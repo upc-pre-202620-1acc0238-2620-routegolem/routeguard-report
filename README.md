@@ -169,6 +169,40 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 ## Objetivos SMART
 
+Para garantizar el desarrollo ordenado y exitoso del ecosistema RouteGuard a lo largo del ciclo académico, el equipo ha establecido los siguientes objetivos bajo la metodología SMART:
+
+**Objetivo 1: Validación de Experiencia de Usuario (UX) y Requerimientos**
+* Validar la propuesta de valor y las hipótesis establecidas en el *Lean UX* realizando 8 entrevistas a profundidad (4 a conductores y 4 a padres de familia) para elaborar el 100% de los artefactos de Needfinding y el *Product Backlog* antes de la Semana 4 del ciclo académico.
+  * **S (Específico):** Validar propuesta de valor y elaborar artefactos UX.
+  * **M (Medible):** 8 entrevistas exactas y 100% de artefactos completados.
+  * **A (Alcanzable):** Viable dividiendo 2 entrevistas por cada uno de los 4 integrantes.
+  * **R (Relevante):** Fundamental para definir la arquitectura y el diseño del software.
+  * **T (Tiempo):** Antes de la Semana 4 (Hito AV1).
+
+**Objetivo 2: Arquitectura de Software y Despliegue Inicial (Backend)**
+* Diseñar, programar y desplegar en la nube la arquitectura base de la plataforma, completando el Landing Page y los endpoints RESTful fundamentales del *Identity & Access Management (IAM) Bounded Context*, cumpliendo la totalidad de los Story Points asignados al Sprint 1 para la Semana 7.
+  * **S:** Despliegue del Landing Page y endpoints de IAM.
+  * **M:** Cumplimiento del 100% de los Story Points del Sprint 1.
+  * **A:** Realizable utilizando frameworks modernos y CI/CD.
+  * **R:** Construye los cimientos para que las aplicaciones móviles puedan conectarse.
+  * **T:** Para la Semana 7 (Hito TB1).
+
+**Objetivo 3: Implementación Nativa de Geolocalización (App Conductores)**
+* Desarrollar la aplicación móvil nativa (Android) para el segmento de transportistas, integrando con éxito los servicios críticos de geolocalización en segundo plano (*Background GPS*) y el modo *offline* para la sincronización de bitácoras, culminando las pruebas de integración para la Semana 11.
+  * **S:** Desarrollo de app nativa con GPS en *background* y soporte *offline*.
+  * **M:** Lograr la sincronización de la bitácora sin pérdida de datos en pruebas.
+  * **A:** Factible enfocando a 2 desarrolladores del equipo en la tecnología nativa.
+  * **R:** Resuelve el mayor "punto de dolor" del conductor: evitar distracciones al volante.
+  * **T:** Para la Semana 11 (Hito TB2).
+
+**Objetivo 4: Ecosistema Cross-Platform y Notificaciones (App Padres)**
+* Desplegar la aplicación *cross-platform* para padres de familia, logrando una comunicación *end-to-end* que procese las coordenadas del conductor y dispare alertas de *Geofencing* y notificaciones *Push* en el dispositivo del padre con una latencia menor a 5 segundos, garantizando un flujo operativo completo para la sustentación final en la Semana 15.
+  * **S:** Integración de notificaciones Push y Geofencing en app cross-platform.
+  * **M:** Latencia menor a 5 segundos desde el envío hasta la alerta.
+  * **A:** Lograble utilizando servicios como Firebase Cloud Messaging.
+  * **R:** Materializa el valor principal del producto: la paz mental de los padres.
+  * **T:** Para la Semana 15 (Trabajo Final - TF).
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo I: Presentación
