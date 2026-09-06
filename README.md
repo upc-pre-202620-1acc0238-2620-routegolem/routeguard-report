@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="[URL_LOGO_UPC]" width="150" alt="Logo de la Universidad">
+  <img src="https://github.com/upc-pre-202620-1acc0238-2620-routegolem/routeguard-report/blob/develop/resources/cover/upc-logo.png" width="150" alt="Logo de la UPC">
   <br><br>
   <strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong>
   <br><br>
