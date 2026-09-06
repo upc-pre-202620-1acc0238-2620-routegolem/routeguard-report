@@ -46,19 +46,162 @@
 
 ## Tabla de contenidos
 
-<!-- Insertar Índice Generado Automáticamente Aquí -->
+* [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
+* [Project Report Collaboration Insights](#project-report-collaboration-insights)
+* [Tabla de contenidos](#tabla-de-contenidos)
+* [Student Outcome](#student-outcome)
+* [Objetivos SMART](#objetivos-smart)
+* [Capítulo I: Presentación](#capítulo-i-presentación)
+  * [1.1. Startup Profile](#11-startup-profile)
+    * [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    * [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  * [1.2. Solution Profile](#12-solution-profile)
+    * [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+    * [1.2.2. Lean UX Process](#122-lean-ux-process)
+      * [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      * [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      * [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      * [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+  * [1.3. Segmentos objetivo](#13-segmentos-objetivo)
+* [Capítulo II: Requirements Development and Software Solution Design](#capítulo-ii-requirements-development-and-software-solution-design)
+  * [2.1. Competidores](#21-competidores)
+    * [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    * [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+  * [2.2. Entrevistas](#22-entrevistas)
+    * [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    * [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+    * [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+  * [2.3. Needfinding](#23-needfinding)
+    * [2.3.1. User Personas](#231-user-personas)
+    * [2.3.2. User Task Matrix](#232-user-task-matrix)
+    * [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+    * [2.3.4. Empathy Mapping](#234-empathy-mapping)
+    * [2.3.5. Big Picture EventStorming](#235-big-picture-eventstorming)
+    * [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
+  * [2.4. Requirements specification](#24-requirements-specification)
+    * [2.4.1. User Stories](#241-user-stories)
+    * [2.4.2. Impact Mapping](#242-impact-mapping)
+    * [2.4.3. Product Backlog](#243-product-backlog)
+  * [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
+    * [2.5.1. EventStorming](#251-eventstorming)
+      * [2.5.1.1. Candidate Context Discovery](#2511-candidate-context-discovery)
+      * [2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)
+      * [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
+    * [2.5.2. Context Mapping](#252-context-mapping)
+    * [2.5.3. Software Architecture](#253-software-architecture)
+      * [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
+      * [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
+      * [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
+  * [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
+    * [2.6.x. Bounded Context: [Bounded Context Name]](#26x-bounded-context-bounded-context-name)
+      * [2.6.x.1. Domain Layer](#26x1-domain-layer)
+      * [2.6.x.2. Interface Layer](#26x2-interface-layer)
+      * [2.6.x.3. Application Layer](#26x3-application-layer)
+      * [2.6.x.4. Infrastructure Layer](#26x4-infrastructure-layer)
+      * [2.6.x.5. Bounded Context Software Architecture Component Level Diagrams](#26x5-bounded-context-software-architecture-component-level-diagrams)
+      * [2.6.x.6. Bounded Context Software Architecture Code Level Diagrams](#26x6-bounded-context-software-architecture-code-level-diagrams)
+        * [2.6.x.6.1. Bounded Context Domain Layer Class Diagrams](#26x61-bounded-context-domain-layer-class-diagrams)
+        * [2.6.x.6.2. Bounded Context Database Design Diagram](#26x62-bounded-context-database-design-diagram)
+* [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
+  * [3.1. Product design](#31-product-design)
+    * [3.1.1. Style Guidelines](#311-style-guidelines)
+      * [3.1.1.1. General Style Guidelines](#3111-general-style-guidelines)
+    * [3.1.2. Information Architecture](#312-information-architecture)
+      * [3.1.2.1. Organization Systems](#3121-organization-systems)
+      * [3.1.2.2. Labelling Systems](#3122-labelling-systems)
+      * [3.1.2.3. SEO Tags and Meta Tags](#3123-seo-tags-and-meta-tags)
+      * [3.1.2.4. Searching Systems](#3124-searching-systems)
+      * [3.1.2.5. Navigation Systems](#3125-navigation-systems)
+    * [3.1.3. Landing Page UI Design](#313-landing-page-ui-design)
+      * [3.1.3.1. Landing Page Wireframe](#3131-landing-page-wireframe)
+      * [3.1.3.2. Landing Page Mock-up](#3132-landing-page-mock-up)
+    * [3.1.4. Mobile Applications UX/UI Design](#314-mobile-applications-uxui-design)
+      * [3.1.4.1. Mobile Applications Wireframes](#3141-mobile-applications-wireframes)
+      * [3.1.4.2. Mobile Applications Wireflow Diagrams](#3142-mobile-applications-wireflow-diagrams)
+      * [3.1.4.3. Mobile Applications Mock-ups](#3143-mobile-applications-mock-ups)
+      * [3.1.4.4. Mobile Applications User Flow Diagrams](#3144-mobile-applications-user-flow-diagrams)
+      * [3.1.4.5. Mobile Applications Prototyping](#3145-mobile-applications-prototyping)
+* [Capítulo IV: Product Implementation & Validation](#capítulo-iv-product-implementation--validation)
+  * [4.1. Software Configuration Management](#41-software-configuration-management)
+    * [4.1.1. Software Development Environment Configuration](#411-software-development-environment-configuration)
+    * [4.1.2. Source Code Management](#412-source-code-management)
+    * [4.1.3. Source Code Style Guide & Conventions](#413-source-code-style-guide--conventions)
+    * [4.1.4. Software Deployment Configuration](#414-software-deployment-configuration)
+  * [4.2. Landing Page & Mobile Application Implementation](#42-landing-page--mobile-application-implementation)
+    * [4.2.1. Sprint n](#421-sprint-n)
+      * [4.2.1.1. Sprint Planning n](#4211-sprint-planning-n)
+      * [4.2.1.2. Aspect Leaders and Collaborators](#4212-aspect-leaders-and-collaborators)
+      * [4.2.1.3. Sprint Backlog n](#4213-sprint-backlog-n)
+      * [4.2.1.4. Development Evidence for Sprint Review](#4214-development-evidence-for-sprint-review)
+      * [4.2.1.5. Testing Suite Evidence for Sprint Review](#4215-testing-suite-evidence-for-sprint-review)
+      * [4.2.1.6. Execution Evidence for Sprint Review](#4216-execution-evidence-for-sprint-review)
+      * [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
+      * [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
+      * [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+  * [4.3. Validation Interviews](#43-validation-interviews)
+    * [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
+    * [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
+    * [4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)
+* [Conclusiones](#conclusiones)
+  * [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+  * [Video App Validation](#video-app-validation)
+  * [Video About the product](#video-about-the-product)
+  * [Video About the team](#video-about-the-team)
+* [Glosario](#glosario)
+* [Bibliografía](#bibliografía)
+* [Anexos](#anexos)
 
 <div style="page-break-after: always;"></div>
 
 ## Student Outcome
 
+El curso contribuye al cumplimiento del Student Outcome ABET: 
+* **Outcome 7 (Criterios 7.c1, 7.c2):** Capacidad para adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje adecuadas.
+* **Outcome 3 (Criterio 3.c2):** Capacidad para comunicarse efectivamente con una variedad de audiencias.
+
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---------------------|---------------------|--------------|
-|                     |                     |              |
+| **Outcome 7 (7.c1):** Identificación de problemáticas, UX Research, y diseño de arquitectura (DDD, RESTful). | Mediante el proceso de *Lean UX* y *UX Research*, investigamos a los usuarios y sus dolores. Aplicamos *Domain-Driven Design (DDD)* para diseñar los Bounded Contexts y diagramar la arquitectura del sistema, asegurando el cumplimiento de principios RESTful. | La investigación estructurada y el diseño guiado por el dominio nos permitió comprender la complejidad del transporte escolar y plantear una arquitectura de software robusta, escalable y centrada en las necesidades reales de seguridad. |
+| **Outcome 7 (7.c2):** Implementación de soluciones (Native/Cross-Platform), ciclo de vida ágil y mejora continua. | Investigamos e implementamos tecnologías nuevas fuera de clase (GPS en *background*, modo *offline*) para la app de conductores (Nativa) y la app de padres (Cross-Platform). Aplicamos marco de trabajo ágil con GitFlow, *Conventional Commits* y realizamos entrevistas de validación. | El aprendizaje autónomo de tecnologías nativas y servicios en segundo plano fue vital para resolver la necesidad del usuario operativo. Aplicar un flujo de CI/CD (GitFlow) garantizó el desarrollo colaborativo sin conflictos. |
+| **Outcome 3 (3.c2):** Comunicación oral y escrita objetiva, respetando estructuras y estándares. | Redactamos el presente informe técnico respetando las normas APA 7, la estructura exigida, un *Ubiquitous Language* en inglés, y produjimos videos explicativos para sustentar el progreso del Sprint de manera profesional. | Documentar el proyecto con un lenguaje técnico estandarizado mejora drásticamente la transferencia de conocimiento. La comunicación efectiva fue clave para alinear las expectativas de todos los miembros del equipo. |
 
 <div style="page-break-after: always;"></div>
 
 ## Objetivos SMART
+
+Para garantizar el desarrollo ordenado y exitoso del ecosistema RouteGuard a lo largo del ciclo académico, el equipo ha establecido los siguientes objetivos bajo la metodología SMART:
+
+**Objetivo 1: Validación de Experiencia de Usuario (UX) y Requerimientos**
+* Validar la propuesta de valor y las hipótesis establecidas en el *Lean UX* realizando 8 entrevistas a profundidad (4 a conductores y 4 a padres de familia) para elaborar el 100% de los artefactos de Needfinding y el *Product Backlog* antes de la Semana 4 del ciclo académico.
+  * **S (Específico):** Validar propuesta de valor y elaborar artefactos UX.
+  * **M (Medible):** 8 entrevistas exactas y 100% de artefactos completados.
+  * **A (Alcanzable):** Viable dividiendo 2 entrevistas por cada uno de los 4 integrantes.
+  * **R (Relevante):** Fundamental para definir la arquitectura y el diseño del software.
+  * **T (Tiempo):** Antes de la Semana 4 (Hito AV1).
+
+**Objetivo 2: Arquitectura de Software y Despliegue Inicial (Backend)**
+* Diseñar, programar y desplegar en la nube la arquitectura base de la plataforma, completando el Landing Page y los endpoints RESTful fundamentales del *Identity & Access Management (IAM) Bounded Context*, cumpliendo la totalidad de los Story Points asignados al Sprint 1 para la Semana 7.
+  * **S:** Despliegue del Landing Page y endpoints de IAM.
+  * **M:** Cumplimiento del 100% de los Story Points del Sprint 1.
+  * **A:** Realizable utilizando frameworks modernos y CI/CD.
+  * **R:** Construye los cimientos para que las aplicaciones móviles puedan conectarse.
+  * **T:** Para la Semana 7 (Hito TB1).
+
+**Objetivo 3: Implementación Nativa de Geolocalización (App Conductores)**
+* Desarrollar la aplicación móvil nativa (Android) para el segmento de transportistas, integrando con éxito los servicios críticos de geolocalización en segundo plano (*Background GPS*) y el modo *offline* para la sincronización de bitácoras, culminando las pruebas de integración para la Semana 11.
+  * **S:** Desarrollo de app nativa con GPS en *background* y soporte *offline*.
+  * **M:** Lograr la sincronización de la bitácora sin pérdida de datos en pruebas.
+  * **A:** Factible enfocando a 2 desarrolladores del equipo en la tecnología nativa.
+  * **R:** Resuelve el mayor "punto de dolor" del conductor: evitar distracciones al volante.
+  * **T:** Para la Semana 11 (Hito TB2).
+
+**Objetivo 4: Ecosistema Cross-Platform y Notificaciones (App Padres)**
+* Desplegar la aplicación *cross-platform* para padres de familia, logrando una comunicación *end-to-end* que procese las coordenadas del conductor y dispare alertas de *Geofencing* y notificaciones *Push* en el dispositivo del padre con una latencia menor a 5 segundos, garantizando un flujo operativo completo para la sustentación final en la Semana 15.
+  * **S:** Integración de notificaciones Push y Geofencing en app cross-platform.
+  * **M:** Latencia menor a 5 segundos desde el envío hasta la alerta.
+  * **A:** Lograble utilizando servicios como Firebase Cloud Messaging.
+  * **R:** Materializa el valor principal del producto: la paz mental de los padres.
+  * **T:** Para la Semana 15 (Trabajo Final - TF).
 
 <div style="page-break-after: always;"></div>
 
