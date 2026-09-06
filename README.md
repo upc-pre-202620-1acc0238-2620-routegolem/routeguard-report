@@ -99,7 +99,30 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 
 ## 1.2. Solution Profile
 
-### 1.2.1. Antecedentes y problemática
+### 1.2.1 Antecedentes y problemática
+
+Para delimitar y entender a fondo el contexto del transporte escolar privado y sus deficiencias actuales, hemos aplicado la técnica de análisis **5W+2H**:
+
+* **Who (¿Quiénes son los afectados?):** 
+La problemática afecta principalmente a tres actores. En primer lugar, los **padres de familia**, quienes experimentan ansiedad constante al delegar el traslado de sus hijos a terceros sin visibilidad del trayecto. En segundo lugar, los **conductores escolares**, quienes sufren de sobrecarga operativa y alto riesgo de accidentes al intentar comunicarse (vía llamadas o mensajes) mientras conducen. Finalmente, los **administradores de flotas o microempresas de transporte**, que carecen de herramientas centralizadas para gestionar sus rutas, asistencia y reportes de incidentes.
+
+* **What (¿Cuál es el problema?):** 
+La coordinación del transporte escolar privado se realiza de manera predominantemente informal y analógica. El uso de llamadas telefónicas, grupos de WhatsApp desordenados y listas de asistencia en papel impide tener trazabilidad, visibilidad en tiempo real y un registro histórico confiable del servicio, comprometiendo la seguridad de los estudiantes.
+
+* **Where (¿Dónde ocurre?):** 
+El problema se concentra en zonas urbanas con alta densidad poblacional y tráfico vehicular pesado (como Lima Metropolitana), donde las distancias entre los hogares y los centros educativos son largas, incrementando la dependencia de servicios de movilidad privada externa al colegio.
+
+* **When (¿Cuándo ocurre?):** 
+Se manifiesta de forma diaria y crítica durante los horarios pico escolares: en el recojo matutino (aproximadamente entre las 6:00 a.m. y 8:00 a.m.) y en el retorno vespertino (entre la 1:30 p.m. y las 4:00 p.m.). Es en estas ventanas de tiempo cuando la falta de información genera mayor desesperación en los padres y mayor presión para los conductores.
+
+* **Why (¿Por qué es un problema?):** 
+Porque la falta de digitalización genera vulnerabilidad para el menor (al no existir una validación inmutable de que abordó o bajó de la unidad), promueve la conducción temeraria (distracción del conductor al manipular el celular para avisar retrasos) y resulta en una desorganización logística que frena el crecimiento de las pequeñas empresas de transporte.
+
+* **How (¿Cómo se manifiesta?):** 
+Se evidencia a través del caos comunicacional: padres llamando insistentemente a los conductores para preguntar "¿Ya llegó mi hijo?", conductores olvidando registrar asistencias por el apuro, demoras no reportadas por tráfico o fallas mecánicas, y una total desconexión entre la operación física del vehículo y la información que recibe la familia.
+
+* **How much (¿Cuál es la magnitud?):** 
+Aunque la demanda es masiva —dado que la gran mayoría de familias con hijos en nivel inicial y primaria en Lima dependen de servicios externos de movilidad— el sector opera casi en un 100% en la informalidad digital. No existen métricas centralizadas ni estándares de calidad basados en monitoreo GPS en tiempo real para este nicho, lo que deja a miles de escolares diariamente expuestos a un sistema de gestión obsoleto basado únicamente en la confianza verbal.
 
 ### 1.2.2. Lean UX Process
 
