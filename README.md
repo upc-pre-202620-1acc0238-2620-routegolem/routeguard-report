@@ -80,6 +80,8 @@
       - [B. Segmento 2: El Padre de Familia](#b-segmento-2-el-padre-de-familia)
     - [2.3.2. User Task Matrix](#232-user-task-matrix)
     - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+      - [A. Journey Map: El Transportista (Conductor)](#a-journey-map-el-transportista-conductor)
+      - [B. Journey Map: El Padre de Familia](#b-journey-map-el-padre-de-familia)
     - [2.3.4. Empathy Mapping](#234-empathy-mapping)
     - [2.3.5. Big Picture EventStorming](#235-big-picture-eventstorming)
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
@@ -499,6 +501,18 @@ La siguiente matriz detalla las tareas principales dentro del ecosistema y la fr
 
 ### 2.3.3. User Journey Mapping
 
+El *User Journey Map* es una herramienta metodológica fundamental en el diseño de servicios que nos permite visualizar la experiencia del usuario a lo largo del tiempo. Ello nos permite identificar sistemáticamente los puntos de dolor (*pain points*) y las oportunidades de interacción con nuestra solución tecnológica (Stickdorn et al., 2018). Para RouteGuard, hemos mapeado las rutinas matutinas de nuestros dos segmentos principales. De esa manera demostramos cómo la aplicación interviene en los momentos de mayor fricción.
+
+#### A. Journey Map: El Transportista (Conductor)
+El recorrido de Carlos evidencia que el momento crítico ocurre durante el tráfico pesado. La implementación de transmisión GPS en segundo plano (*background location*) transforma una situación de alto estrés en un momento de serenidad, ya que el conductor no necesita interactuar con el dispositivo para calmar la ansiedad de los padres.
+
+![User Journey Map - Carlos Mendoza](resources/chapter-2/user-journey-mapping/user-journey-map-carlos-mendoza.png)
+
+#### B. Journey Map: El Padre de Familia
+El recorrido de Valeria demuestra cómo la incertidumbre matutina se resuelve mediante la tecnología. El uso de alertas automatizadas por *Geofencing* elimina la necesidad de monitoreo activo, generando un pico de confianza y alivio exactamente en el momento en que el estudiante aborda la unidad.
+
+![User Journey Map - Valeria Rojas](resources/chapter-2/user-journey-mapping/user-journey-map-valeria-rojas.png)
+
 ### 2.3.4. Empathy Mapping
 
 ### 2.3.5. Big Picture EventStorming
@@ -727,6 +741,7 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 * Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software.* Addison-Wesley Professional.
 * Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing Great Products with Agile Teams* (3rd ed.). O'Reilly Media.
 * Kumar, A., & Lee, S. (2024). Role-based task frequency analysis in mobile interface design for logistics. *International Journal of Human-Computer Studies,* 182, 103-118. https://doi.org/10.1016/j.ijhcs.2024.103118
+* Stickdorn, M., Hormess, M. E., Lawrence, A., & Schneider, J. (2018). *This Is Service Design Doing: Applying Service Design Thinking in the Real World*. O'Reilly Media.
 
 **Lenguajes, frameworks y herramientas**
 
