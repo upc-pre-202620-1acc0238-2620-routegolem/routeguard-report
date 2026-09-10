@@ -84,6 +84,7 @@
       - [B. Journey Map: El Padre de Familia](#b-journey-map-el-padre-de-familia)
     - [2.3.4. Empathy Mapping](#234-empathy-mapping)
     - [2.3.5. Big Picture EventStorming](#235-big-picture-eventstorming)
+      - [Cronología de Eventos de Dominio Identificados:](#cronología-de-eventos-de-dominio-identificados)
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
   - [2.4. Requirements specification](#24-requirements-specification)
     - [2.4.1. User Stories](#241-user-stories)
@@ -517,6 +518,35 @@ El recorrido de Valeria demuestra cómo la incertidumbre matutina se resuelve me
 
 ### 2.3.5. Big Picture EventStorming
 
+El *Big Picture EventStorming* es una técnica de modelado colaborativo de arquitectura de software que nos permitió explorar y mapear la totalidad de los procesos de negocio de **RouteGuard**. En esta etapa inicial, nos enfocamos exclusivamente en descubrir la línea temporal del ecosistema a través de los **Domain Events** (Eventos de Dominio). 
+
+Como dicta el estándar de esta herramienta (Brandolini, 2021), los eventos fueron redactados utilizando el *Ubiquitous Language* en inglés y en pasado participio, representando hechos relevantes que ya han ocurrido en el sistema y que interesan a los expertos del negocio.
+
+A continuación, se presenta la pizarra desarrollada, dividida en las tres fases principales del ciclo de vida del servicio de movilidad:
+
+![RouteGuard Big Picture EventStorming](resources/chapter-2/big-picture-eventstorming/big-picture-eventstorming.png)
+
+#### Cronología de Eventos de Dominio Identificados:
+
+**Fase 1: Pre-viaje y Configuración (Setup)**
+* `SubscriptionPlanPurchased`: Un administrador adquiere un plan SaaS.
+* `DriverAccountCreated`: Se registra un conductor en la plataforma.
+* `SchoolRouteCreated`: El administrador diseña la secuencia de paradas.
+* `StudentAssignedToRoute`: Se asocia un niño a una ruta específica.
+
+**Fase 2: Operación Central (Core)**
+* `TripStarted`: El conductor inicia el recorrido diario.
+* `ProximityGeofenceTriggered`: El GPS penetra el radio del hogar, detonando alertas.
+* `StudentBoarded`: El conductor registra la subida del niño (*Check-in*).
+* `StudentDroppedOff`: El conductor registra la bajada del niño (*Check-out*).
+* `IncidentReported`: Se registra un retraso o emergencia en el trayecto.
+
+**Fase 3: Post-viaje y Cierre**
+* `TripFinished`: El vehículo llega a su destino final.
+* `DailyReportGenerated`: El sistema procesa la bitácora de asistencia.
+
+El descubrimiento de esta línea temporal fue el insumo principal para poder agrupar lógicamente estos eventos y descubrir nuestros *Bounded Contexts* en la etapa de diseño estratégico.
+
 ### 2.3.6. Ubiquitous Language
 
 Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003), hemos establecido un *Ubiquitous Language* (Lenguaje Ubicuo). Este glosario estandariza los términos del negocio en inglés para garantizar que tanto el equipo de desarrollo como los expertos del dominio utilicen exactamente el mismo vocabulario, eliminando ambigüedades entre el código fuente y las reglas de negocio.
@@ -736,6 +766,7 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 **Métodos y técnicas de ingeniería de software**
 
+* Brandolini, A. (2021). *Introducing EventStorming: An Act of Deliberate Collective Learning.* Leanpub.
 * Chen, Y., & Zhao, M. (2025). Passive monitoring and location-based notifications in family tracking applications. *Journal of Mobile Human-Computer Interaction,* 15(2), 45-60. https://doi.org/10.1016/j.jmhci.2025.104221
 * Cooper, A. (1999). *The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity.* Sams Publishing.
 * Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software.* Addison-Wesley Professional.
