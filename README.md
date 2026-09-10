@@ -88,6 +88,9 @@
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
   - [2.4. Requirements specification](#24-requirements-specification)
     - [2.4.1. User Stories](#241-user-stories)
+      - [Epics Identificadas:](#epics-identificadas)
+      - [Technical Stories](#technical-stories)
+      - [Spike Stories](#spike-stories)
     - [2.4.2. Impact Mapping](#242-impact-mapping)
     - [2.4.3. Product Backlog](#243-product-backlog)
   - [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
@@ -566,11 +569,181 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 ### 2.4.1. User Stories
 
-| Story ID | User | Priority | Epic |
-|----------|------|----------|------|
-| **Title** | | | |
-| **Description** | | | |
-| **Acceptance Criteria** | | | |
+En esta sección, detallamos los requisitos de los productos digitales a través de User Stories, Technical Stories y Spike Stories. Todas han sido agrupadas por Epics y sus Criterios de Aceptación han sido definidos utilizando la sintaxis de Gherkin (Given-When-Then), evitando referencias a la interfaz gráfica y redactándolas en tercera persona y tiempo presente.
+
+#### Epics Identificadas:
+* **EP01:** Identity & Access Management
+* **EP02:** Routing & Planning
+* **EP03:** Operations & Tracking
+* **EP04:** Notifications & Ecosystem
+
+<br>
+
+<table>
+  <tr>
+    <th width="15%">Story ID</th>
+    <th width="25%">User</th>
+    <th width="20%">Priority</th>
+    <th width="40%">Epic</th>
+  </tr>
+  <tr>
+    <td>US01</td>
+    <td>Administrador</td>
+    <td>High</td>
+    <td>EP01: Identity & Access Management</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Title:</strong> Creación de cuenta de flota y suscripción</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Description:</strong> Como Administrador, quiero registrar los datos de mi empresa y seleccionar un plan de suscripción para habilitar el uso del ecosistema a mis conductores.</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
+      <b>Escenario:</b> Registro exitoso de una nueva flota<br>
+      <b>Given</b> un administrador no autenticado proporciona información de registro y credenciales de pago válidas,<br>
+      <b>When</b> el administrador confirma la solicitud de suscripción,<br>
+      <b>Then</b> el sistema aprovisiona un nuevo workspace para la empresa, activa el estado de la cuenta y envía un correo electrónico de confirmación.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th width="15%">Story ID</th>
+    <th width="25%">User</th>
+    <th width="20%">Priority</th>
+    <th width="40%">Epic</th>
+  </tr>
+  <tr>
+    <td>US02</td>
+    <td>Conductor</td>
+    <td>High</td>
+    <td>EP03: Operations & Tracking</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Title:</strong> Inicio de recorrido de la ruta asignada</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Description:</strong> Como Conductor, quiero iniciar oficialmente mi recorrido diario para que el sistema comience a registrar mis coordenadas.</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
+      <b>Escenario:</b> Activación de ruta y GPS<br>
+      <b>Given</b> un conductor autenticado con una ruta programada pendiente para el día actual,<br>
+      <b>When</b> el conductor confirma el inicio de su recorrido,<br>
+      <b>Then</b> el sistema cambia el estado de la ruta a 'En Progreso' y comienza a registrar las coordenadas geográficas del dispositivo móvil en tiempo real.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th width="15%">Story ID</th>
+    <th width="25%">User</th>
+    <th width="20%">Priority</th>
+    <th width="40%">Epic</th>
+  </tr>
+  <tr>
+    <td>US03</td>
+    <td>Conductor</td>
+    <td>High</td>
+    <td>EP03: Operations & Tracking</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Title:</strong> Registro de asistencia al abordar</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Description:</strong> Como Conductor, quiero confirmar la asistencia de un estudiante de manera ágil para mantener un registro exacto sin desviar mi atención del entorno.</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
+      <b>Escenario:</b> Check-in exitoso de un alumno<br>
+      <b>Given</b> un viaje en estado 'En Progreso' y un estudiante con estado 'Pendiente de recojo',<br>
+      <b>When</b> el conductor confirma la asistencia del estudiante,<br>
+      <b>Then</b> el sistema actualiza el estado del estudiante a 'A bordo', registra la marca de tiempo exacta y emite un evento de notificación de abordaje.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th width="15%">Story ID</th>
+    <th width="25%">User</th>
+    <th width="20%">Priority</th>
+    <th width="40%">Epic</th>
+  </tr>
+  <tr>
+    <td>US04</td>
+    <td>Padre de Familia</td>
+    <td>High</td>
+    <td>EP04: Notifications & Ecosystem</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Title:</strong> Recepción de alerta preventiva por Geofencing</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Description:</strong> Como Padre de Familia, quiero recibir una alerta automatizada cuando la movilidad se encuentre cerca de mi hogar para preparar a mi hijo a tiempo.</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
+      <b>Escenario:</b> Disparo de notificación de proximidad<br>
+      <b>Given</b> un viaje en progreso y un perímetro virtual de 500 metros establecido alrededor de la ubicación de recojo,<br>
+      <b>When</b> las coordenadas geográficas del vehículo interceptan dicho perímetro virtual,<br>
+      <b>Then</b> el sistema despacha una notificación de proximidad al dispositivo vinculado a la cuenta del padre de familia.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+#### Technical Stories
+
+<table>
+  <tr>
+    <th width="15%">Story ID</th>
+    <th width="25%">User</th>
+    <th width="20%">Priority</th>
+    <th width="40%">Epic</th>
+  </tr>
+  <tr>
+    <td>TS01</td>
+    <td>Developer</td>
+    <td>High</td>
+    <td>EP01: Identity & Access Management</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Title:</strong> Autenticación de API vía JWT</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Description:</strong> Como Developer, quiero implementar un endpoint RESTful seguro para autenticar a los usuarios móviles y emitir tokens de acceso.</td>
+  </tr>
+  <tr>
+    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
+      <b>Escenario:</b> Generación de Token JWT con credenciales válidas<br>
+      <b>Given</b> un cliente móvil con credenciales de conductor registradas en la base de datos,<br>
+      <b>When</b> el cliente envía un request POST al endpoint `/api/v1/auth/login` con un payload JSON válido,<br>
+      <b>Then</b> el servidor valida el hash de la contraseña y responde con un HTTP Status `200 OK` retornando un token JWT válido con vigencia de 24 horas.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+#### Spike Stories
+
+* **Spike ID:** SS01
+* **Título:** Investigar la implementación de Background Location Tracking en Android/iOS usando Kotlin Multiplatform.
+* **Contexto:** El requerimiento principal del sistema es rastrear la ubicación del conductor sin que este mantenga la pantalla de la aplicación encendida. Existen fuertes restricciones a nivel de sistema operativo en las últimas versiones de Android e iOS respecto al uso de GPS en segundo plano para ahorrar batería, lo cual genera incertidumbre técnica.
+* **Spike Story:** Como equipo de desarrollo móvil, quiero investigar y prototipar los permisos y servicios requeridos para implementar el rastreo de ubicación en segundo plano utilizando KMP (Kotlin Multiplatform), para entender los riesgos técnicos, las limitaciones de consumo de batería y el esfuerzo de implementación.
+* **Criterios de Aceptación:**
+  * **Dado que** el equipo necesita validar el seguimiento en segundo plano, **Cuando** el desarrollador construye un proof-of-concept (PoC) y lo ejecuta con la pantalla apagada por 15 minutos, **Entonces** el PoC es funcional, registra la ubicación correctamente y el hallazgo se documenta en un informe técnico de viabilidad detallando los permisos necesarios (`ACCESS_BACKGROUND_LOCATION` / `UIBackgroundModes`).
 
 ### 2.4.2. Impact Mapping
 
