@@ -470,6 +470,19 @@ El objetivo de estas entrevistas es validar la magnitud de los problemas de comu
 
 ### 2.3.6. Ubiquitous Language
 
+Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003), hemos establecido un *Ubiquitous Language* (Lenguaje Ubicuo). Este glosario estandariza los términos del negocio en inglés para garantizar que tanto el equipo de desarrollo como los expertos del dominio utilicen exactamente el mismo vocabulario, eliminando ambigüedades entre el código fuente y las reglas de negocio.
+
+| Término | Descripción | Contexto |
+|---------|-------------|----------|
+| **Fleet** | Colección de vehículos y conductores gestionados por un mismo Administrador de transporte escolar. | IAM / Routing |
+| **Route** | Secuencia predefinida de paradas (*Stops*) desde un punto de origen hacia un colegio (o viceversa). | Routing |
+| **Trip** | La ejecución física y en tiempo real de una *Route* en una fecha y hora específica. | Operations |
+| **Stop** | Ubicación geográfica (coordenadas) donde un estudiante debe subir o bajar del vehículo. | Routing |
+| **Boarding** | El acto en el que un estudiante ingresa al vehículo y el conductor registra su asistencia en el sistema. | Operations |
+| **Geofence** | Perímetro virtual circular alrededor de un *Stop*. Cuando el GPS del conductor penetra este perímetro, dispara eventos automáticos. | Notifications |
+| **Proximity Alert** | Notificación Push enviada pasivamente al celular del padre cuando se penetra el *Geofence* de su hogar. | Notifications |
+| **Incident** | Evento inesperado (tráfico pesado, falla mecánica, accidente) que altera el curso normal de un *Trip*. | Operations |
+
 ## 2.4. Requirements specification
 
 ### 2.4.1. User Stories
@@ -674,6 +687,7 @@ El objetivo de estas entrevistas es validar la magnitud de los problemas de comu
 
 **Métodos y técnicas de ingeniería de software**
 
+* Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software.* Addison-Wesley Professional.
 * Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing Great Products with Agile Teams* (3rd ed.). O'Reilly Media.
 
 **Lenguajes, frameworks y herramientas**
