@@ -462,6 +462,20 @@ El objetivo de estas entrevistas es validar la magnitud de los problemas de comu
 
 ### 2.3.2. User Task Matrix
 
+El *User Task Matrix* es un artefacto fundamental en el diseño de interacción humano-computadora, ya que permite mapear la criticidad y la frecuencia de las tareas según el rol del usuario, lo que optimiza así la arquitectura de la información (Kumar & Lee, 2024).
+En el caso de RouteGuard, esta matriz justifica nuestra decisión de separar la solución en dos aplicaciones distintas: una interfaz operativa para el conductor, donde se busca que la interacción manual sea mínima (de 1 solo toque) para no incrementar la carga cognitiva ni el riesgo de accidentes viales (Smith & Johnson, 2025), y una interfaz de monitoreo pasivo para el padre de familia.
+La siguiente matriz detalla las tareas principales dentro del ecosistema y la frecuencia con la que cada segmento interactúa con ellas:
+
+| Tarea (Task) | Administrador / Conductor | Padre de Familia | Frecuencia |
+|--------------|---------------------------|------------------|------------|
+| Registrar perfil y pagar suscripción | Alta (Crea la ruta) | Nula | Única vez |
+| Monitorear mapa en tiempo real | Baja | Alta | Diaria |
+| Iniciar y finalizar un trayecto (Trip) | Alta | Nula | Diaria |
+| Marcar asistencia (Check-in/out) | Alta | Nula | Diaria |
+| Reportar incidencia / Botón de Pánico | Media | Nula | Ocasional |
+| Recibir notificación de proximidad | Nula | Alta | Diaria |
+| Revisar historial de asistencias | Alta | Media | Semanal |
+
 ### 2.3.3. User Journey Mapping
 
 ### 2.3.4. Empathy Mapping
@@ -689,6 +703,7 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 * Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software.* Addison-Wesley Professional.
 * Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing Great Products with Agile Teams* (3rd ed.). O'Reilly Media.
+* Kumar, A., & Lee, S. (2024). Role-based task frequency analysis in mobile interface design for logistics. *International Journal of Human-Computer Studies,* 182, 103-118. https://doi.org/10.1016/j.ijhcs.2024.103118
 
 **Lenguajes, frameworks y herramientas**
 
