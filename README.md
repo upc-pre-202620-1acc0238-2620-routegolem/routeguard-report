@@ -585,139 +585,51 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 ### 2.4.1. User Stories
 
-En esta sección, detallamos los requisitos de los productos digitales a través de User Stories, Technical Stories y Spike Stories. Todas han sido agrupadas por Epics y sus Criterios de Aceptación han sido definidos utilizando la sintaxis de Gherkin (Given-When-Then), evitando referencias a la interfaz gráfica y redactándolas en tercera persona y tiempo presente.
+**USER STORIES**
+| Story ID | Título | Descripción | Criterios de Aceptación | Epic ID |
+| :--- | :--- | :--- | :--- | :--- |
+| **US-01** | Elección de Roles | Como nuevo usuario, quiero conocer las vistas y funcionalidades para elegir el rol que tomaré al utilizar la aplicación y acceder a ellas. | **Escenario 1** <br>Dado que un Gestor Operativo accede por primera vez a la plataforma, <br>Cuando proporciona sus datos de identidad y rol técnico <br>Entonces el sistema emite la confirmación de cuenta creada <br><br>**Escenario 2:** <br>Dado que un Gestor Operativo intenta registrarse <br>Cuando ingresa un correo electrónico que ya se encuentra activo en el sistema <br>Entonces el sistema rechaza la solicitud advirtiendo la duplicidad. | **EP01** |
+| **US-02** | Sección Tutorial | Como nuevo usuario, quiero ver los pasos iniciales para saber cómo empezar a utilizar la aplicación. | **Escenario 1** <br>Dado que el Gestor Operativo detecta una falla técnica, <br>Cuando proporciona la información de la incidencia (Título, Partida afectada, Descripción detallada) y adjunta la evidencia fotográfica, <br>Entonces el sistema genera un ticket de alerta trazable y notifica al equipo correspondiente. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta registrar la incidencia, <br>Cuando omite adjuntar la evidencia fotográfica obligatoria, <br>Entonces el sistema impide el registro y exige que se adjunte el respaldo visual. | **EP01** |
+| **US-03** | Preguntas Frecuentes (FAQ) | Como nuevo usuario, quiero ver dudas comunes para evitar llamadas de soporte. | **Escenario 1** <br>Dado que el Gestor Operativo requiere materiales, <br>Cuando detalla el requerimiento (Insumo, Cantidad, Unidad y Fecha máxima), <br>Entonces el sistema genera una solicitud formal con un código de seguimiento. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta generar el requerimiento, <br>Cuando omite especificar la cantidad necesaria, <br>Entonces el sistema bloquea la acción y exige el volumen del material. | **EP01** |
+| **US-04** | Demo Interactiva | Como padre de familia, quiero probar un simulador de mapa antes de establecer algún contrato para verificar que es la experiencia que deseo tener respecto al transporte de mi hijo. | **Escenario 1** <br>Dado que un material tiene configurado un límite mínimo, <br>Cuando el stock registrado desciende por debajo de dicho límite tras un despacho, <br>Entonces el sistema emite una advertencia de stock crítico. <br><br>**Escenario 2:** <br>Dado que el stock actual se encuentra por debajo del límite mínimo, <br>Cuando el sistema ejecuta la verificación programada, <br>Entonces envía automáticamente una notificación de reposición al Equipo de Logística. | **EP01** |
+| **US-05** | Gestión de Perfil y Datos Personales | Como usuario de la aplicación, quiero actualizar mi número de teléfono y foto de perfil para mantener mi información de contacto al día. | **Escenario 1:** <br>Dado que el Equipo de Logística intenta procesar un pedido que excede el monto presupuestado, <br>Cuando acepta la solicitud de compra, <br>Entonces el sistema bloquea la operación e informa del exceso presupuestal. <br><br>**Escenario 2:** <br>Dado que el pedido se encuentra dentro del presupuesto disponible, <br>Cuando el Equipo de Logística acepta la solicitud, <br>Entonces el sistema aprueba la compra y actualiza el presupuesto utilizado. | **EP01** |
+| **US-06** | Registro de Conductores | Como administrador de la empresa de movilidad escolar, quiero crear cuentas de conductores y asignar rutas y alumnos para establecer grupos de recojo por proximidad. | **Escenario 1** <br>Dado que el Gestor Operativo aprueba la partida técnica, <br>Cuando proporciona el código numérico de seguridad válido, <br>Entonces el sistema sella digitalmente el documento de conformidad. <br><br>**Escenario 2** <br>Dado que el Gestor Operativo intenta validar la firma, <br>Cuando ingresa un código de seguridad incorrecto o con longitud inválida, <br>Entonces el sistema rechaza la firma y mantiene el acta en estado pendiente. | **EP02** |
+| **US-07** | Solicitud a Conductor Independiente | Como padre de familia, quiero solicitar un contrato a un conductor independiente para inscribir a mi hijo en su movilidad. | **Escenario 1** <br>Dado que existe una solicitud en estado pendiente, <br>Cuando el Equipo de Logística aprueba el requerimiento, <br>Entonces el sistema actualiza el estado a "En proceso de compra" para visibilidad del solicitante. <br><br>**Escenario 2:** <br>Dado que el Equipo de Logística decide rechazar la solicitud, <br>Cuando intenta confirmar el rechazo sin proporcionar una justificación, <br>Entonces el sistema impide la acción hasta que se detalle el motivo. | **EP02** |
+| **US-08** | Asignación de Conductor Idóneo | Como administrador de la empresa de movilidad escolar, quiero revisar las solicitudes de padres y asignarles el conductor con espacio o ruta factible para completar el proceso de contratación. | **Escenario 1:** <br>Dado que el Gestor Operativo evalúa la jornada, <br>Cuando registra un avance válido correspondiente a partida programada en el cronograma, <br>Entonces el sistema actualiza el estado de la partida para ese día. <br><br>**Escenario 2:** <br>Dado que una labor programada no pudo ser ejecutada, <br>Cuando el Gestor Operativo marca el estado como "Bloqueado" y detalla el motivo del impedimento, <br>Entonces el sistema guarda el registro y alerta de la desviación del plan. | **EP02** |
+| **US-09** | Confirmación de Conductor Asignado | Como padre de familia, quiero visualizar los datos del conductor asignado por la empresa y confirmar o rechazar la asignación para asegurarme de que el servicio es de mi conformidad. | **Escenario 1** <br>Dado que el Gestor Operativo modifica las configuraciones, <br>Cuando cambia el estado a "Paralizada" y documenta la justificación, <br>Entonces el sistema restringe la creación de nuevos requerimientos para dicha obra. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta paralizar la obra, <br>Cuando omite redactar la justificación obligatoria, <br>Entonces el sistema bloquea la actualización del estado. | **EP02** |
+| **US-10** | Consulta de Precios | Como padre de familia, quiero ver los costos de las distintas movilidades para elegir la que se ajuste a mi presupuesto. | **Escenario 1:** <br>Dado que el Gestor Operativo tiene acceso al proyecto asignado, <br>Cuando el sistema procesa el estado actual de la obra, <br>Entonces el sistema expone el porcentaje de avance, la cantidad de RNC abiertos, el personal activo y las alertas de stock crítico de forma unificada. | **EP02** |
+| **US-11** | Admisión de Alumnos | Como conductor de movilidad escolar, quiero registrar nuevos alumnos en mi lista para incluir sus datos, casa y colegio en los recorridos. | **Escenario 1** <br>Dado que el Gestor Operativo gestiona las cuentas, <br>Cuando asigna el rol de "Equipo de Logística" a un perfil básico, <br>Entonces el sistema otorga acceso al módulo de inventarios y revoca permisos de otras áreas. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo visualiza su propio perfil, <br>Cuando intenta modificar sus propias credenciales, <br>Entonces el sistema impide la acción para evitar que pierda sus privilegios. | **EP02** |
+| **US-12** | Registro de Múltiples Hijos | Como padre de familia, quiero registrar a más de un hijo en mi cuenta para monitorear a todos desde una sola aplicación. | **Escenario 1** <br>Dado que el Gestor Operativo accede a las opciones de respaldo, <br>Cuando solicita la información en un formato específico, <br>Entonces el sistema compila los datos y provee un archivo descargable. <br><br>**Escenario 2:** <br>Dado que un usuario sin permisos intenta ejecutar un respaldo, <br>Cuando solicita la acción de exportación global, <br>Entonces el sistema le deniega el acceso por falta de permisos. | **EP02** |
+| **US-13** | Mantenimiento y Documentación del Vehículo | Como conductor de movilidad escolar, quiero registrar el mantenimiento preventivo y SOAT de mi vehículo para cumplir con las normativas de tránsito vigentes. | **Escenario 1:** <br>Dado que el Equipo de Logística identifica una merma, <br>Cuando registra la cantidad y la categoriza como pérdida, <br>Entonces el sistema deduce el material del inventario activo. | **EP03** |
+| **US-14** | Gestión de Licencias y Antecedentes | Como conductor de movilidad escolar, quiero registrar y actualizar mis licencias de conducir y antecedentes penales para cumplir con los estándares de seguridad exigidos por las autoridades y la empresa. | **Escenario 1** <br>Dado que el cliente ingresa con su perfil específico, <br>Cuando navega por los módulos del proyecto, <br>Entonces el sistema restringe totalmente sus permisos de creación, edición o eliminación. <br><br>**Escenario 2:** <br>Dado que el cliente consulta la planificación, <br>Cuando intenta manipular las fechas o tareas establecidas, <br>Entonces el sistema rechaza las alteraciones y preserva la integridad de los datos. | **EP03** |
+| **US-15** | Registro de Gastos | Como conductor de movilidad escolar, quiero registrar los repostajes de combustible y gastos menores del vehículo para llevar un control de mis egresos diarios. | **Escenario 1** <br>Dado que un Gestor Operativo accede por primera vez a la plataforma, <br>Cuando proporciona sus datos de identidad y rol técnico <br>Entonces el sistema emite la confirmación de cuenta creada <br><br>**Escenario 2:** <br>Dado que un Gestor Operativo intenta registrarse <br>Cuando ingresa un correo electrónico que ya se encuentra activo en el sistema <br>Entonces el sistema rechaza la solicitud advirtiendo la duplicidad. | **EP03** |
+| **US-16** | Reporte de Kilometraje Diario | Como conductor de movilidad escolar, quiero registrar el kilometraje inicial y final de la jornada para llevar un control del desgaste del vehículo y rendimiento de combustible. | **Escenario 1** <br>Dado que el Gestor Operativo detecta una falla técnica, <br>Cuando proporciona la información de la incidencia (Título, Partida afectada, Descripción detallada) y adjunta la evidencia fotográfica, <br>Entonces el sistema genera un ticket de alerta trazable y notifica al equipo correspondiente. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta registrar la incidencia, <br>Cuando omite adjuntar la evidencia fotográfica obligatoria, <br>Entonces el sistema impide el registro y exige que se adjunte el respaldo visual. | **EP03** |
+| **US-17** | Control de Capacidad y Asientos | Como conductor de movilidad escolar, quiero visualizar el límite de asientos ocupados de mi vehículo para no exceder la capacidad reglamentaria permitida. | **Escenario 1** <br>Dado que el Gestor Operativo requiere materiales, <br>Cuando detalla el requerimiento (Insumo, Cantidad, Unidad y Fecha máxima), <br>Entonces el sistema genera una solicitud formal con un código de seguimiento. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta generar el requerimiento, <br>Cuando omite especificar la cantidad necesaria, <br>Entonces el sistema bloquea la acción y exige el volumen del material. | **EP03** |
+| **US-18** | Creación de Rutas | Como conductor de movilidad escolar, quiero trazar rutas y paradas personalizadas para optimizar el tiempo de recorrido. | **Escenario 1** <br>Dado que un material tiene configurado un límite mínimo, <br>Cuando el stock registrado desciende por debajo de dicho límite tras un despacho, <br>Entonces el sistema emite una advertencia de stock crítico. <br><br>**Escenario 2:** <br>Dado que el stock actual se encuentra por debajo del límite mínimo, <br>Cuando el sistema ejecuta la verificación programada, <br>Entonces envía automáticamente una notificación de reposición al Equipo de Logística. | **EP04** |
+| **US-19** | Visualización de Alumnos por Parada | Como conductor de movilidad escolar, quiero ver el listado específico de niños que debo recoger en cada parada programada para agilizar el embarque y evitar confusiones en la ruta. | **Escenario 1:** <br>Dado que el Equipo de Logística intenta procesar un pedido que excede el monto presupuestado, <br>Cuando acepta la solicitud de compra, <br>Entonces el sistema bloquea la operación e informa del exceso presupuestal. <br><br>**Escenario 2:** <br>Dado que el pedido se encuentra dentro del presupuesto disponible, <br>Cuando el Equipo de Logística acepta la solicitud, <br>Entonces el sistema aprueba la compra y actualiza el presupuesto utilizado. | **EP04** |
+| **US-20** | Cambio Temporal de Dirección de Recojo | Como padre de familia, quiero solicitar un cambio puntual en la dirección de recojo o entrega para cubrir situaciones excepcionales, como quedarme en casa de un familiar. | **Escenario 1** <br>Dado que el Gestor Operativo aprueba la partida técnica, <br>Cuando proporciona el código numérico de seguridad válido, <br>Entonces el sistema sella digitalmente el documento de conformidad. <br><br>**Escenario 2** <br>Dado que el Gestor Operativo intenta validar la firma, <br>Cuando ingresa un código de seguridad incorrecto o con longitud inválida, <br>Entonces el sistema rechaza la firma y mantiene el acta en estado pendiente. | **EP04** |
+| **US-21** | Notificación de Ausencia del Alumno | Como padre de familia, quiero avisar al conductor que mi hijo no asistirá ese día para que no pierda tiempo esperándolo en la parada. | **Escenario 1** <br>Dado que existe una solicitud en estado pendiente, <br>Cuando el Equipo de Logística aprueba el requerimiento, <br>Entonces el sistema actualiza el estado a "En proceso de compra" para visibilidad del solicitante. <br><br>**Escenario 2:** <br>Dado que el Equipo de Logística decide rechazar la solicitud, <br>Cuando intenta confirmar el rechazo sin proporcionar una justificación, <br>Entonces el sistema impide la acción hasta que se detalle el motivo. | **EP04** |
+| **US-22** | Reasignación de Rutas por Ausencias | Como administrador de la empresa de movilidad escolar, quiero reasignar conductores a diferentes rutas para optimizar la flota ante ausencias imprevistas del personal. | **Escenario 1:** <br>Dado que el Gestor Operativo evalúa la jornada, <br>Cuando registra un avance válido correspondiente a partida programada en el cronograma, <br>Entonces el sistema actualiza el estado de la partida para ese día. <br><br>**Escenario 2:** <br>Dado que una labor programada no pudo ser ejecutada, <br>Cuando el Gestor Operativo marca el estado como "Bloqueado" y detalla el motivo del impedimento, <br>Entonces el sistema guarda el registro y alerta de la desviación del plan. | **EP04** |
+| **US-23** | Check de Seguridad | Como conductor de movilidad escolar, quiero una lista de chequeo del estado del vehículo para garantizar la seguridad de los niños que transporto. | **Escenario 1** <br>Dado que el Gestor Operativo modifica las configuraciones, <br>Cuando cambia el estado a "Paralizada" y documenta la justificación, <br>Entonces el sistema restringe la creación de nuevos requerimientos para dicha obra. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta paralizar la obra, <br>Cuando omite redactar la justificación obligatoria, <br>Entonces el sistema bloquea la actualización del estado. | **EP05** |
+| **US-24** | Inicio de la Ruta | Como conductor de movilidad escolar, quiero activar la ruta para notificar a los padres que voy en camino a recoger a sus hijos. | **Escenario 1:** <br>Dado que el Gestor Operativo tiene acceso al proyecto asignado, <br>Cuando el sistema procesa el estado actual de la obra, <br>Entonces el sistema expone el porcentaje de avance, la cantidad de RNC abiertos, el personal activo y las alertas de stock crítico de forma unificada. | **EP05** |
+| **US-25** | Marcación de Abordaje | Como conductor de movilidad escolar, quiero registrar el abordaje de cada niño para confirmar que subió al vehículo. | **Escenario 1** <br>Dado que el Gestor Operativo gestiona las cuentas, <br>Cuando asigna el rol de "Equipo de Logística" a un perfil básico, <br>Entonces el sistema otorga acceso al módulo de inventarios y revoca permisos de otras áreas. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo visualiza su propio perfil, <br>Cuando intenta modificar sus propias credenciales, <br>Entonces el sistema impide la acción para evitar que pierda sus privilegios. | **EP05** |
+| **US-26** | Navegación Integrada | Como conductor de movilidad escolar, quiero acceder a mapas externos para hallar la ruta más rápida en caso de imprevistos tras recoger a todos los niños. | **Escenario 1** <br>Dado que el Gestor Operativo accede a las opciones de respaldo, <br>Cuando solicita la información en un formato específico, <br>Entonces el sistema compila los datos y provee un archivo descargable. <br><br>**Escenario 2:** <br>Dado que un usuario sin permisos intenta ejecutar un respaldo, <br>Cuando solicita la acción de exportación global, <br>Entonces el sistema le deniega el acceso por falta de permisos. | **EP05** |
+| **US-27** | Finalización de Ruta | Como conductor de movilidad escolar, quiero finalizar la ruta para notificar a los padres que sus hijos ya fueron entregados o recogidos y poder retornar a mis actividades diarias. | **Escenario 1:** <br>Dado que el Equipo de Logística identifica una merma, <br>Cuando registra la cantidad y la categoriza como pérdida, <br>Entonces el sistema deduce el material del inventario activo. | **EP05** |
+| **US-28** | Sincronización de Datos Offline | Como conductor de movilidad escolar, quiero que la aplicación guarde localmente el registro de abordajes si pierdo conexión a internet para sincronizarlos automáticamente al recuperar señal. | **Escenario 1** <br>Dado que el cliente ingresa con su perfil específico, <br>Cuando navega por los módulos del proyecto, <br>Entonces el sistema restringe totalmente sus permisos de creación, edición o eliminación. <br><br>**Escenario 2:** <br>Dado que el cliente consulta la planificación, <br>Cuando intenta manipular las fechas o tareas establecidas, <br>Entonces el sistema rechaza las alteraciones y preserva la integridad de los datos. | **EP05** |
+| **US-29** | Bloqueo de Vías | Como conductor de movilidad escolar, quiero marcar una calle o tramo como bloqueado temporalmente para que el sistema sugiera un desvío inmediato en el mapa. | **Escenario 1** <br>Dado que un Gestor Operativo accede por primera vez a la plataforma, <br>Cuando proporciona sus datos de identidad y rol técnico <br>Entonces el sistema emite la confirmación de cuenta creada <br><br>**Escenario 2:** <br>Dado que un Gestor Operativo intenta registrarse <br>Cuando ingresa un correo electrónico que ya se encuentra activo en el sistema <br>Entonces el sistema rechaza la solicitud advirtiendo la duplicidad. | **EP05** |
+| **US-30** | Gestión de Notificaciones | Como conductor de movilidad escolar, quiero enviar avisos globales a los padres de los niños que llevo a bordo para informar eventos o imprevistos ocurridos en la ruta. | **Escenario 1** <br>Dado que el Gestor Operativo detecta una falla técnica, <br>Cuando proporciona la información de la incidencia (Título, Partida afectada, Descripción detallada) y adjunta la evidencia fotográfica, <br>Entonces el sistema genera un ticket de alerta trazable y notifica al equipo correspondiente. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta registrar la incidencia, <br>Cuando omite adjuntar la evidencia fotográfica obligatoria, <br>Entonces el sistema impide el registro y exige que se adjunte el respaldo visual. | **EP05** |
+| **US-31** | Botón de Pánico | Como conductor de movilidad escolar, quiero contar con un botón de SOS que llame directamente a un servicio de emergencias en caso de algún imprevisto grave. | **Escenario 1** <br>Dado que el Gestor Operativo requiere materiales, <br>Cuando detalla el requerimiento (Insumo, Cantidad, Unidad y Fecha máxima), <br>Entonces el sistema genera una solicitud formal con un código de seguimiento. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta generar el requerimiento, <br>Cuando omite especificar la cantidad necesaria, <br>Entonces el sistema bloquea la acción y exige el volumen del material. | **EP05** |
+| **US-32** | Reporte de Incidencias | Como conductor de movilidad escolar, quiero mantener un registro de las incidencias presentadas a diario para reportárselo a los padres y estén al tanto de lo que ocurre. | **Escenario 1** <br>Dado que un material tiene configurado un límite mínimo, <br>Cuando el stock registrado desciende por debajo de dicho límite tras un despacho, <br>Entonces el sistema emite una advertencia de stock crítico. <br><br>**Escenario 2:** <br>Dado que el stock actual se encuentra por debajo del límite mínimo, <br>Cuando el sistema ejecuta la verificación programada, <br>Entonces envía automáticamente una notificación de reposición al Equipo de Logística. | **EP05** |
+| **US-33** | Rastreo en Tiempo Real | Como padre de familia, quiero visualizar el vehículo en el mapa para saber la ubicación de mi hijo si es que llega o esta en camino. | **Escenario 1:** <br>Dado que el Equipo de Logística intenta procesar un pedido que excede el monto presupuestado, <br>Cuando acepta la solicitud de compra, <br>Entonces el sistema bloquea la operación e informa del exceso presupuestal. <br><br>**Escenario 2:** <br>Dado que el pedido se encuentra dentro del presupuesto disponible, <br>Cuando el Equipo de Logística acepta la solicitud, <br>Entonces el sistema aprueba la compra y actualiza el presupuesto utilizado. | **EP06** |
+| **US-34** | Alerta de Proximidad | Como padre de familia, quiero recibir un aviso previo de que mi hijo está por llegar a mi hogar para recibirlo y no dejarlo esperando afuera. | **Escenario 1** <br>Dado que el Gestor Operativo aprueba la partida técnica, <br>Cuando proporciona el código numérico de seguridad válido, <br>Entonces el sistema sella digitalmente el documento de conformidad. <br><br>**Escenario 2** <br>Dado que el Gestor Operativo intenta validar la firma, <br>Cuando ingresa un código de seguridad incorrecto o con longitud inválida, <br>Entonces el sistema rechaza la firma y mantiene el acta en estado pendiente. | **EP06** |
+| **US-35** | Confirmación de Llegada | Como padre de familia, quiero recibir un aviso de que mi hijo llegó al colegio para estar tranquilo y dedicarme a mis actividades. | **Escenario 1** <br>Dado que existe una solicitud en estado pendiente, <br>Cuando el Equipo de Logística aprueba el requerimiento, <br>Entonces el sistema actualiza el estado a "En proceso de compra" para visibilidad del solicitante. <br><br>**Escenario 2:** <br>Dado que el Equipo de Logística decide rechazar la solicitud, <br>Cuando intenta confirmar el rechazo sin proporcionar una justificación, <br>Entonces el sistema impide la acción hasta que se detalle el motivo. | **EP06** |
+| **US-36** | Geocerca del Colegio | Como padre de familia, quiero recibir una notificación automática cuando el vehículo entre o salga del colegio para saber que mi hijo llegó o partió. | **Escenario 1:** <br>Dado que el Gestor Operativo evalúa la jornada, <br>Cuando registra un avance válido correspondiente a partida programada en el cronograma, <br>Entonces el sistema actualiza el estado de la partida para ese día. <br><br>**Escenario 2:** <br>Dado que una labor programada no pudo ser ejecutada, <br>Cuando el Gestor Operativo marca el estado como "Bloqueado" y detalla el motivo del impedimento, <br>Entonces el sistema guarda el registro y alerta de la desviación del plan. | **EP06** |
+| **US-37** | Alerta de Retraso Prolongado | Como padre de familia, quiero recibir una alerta cuando la ruta presente un retraso mayor al habitual para estar informado sin necesidad de revisar el mapa constantemente. | **Escenario 1** <br>Dado que el Gestor Operativo modifica las configuraciones, <br>Cuando cambia el estado a "Paralizada" y documenta la justificación, <br>Entonces el sistema restringe la creación de nuevos requerimientos para dicha obra. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo intenta paralizar la obra, <br>Cuando omite redactar la justificación obligatoria, <br>Entonces el sistema bloquea la actualización del estado. | **EP06** |
+| **US-38** | Chat Interno Conductor - Padre | Como usuario (conductor o padre), quiero comunicarme mediante un chat interno para coordinar detalles específicos sin usar mensajería externa. | **Escenario 1:** <br>Dado que el Gestor Operativo tiene acceso al proyecto asignado, <br>Cuando el sistema procesa el estado actual de la obra, <br>Entonces el sistema expone el porcentaje de avance, la cantidad de RNC abiertos, el personal activo y las alertas de stock crítico de forma unificada. | **EP06** |
+| **US-39** | Calificación del Servicio | Como padre de familia, quiero calificar el desempeño del conductor y la puntualidad del servicio para garantizar la calidad del servicio de transporte. | **Escenario 1** <br>Dado que el Gestor Operativo gestiona las cuentas, <br>Cuando asigna el rol de "Equipo de Logística" a un perfil básico, <br>Entonces el sistema otorga acceso al módulo de inventarios y revoca permisos de otras áreas. <br><br>**Escenario 2:** <br>Dado que el Gestor Operativo visualiza su propio perfil, <br>Cuando intenta modificar sus propias credenciales, <br>Entonces el sistema impide la acción para evitar que pierda sus privilegios. | **EP07** |
+| **US-40** | Historial de Asistencia | Como padre de familia, quiero consultar el registro histórico de asistencia de mi hijo para verificar los días en que mi hijo usó el servicio de transporte. | **Escenario 1** <br>Dado que el Gestor Operativo accede a las opciones de respaldo, <br>Cuando solicita la información en un formato específico, <br>Entonces el sistema compila los datos y provee un archivo descargable. <br><br>**Escenario 2:** <br>Dado que un usuario sin permisos intenta ejecutar un respaldo, <br>Cuando solicita la acción de exportación global, <br>Entonces el sistema le deniega el acceso por falta de permisos. | **EP07** |
+| **US-41** | Gestión de Reclamos | Como padre de familia, quiero presentar un reclamo formal sobre el servicio para que el administrador lo revise y dé una solución. | **Escenario 1:** <br>Dado que el Equipo de Logística identifica una merma, <br>Cuando registra la cantidad y la categoriza como pérdida, <br>Entonces el sistema deduce el material del inventario activo. | **EP07** |
 
-#### Epics Identificadas:
-* **EP01:** Identity & Access Management
-* **EP02:** Routing & Planning
-* **EP03:** Operations & Tracking
-* **EP04:** Notifications & Ecosystem
-
-<br>
-
-<table>
-  <tr>
-    <th width="15%">Story ID</th>
-    <th width="25%">User</th>
-    <th width="20%">Priority</th>
-    <th width="40%">Epic</th>
-  </tr>
-  <tr>
-    <td>US01</td>
-    <td>Administrador</td>
-    <td>High</td>
-    <td>EP01: Identity & Access Management</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title:</strong> Creación de cuenta de flota y suscripción</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Description:</strong> Como Administrador, quiero registrar los datos de mi empresa y seleccionar un plan de suscripción para habilitar el uso del ecosistema a mis conductores.</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
-      <b>Escenario:</b> Registro exitoso de una nueva flota<br>
-      <b>Given</b> un administrador no autenticado proporciona información de registro y credenciales de pago válidas,<br>
-      <b>When</b> el administrador confirma la solicitud de suscripción,<br>
-      <b>Then</b> el sistema aprovisiona un nuevo workspace para la empresa, activa el estado de la cuenta y envía un correo electrónico de confirmación.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<table>
-  <tr>
-    <th width="15%">Story ID</th>
-    <th width="25%">User</th>
-    <th width="20%">Priority</th>
-    <th width="40%">Epic</th>
-  </tr>
-  <tr>
-    <td>US02</td>
-    <td>Conductor</td>
-    <td>High</td>
-    <td>EP03: Operations & Tracking</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title:</strong> Inicio de recorrido de la ruta asignada</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Description:</strong> Como Conductor, quiero iniciar oficialmente mi recorrido diario para que el sistema comience a registrar mis coordenadas.</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
-      <b>Escenario:</b> Activación de ruta y GPS<br>
-      <b>Given</b> un conductor autenticado con una ruta programada pendiente para el día actual,<br>
-      <b>When</b> el conductor confirma el inicio de su recorrido,<br>
-      <b>Then</b> el sistema cambia el estado de la ruta a 'En Progreso' y comienza a registrar las coordenadas geográficas del dispositivo móvil en tiempo real.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<table>
-  <tr>
-    <th width="15%">Story ID</th>
-    <th width="25%">User</th>
-    <th width="20%">Priority</th>
-    <th width="40%">Epic</th>
-  </tr>
-  <tr>
-    <td>US03</td>
-    <td>Conductor</td>
-    <td>High</td>
-    <td>EP03: Operations & Tracking</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title:</strong> Registro de asistencia al abordar</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Description:</strong> Como Conductor, quiero confirmar la asistencia de un estudiante de manera ágil para mantener un registro exacto sin desviar mi atención del entorno.</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
-      <b>Escenario:</b> Check-in exitoso de un alumno<br>
-      <b>Given</b> un viaje en estado 'En Progreso' y un estudiante con estado 'Pendiente de recojo',<br>
-      <b>When</b> el conductor confirma la asistencia del estudiante,<br>
-      <b>Then</b> el sistema actualiza el estado del estudiante a 'A bordo', registra la marca de tiempo exacta y emite un evento de notificación de abordaje.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<table>
-  <tr>
-    <th width="15%">Story ID</th>
-    <th width="25%">User</th>
-    <th width="20%">Priority</th>
-    <th width="40%">Epic</th>
-  </tr>
-  <tr>
-    <td>US04</td>
-    <td>Padre de Familia</td>
-    <td>High</td>
-    <td>EP04: Notifications & Ecosystem</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title:</strong> Recepción de alerta preventiva por Geofencing</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Description:</strong> Como Padre de Familia, quiero recibir una alerta automatizada cuando la movilidad se encuentre cerca de mi hogar para preparar a mi hijo a tiempo.</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
-      <b>Escenario:</b> Disparo de notificación de proximidad<br>
-      <b>Given</b> un viaje en progreso y un perímetro virtual de 500 metros establecido alrededor de la ubicación de recojo,<br>
-      <b>When</b> las coordenadas geográficas del vehículo interceptan dicho perímetro virtual,<br>
-      <b>Then</b> el sistema despacha una notificación de proximidad al dispositivo vinculado a la cuenta del padre de familia.
-    </td>
-  </tr>
-</table>
-
-<br>
 
 #### Technical Stories
 
