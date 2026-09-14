@@ -1754,7 +1754,7 @@ La consulta del paso 2 materializa la regla de que ningún estudiante puede vinc
 | 7 | Event | Offline Log Synchronized | Trip Monitoring | Trip Monitoring |
 | 8 | Event | Student Boarded | Trip Monitoring | Notifications |
  
-![Escenario 02: Sincronización offline](resources\chapter-2\Domain-Message-Flows\2.png)
+![Escenario 02: Sincronización offline](.\resources\chapter-2\Domain-Message-Flows\2.png)
  
 El desfase entre los pasos 4 y 7 es la razón por la que el registro conserva el *timestamp* del dispositivo y no el de recepción del servidor: la bitácora debe reflejar cuándo ocurrió el hecho, no cuándo el sistema lo supo.
  
