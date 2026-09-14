@@ -600,7 +600,7 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 **USER STORIES**
 
-<!-- User Story 01 -->
+<!--US1-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -610,41 +610,44 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-01</td>
-    <td>Nuevo usuario</td>
+    <td>Nuevo Usuario</td>
     <td>Media</td>
     <td>EP01</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Elección de Roles</td>
+    <th>Title</th>
+    <td colspan="3">Elección de Roles</td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como nuevo usuario, quiero conocer las vistas y funcionalidades para elegir el rol que tomaré al utilizar la aplicación y acceder a ellas.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Selección de rol Padre</strong><br>
-      <strong>Dado que</strong> el usuario está en la sección de roles,<br>
-      <strong>Cuando</strong> elige el rol "Padre",<br>
-      <strong>Entonces</strong> el sistema muestra capturas de la App de padres.<br><br>
-      <strong>Escenario 2: Selección de rol Conductor</strong><br>
-      <strong>Dado que</strong> el usuario está en la sección de roles,<br>
-      <strong>Cuando</strong> elige el rol "Conductor",<br>
-      <strong>Entonces</strong> el sistema muestra la gestión de rutas.<br><br>
-      <strong>Escenario 3: Rol por defecto sin selección</strong><br>
-      <strong>Dado que</strong> el usuario no selecciona ninguna opción,<br>
-      <strong>Cuando</strong> visualiza la sección de roles,<br>
-      <strong>Entonces</strong> el sistema asigna un rol predeterminado o solicita una selección explícita.
-    </td>
+    <td colspan="4">Como nuevo usuario, quiero conocer las vistas y funcionalidades para elegir el rol que tomaré al utilizar la aplicación y acceder a ellas.</td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Selección de rol Padre</strong><br>
+    <strong>Dado que</strong> el usuario está en la sección de roles,<br>
+    <strong>Cuando</strong> elige el rol "Padre",<br>
+    <strong>Entonces</strong> el sistema muestra capturas de la App de padres.<br>
+    <br>
+    <strong>Escenario 2: Selección de rol Conductor</strong><br>
+    <strong>Dado que</strong> el usuario está en la sección de roles,<br>
+    <strong>Cuando</strong> elige el rol "Conductor",<br>
+    <strong>Entonces</strong> el sistema muestra la gestión de rutas.<br>
+    <br>
+    <strong>Escenario 3: Rol por defecto sin selección</strong><br>
+    <strong>Dado que</strong> el usuario no selecciona ninguna opción,<br>
+    <strong>Cuando</strong> visualiza la sección de roles,<br>
+    <strong>Entonces</strong> el sistema muestra el rol "Admin" por defecto.<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 02 -->
+<!--US2-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -654,37 +657,44 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-02</td>
-    <td>Usuario registrado</td>
-    <td>Alta</td>
+    <td>Nuevo usuario</td>
+    <td>Baja</td>
     <td>EP01</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Inicio de sesión seguro</td>
+    <th>Title</th>
+    <td colspan="3">Sección Tutorial</td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario registrado, quiero iniciar sesión con mis credenciales para acceder a mi perfil personalizado y reportes de movilidad urbana.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Credenciales válidas</strong><br>
-      <strong>Dado que</strong> el usuario ingresa un correo y contraseña correctos,<br>
-      <strong>Cuando</strong> hace clic en "Iniciar Sesión",<br>
-      <strong>Entonces</strong> el sistema redirige al dashboard principal.<br><br>
-      <strong>Escenario 2: Credenciales inválidas</strong><br>
-      <strong>Dado que</strong> el usuario ingresa datos incorrectos,<br>
-      <strong>Cuando</strong> intenta iniciar sesión,<br>
-      <strong>Entonces</strong> el sistema muestra un mensaje de error de autenticación.
-    </td>
+    <td colspan="4">Como nuevo usuario, quiero ver los pasos iniciales para saber cómo empezar a utilizar la aplicación.</td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Navegación por infografía</strong><br>
+    <strong>Dado que</strong> el usuario visualiza la infografía del tutorial,<br>
+    <strong>Cuando</strong> sigue los pasos del 1 al 5,<br>
+    <strong>Entonces</strong> comprende el flujo de contrato del servicio.<br>
+    <br>
+    <strong>Escenario 2: Reproducción del video demo</strong><br>
+    <strong>Dado que</strong> el usuario ve la sección de tutorial,<br>
+    <strong>Cuando</strong> pulsa el botón "Play" del video demo,<br>
+    <strong>Entonces</strong> visualiza el funcionamiento real de la aplicación.<br>
+    <br>
+    <strong>Escenario 3: Compatibilidad con navegador antiguo</strong><br>
+    <strong>Dado que</strong> el usuario accede desde un dispositivo antiguo,<br>
+    <strong>Cuando</strong> el video intenta cargar,<br>
+    <strong>Entonces</strong> el sistema muestra una imagen estática en su lugar.<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 03 -->
+<!--US3-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -694,33 +704,44 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-03</td>
-    <td>Ciudadano / Conductor</td>
-    <td>Alta</td>
-    <td>EP02</td>
+    <td>Nuevo usuario</td>
+    <td>Baja</td>
+    <td>EP01</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Reporte en tiempo real de incidentes viales</td>
+    <th>Title</th>
+    <td colspan="3">Preguntas Frecuentes (FAQ)</td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario de la vía, quiero reportar incidentes en tiempo real (baches, tráfico, bloqueos) para alertar a otros conductores y peatones.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Envío exitoso de reporte</strong><br>
-      <strong>Dado que</strong> el usuario selecciona la ubicación y el tipo de incidencia,<br>
-      <strong>Cuando</strong> presiona "Enviar reporte",<br>
-      <strong>Entonces</strong> el incidente se refleja inmediatamente en el mapa interactivo.
-    </td>
+    <td colspan="4">Como nuevo usuario, quiero ver dudas comunes para evitar llamadas de soporte.</td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Despliegue de respuesta</strong><br>
+    <strong>Dado que</strong> el usuario visualiza la lista de preguntas frecuentes,<br>
+    <strong>Cuando</strong> toca una pregunta,<br>
+    <strong>Entonces</strong> el sistema despliega la respuesta correspondiente.<br>
+    <br>
+    <strong>Escenario 2: Búsqueda por palabra clave</strong><br>
+    <strong>Dado que</strong> el usuario usa el buscador de FAQs,<br>
+    <strong>Cuando</strong> escribe "precio",<br>
+    <strong>Entonces</strong> el sistema filtra las preguntas relacionadas a ese término.<br>
+    <br>
+    <strong>Escenario 3: Contacto por duda no resuelta</strong><br>
+    <strong>Dado que</strong> el usuario no encuentra respuesta a su duda,<br>
+    <strong>Cuando</strong> llega al final de la lista de FAQs,<br>
+    <strong>Entonces</strong> el sistema muestra un botón de contacto directo.<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 04 -->
+<!--US4-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -730,69 +751,44 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-04</td>
-    <td>Ciudadano</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Visualización de mapa interactivo</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como ciudadano, quiero visualizar un mapa interactivo con la ubicación de los reportes viales para planificar mejor mis desplazamientos.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Carga de marcadores</strong><br>
-      <strong>Dado que</strong> el usuario accede a la sección de mapa,<br>
-      <strong>Cuando</strong> la interfaz termina de cargar,<br>
-      <strong>Entonces</strong> se muestran los marcadores activos de incidencias en la zona.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 05 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-05</td>
-    <td>Usuario frecuente</td>
+    <td>Padre de familia</td>
     <td>Baja</td>
     <td>EP01</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Gestión de perfil de usuario</td>
+    <th>Title</th>
+    <td colspan="3">Demo Interactiva</td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario frecuente, quiero editar la información de mi perfil para mantener mis datos de contacto y preferencias actualizados.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Actualización exitosa</strong><br>
-      <strong>Dado que</strong> el usuario modifica sus datos en la sección de perfil,<br>
-      <strong>Cuando</strong> hace clic en "Guardar cambios",<br>
-      <strong>Entonces</strong> el sistema actualiza la información y muestra un mensaje de éxito.
-    </td>
+    <td colspan="4">Como padre de familia, quiero probar un simulador de mapa antes de establecer algún contrato para verificar que es la experiencia que deseo tener respecto al transporte de mi hijo.</td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Reproducción de la demo</strong><br>
+    <strong>Dado que</strong> el padre de familia ingresa al mapa demo,<br>
+    <strong>Cuando</strong> pulsa el botón "Play",<br>
+    <strong>Entonces</strong> visualiza un bus moviéndose de forma ficticia por el mapa.<br>
+    <br>
+    <strong>Escenario 2: Aviso de prueba en punto de llegada</strong><br>
+    <strong>Dado que</strong> la demo está en ejecución,<br>
+    <strong>Cuando</strong> el bus ficticio llega a un punto de parada,<br>
+    <strong>Entonces</strong> el sistema reproduce un aviso de prueba.<br>
+    <br>
+    <strong>Escenario 3: Dispositivo no compatible con la demo</strong><br>
+    <strong>Dado que</strong> el dispositivo del usuario no cumple con los requisitos mínimos de la aplicación,<br>
+    <strong>Cuando</strong> intenta abrir la demo interactiva,<br>
+    <strong>Entonces</strong> el sistema le sugiere actualizar la aplicación o el sistema operativo de su dispositivo.<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 06 -->
+<!--US5-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -801,34 +797,45 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td>US-06</td>
-    <td>Nuevo usuario</td>
-    <td>Alta</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td>EP01</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Registro de cuenta nueva</td>
+    <th>Title</th>
+    <td colspan="3"></td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como nuevo usuario, quiero registrarme en la plataforma mediante un formulario para tener acceso completo a las funciones de la comunidad.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Registro completado</strong><br>
-      <strong>Dado que</strong> el usuario completa todos los campos obligatorios correctamente,<br>
-      <strong>Cuando</strong> presiona "Registrarse",<br>
-      <strong>Entonces</strong> el sistema crea la cuenta y envía un correo de confirmación.
-    </td>
+    <td colspan="4"></td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 07 -->
+<!--US6-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -837,34 +844,45 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td>US-07</td>
-    <td>Administrador</td>
-    <td>Alta</td>
-    <td>EP03</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Moderación de reportes de usuarios</td>
+    <th>Title</th>
+    <td colspan="3"></td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero revisar y moderar los reportes enviados por los usuarios para evitar información falsa o spam en el sistema.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Eliminación de reporte falso</strong><br>
-      <strong>Dado que</strong> el administrador identifica un reporte inválido en el panel,<br>
-      <strong>Cuando</strong> selecciona la opción "Eliminar",<br>
-      <strong>Entonces</strong> el reporte se oculta del mapa público.
-    </td>
+    <td colspan="4"></td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 08 -->
+<!--US7-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -873,34 +891,45 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td>US-08</td>
-    <td>Ciudadano</td>
-    <td>Media</td>
-    <td>EP02</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Filtro de reportes por categoría</td>
+    <th>Title</th>
+    <td colspan="3"></td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como ciudadano, quiero filtrar los reportes en el mapa según el tipo de incidencia para visualizar únicamente lo que me interesa.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Aplicar filtro de baches</strong><br>
-      <strong>Dado que</strong> el usuario selecciona la categoría "Baches" en el menú de filtros,<br>
-      <strong>Cuando</strong> aplica la selección,<br>
-      <strong>Entonces</strong> el mapa muestra exclusivamente los incidentes relacionados con baches.
-    </td>
+    <td colspan="4"></td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 09 -->
+<!--US8-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -909,34 +938,45 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td>US-09</td>
-    <td>Usuario activo</td>
-    <td>Media</td>
-    <td>EP02</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Validación comunitaria de reportes</td>
+    <th>Title</th>
+    <td colspan="3"></td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario activo, quiero votar a favor o en contra de la veracidad de un reporte para certificar la información junto a la comunidad.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Votar a favor de un reporte</strong><br>
-      <strong>Dado que</strong> el usuario visualiza el detalle de un reporte activo,<br>
-      <strong>Cuando</strong> presiona el botón "Confirmar reporte",<br>
-      <strong>Entonces</strong> el contador de validaciones aumenta en uno.
-    </td>
+    <td colspan="4"></td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 10 -->
+<!--US9-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -945,34 +985,45 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td>US-10</td>
-    <td>Conductor</td>
-    <td>Alta</td>
-    <td>EP02</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Cálculo de rutas alternas por congestión</td>
+    <th>Title</th>
+    <td colspan="3"></td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como conductor, quiero recibir sugerencias de rutas alternas cuando haya reportes de alta congestión para optimizar mi tiempo de viaje.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Sugerencia automática de ruta</strong><br>
-      <strong>Dado que</strong> el sistema detecta un bloqueo o tráfico pesado en la ruta actual,<br>
-      <strong>Cuando</strong> el usuario solicita indicaciones hacia su destino,<br>
-      <strong>Entonces</strong> la aplicación calcula y muestra una ruta alternativa evitando el incidente.
-    </td>
+    <td colspan="4"></td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
 </table>
 
-<br>
-
-<!-- User Story 11 -->
+<!--US10-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -981,1111 +1032,43 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td>US-11</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title</strong><br>Recuperación de contraseña</td>
+    <th>Title</th>
+    <td colspan="3"></td>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario que olvidó su clave, quiero solicitar la recuperación de mi contraseña mediante correo electrónico para restaurar el acceso.
-    </td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Envío de enlace de recuperación</strong><br>
-      <strong>Dado que</strong> el usuario ingresa su correo registrado en la opción de recuperación,<br>
-      <strong>Cuando</strong> presiona "Enviar",<br>
-      <strong>Entonces</strong> el sistema envía un enlace seguro para reestablecer la contraseña.
-    </td>
+    <td colspan="4"></td>
   </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
 </table>
-
-<br>
-
-<!-- User Story 12 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-12</td>
-    <td>Usuario móvil</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Adjuntar fotografía en reportes</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario de la app móvil, quiero adjuntar una fotografía al crear un reporte para evidenciar de manera visual el problema en la vía.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Carga de imagen desde galería o cámara</strong><br>
-      <strong>Dado que</strong> el usuario se encuentra creando un reporte de incidente,<br>
-      <strong>Cuando</strong> selecciona la opción de adjuntar imagen y elige una foto,<br>
-      <strong>Entonces</strong> la imagen se previsualiza correctamente antes de enviar el formulario.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 13 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-13</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Visualización de historial de reportes personales</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario registrado, quiero consultar el historial de los reportes que he creado para verificar su estado actual.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Consulta del historial</strong><br>
-      <strong>Dado que</strong> el usuario accede a la sección "Mis Reportes",<br>
-      <strong>Cuando</strong> carga la vista,<br>
-      <strong>Entonces</strong> se listan todas las incidencias que ha reportado previamente con su estado (Pendiente, Validado, Resuelto).
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 14 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-14</td>
-    <td>Administrador</td>
-    <td>Media</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Gestión de cuentas de usuarios</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero listar y gestionar los usuarios registrados en el sistema para bloquear cuentas infractoras si es necesario.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Bloqueo de usuario</strong><br>
-      <strong>Dado que</strong> el administrador visualiza la lista de usuarios en el panel de control,<br>
-      <strong>Cuando</strong> selecciona la opción "Suspender cuenta" en un usuario específico,<br>
-      <strong>Entonces</strong> el sistema bloquea el acceso de dicho usuario a la plataforma.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 15 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-15</td>
-    <td>Conductor</td>
-    <td>Alta</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Alertas sonoras de proximidad a incidentes</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como conductor en ruta, quiero recibir alertas sonoras cuando me esté acercando a un reporte vial crítico para prevenir accidentes.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Activación de alerta por proximidad</strong><br>
-      <strong>Dado que</strong> el usuario se encuentra navegando con el GPS activo,<br>
-      <strong>Cuando</strong> se encuentra a menos de 200 metros de un incidente reportado,<br>
-      <strong>Entonces</strong> la aplicación emite una alerta sonora y visual en pantalla.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 16 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-16</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Cierre de sesión seguro</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario autenticado, quiero cerrar sesión de manera segura para evitar que otras personas accedan a mi cuenta en dispositivos compartidos.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Cierre exitoso</strong><br>
-      <strong>Dado que</strong> el usuario hace clic en el botón "Cerrar sesión" en su perfil,<br>
-      <strong>Cuando</strong> confirma la acción,<br>
-      <strong>Entonces</strong> el sistema borra el token de sesión y redirige a la pantalla de inicio o login.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 17 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-17</td>
-    <td>Ciudadano</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Búsqueda de ubicaciones y direcciones</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como ciudadano, quiero buscar una dirección específica en la barra de búsqueda para centrar el mapa en esa zona de la ciudad.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Búsqueda exitosa de dirección</strong><br>
-      <strong>Dado que</strong> el usuario escribe una dirección en la barra de búsqueda,<br>
-      <strong>Cuando</strong> presiona enter o selecciona una sugerencia,<br>
-      <strong>Entonces</strong> el mapa se desplaza y centra automáticamente en la ubicación indicada.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 18 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-18</td>
-    <td>Usuario activo</td>
-    <td>Baja</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Comentarios en reportes viales</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario de la plataforma, quiero dejar comentarios en los reportes para aportar detalles adicionales sobre el estado del incidente.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Publicación de comentario</strong><br>
-      <strong>Dado que</strong> el usuario visualiza el detalle de un reporte y escribe un comentario,<br>
-      <strong>Cuando</strong> hace clic en "Comentar",<br>
-      <strong>Entonces</strong> el texto se añade al hilo de comentarios del reporte con su respectivo autor y hora.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 19 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-19</td>
-    <td>Administrador</td>
-    <td>Alta</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Panel de métricas y estadísticas generales</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero visualizar un panel de estadísticas con el volumen de reportes y usuarios activos para analizar el uso de la plataforma.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Carga de gráficos estadísticos</strong><br>
-      <strong>Dado que</strong> el administrador accede al panel de métricas,<br>
-      <strong>Когда</strong> selecciona un rango de fechas,<br>
-      <strong>Entonces</strong> el sistema muestra gráficos actualizados de reportes generados y resueltos.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 20 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-20</td>
-    <td>Ciudadano</td>
-    <td>Media</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Cambio de idioma en la interfaz</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero cambiar el idioma de la interfaz entre español e inglés para navegar cómodamente según mi preferencia.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Cambio exitoso a inglés</strong><br>
-      <strong>Dado que</strong> el usuario se encuentra en la configuración de la app y selecciona el idioma inglés,<br>
-      <strong>Cuando</strong> guarda la preferencia,<br>
-      <strong>Entonces</strong> todos los textos estáticos de la interfaz cambian al idioma inglés.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 21 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-21</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Modo oscuro en la interfaz web y móvil</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero activar el modo oscuro en la aplicación para reducir la fatiga visual al utilizarla en entornos con poca luz.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Activación de tema oscuro</strong><br>
-      <strong>Dado que</strong> el usuario activa la opción de modo oscuro en los ajustes,<br>
-      <strong>Cuando</strong> aplica el cambio,<br>
-      <strong>Entonces</strong> la paleta de colores de la interfaz adopta tonos oscuros de manera inmediata.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 22 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-22</td>
-    <td>Conductor</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Guardar ubicaciones favoritas</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como conductor, quiero guardar direcciones frecuentes (como casa o trabajo) como favoritas para acceder rápidamente a rutas hacia ellas.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Guardar nueva dirección favorita</strong><br>
-      <strong>Dado que</strong> el usuario busca una ubicación en el mapa,<br>
-      <strong>Cuando</strong> selecciona la opción "Guardar en favoritos" y le asigna un nombre,<br>
-      <strong>Entonces</strong> la dirección se almacena en su lista de accesos rápidos.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 23 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-23</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Sección de preguntas frecuentes (FAQ)</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario nuevo, quiero consultar una sección de preguntas frecuentes para resolver dudas comunes sobre el funcionamiento de la app.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Visualización de FAQs</strong><br>
-      <strong>Dado que</strong> el usuario hace clic en la opción "Ayuda / FAQ" del menú principal,<br>
-      <strong>Cuando</strong> abre la sección,<br>
-      <strong>Entonces</strong> se despliega una lista organizada de preguntas y respuestas útiles.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 24 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-24</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Formulario de contacto y soporte técnico</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero enviar un mensaje a través de un formulario de contacto para reportar problemas técnicos o sugerencias al equipo.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Envío exitoso de mensaje de soporte</strong><br>
-      <strong>Dado que</strong> el usuario completa los campos de asunto y mensaje en soporte,<br>
-      <strong>Cuando</strong> presiona "Enviar mensaje",<br>
-      <strong>Entonces</strong> el sistema registra la consulta y muestra una confirmación en pantalla.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 25 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-25</td>
-    <td>Usuario activo</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Sistema de reputación y puntos por aportes</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario activo, quiero ganar puntos de reputación cada vez que mis reportes sean validados para incentivar la participación constante.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Acreditación de puntos</strong><br>
-      <strong>Dado que</strong> un reporte creado por el usuario alcanza el umbral de confirmación comunitaria,<br>
-      <strong>Cuando</strong> el sistema procesa la validación,<br>
-      <strong>Entonces</strong> se suman puntos automáticamente al perfil del usuario.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 26 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-26</td>
-    <td>Administrador</td>
-    <td>Baja</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Exportación de reportes a formato CSV</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero exportar los registros de reportes viales a un archivo CSV para realizar análisis externos o auditorías.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Descarga de archivo CSV</strong><br>
-      <strong>Dado que</strong> el administrador se encuentra en el panel de gestión de reportes,<br>
-      <strong>Cuando</strong> hace clic en el botón "Exportar a CSV",<br>
-      <strong>Entonces</strong> el navegador inicia la descarga del archivo con los datos estructurados.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 27 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-27</td>
-    <td>Ciudadano</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Compartir reporte en redes sociales o mensajería</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero compartir un reporte específico mediante un enlace o app de mensajería para alertar a conocidos de forma rápida.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Generación de enlace de compartir</strong><br>
-      <strong>Dado que</strong> el usuario visualiza una alerta o incidente en el mapa,<br>
-      <strong>Cuando</strong> presiona el botón "Compartir",<br>
-      <strong>Entonces</strong> se despliegan opciones para copiar el enlace o enviarlo directamente por WhatsApp u otras apps.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 28 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-28</td>
-    <td>Conductor</td>
-    <td>Baja</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Configuración de radios de alerta de tráfico</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como conductor, quiero configurar el radio de distancia para recibir notificaciones preventivas de incidentes cercanos en mi ruta.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Ajuste de radio de notificación</strong><br>
-      <strong>Dado que</strong> el usuario accede a la configuración de alertas en su perfil,<br>
-      <strong>Cuando</strong> modifica el radio a 5 kilómetros y guarda los cambios,<br>
-      <strong>Entonces</strong> el sistema ajusta el rango de proximidad para futuras notificaciones.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 29 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-29</td>
-    <td>Administrador</td>
-    <td>Alta</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Gestión de roles y permisos de moderación</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador principal, quiero asignar roles de moderador a otros usuarios para delegar tareas de control de contenido.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Asignación de rol moderador</strong><br>
-      <strong>Dado que</strong> el administrador visualiza los detalles de un usuario en el panel,<br>
-      <strong>Когда</strong> cambia su rol a "Moderador" y guarda,<br>
-      <strong>Entonces</strong> el usuario adquiere permisos de revisión en su próxima sesión.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 30 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-30</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Visualización de términos y condiciones de servicio</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero consultar los términos y condiciones de uso de la plataforma para conocer las políticas de privacidad y responsabilidades.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Acceso al documento legal</strong><br>
-      <strong>Dado que</strong> el usuario hace clic en el enlace "Términos y Condiciones" en el registro o pie de página,<br>
-      <strong>Cuando</strong> se abre la vista,<br>
-      <strong>Entonces</strong> se muestra el texto completo de las políticas de uso de la aplicación.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 31 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-31</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Política de privacidad de datos personales</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero consultar la política de privacidad para entender cómo se protegen y tratan mis datos personales en la plataforma.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Consulta de política de privacidad</strong><br>
-      <strong>Dado que</strong> el usuario accede a la sección de política de privacidad desde el menú de configuración,<br>
-      <strong>Cuando</strong> la página carga,<br>
-      <strong>Entonces</strong> se visualizan claramente las cláusulas de resguardo de información.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 32 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-32</td>
-    <td>Conductor</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Visualización de estado del tráfico en tiempo real</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como conductor, quiero ver capas de colores sobre las vías principales indicando el flujo del tráfico para elegir caminos más despejados.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Capa de tráfico activa</strong><br>
-      <strong>Dado que</strong> el usuario activa la capa de tráfico en las opciones del mapa,<br>
-      <strong>Cuando</strong> visualiza las avenidas principales,<br>
-      <strong>Entonces</strong> se muestran líneas de colores (verde, amarillo, rojo) según la densidad vehicular.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 33 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-33</td>
-    <td>Usuario móvil</td>
-    <td>Alta</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Geolocalización automática al crear reporte</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario móvil, quiero que el sistema detecte automáticamente mi ubicación GPS al crear un reporte para agilizar el proceso sin ingresar coordenadas manuales.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Obtención exitosa de coordenadas GPS</strong><br>
-      <strong>Dado que</strong> el usuario otorga permisos de ubicación y presiona "Crear reporte",<br>
-      <strong>Cuando</strong> abre el mapa de ubicación del incidente,<br>
-      <strong>Entonces</strong> el marcador se posiciona automáticamente en su ubicación GPS actual.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 34 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-34</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Personalización de notificaciones push</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario, quiero habilitar o deshabilitar las notificaciones push en mi dispositivo para recibir solo los avisos que me interesen.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Desactivación de notificaciones</strong><br>
-      <strong>Dado que</strong> el usuario entra a las preferencias de notificación en su perfil,<br>
-      <strong>Cuando</strong> desactiva el interruptor de avisos de tráfico y guarda,<br>
-      <strong>Entonces</strong> deja de recibir notificaciones emergentes de esa categoría.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 35 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-35</td>
-    <td>Administrador</td>
-    <td>Media</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Configuración de parámetros globales del sistema</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero configurar parámetros generales de la app (como radios de validación o límites de reportes) desde el panel de control.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Actualización de parámetro global</strong><br>
-      <strong>Dado que</strong> el administrador modifica el valor del radio de validación en la configuración del sistema,<br>
-      <strong>Cuando</strong> hace clic en "Guardar cambios",<br>
-      <strong>Entonces</strong> el sistema aplica el nuevo parámetro en tiempo real para las nuevas validaciones.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 36 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-36</td>
-    <td>Usuario activo</td>
-    <td>Baja</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Visualización de ranking de contribuidores</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como usuario activo, quiero ver una tabla de clasificación con los usuarios que más reportes útiles realizan para fomentar una sana competencia en la comunidad.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Consulta del ranking mensual</strong><br>
-      <strong>Dado que</strong> el usuario accede a la sección "Comunidad / Ranking",<br>
-      <strong>Cuando</strong> selecciona el filtro mensual,<br>
-      <strong>Entonces</strong> se muestra la lista ordenada de los usuarios con mayor puntuación acumulada.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 37 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-37</td>
-    <td>Ciudadano</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Reporte de zonas de baja iluminación o inseguridad</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como ciudadano, quiero reportar zonas con deficiencias de iluminación o riesgos peatonales para advertir a otros transeúntes.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Creación de reporte de iluminación</strong><br>
-      <strong>Dado que</strong> el usuario selecciona la categoría "Peligro / Falta de luz" en el formulario de incidentes,<br>
-      <strong>Когда</strong> ubica el punto en el mapa y envía el reporte,<br>
-      <strong>Entonces</strong> la alerta aparece en el mapa con un icono distintivo de precaución peatonal.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 38 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-38</td>
-    <td>Administrador</td>
-    <td>Baja</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Revisión de bitácora (logs) de auditoría del sistema</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero revisar el registro de actividades y accesos (logs) del sistema para detectar comportamientos anómalos o fallas de seguridad.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Filtrado de logs de seguridad</strong><br>
-      <strong>Dado que</strong> el administrador ingresa a la sección de auditoría en el panel web,<br>
-      <strong>Cuando</strong> filtra por eventos de error de inicio de sesión,<br>
-      <strong>Entonces</strong> el sistema despliega el listado detallado con fechas, IPs y acciones asociadas.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 39 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-39</td>
-    <td>Conductor</td>
-    <td>Media</td>
-    <td>EP02</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Reporte de vehículos mal estacionados o bloqueos</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como conductor o transeúnte, quiero reportar vehículos mal estacionados que bloqueen el paso para notificar la obstrucción de la vía.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Envío exitoso de bloqueo vehicular</strong><br>
-      <strong>Dado que</strong> el usuario selecciona la categoría "Bloqueo vehicular",<br>
-      <strong>Cuando</strong> añade la descripción breve y adjunta una foto opcional,<br>
-      <strong>Entonces</strong> el reporte queda publicado en tiempo real en la capa de incidencias viales.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 40 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-40</td>
-    <td>Ciudadano</td>
-    <td>Baja</td>
-    <td>EP01</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Tutorial de bienvenida interactivo (Onboarding)</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como nuevo usuario, quiero visualizar un breve tutorial interactivo al iniciar sesión por primera vez para conocer rápidamente las funciones clave de la app.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Visualización del carrusel de bienvenida</strong><br>
-      <strong>Dado que</strong> el usuario completa su registro e inicia sesión por primera vez,<br>
-      <strong>Cuando</strong> ingresa al dashboard principal,<br>
-      <strong>Entonces</strong> se despliega un tutorial emergente paso a paso que puede recorrer o saltar.
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<!-- User Story 41 -->
-<table>
-  <tr>
-    <th><strong>Story ID</strong></th>
-    <th>User</th>
-    <th>Priority</th>
-    <th>Epic</th>
-  </tr>
-  <tr>
-    <td>US-41</td>
-    <td>Administrador</td>
-    <td>Baja</td>
-    <td>EP03</td>
-  </tr>
-  <tr>
-    <td colspan="4"><strong>Title</strong><br>Envío de notificaciones masivas o comunicados institucionales</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Description</strong><br>
-      Como administrador, quiero enviar un comunicado o alerta general a todos los usuarios registrados para informar sobre eventos críticos o mantenimiento.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <strong>Acceptance Criteria</strong><br><br>
-      <strong>Escenario 1: Envío de aviso general</strong><br>
-      <strong>Dado que</strong> el administrador redacta un comunicado oficial en el panel de control,<br>
-      <strong>Cuando</strong> presiona "Enviar notificación a todos",<br>
-      <strong>Entonces</strong> el sistema despacha el aviso push y correo a la base activa de usuarios.
-    </td>
-  </tr>
-</table>
-
 
 | Story ID | Título | Descripción | Criterios de Aceptación | Epic ID |
 | :--- | :--- | :--- | :--- | :--- |
