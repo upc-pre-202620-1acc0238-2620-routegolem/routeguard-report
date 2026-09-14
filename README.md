@@ -797,40 +797,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-05</td>
+    <td>Usuario de la aplicación</td>
+    <td>Media</td>
     <td>EP01</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Gestión de Perfil y Datos Personales</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como usuario de la aplicación, quiero actualizar mi número de teléfono y foto de perfil para mantener mi información de contacto al día.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
 </tr>
 <tr>
   <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 1: Actualización de número de teléfono</strong><br>
+    <strong>Dado que</strong> el usuario está en su perfil,<br>
+    <strong>Cuando</strong> actualiza su número de teléfono y guarda los cambios,<br>
+    <strong>Entonces</strong> el sistema almacena el nuevo número como dato de contacto vigente.<br>
     <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 2: Actualización de foto de perfil</strong><br>
+    <strong>Dado que</strong> el usuario desea cambiar su foto de perfil,<br>
+    <strong>Cuando</strong> selecciona una nueva imagen y confirma,<br>
+    <strong>Entonces</strong> el sistema reemplaza la foto anterior por la nueva.<br>
     <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 3: Dato inválido en el formulario</strong><br>
+    <strong>Dado que</strong> el usuario intenta actualizar su perfil,<br>
+    <strong>Cuando</strong> ingresa un número de teléfono con formato inválido,<br>
+    <strong>Entonces</strong> el sistema muestra un mensaje de error y no guarda el cambio.<br>
   </td>
 </tr>
 </table>
@@ -844,40 +844,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-06</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP02</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Registro de Conductores</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como administrador de la empresa de movilidad escolar, quiero crear cuentas de conductores y asignar rutas y alumnos para establecer grupos de recojo por proximidad.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
 </tr>
 <tr>
   <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 1: Creación exitosa de perfil</strong><br>
+    <strong>Dado que</strong> el administrador ingresa datos válidos del conductor,<br>
+    <strong>Cuando</strong> guarda el registro,<br>
+    <strong>Entonces</strong> el sistema crea el perfil del conductor.<br>
     <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 2: Validación de licencia subida</strong><br>
+    <strong>Dado que</strong> el conductor sube su licencia de conducir,<br>
+    <strong>Cuando</strong> el sistema valida el documento,<br>
+    <strong>Entonces</strong> el estado del conductor cambia a "Verificado".<br>
     <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 3: Registro con DNI duplicado</strong><br>
+    <strong>Dado que</strong> el administrador intenta registrar un conductor con un DNI ya existente,<br>
+    <strong>Cuando</strong> intenta guardar,<br>
+    <strong>Entonces</strong> el sistema muestra el mensaje "Usuario ya existe".<br>
   </td>
 </tr>
 </table>
@@ -891,40 +891,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-07</td>
+    <td>Padre de familia</td>
+    <td>Alta</td>
+    <td>EP02</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Solicitud a Conductor Independiente</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como padre de familia, quiero solicitar un contrato a un conductor independiente para inscribir a mi hijo en su movilidad.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
 </tr>
 <tr>
   <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 1: Envío de invitación por correo válido</strong><br>
+    <strong>Dado que</strong> el padre de familia ingresa un correo válido del conductor independiente,<br>
+    <strong>Cuando</strong> registra la solicitud,<br>
+    <strong>Entonces</strong> el sistema envía una invitación al conductor.<br>
     <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 2: Habilitación de vista de mapa</strong><br>
+    <strong>Dado que</strong> el conductor confirma el vínculo con el alumno,<br>
+    <strong>Cuando</strong> se completa la confirmación,<br>
+    <strong>Entonces</strong> el sistema habilita la vista de mapa para el padre.<br>
     <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 3: Correo con formato inválido</strong><br>
+    <strong>Dado que</strong> el padre de familia ingresa un correo con formato inválido,<br>
+    <strong>Cuando</strong> intenta enviar la solicitud,<br>
+    <strong>Entonces</strong> el sistema muestra el mensaje "Formato no soportado".<br>
   </td>
 </tr>
 </table>
@@ -938,40 +938,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-08</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP02</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Asignación de Conductor Idóneo</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como administrador de la empresa de movilidad escolar, quiero revisar las solicitudes de padres y asignarles el conductor con espacio o ruta factible para completar el proceso de contratación.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
 </tr>
 <tr>
   <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 1: Asignación exitosa</strong><br>
+    <strong>Dado que</strong> existe una solicitud de un padre de familia,<br>
+    <strong>Cuando</strong> el administrador encuentra un conductor con espacio y ruta factible,<br>
+    <strong>Entonces</strong> el sistema le asigna el conductor a la solicitud.<br>
     <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 2: Sin conductor factible</strong><br>
+    <strong>Dado que</strong> no hay conductores con espacio o ruta factible,<br>
+    <strong>Cuando</strong> el administrador revisa la solicitud,<br>
+    <strong>Entonces</strong> el sistema indica que no hay conductores disponibles por el momento.<br>
     <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 3: Reasignación tras rechazo</strong><br>
+    <strong>Dado que</strong> un padre rechazó una asignación previa,<br>
+    <strong>Cuando</strong> el administrador revisa la solicitud nuevamente,<br>
+    <strong>Entonces</strong> puede asignarle un conductor distinto.<br>
   </td>
 </tr>
 </table>
@@ -985,45 +985,186 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-09</td>
+    <td>Padre de familia</td>
+    <td>Alta</td>
+    <td>EP02</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Confirmación de Conductor Asignado</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como padre de familia, quiero visualizar los datos del conductor asignado por la empresa y confirmar o rechazar la asignación para asegurarme de que el servicio es de mi conformidad.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
 </tr>
 <tr>
   <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 1: Confirmación de la asignación</strong><br>
+    <strong>Dado que</strong> un padre de familia visualiza los datos del conductor asignado,<br>
+    <strong>Cuando</strong> confirma la asignación,<br>
+    <strong>Entonces</strong> el sistema activa el servicio de movilidad para su hijo.<br>
     <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 2: Rechazo de la asignación</strong><br>
+    <strong>Dado que</strong> un padre de familia no está conforme con el conductor asignado,<br>
+    <strong>Cuando</strong> rechaza la asignación,<br>
+    <strong>Entonces</strong> el sistema notifica al administrador para reasignar otro conductor.<br>
     <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
+    <strong>Escenario 3: Datos incompletos del conductor</strong><br>
+    <strong>Dado que</strong> la información del conductor asignado está incompleta,<br>
+    <strong>Cuando</strong> el padre intenta revisarla,<br>
+    <strong>Entonces</strong> el sistema muestra un aviso de "Datos en actualización".<br>
   </td>
 </tr>
 </table>
 
 <!--US10-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-10</td>
+    <td>Padre de familia</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consulta de Precios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero ver los costos de las distintas movilidades para elegir la que se ajuste a mi presupuesto.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Consulta del precio mensual</strong><br>
+    <strong>Dado que</strong> un padre de familia visualiza el perfil de una movilidad,<br>
+    <strong>Cuando</strong> consulta la tabla de precios,<br>
+    <strong>Entonces</strong> el sistema muestra el costo mensual del servicio establecido por el conductor o la empresa.<br>
+    <br>
+    <strong>Escenario 2: Precios mostrados en soles</strong><br>
+    <strong>Dado que</strong> el padre de familia consulta los costos de las distintas movilidades,<br>
+    <strong>Cuando</strong> visualiza la tabla de precios,<br>
+    <strong>Entonces</strong> todos los montos se muestran en Soles (PEN), sin opción de otra moneda.<br>
+    <br>
+    <strong>Escenario 3: Plan alternativo no configurado</strong><br>
+    <strong>Dado que</strong> un conductor o administrador no ha configurado un plan alternativo (por ejemplo, uno anual de pago único),<br>
+    <strong>Cuando</strong> el padre intenta visualizarlo,<br>
+    <strong>Entonces</strong> el sistema muestra la etiqueta "No disponible" para ese plan.<br>
+  </td>
+</tr>
+</table>
+
+<!--US11-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-11</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Admisión de Alumnos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor de movilidad escolar, quiero registrar nuevos alumnos en mi lista para incluir sus datos, casa y colegio en los recorridos.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Registro en lista de espera</strong><br>
+    <strong>Dado que</strong> el conductor ingresa los datos del menor,<br>
+    <strong>Cuando</strong> guarda el registro,<br>
+    <strong>Entonces</strong> el alumno aparece en la lista de espera.<br>
+    <br>
+    <strong>Escenario 2: Generación de carné digital</strong><br>
+    <strong>Dado que</strong> el conductor sube la foto del alumno,<br>
+    <strong>Cuando</strong> guarda el registro,<br>
+    <strong>Entonces</strong> el sistema muestra la foto en el carné digital del alumno.<br>
+    <br>
+    <strong>Escenario 3: Validación de campos obligatorios</strong><br>
+    <strong>Dado que</strong> el conductor deja campos vacíos en el formulario,<br>
+    <strong>Cuando</strong> intenta guardar el registro,<br>
+    <strong>Entonces</strong> el sistema resalta los campos obligatorios faltantes.<br>
+  </td>
+</tr>
+</table>
+
+<!--US12-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-12</td>
+    <td>Padre de familia</td>
+    <td>Media</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de Múltiples Hijos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero registrar a más de un hijo en mi cuenta para monitorear a todos desde una sola aplicación.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Registro de un segundo hijo</strong><br>
+    <strong>Dado que</strong> un padre de familia ya tiene un hijo registrado,<br>
+    <strong>Cuando</strong> agrega los datos de otro hijo,<br>
+    <strong>Entonces</strong> el sistema los vincula a la misma cuenta.<br>
+    <br>
+    <strong>Escenario 2: Visualización de todos los hijos</strong><br>
+    <strong>Dado que</strong> un padre tiene más de un hijo registrado,<br>
+    <strong>Cuando</strong> ingresa a su cuenta,<br>
+    <strong>Entonces</strong> el sistema muestra la lista completa de sus hijos.<br>
+    <br>
+    <strong>Escenario 3: Registro con datos incompletos</strong><br>
+    <strong>Dado que</strong> un padre intenta registrar a un nuevo hijo,<br>
+    <strong>Cuando</strong> deja campos obligatorios vacíos,<br>
+    <strong>Entonces</strong> el sistema no permite guardar el registro y resalta los campos faltantes.<br>
+  </td>
+</tr>
+</table>
+
+<!--US13-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
