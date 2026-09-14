@@ -1721,6 +1721,74 @@ La separación entre Trip Monitoring y Tracking fue la decisión más discutida,
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
+El *Domain Message Flow Modelling* es una técnica que permite representar cómo fluyen los mensajes de dominio —*commands*, *events* y *queries*— entre los distintos Bounded Contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto al resolver un caso concreto del negocio.
+ 
+Para cada escenario se documenta la secuencia numerada de mensajes, que es la que se representa en el diagrama: los comandos en azul, los eventos en naranja y las consultas en verde, con los contextos dibujados como nubes y los actores como participantes externos.
+ 
+**Escenario 01: Contratación y matrícula de un estudiante**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Solicitar contrato | Padre de familia | Community Management |
+| 2 | Query | Obtener aptitud y capacidad del vehículo | Community Management | Fleet & Route Management |
+| 3 | Command | Asignar conductor a solicitud | Administrador | Community Management |
+| 4 | Event | Driver Assigned To Request | Community Management | Notifications |
+| 5 | Command | Confirmar asignación | Padre de familia | Community Management |
+| 6 | Event | Driver Assignment Confirmed | Community Management | Community Management |
+| 7 | Event | Student Enrolled | Community Management | Fleet & Route Management |
+ 
+![Escenario 01: Contratación y matrícula](resources\chapter-2\Domain-Message-Flows\1.png)
+ 
+La consulta del paso 2 materializa la regla de que ningún estudiante puede vincularse a una unidad marcada como no apta para operar.
+ 
+**Escenario 02: Abordaje en zona sin cobertura y sincronización diferida**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Completar checklist de seguridad | Conductor | Trip Monitoring |
+| 2 | Command | Iniciar viaje | Conductor | Trip Monitoring |
+| 3 | Event | Trip Started | Trip Monitoring | Tracking |
+| 4 | Command | Marcar abordaje sin conexión | Conductor | Trip Monitoring |
+| 5 | Event | Boarding Record Queued Offline | Trip Monitoring | Almacenamiento local |
+| 6 | Command | Sincronizar cola de registros | App del conductor | Trip Monitoring |
+| 7 | Event | Offline Log Synchronized | Trip Monitoring | Trip Monitoring |
+| 8 | Event | Student Boarded | Trip Monitoring | Notifications |
+ 
+![Escenario 02: Sincronización offline](resources\chapter-2\Domain-Message-Flows\2.png)
+ 
+El desfase entre los pasos 4 y 7 es la razón por la que el registro conserva el *timestamp* del dispositivo y no el de recepción del servidor: la bitácora debe reflejar cuándo ocurrió el hecho, no cuándo el sistema lo supo.
+ 
+**Escenario 03: Alerta de proximidad al hogar**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Transmitir ubicación en segundo plano | App del conductor | Tracking |
+| 2 | Query | Obtener perímetro de la parada | Tracking | Fleet & Route Management |
+| 3 | Event | Trip Location Updated | Tracking | Tracking |
+| 4 | Event | Proximity Geofence Triggered | Tracking | Notifications |
+| 5 | Command | Despachar notificación al padre | Notifications | Proveedor push (FCM) |
+| 6 | Event | Parent Notification Dispatched | Notifications | Padre de familia |
+| 7 | Query | Obtener ubicación del vehículo | Padre de familia | Tracking |
+ 
+![Escenario 03: Alerta de proximidad](resources\chapter-2\Domain-Message-Flows\3.png)
+ 
+Este escenario sustenta el Objetivo SMART 4, que exige una latencia menor a 5 segundos entre los pasos 1 y 6. La consulta del paso 7 es opcional y refleja la experiencia pasiva del segmento: el padre recibe la alerta sin necesidad de abrir la aplicación.
+ 
+**Escenario 04: Reporte de incidencia y difusión a los padres**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Reportar incidencia | Conductor | Trip Monitoring |
+| 2 | Event | Incident Reported | Trip Monitoring | Tracking |
+| 3 | Query | Obtener tiempo estimado de llegada | Tracking | Proveedor de mapas |
+| 4 | Event | Delay Threshold Exceeded | Tracking | Notifications |
+| 5 | Event | Route Reassigned | Fleet & Route Management | Notifications |
+| 6 | Event | Parent Notification Dispatched | Notifications | Padres de alumnos a bordo |
+ 
+![Escenario 04: Reporte de incidencia](resources\chapter-2\Domain-Message-Flows\4.png)
+ 
+El paso 6 contiene la restricción de alcance más importante del escenario: la difusión llega solo a los tutores de los estudiantes que se encuentran efectivamente a bordo, no a toda la ruta.
+
 #### 2.5.1.3. Bounded Context Canvases
 
 ### 2.5.2. Context Mapping
