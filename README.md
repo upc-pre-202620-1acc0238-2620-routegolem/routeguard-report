@@ -24,7 +24,7 @@
   [Código] - De la Cruz De los Santos, Mathias Marcelo<br>
   [Código] - Francia Torres, Jhony Manuel<br>
   u202411627 - Pareja Calloapaza, Marcelo Fausto<br>
-  [Código] - Ramirez Ruíz, Nickolas<br>
+  [u202415551] - Ramirez Ruíz, Nickolas<br>
   <br><br>
   <strong>Periodo 2026-02</strong><br>
   <strong>Setiembre 2026</strong>
@@ -367,21 +367,28 @@ Para el ecosistema de RouteGuard, hemos identificado dos segmentos de usuarios c
 
 ## 2.1. Competidores
 
-### 2.1.1. Análisis competitivo
+#### 2.1.1 Análisis Competitivo
 
-| | Su startup | Competidor 1 | Competidor 2 | Competidor 3 |
-|---|---|---|---|---|
-| **Perfil** | Overview | | | |
-| | Ventaja competitiva | | | |
-| **Perfil de Marketing** | Mercado objetivo | | | |
-| | Estrategias de marketing | | | |
-| **Perfil de Producto** | Productos & Servicios | | | |
-| | Precios & Costos | | | |
-| | Canales de distribución | | | |
-| **Análisis SWOT** | Fortalezas | | | |
-| | Debilidades | | | |
-| | Oportunidades | | | |
-| | Amenazas | | | |
+**¿Por qué llevar a cabo el análisis?**
+
+Este análisis nos permite conocer las características, ventajas y limitaciones de las principales soluciones de transporte escolar existentes en el mercado. También ayuda a identificar oportunidades de diferenciación y áreas de mejora para SafeRoute.
+
+| Categoría | Subcategoría | **RouteGuard**![RouteGuard](.assetsimagesChapter2RouteGuard.png)                                                                                                      | **OnTrack School**![OnTrack School](./resources/assets/images/OnTrackSchool.png)| **SafeRoute Parent** ![SafeRoute Parent](./resources/assets/images/SafeRouteParent.png)| **BusRight**![BusRight](./resources/assets/images/BusRight.png)                                            |
+|---|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|------------------------------------------------------------------------------------------------------------|
+| **Perfil** | Overview | Plataforma de monitoreo y gestión de transporte escolar.                                                                                                              | Plataforma de gestión de transporte escolar para colegios, instituciones educativas y empresas de transporte. | Plataforma de monitoreo y seguridad del transporte escolar enfocada principalmente en padres de familia. | Plataforma integral para la gestión y optimización del transporte escolar y sus operaciones.               |
+| | Ventaja Competitiva | Roles específicos tanto para el padre como para el conductor y herramientas para la gestión de los viajes escolares.                                                  | Integra la gestión del transporte, seguimiento en tiempo real, control de acceso y otros servicios escolares en una sola plataforma. | Enfoque en seguridad, seguimiento en tiempo real, alertas y tranquilidad para los padres durante el traslado. | Combina planificación de rutas, GPS, gestión de estudiantes, conductores y comunicación con los padres.    |
+| **Perfil de Marketing** | Mercado Objetivo | Padres de familia y conductores de movilidad escolar.                                                                                                                 | Colegios, instituciones educativas y empresas de transporte escolar. | Padres de familia, colegios y operadores de transporte escolar. | Distritos escolares, departamentos de transporte y grandes operadores de transporte estudiantil.           |
+| | Estrategias de Marketing | Variedad de herramientas y seguridad para la correcta gestión de viajes escolares.                                                                                    | Marketing B2B dirigido a instituciones educativas mediante demostraciones, presencia digital y casos de éxito. | Marketing enfocado en seguridad, tranquilidad de los padres, seguimiento en tiempo real y protección de los estudiantes. | Marketing B2B orientado a eficiencia operativa, reducción de costos, seguridad y optimización de rutas.    |
+| **Perfil de Producto** | Productos y Servicios | Plataforma web, dashboard, GPS.                                                                                                                                       | Gestión de rutas, GPS, alumnos, vehículos, conductores, notificaciones y control de acceso. | Seguimiento GPS, ETA, alertas, geocercas, monitoreo del conductor y comunicación con padres. | Planificación de rutas, GPS, gestión de estudiantes, navegación para conductores, notificaciones y seguimiento. |
+| | Precios y Costos | Suscripción mensual de entre S/.9.99 y S/.49.99.                                                                                                                      | Precios personalizados según los servicios y características contratados por cada institución. | Aplicación gratuita para padres. No presenta información pública clara sobre los precios para instituciones u operadores. | Precios personalizados según el tamaño y las necesidades de cada organización.                             |
+| | Canales de Distribución (Web y/o Móvil) | Plataforma web.                                                                                                                                                       | Plataforma web y aplicaciones móviles para padres, conductores y administradores. | Aplicación móvil para padres y herramientas digitales para operadores de transporte. | Plataforma web y aplicaciones móviles para administradores, conductores y padres.                          |
+| **Análisis SWOT** | Fortalezas | Sistema enfocado en seguimiento de viajes, control de viajes y agendas y gestión.                                                                                     | Amplia propuesta de valor, integración con servicios escolares y presencia en el mercado latinoamericano. | Fuerte enfoque en seguridad, monitoreo en tiempo real y experiencia de los padres. | Plataforma completa con optimización de rutas, gestión operativa y herramientas de seguridad.              |
+| | Debilidades | Modelo de negocio nuevo en un mercado con mucha incertidumbre.                                                                                                        | Puede resultar complejo para pequeños operadores y depende principalmente de instituciones educativas. | Se concentra principalmente en monitoreo y seguridad, con menor énfasis en la gestión integral del transporte. | Está orientado principalmente a organizaciones grandes y al mercado estadounidense.                        |
+| | Oportunidades | Gran crecimiento potencial en el mercado de transporte escolar privado en Perú, ampliando funcionalidades y expandiéndose a otras ciudades y colegios.                | Expandirse en Latinoamérica y ofrecer más servicios para empresas de transporte escolar. | Incorporar funcionalidades de gestión de rutas, alumnos, conductores y operaciones. | Expandirse hacia nuevos mercados e incorporar inteligencia artificial para optimizar rutas y operaciones.  |
+| | Amenazas | Entrada de competidores más consolidados (como SafeRouteParent u OnTrack School) y soluciones informales o manuales que ya usan algunos colegios y padres de familia. | Nuevas plataformas SaaS, soluciones locales de transporte y sistemas GPS de menor costo. | Competidores que integren monitoreo, gestión, pagos y comunicación en una sola plataforma. | Software local, soluciones internas de colegios y nuevos competidores especializados en transporte escolar. |
+
+
+
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
