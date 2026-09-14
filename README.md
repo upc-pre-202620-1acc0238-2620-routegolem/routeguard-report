@@ -392,6 +392,42 @@ Este análisis nos permite conocer las características, ventajas y limitaciones
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
+En base al análisis competitivo realizado, se plantean las siguientes estrategias y tácticas para posicionar a RouteGuard frente a sus competidores:
+
+#### Enfoque en la especialización del problema
+
+- RouteGuard se centrará exclusivamente en el transporte escolar, integrando funcionalidades pensadas para las necesidades particulares de este sector, entre ellas el control de abordaje, la gestión de rutas y el registro de incidencias.
+- Con esto, la plataforma cubre aspectos operativos y de seguridad que las aplicaciones genéricas de geolocalización suelen dejar de lado.
+
+#### Estrategia de digitalización del sector no estructurado
+
+- La solución apuntará principalmente a transportistas independientes que hoy en día coordinan sus servicios a través de WhatsApp, llamadas y procesos manuales.
+- RouteGuard propondrá una plataforma simple y práctica que permita digitalizar esas actividades sin exigir conocimientos técnicos ni implementaciones complicadas.
+
+#### Diferenciación mediante simplicidad y accesibilidad
+
+- Se apostará por una experiencia intuitiva, sencilla y económica, marcando distancia frente a plataformas corporativas más robustas como OnTrack School.
+- La interfaz buscará minimizar la carga administrativa del conductor, facilitando su uso durante la operación del día a día.
+
+#### Estrategia de confianza y seguridad para los padres
+
+- RouteGuard trabajará en reducir la incertidumbre de los padres a través de notificaciones automáticas de abordaje, seguimiento del trayecto y alertas en tiempo real.
+- De esta forma, se reemplaza la comunicación informal y fragmentada por un sistema estructurado que entrega información clara, oportuna y confiable sobre el traslado de los estudiantes.
+
+#### Estrategia de crecimiento progresivo y escalabilidad
+
+- La plataforma ofrecerá planes escalonados —Básico, Intermedio y Completo— capaces de ajustarse al crecimiento en número de estudiantes o vehículos gestionados por cada cliente.
+- Este esquema facilita la entrada de nuevos usuarios con una opción inicial accesible, dejando abierta la posibilidad de ampliar servicios a medida que sus necesidades crezcan.
+
+#### Estrategia de posicionamiento local
+
+- En su etapa inicial, RouteGuard estará enfocado en las dinámicas operativas y particularidades geográficas de Lima Metropolitana, buscando entender a fondo las necesidades del transporte escolar en este mercado.
+- Una vez que la solución se consolide localmente, se evaluará su expansión gradual hacia otras ciudades del país.
+
+#### Estrategia de preparación tecnológica a futuro
+
+- La arquitectura de RouteGuard se pensará contemplando futuras integraciones con tecnologías IoT, como sensores, cámaras y otros dispositivos de monitoreo.
+
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
