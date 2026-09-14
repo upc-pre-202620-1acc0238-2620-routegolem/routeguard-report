@@ -446,6 +446,22 @@ En base al análisis competitivo realizado, se plantean las siguientes estrategi
 
 ### 2.3.4. Empathy Mapping
 
+
+En esta sección se presenta el análisis de empatía realizado para nuestros segmentos objetivo, buscando responder a las preguntas fundamentales del marco de trabajo: *¿Con quién estamos empatizando?*, *¿Qué necesita hacer?*, *¿Qué ve?*, *¿Qué dice?*, *¿Qué hace?*, *¿Qué oye?*, *¿Qué piensa y siente?*, e identificando claramente sus dolores (*Pains*) y ganancias (*Gains*).
+
+---
+
+#### Segmento Objetivo 1: Drivers
+
+![Arturo Núñez Empathy Map](./resources/assets/images/Arturo%20Núñez%20Empaty%20map.png)
+
+---
+
+#### Segmento Objetivo 2: Parents
+
+![Fernando Nery Empathy Map](./resources/assets/images/Fernando%20Nery%20%20Empaty%20map.png)
+
+
 ### 2.3.5. Big Picture EventStorming
 
 ### 2.3.6. Ubiquitous Language
