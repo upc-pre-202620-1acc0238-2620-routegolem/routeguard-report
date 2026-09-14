@@ -1668,6 +1668,57 @@ Como último paso, identificamos los eventos que se relacionen entre sí mediant
 
 #### 2.5.1.1. Candidate Context Discovery
 
+En esta sesión aplicamos la técnica de Candidate Context Discovery para identificar y separar los posibles Bounded Contexts del sistema RouteGuard. La sesión se realizó en **Miro** con la participación de los cuatro integrantes del equipo y tuvo una duración de una hora y cuarenta minutos, dentro del límite de dos horas recomendado para esta técnica.
+ 
+Utilizamos las tres técnicas sugeridas de forma encadenada, ya que cada una responde una pregunta distinta. Con **start-with-simple** descompusimos la línea temporal en tres fases secuenciales —configuración y contratación, operación diaria, y cierre y postventa— para obtener un modelo manejable antes de intentar agrupar. Con **look-for-pivotal-events** identificamos los eventos que marcan cambios de estado entre partes distintas del proceso de negocio, que resultaron ser las costuras naturales del dominio. Finalmente, con **start-with-value** determinamos qué agrupaciones concentran el mayor valor para el negocio, contrastándolas con la propuesta de valor.
+ 
+Los eventos pivote identificados fueron los siguientes:
+ 
+| Evento pivote | Cambio de estado que señala |
+|---|---|
+| `VehicleMarkedUnfitForOperation` | La unidad pasa de habilitada a bloqueada; separa el cumplimiento legal de la operación. |
+| `DriverAssignmentConfirmed` | El vínculo pasa de negociación a servicio activo; separa la contratación de la planificación. |
+| `TripStarted` | El plan de ruta pasa de intención a ejecución; separa la planificación del registro operativo. |
+| `ProximityGeofenceTriggered` | La telemetría cruda pasa a ser un hecho accionable; separa el procesamiento de señal del despacho de alertas. |
+| `OfflineLogSynchronized` | El registro pasa de provisional en el dispositivo a confirmado en el servidor. |
+| `TripFinished` | La ejecución pasa a cierre; separa la operación de la postventa. |
+ 
+Al analizar estos eventos pudimos observar que cada grupo implicaba responsabilidades, reglas y garantías de consistencia distintas dentro del sistema, lo que nos permitió agruparlos en contextos bien definidos, evitando ambigüedad y facilitando la organización del dominio.
+ 
+A continuación se presenta la evolución progresiva del EventStorm durante la sesión.
+ 
+*Paso 1 — Domain Events:* los eventos trazados sobre la línea temporal, en pasado participio y con el lenguaje ubicuo en inglés.
+ 
+![Paso 1: Domain Events](resources/chapter-2/EventStorming\Events.jpeg)
+ 
+*Paso 2 — Commands:* sobre cada evento se identificó el comando que lo dispara.
+ 
+![Paso 2: Commands](resources/chapter-2/EventStorming\Commands.jpeg)
+ 
+*Paso 3 — Actors:* se determinó qué actor ejecuta cada comando.
+ 
+![Paso 3: Actors](resources/chapter-2/EventStorming\Actors.jpeg)
+ 
+*Paso 4 — Agrupación:* aplicando los eventos pivote como líneas de corte, los eventos se agruparon por los agregados que comparten.
+ 
+![Paso 4: Bounded Contexts](resources/chapter-2/EventStorming\Design-Level-Event-Storming.jpeg)
+ 
+Este proceso nos llevó a definir los siguientes Bounded Contexts:
+ 
+| Bounded Context | Descripción | Eventos clave |
+|---|---|---|
+| **Identity & Access Management (IAM)** | Maneja el registro, la autenticación y el control de acceso por rol de los usuarios. | Driver Account Created, User Authenticated |
+| **Subscription & Billing** | Administra los planes SaaS y habilita el acceso comercial a la plataforma. | Subscription Plan Purchased |
+| **Community Management** | Formaliza el vínculo entre familias y transportistas, sostiene la comunicación y recoge la percepción de calidad. | Contract Requested, Driver Assigned To Request, Driver Assignment Confirmed, Student Enrolled, Internal Message Sent, Service Rated, Complaint Filed |
+| **Fleet & Route Management** | Custodia la aptitud legal de las unidades, el control de costos y el plan de recorrido vigente. | Vehicle Document Registered, Vehicle Marked Unfit For Operation, Odometer Reading Recorded, Operating Expense Recorded, School Route Created, Student Assigned To Route, Student Absence Notified, Pickup Address Change Requested, Route Reassigned, Road Blockage Reported |
+| **Trip Monitoring** | Registra la ejecución real del servicio diario con valor probatorio, incluso sin conectividad. | Safety Checklist Completed, Trip Started, Student Boarded, Boarding Record Queued Offline, Offline Log Synchronized, Incident Reported, Panic Alert Triggered, Student Dropped Off, Trip Finished, Daily Report Generated |
+| **Tracking** | Procesa la telemetría de ubicación en segundo plano y evalúa perímetros y desviaciones de tiempo. | Trip Location Updated, Proximity Geofence Triggered, Delay Threshold Exceeded |
+| **Notifications** | Traduce los eventos del dominio en entregas efectivas al dispositivo del destinatario. | Parent Notification Dispatched |
+ 
+Aplicando finalmente *start-with-value*, clasificamos los contextos según su aporte estratégico. **Trip Monitoring** y **Tracking** constituyen el *Core Domain*, ya que sin el registro irrefutable de la ejecución y sin el procesamiento de la ubicación en segundo plano la propuesta de valor del producto no se cumple. **Fleet & Route Management**, **Community Management** y **Notifications** son *Supporting Subdomains*: indispensables pero no diferenciadores. **IAM** y **Subscription & Billing** son *Generic Subdomains*, problemas ya resueltos por la industria en los que se prioriza la reutilización.
+ 
+La separación entre Trip Monitoring y Tracking fue la decisión más discutida, porque ambos hablan del mismo `Trip`. La diferencia está en la naturaleza del dato: Trip Monitoring custodia hechos con valor probatorio que no pueden perderse, mientras que Tracking procesa una coordenada cada pocos segundos donde perder una posición individual es irrelevante. Fusionarlos obligaría a aplicar las garantías más estrictas al volumen más alto, o a relajar las garantías de la bitácora de abordaje.
+
 #### 2.5.1.2. Domain Message Flows Modeling
 
 #### 2.5.1.3. Bounded Context Canvases
