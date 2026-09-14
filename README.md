@@ -1795,6 +1795,23 @@ El paso 6 contiene la restricción de alcance más importante del escenario: la 
 
 #### 2.5.1.3. Bounded Context Canvases
 
+El Bounded Context Canvas es un instrumento visual del Domain-Driven Design que ayuda a delimitar con precisión el alcance, las responsabilidades y los puntos de contacto de cada contexto dentro de un sistema complejo. Su valor está en que el equipo llegue a un entendimiento común sobre qué hace cada contexto, qué agregados y entidades viven dentro de él y qué reglas de negocio rigen su comportamiento. A continuación se presentan los canvases elaborados para los contextos identificados en RouteGuard.
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas IAM.jpg" width="1000">
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Notifications.jpg" width="1000">
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Suscription.jpg" width="1000">
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Community.jpg" width="1000">
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Tracking.jpg" width="1000">
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Trip.jpg" width="1000">
+
+<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Fleet.jpg" width="1000">
+
+
 ### 2.5.2. Context Mapping
 
 ### 2.5.3. Software Architecture
