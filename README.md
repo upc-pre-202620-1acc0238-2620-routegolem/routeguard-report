@@ -1173,6 +1173,246 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
     <th>Epic</th>
   </tr>
   <tr>
+    <td>US-13</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Mantenimiento y Documentación del Vehículo</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor de movilidad escolar, quiero registrar el mantenimiento preventivo y SOAT de mi vehículo para cumplir con las normativas de tránsito vigentes.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: Registro de mantenimiento preventivo</strong><br>
+    <strong>Dado que</strong> el conductor realiza un mantenimiento preventivo a su vehículo,<br>
+    <strong>Cuando</strong> registra la fecha y el detalle en el sistema,<br>
+    <strong>Entonces</strong> queda almacenado en el historial del vehículo.<br>
+    <br>
+    <strong>Escenario 2: Carga del SOAT vigente</strong><br>
+    <strong>Dado que</strong> el conductor sube el documento del SOAT,<br>
+    <strong>Cuando</strong> el sistema valida la fecha de vigencia,<br>
+    <strong>Entonces</strong> actualiza el estado de documentación a "Vigente".<br>
+    <br>
+    <strong>Escenario 3: Documento vencido</strong><br>
+    <strong>Dado que</strong> el SOAT del conductor está vencido,<br>
+    <strong>Cuando</strong> el sistema detecta la fecha,<br>
+    <strong>Entonces</strong> marca al vehículo como "No apto para operar" hasta su renovación.<br>
+  </td>
+</tr>
+</table>
+
+<!--US14-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4"></td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
+</table>
+
+| **US-14** | Gestión de Licencias y Antecedentes | Como conductor de movilidad escolar, quiero registrar y actualizar mis licencias de conducir y antecedentes penales para cumplir con los estándares de seguridad exigidos por las autoridades y la empresa. | **Escenario 1: Registro de licencia de conducir** <br>**Dado que** el conductor sube su licencia de conducir vigente, <br>**Cuando** el sistema valida el documento, <br>**Entonces** actualiza su estado de habilitación. <br>**Escenario 2: Registro de antecedentes penales** <br>**Dado que** el conductor sube su certificado de antecedentes penales, <br>**Cuando** el sistema lo procesa, <br>**Entonces** queda registrado en su perfil de cumplimiento. <br>**Escenario 3: Licencia próxima a vencer** <br>**Dado que** la licencia del conductor está próxima a vencer, <br>**Cuando** el sistema detecta la fecha límite, <br>**Entonces** le envía un recordatorio para renovarla. | **EP03** |
+| **US-15** | Registro de Gastos | Como conductor de movilidad escolar, quiero registrar los repostajes de combustible y gastos menores del vehículo para llevar un control de mis egresos diarios. | **Escenario 1: Registro de repostaje de combustible** <br>**Dado que** el conductor realiza un repostaje de combustible, <br>**Cuando** registra el monto y la fecha, <br>**Entonces** el sistema lo agrega a su historial de gastos. <br>**Escenario 2: Registro de gasto menor** <br>**Dado que** el conductor tiene un gasto menor del vehículo, <br>**Cuando** lo registra en el sistema, <br>**Entonces** queda reflejado en su resumen de egresos diarios. <br>**Escenario 3: Monto inválido** <br>**Dado que** el conductor intenta registrar un gasto, <br>**Cuando** ingresa un monto negativo o no numérico, <br>**Entonces** el sistema muestra un mensaje de error y no guarda el registro. | **EP03** |
+| **US-16** | Reporte de Kilometraje Diario | Como conductor de movilidad escolar, quiero registrar el kilometraje inicial y final de la jornada para llevar un control del desgaste del vehículo y rendimiento de combustible. | **Escenario 1: Registro de kilometraje inicial** <br>**Dado que** el conductor inicia su jornada, <br>**Cuando** registra el kilometraje inicial del vehículo, <br>**Entonces** el sistema lo almacena como punto de partida del día. <br>**Escenario 2: Registro de kilometraje final** <br>**Dado que** el conductor finaliza su jornada, <br>**Cuando** registra el kilometraje final, <br>**Entonces** el sistema calcula el total recorrido en el día. <br>**Escenario 3: Kilometraje final menor al inicial** <br>**Dado que** el conductor ingresa un kilometraje final menor al inicial, <br>**Cuando** intenta guardar el registro, <br>**Entonces** el sistema muestra un mensaje de error por dato inconsistente. | **EP03** |
+| **US-17** | Control de Capacidad y Asientos | Como conductor de movilidad escolar, quiero visualizar el límite de asientos ocupados de mi vehículo para no exceder la capacidad reglamentaria permitida. | **Escenario 1: Visualización de asientos disponibles** <br>**Dado que** el conductor consulta su vehículo, <br>**Cuando** revisa la capacidad de asientos, <br>**Entonces** el sistema muestra los asientos ocupados y disponibles. <br>**Escenario 2: Alerta por capacidad al límite** <br>**Dado que** el vehículo alcanza su capacidad máxima permitida, <br>**Cuando** el conductor intenta agregar un alumno adicional, <br>**Entonces** el sistema le impide asignarlo y muestra una alerta. <br>**Escenario 3: Actualización tras baja de un alumno** <br>**Dado que** un alumno es dado de baja de la ruta, <br>**Cuando** el sistema actualiza la lista, <br>**Entonces** libera un asiento disponible en el conteo de capacidad | **EP03** |
+
+<!--US15-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4"></td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
+</table>
+
+<!--US16-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4"></td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
+</table>
+
+<!--US17-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3"></td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4"></td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Escenario 1: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 2: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+    <br>
+    <strong>Escenario 3: </strong><br>
+    <strong>Dado que</strong> ,<br>
+    <strong>Cuando</strong> ,<br>
+    <strong>Entonces</strong> ,<br>
+  </td>
+</tr>
+</table>
+
+<!--US18-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
     <td></td>
     <td></td>
     <td></td>
