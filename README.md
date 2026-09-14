@@ -1653,13 +1653,17 @@ Para el proceso de EventStorming utilizamos la herramienta Miro y realizamos 4 p
 
 <img src="resources\chapter-2\EventStorming\paleta-colores.png" width="900">
 
-Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
+Como primer paso, empleamos post-it anaranjado para identificar a los eventos.
 
 <img src="resources\chapter-2\EventStorming\Events.jpeg" width="900">
 
-Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
+Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
 
 <img src="resources\chapter-2\EventStorming\Commands.jpeg" width="900">
+
+Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
+
+<img src="resources\chapter-2\EventStorming\Actors.jpeg" width="900">
 
 Como último paso, identificamos los eventos que se relacionen entre sí mediante los agregados y entidades que utilizan, agrupandolos porBounded Context.
 
@@ -1689,19 +1693,19 @@ A continuación se presenta la evolución progresiva del EventStorm durante la s
  
 *Paso 1 — Domain Events:* los eventos trazados sobre la línea temporal, en pasado participio y con el lenguaje ubicuo en inglés.
  
-![Paso 1: Domain Events](resources/chapter-2/EventStorming\Events.jpeg)
+<img src="resources\chapter-2\EventStorming\Events.jpeg" width="900">
  
 *Paso 2 — Commands:* sobre cada evento se identificó el comando que lo dispara.
  
-![Paso 2: Commands](resources/chapter-2/EventStorming\Commands.jpeg)
+<img src="resources\chapter-2\EventStorming\Commands.jpeg" width="900">
  
 *Paso 3 — Actors:* se determinó qué actor ejecuta cada comando.
  
-![Paso 3: Actors](resources/chapter-2/EventStorming\Actors.jpeg)
+<img src="resources\chapter-2\EventStorming\Actors.jpeg" width="900">
  
 *Paso 4 — Agrupación:* aplicando los eventos pivote como líneas de corte, los eventos se agruparon por los agregados que comparten.
  
-![Paso 4: Bounded Contexts](resources/chapter-2/EventStorming\Design-Level-Event-Storming.jpeg)
+<img src="resources\chapter-2\EventStorming\Design-Level-Event-Storming.jpeg" width="900">
  
 Este proceso nos llevó a definir los siguientes Bounded Contexts:
  
@@ -1737,7 +1741,7 @@ Para cada escenario se documenta la secuencia numerada de mensajes, que es la qu
 | 6 | Event | Driver Assignment Confirmed | Community Management | Community Management |
 | 7 | Event | Student Enrolled | Community Management | Fleet & Route Management |
  
-![Escenario 01: Contratación y matrícula](resources\chapter-2\Domain-Message-Flows\1.png)
+<img src="resources\chapter-2\Domain-Message-Flows\1.png" width="1000">
  
 La consulta del paso 2 materializa la regla de que ningún estudiante puede vincularse a una unidad marcada como no apta para operar.
  
@@ -1754,7 +1758,7 @@ La consulta del paso 2 materializa la regla de que ningún estudiante puede vinc
 | 7 | Event | Offline Log Synchronized | Trip Monitoring | Trip Monitoring |
 | 8 | Event | Student Boarded | Trip Monitoring | Notifications |
  
-![Escenario 02: Sincronización offline](.\resources\chapter-2\Domain-Message-Flows\2.png)
+<img src="resources\chapter-2\Domain-Message-Flows\2.png" width="1000">
  
 El desfase entre los pasos 4 y 7 es la razón por la que el registro conserva el *timestamp* del dispositivo y no el de recepción del servidor: la bitácora debe reflejar cuándo ocurrió el hecho, no cuándo el sistema lo supo.
  
@@ -1770,7 +1774,7 @@ El desfase entre los pasos 4 y 7 es la razón por la que el registro conserva el
 | 6 | Event | Parent Notification Dispatched | Notifications | Padre de familia |
 | 7 | Query | Obtener ubicación del vehículo | Padre de familia | Tracking |
  
-![Escenario 03: Alerta de proximidad](resources\chapter-2\Domain-Message-Flows\3.png)
+<img src="resources\chapter-2\Domain-Message-Flows\3.png" width="1000">
  
 Este escenario sustenta el Objetivo SMART 4, que exige una latencia menor a 5 segundos entre los pasos 1 y 6. La consulta del paso 7 es opcional y refleja la experiencia pasiva del segmento: el padre recibe la alerta sin necesidad de abrir la aplicación.
  
@@ -1785,7 +1789,7 @@ Este escenario sustenta el Objetivo SMART 4, que exige una latencia menor a 5 se
 | 5 | Event | Route Reassigned | Fleet & Route Management | Notifications |
 | 6 | Event | Parent Notification Dispatched | Notifications | Padres de alumnos a bordo |
  
-![Escenario 04: Reporte de incidencia](resources\chapter-2\Domain-Message-Flows\4.png)
+<img src="resources\chapter-2\Domain-Message-Flows\4.png" width="1000">
  
 El paso 6 contiene la restricción de alcance más importante del escenario: la difusión llega solo a los tutores de los estudiantes que se encuentran efectivamente a bordo, no a toda la ruta.
 
