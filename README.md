@@ -237,12 +237,12 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-| Foto | Apellidos y Nombres | Código | Carrera | Resumen |
-|:---:|:---|:---:|:---|:---|
-| [Foto] | De la Cruz De los Santos, Mathias Marcelo | U20... | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
-| [Foto] | Francia Torres, Jhony Manuel | U20... | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
-| [Foto] | Pareja Calloapaza, Marcelo Fausto | U202411627 | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
-| [Foto] | Ramirez Ruíz, Nickolas | U20... | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+|                         Foto                         | Apellidos y Nombres |   Código    | Carrera | Resumen |
+|:----------------------------------------------------:|:---|:-----------:|:---|:---|
+|                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+|                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+|                        [Foto]                        | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+| ![foto](/resources/assets/images/Team/nickolas.png ) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
 
 ## 1.2. Solution Profile
 
