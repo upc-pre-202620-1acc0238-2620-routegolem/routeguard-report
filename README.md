@@ -1649,6 +1649,23 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 ### 2.5.1. EventStorming
 
+Para el proceso de EventStorming utilizamos la herramienta Miro y realizamos 4 pasos para llegar a definir los bounded context que se van atrabajar.En primer lugar, debemos identificar los eventos y trazarlos mediante una linea de tiempo imaginaria que va de izquierda a derecha. Además,empleamos la siguiente paleta de colores como leyenda: 
+
+<img src="resources\chapter-2\EventStorming\paleta-colores.png" width="900">
+
+Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
+
+<img src="resources\chapter-2\EventStorming\Events.jpeg" width="900">
+
+Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
+
+<img src="resources\chapter-2\EventStorming\Commands.jpeg" width="900">
+
+Como último paso, identificamos los eventos que se relacionen entre sí mediante los agregados y entidades que utilizan, agrupandolos porBounded Context.
+
+
+<img src="resources\chapter-2\EventStorming\Design-Level-Event-Storming.jpeg" width="900">
+
 #### 2.5.1.1. Candidate Context Discovery
 
 #### 2.5.1.2. Domain Message Flows Modeling
