@@ -1811,8 +1811,30 @@ El Bounded Context Canvas es un instrumento visual del Domain-Driven Design que 
 
 <img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Fleet.jpg" width="1000">
 
-
 ### 2.5.2. Context Mapping
+
+En esta sección se ha definido la estructura estratégica de la solución mediante la identificación de los Bounded Contexts y sus relaciones. El proceso de diseño se centró en aislar los dos contextos *Core Domain* —Trip Monitoring y Tracking— de las capacidades de soporte y de las capacidades genéricas, de modo que el esfuerzo del equipo se concentre donde está la ventaja competitiva de RouteGuard.
+ 
+Durante las sesiones de diseño se plantearon las siguientes preguntas para validar la robustez de la descomposición y definir las relaciones entre contextos:
+ 
+- **¿Qué pasaría si fusionamos Trip Monitoring y Tracking en un solo contexto?**
+Se decidió mantenerlos separados, tal como se sustentó en la sección 2.5.1.1: Trip Monitoring custodia hechos con valor probatorio que exigen consistencia fuerte, mientras que Tracking procesa telemetría de alto volumen y tolerante a pérdida. Sin embargo, ambos son *Core Domain* y avanzan en el mismo ritmo de desarrollo, coordinados por los eventos `TripStarted` y `TripFinished` que abren y cierran la ventana de escucha de Tracking. Esta coordinación cercana entre pares se modela con el patrón **Partnership**: ningún equipo puede avanzar sin coordinar con el otro, pero ninguno se subordina.
+ 
+- **¿Qué pasaría si Community Management dependiera directamente del modelo de datos de Fleet & Route Management?**
+Community Management necesita consultar la aptitud del vehículo y la disponibilidad de asientos antes de confirmar una asignación (US-09). Si consumiera directamente las entidades `Vehicle` y `Route` de Fleet & Route Management, cualquier cambio en ese modelo —por ejemplo, al incorporar nuevos tipos de documento vehicular— rompería la lógica de contratación. Para evitar ese acoplamiento se determinó el uso de una **Anticorruption Layer (ACL)** en Community Management, que traduce la respuesta de Fleet & Route Management a los únicos dos hechos que la contratación necesita: *apto* y *con asientos disponibles*.
+ 
+- **¿Qué pasaría si aislamos los contextos IAM y Subscription & Billing?**
+Al tratarse de funcionalidades necesarias pero no diferenciadoras, ambos se clasifican como *Generic Subdomain* y se resuelven mediante la reutilización de la implementación ya construida para la plataforma web del equipo (sección 2.5.1.1). El resto de los contextos consume su modelo tal como es, sin intentar influir en su diseño, lo que corresponde al patrón **Conformist**: el costo de adaptarse es menor que el de mantener una traducción para un contexto que no va a evolucionar según las necesidades particulares de RouteGuard.
+ 
+- **¿Qué pasaría si cada contexto publicara sus eventos hacia Notifications con su propio formato?**
+Notifications recibe hechos de cuatro contextos distintos —Trip Monitoring, Tracking, Fleet & Route Management y Community Management—, cada uno con su propio lenguaje ubicuo. Publicar sin una convención común obligaría a Notifications a mantener cuatro traductores distintos y a cada contexto a conocer la estructura interna de Notifications. Se optó por que Notifications defina un **Open Host Service** con un **Published Language** propio: un contrato único de notificación (destinatario, tipo, prioridad, contenido) que todo contexto upstream debe producir. Cada contexto upstream actúa como proveedor de ese lenguaje publicado, y Notifications lo consume sin necesidad de una traducción particular por cada origen.
+ 
+- **¿Qué pasaría si duplicamos la consulta del plan de ruta en Trip Monitoring en lugar de depender de Fleet & Route Management en tiempo real?**
+Se descartó. Trip Monitoring opera incluso sin conectividad prolongada, por lo que duplicar el plan de ruta introduciría el riesgo de que el conductor ejecute un plan desactualizado tras una reasignación. Se mantiene la relación **Customer/Supplier**, con Trip Monitoring como cliente aguas abajo: Fleet & Route Management prioriza en su backlog los cambios de contrato que Trip Monitoring necesita, pero conserva la autoridad sobre el modelo de ruta.
+ 
+**Diagrama de Context Mapping**
+ 
+<img src="resources\chapter-2\ContextMapping.jpg" width="1000">
 
 ### 2.5.3. Software Architecture
 
