@@ -66,8 +66,15 @@
     - [Segmento 2: Padres de Familia](#segmento-2-padres-de-familia)
 - [Capítulo II: Requirements Development and Software Solution Design](#capítulo-ii-requirements-development-and-software-solution-design)
   - [2.1. Competidores](#21-competidores)
-    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+      - [2.1.1 Análisis Competitivo](#211-análisis-competitivo)
     - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+      - [Enfoque en la especialización del problema](#enfoque-en-la-especialización-del-problema)
+      - [Estrategia de digitalización del sector no estructurado](#estrategia-de-digitalización-del-sector-no-estructurado)
+      - [Diferenciación mediante simplicidad y accesibilidad](#diferenciación-mediante-simplicidad-y-accesibilidad)
+      - [Estrategia de confianza y seguridad para los padres](#estrategia-de-confianza-y-seguridad-para-los-padres)
+      - [Estrategia de crecimiento progresivo y escalabilidad](#estrategia-de-crecimiento-progresivo-y-escalabilidad)
+      - [Estrategia de posicionamiento local](#estrategia-de-posicionamiento-local)
+      - [Estrategia de preparación tecnológica a futuro](#estrategia-de-preparación-tecnológica-a-futuro)
   - [2.2. Entrevistas](#22-entrevistas)
     - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
       - [A. Segmento 1: Transportistas Escolares (Administradores y Conductores)](#a-segmento-1-transportistas-escolares-administradores-y-conductores)
@@ -83,12 +90,13 @@
       - [A. Journey Map: El Transportista (Conductor)](#a-journey-map-el-transportista-conductor)
       - [B. Journey Map: El Padre de Familia](#b-journey-map-el-padre-de-familia)
     - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+      - [Segmento Objetivo 1: Drivers](#segmento-objetivo-1-drivers)
+      - [Segmento Objetivo 2: Parents](#segmento-objetivo-2-parents)
     - [2.3.5. Big Picture EventStorming](#235-big-picture-eventstorming)
       - [Cronología de Eventos de Dominio Identificados:](#cronología-de-eventos-de-dominio-identificados)
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
   - [2.4. Requirements specification](#24-requirements-specification)
     - [2.4.1. User Stories](#241-user-stories)
-      - [Epics Identificadas:](#epics-identificadas)
       - [Technical Stories](#technical-stories)
       - [Spike Stories](#spike-stories)
     - [2.4.2. Impact Mapping](#242-impact-mapping)
@@ -104,15 +112,69 @@
       - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
       - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
-    - [2.6.x. Bounded Context: \[Bounded Context Name\]](#26x-bounded-context-bounded-context-name)
-      - [2.6.x.1. Domain Layer](#26x1-domain-layer)
-      - [2.6.x.2. Interface Layer](#26x2-interface-layer)
-      - [2.6.x.3. Application Layer](#26x3-application-layer)
-      - [2.6.x.4 Infrastructure Layer](#26x4-infrastructure-layer)
-      - [2.6.x.5. Bounded Context Software Architecture Component Level Diagrams](#26x5-bounded-context-software-architecture-component-level-diagrams)
-      - [2.6.x.6. Bounded Context Software Architecture Code Level Diagrams](#26x6-bounded-context-software-architecture-code-level-diagrams)
-        - [2.6.x.6.1. Bounded Context Domain Layer Class Diagrams](#26x61-bounded-context-domain-layer-class-diagrams)
-        - [2.6.x.6.2. Bounded Context Database Design Diagram](#26x62-bounded-context-database-design-diagram)
+    - [2.6.1. Bounded Context: Identity \& Access Management (IAM)](#261-bounded-context-identity--access-management-iam)
+      - [2.6.1.1. Domain Layer](#2611-domain-layer)
+      - [2.6.1.2. Interface Layer](#2612-interface-layer)
+      - [2.6.1.3. Application Layer](#2613-application-layer)
+      - [2.6.1.4. Infrastructure Layer](#2614-infrastructure-layer)
+      - [2.6.1.5. Component Level Diagrams](#2615-component-level-diagrams)
+      - [2.6.1.6. Code Level Diagrams](#2616-code-level-diagrams)
+        - [2.6.1.6.1. Domain Layer Class Diagram](#26161-domain-layer-class-diagram)
+        - [2.6.1.6.2. Database Design Diagram](#26162-database-design-diagram)
+    - [2.6.2. Bounded Context: Suscription \& Onboarding](#262-bounded-context-suscription--onboarding)
+      - [2.6.2.1. Domain Layer](#2621-domain-layer)
+      - [2.6.2.2. Interface Layer](#2622-interface-layer)
+      - [2.6.2.3. Application Layer](#2623-application-layer)
+      - [2.6.2.4. Infrastructure Layer](#2624-infrastructure-layer)
+      - [2.6.2.5. Component Level Diagrams](#2625-component-level-diagrams)
+      - [2.6.2.6. Code Level Diagrams](#2626-code-level-diagrams)
+        - [2.6.2.6.1. Domain Layer Class Diagram](#26261-domain-layer-class-diagram)
+        - [2.6.2.6.2. Database Design Diagram](#26262-database-design-diagram)
+    - [2.6.3. Bounded Context: Fleet \& Compliance](#263-bounded-context-fleet--compliance)
+      - [2.6.3.1. Domain Layer](#2631-domain-layer)
+      - [2.6.3.2. Interface Layer](#2632-interface-layer)
+      - [2.6.3.3. Application Layer](#2633-application-layer)
+      - [2.6.3.4. Infrastructure Layer](#2634-infrastructure-layer)
+      - [2.6.3.5. Component Level Diagrams](#2635-component-level-diagrams)
+      - [2.6.3.6. Code Level Diagrams](#2636-code-level-diagrams)
+        - [2.6.3.6.1. Domain Layer Class Diagram](#26361-domain-layer-class-diagram)
+        - [2.6.3.6.2. Database Design Diagram](#26362-database-design-diagram)
+    - [2.6.4. Bounded Context: Trip Management](#264-bounded-context-trip-management)
+      - [2.6.4.1. Domain Layer](#2641-domain-layer)
+      - [2.6.4.2. Interface Layer](#2642-interface-layer)
+      - [2.6.4.3. Application Layer](#2643-application-layer)
+      - [2.6.4.4. Infrastructure Layer](#2644-infrastructure-layer)
+      - [2.6.4.5. Component Level Diagrams](#2645-component-level-diagrams)
+      - [2.6.4.6. Code Level Diagrams](#2646-code-level-diagrams)
+        - [2.6.4.6.1. Domain Layer Class Diagram](#26461-domain-layer-class-diagram)
+        - [2.6.4.6.2. Database Design Diagram](#26462-database-design-diagram)
+    - [2.6.5. Bounded Context: Real-time Tracking](#265-bounded-context-real-time-tracking)
+      - [2.6.5.1. Domain Layer](#2651-domain-layer)
+      - [2.6.5.2. Interface Layer](#2652-interface-layer)
+      - [2.6.5.3. Application Layer](#2653-application-layer)
+      - [2.6.5.4. Infrastructure Layer](#2654-infrastructure-layer)
+      - [2.6.5.5. Component Level Diagrams](#2655-component-level-diagrams)
+      - [2.6.5.6. Code Level Diagrams](#2656-code-level-diagrams)
+        - [2.6.5.6.1. Domain Layer Class Diagram](#26561-domain-layer-class-diagram)
+        - [2.6.5.6.2. Database Design Diagram](#26562-database-design-diagram)
+    - [2.6.6. Bounded Context: Notifications \& Geofencing](#266-bounded-context-notifications--geofencing)
+      - [2.6.6.1. Domain Layer](#2661-domain-layer)
+      - [2.6.6.2. Interface Layer](#2662-interface-layer)
+      - [2.6.6.3. Application Layer](#2663-application-layer)
+      - [2.6.6.4. Infrastructure Layer](#2664-infrastructure-layer)
+      - [2.6.6.5. Component Level Diagrams](#2665-component-level-diagrams)
+      - [2.6.6.6. Code Level Diagrams](#2666-code-level-diagrams)
+        - [2.6.6.6.1. Domain Layer Class Diagram](#26661-domain-layer-class-diagram)
+        - [2.6.6.6.2. Database Design Diagram](#26662-database-design-diagram)
+    - [2.6.7. Bounded Context: Community \& Support](#267-bounded-context-community--support)
+      - [2.6.7.1. Domain Layer](#2671-domain-layer)
+      - [2.6.7.2. Interface Layer](#2672-interface-layer)
+      - [2.6.7.3. Application Layer](#2673-application-layer)
+      - [2.6.7.4. Infrastructure Layer](#2674-infrastructure-layer)
+      - [2.6.7.5. Component Level Diagrams](#2675-component-level-diagrams)
+      - [2.6.7.6. Code Level Diagrams](#2676-code-level-diagrams)
+        - [2.6.7.6.1. Domain Layer Class Diagram](#26761-domain-layer-class-diagram)
+        - [2.6.7.6.2. Database Design Diagram](#26762-database-design-diagram)
 - [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
   - [3.1. Product design](#31-product-design)
     - [3.1.1. Style Guidelines](#311-style-guidelines)
@@ -642,24 +704,31 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 ## 2.4. Requirements specification
 
+La especificación de requerimientos en entornos de desarrollo ágil reemplaza la documentación extensa y rígida por formatos ligeros. Estos aseguran el fomento de la colaboración y capturan el valor directo para el cliente (Cohn, 2004). En este proyecto, integramos técnicas de agilidad con los principios de *Domain-Driven Design* (Evans, 2003) para garantizar que las necesidades del negocio se reflejen fielmente en la estructura del software.
+
 ### 2.4.1. User Stories
 
-**EPICS**
-| Epic ID | Título | Descripción | Criterios de Aceptación |
+Las Historias de Usuario y las Épicas son herramientas fundamentales en Scrum y metodologías ágiles. De acuerdo con Cohn (2004), el propósito de su diseño radica en desplazar el enfoque de "escribir requerimientos" hacia "fomentar conversaciones" sobre ellos.
+
+Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se alineen uno a uno con los *Bounded Contexts* descubiertos en nuestro diseño estratégico. Esta decisión asegura una transición fluida entre el modelado del problema y el diseño de la solución (Vernon, 2013). A continuación, se detallan las Épicas y sus respectivas Historias de Usuario, Historias Técnicas y Spikes, estructuradas bajo el formato de Criterios de Aceptación Gherkin (*Given-When-Then*).
+
+**EPICS (Alineadas a los Bounded Contexts)**
+
+| Epic ID | Título (Bounded Context) | Descripción | Criterios de Aceptación |
 | :--- | :--- | :--- | :--- |
-| **EP01** | **Acceso y OnBoarding** | Como nuevo usuario, quiero conocer la aplicación, elegir mi rol y gestionar mi perfil, para comenzar a usar el servicio de manera informada y personalizada. | **Escenario 1: Selección y visualización de roles en el inicio** <br>**Dado que** un usuario ingresa por primera vez a la aplicación, <br>**Cuando** completa el tutorial y elige su rol, <br>**Entonces** el sistema le muestra las funcionalidades correspondientes a ese rol. <br><br> **Escenario 2: Actualización de perfil** <br>**Dado que** un usuario tiene una cuenta ya registrada, <br>**Cuando** actualiza sus datos de perfil, <br>**Entonces** la información se refleja correctamente en su cuenta sin necesidad de reiniciar sesión. |
-| **EP02** | **Gestión de Cuentas, Admisión y Contratación** | Como padre de familia y administrador, quiero registrar cuentas, contratar el servicio y matricular alumnos, para formalizar el uso de la movilidad escolar. | **Escenario 1: Contratación exitosa del servicio** <br>**Dado que** un padre de familia está interesado en el servicio, <br>**Cuando** solicita un contrato (a un conductor independiente o a una empresa) y este es aceptado, <br>**Entonces** el alumno queda matriculado y vinculado a una movilidad activa. <br>**Escenario 2: Asignación y confirmación de conductor** <br>**Dado que** un administrador tiene conductores registrados en su empresa, <br>**Cuando** recibe una solicitud de un padre, <br>**Entonces** puede asignarle un conductor con espacio disponible y el padre puede confirmar o rechazar esa asignación. |
-| **EP03** | **Gestión del Vehículo y Cumplimiento** | Como conductor de movilidad escolar, quiero mantener actualizada la documentación, el mantenimiento y las condiciones legales de mi vehículo, para operar de forma segura y conforme a la normativa vigente. | **Escenario 1: Registro y validación de documentación legal** <br>**Dado que** el conductor registra su documentación, <br>**Cuando** ingresa la fecha de vencimiento de su licencia y SOAT, <br>**Entonces** el sistema valida los datos para cumplir con la normativa vigente. <br>**Escenario 2: Control operativo inicial de kilometraje y gastos** <br>**Dado que** la jornada diaria ha iniciado, <br>**Cuando** el conductor registra el kilometraje inicial y los gastos de combustible, <br>**Entonces** el sistema almacena el control operativo de la unidad. |
-| **EP04** | **Planificación de Rutas** | Como conductor y administrador, quiero planificar y ajustar las rutas de recojo y entrega, para optimizar los recorridos y adaptarme a ausencias o imprevistos antes del viaje. | **Escenario 1: Distribución de alumnos por parada** <br>**Dado que** un conductor tiene una lista de alumnos asignados, <br>**Cuando** traza su ruta, <br>**Entonces** el sistema distribuye correctamente a cada alumno en su parada correspondiente. <br>**Escenario 2: Reasignación por ausencia de conductor** <br>**Dado que** ocurre una ausencia imprevista de un conductor, <br>**Cuando** el administrador reasigna su ruta a otro conductor disponible, <br>**Entonces** los padres afectados reciben la notificación del cambio. |
-| **EP05** | **Operación y Ejecución de la Ruta** | Como conductor de movilidad escolar, quiero iniciar la ruta, registrar abordajes, navegar, bloquear vías y gestionar alertas para ejecutar de forma segura y controlada el recorrido diario de los estudiantes. | **Escenario 1: Activación de ruta y registro de abordajes** <br>**Dado que** la ruta está lista para iniciar, <br>**Cuando** el conductor pulsa el botón de inicio y navega, <br>**Entonces** el sistema activa la transmisión y el registro de abordajes de los niños. <br>**Escenario 2: Cierre de ruta con entrega confirmada** <br>**Dado que** una ruta está en curso, <br>**Cuando** el conductor marca el abordaje de todos los alumnos y finaliza el recorrido, <br>**Entonces** el sistema cierra la ruta y notifica la entrega a cada padre. |
-| **EP06** | **Seguimiento y Comunicación con Padres** | Como padre de familia, quiero monitorear la ubicación del vehículo y comunicarme con el conductor, para estar informado sobre el trayecto de mi hijo. | **Escenario 1: Visualización en tiempo real y alertas de proximidad** <br>**Dado que** hay un viaje activo en curso, <br>**Cuando** el padre abre el mapa, <br>**Entonces** visualiza la ubicación en tiempo real del vehículo y recibe la alerta de proximidad a su hogar. <br>**Escenario 2: Uso del chat interno durante el trayecto** <br>**Dado que** es necesario comunicarse durante el trayecto, <br>**Cuando** el padre o el conductor usan el chat interno, <br>**Entonces** se envían los mensajes en tiempo real sin salir de la plataforma. |
-| **EP07** | **Postventa y Soporte** | Como padre de familia, quiero calificar el servicio, consultar el historial de asistencia y presentar reclamos para evaluar la calidad del transporte y resolver cualquier inconformidad posterior. | **Escenario 1: Calificación del servicio finalizado** <br>**Dado que** un servicio de transporte fue finalizado, <br>**Cuando** el padre califica al conductor y la puntualidad, <br>**Entonces** la valoración queda registrada y visible en el historial del conductor. <br>**Escenario 2: Registro y seguimiento de reclamo** <br>**Dado que** un padre está insatisfecho con el servicio, <br>**Cuando** presenta un reclamo formal, <br>**Entonces** el administrador recibe la notificación y puede darle seguimiento hasta su resolución. |
+| **EP01** | **Identity & Access Management (IAM)** | Como nuevo usuario, quiero registrarme, elegir mi rol y gestionar mi perfil para acceder de forma segura al ecosistema. | **Escenario 1:**<br>**Dado que** el usuario es nuevo, <br>**Cuando** completa sus datos básicos y selecciona su rol, <br>**Entonces** el sistema crea la cuenta y le otorga los permisos correspondientes. |
+| **EP02** | **Suscription & Onboarding** | Como administrador o padre, quiero gestionar pagos y afiliaciones para mantener el servicio activo y formalizado. | **Escenario 1:**<br>**Dado que** el administrador elige un plan SaaS, <br>**Cuando** se procesa el pago exitosamente, <br>**Entonces** el sistema habilita el registro de múltiples vehículos. |
+| **EP03** | **Fleet & Compliance** | Como administrador, quiero registrar vehículos y choferes para cumplir con la normativa de seguridad y capacidad. | **Escenario 1:**<br>**Dado que** se ingresa la placa de un vehículo, <br>**Cuando** se registran los asientos disponibles, <br>**Entonces** el sistema restringe la asignación de pasajeros a ese límite máximo. |
+| **EP04** | **Trip Management** | Como conductor, quiero planificar la ruta y ordenar las paradas para optimizar el tiempo de recojo escolar. | **Escenario 1:**<br>**Dado que** hay una lista de alumnos asignados, <br>**Cuando** el conductor genera la ruta del día, <br>**Entonces** el sistema ordena las paradas geográficamente. |
+| **EP05** | **Real-time Tracking** | Como conductor, quiero que la app transmita mi ubicación y me permita marcar asistencias para tener trazabilidad del viaje. | **Escenario 1:**<br>**Dado que** el conductor inicia el trayecto, <br>**Cuando** el vehículo se desplaza, <br>**Entonces** el sistema emite coordenadas periódicamente sin intervención manual. |
+| **EP06** | **Notifications & Geofencing** | Como padre de familia, quiero recibir alertas automáticas cuando la movilidad se acerque para salir a tiempo. | **Escenario 1:**<br>**Dado que** el viaje está en curso, <br>**Cuando** la movilidad entra al radio de proximidad del hogar, <br>**Entonces** el sistema envía una alerta inmediata al dispositivo del padre. |
+| **EP07** | **Community & Support** | Como padre o administrador, quiero calificar el servicio y reportar incidentes para mantener un estándar de calidad. | **Escenario 1:**<br>**Dado que** el viaje finalizó, <br>**Cuando** el padre envía una calificación negativa, <br>**Entonces** el sistema registra el reporte en el perfil del conductor. |
 
 <br>
 
 **USER STORIES**
 
-<!--US1-->
+<!--US01-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -669,44 +738,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-01</td>
-    <td>Nuevo Usuario</td>
-    <td>Media</td>
+    <td>Padre / Conductor</td>
+    <td>Alta</td>
     <td>EP01</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Elección de Roles</td>
+    <td colspan="3">Registro y Asignación de Rol</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como nuevo usuario, quiero conocer las vistas y funcionalidades para elegir el rol que tomaré al utilizar la aplicación y acceder a ellas.</td>
+    <td colspan="4">Como nuevo usuario, quiero crear una cuenta especificando si soy Padre, Conductor o Administrador para acceder a las funciones correspondientes a mi perfil.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Selección de rol Padre</strong><br>
-    <strong>Dado que</strong> el usuario está en la sección de roles,<br>
-    <strong>Cuando</strong> elige el rol "Padre",<br>
-    <strong>Entonces</strong> el sistema muestra capturas de la App de padres.<br>
-    <br>
-    <strong>Escenario 2: Selección de rol Conductor</strong><br>
-    <strong>Dado que</strong> el usuario está en la sección de roles,<br>
-    <strong>Cuando</strong> elige el rol "Conductor",<br>
-    <strong>Entonces</strong> el sistema muestra la gestión de rutas.<br>
-    <br>
-    <strong>Escenario 3: Rol por defecto sin selección</strong><br>
-    <strong>Dado que</strong> el usuario no selecciona ninguna opción,<br>
-    <strong>Cuando</strong> visualiza la sección de roles,<br>
-    <strong>Entonces</strong> el sistema muestra el rol "Admin" por defecto.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Creación de cuenta exitosa</strong><br>
+      <strong>Dado que</strong> el usuario ingresa sus datos válidos,<br>
+      <strong>Cuando</strong> selecciona su rol principal,<br>
+      <strong>Entonces</strong> el sistema persiste la cuenta en la base de datos con los accesos correspondientes.<br><br>
+      <strong>Escenario 2: Correo duplicado</strong><br>
+      <strong>Dado que</strong> el usuario ingresa un correo ya registrado,<br>
+      <strong>Cuando</strong> intenta finalizar el registro,<br>
+      <strong>Entonces</strong> el sistema bloquea la acción y exige credenciales diferentes.
+    </td>
+  </tr>
 </table>
 
-<!--US2-->
+<br>
+
+<!--US02-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -716,44 +781,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-02</td>
-    <td>Nuevo usuario</td>
-    <td>Baja</td>
-    <td>EP01</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP02</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Sección Tutorial</td>
+    <td colspan="3">Adquisición de Plan de Suscripción</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como nuevo usuario, quiero ver los pasos iniciales para saber cómo empezar a utilizar la aplicación.</td>
+    <td colspan="4">Como administrador de flota, quiero suscribirme a un plan de pago mensual para poder registrar más de un vehículo en mi organización.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Navegación por infografía</strong><br>
-    <strong>Dado que</strong> el usuario visualiza la infografía del tutorial,<br>
-    <strong>Cuando</strong> sigue los pasos del 1 al 5,<br>
-    <strong>Entonces</strong> comprende el flujo de contrato del servicio.<br>
-    <br>
-    <strong>Escenario 2: Reproducción del video demo</strong><br>
-    <strong>Dado que</strong> el usuario ve la sección de tutorial,<br>
-    <strong>Cuando</strong> pulsa el botón "Play" del video demo,<br>
-    <strong>Entonces</strong> visualiza el funcionamiento real de la aplicación.<br>
-    <br>
-    <strong>Escenario 3: Compatibilidad con navegador antiguo</strong><br>
-    <strong>Dado que</strong> el usuario accede desde un dispositivo antiguo,<br>
-    <strong>Cuando</strong> el video intenta cargar,<br>
-    <strong>Entonces</strong> el sistema muestra una imagen estática en su lugar.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Pago procesado correctamente</strong><br>
+      <strong>Dado que</strong> el administrador selecciona un plan premium,<br>
+      <strong>Cuando</strong> el procesador de pagos confirma la transacción,<br>
+      <strong>Entonces</strong> el sistema actualiza el estado de la cuenta a premium inmediatamente.<br><br>
+      <strong>Escenario 2: Pago rechazado</strong><br>
+      <strong>Dado que</strong> el administrador tiene fondos insuficientes,<br>
+      <strong>Cuando</strong> el procesador de pagos deniega la transacción,<br>
+      <strong>Entonces</strong> el sistema mantiene la cuenta en plan básico.
+    </td>
+  </tr>
 </table>
 
-<!--US3-->
+<br>
+
+<!--US03-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -763,44 +824,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-03</td>
-    <td>Nuevo usuario</td>
-    <td>Baja</td>
-    <td>EP01</td>
+    <td>Administrador</td>
+    <td>Media</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Preguntas Frecuentes (FAQ)</td>
+    <td colspan="3">Gestión de Capacidad Vehicular</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como nuevo usuario, quiero ver dudas comunes para evitar llamadas de soporte.</td>
+    <td colspan="4">Como administrador, quiero establecer la cantidad de asientos de cada vehículo para evitar la sobreasignación de estudiantes.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Despliegue de respuesta</strong><br>
-    <strong>Dado que</strong> el usuario visualiza la lista de preguntas frecuentes,<br>
-    <strong>Cuando</strong> toca una pregunta,<br>
-    <strong>Entonces</strong> el sistema despliega la respuesta correspondiente.<br>
-    <br>
-    <strong>Escenario 2: Búsqueda por palabra clave</strong><br>
-    <strong>Dado que</strong> el usuario usa el buscador de FAQs,<br>
-    <strong>Cuando</strong> escribe "precio",<br>
-    <strong>Entonces</strong> el sistema filtra las preguntas relacionadas a ese término.<br>
-    <br>
-    <strong>Escenario 3: Contacto por duda no resuelta</strong><br>
-    <strong>Dado que</strong> el usuario no encuentra respuesta a su duda,<br>
-    <strong>Cuando</strong> llega al final de la lista de FAQs,<br>
-    <strong>Entonces</strong> el sistema muestra un botón de contacto directo.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Límite respetado</strong><br>
+      <strong>Dado que</strong> un vehículo tiene un límite de 10 asientos,<br>
+      <strong>Cuando</strong> el administrador intenta asignar un estudiante,<br>
+      <strong>Entonces</strong> el sistema reduce la disponibilidad a 9 asientos.<br><br>
+      <strong>Escenario 2: Límite excedido</strong><br>
+      <strong>Dado que</strong> un vehículo tiene 0 asientos disponibles,<br>
+      <strong>Cuando</strong> el administrador intenta asignar otro estudiante,<br>
+      <strong>Entonces</strong> el sistema aborta la operación por exceso de capacidad.
+    </td>
+  </tr>
 </table>
 
-<!--US4-->
+<br>
+
+<!--US04-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -810,44 +867,36 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-04</td>
-    <td>Padre de familia</td>
-    <td>Baja</td>
-    <td>EP01</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP04</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Demo Interactiva</td>
+    <td colspan="3">Listado y Secuencia de Paradas</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como padre de familia, quiero probar un simulador de mapa antes de establecer algún contrato para verificar que es la experiencia que deseo tener respecto al transporte de mi hijo.</td>
+    <td colspan="4">Como conductor, quiero visualizar la lista diaria de alumnos ordenados por secuencia geográfica para seguir una ruta óptima.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Reproducción de la demo</strong><br>
-    <strong>Dado que</strong> el padre de familia ingresa al mapa demo,<br>
-    <strong>Cuando</strong> pulsa el botón "Play",<br>
-    <strong>Entonces</strong> visualiza un bus moviéndose de forma ficticia por el mapa.<br>
-    <br>
-    <strong>Escenario 2: Aviso de prueba en punto de llegada</strong><br>
-    <strong>Dado que</strong> la demo está en ejecución,<br>
-    <strong>Cuando</strong> el bus ficticio llega a un punto de parada,<br>
-    <strong>Entonces</strong> el sistema reproduce un aviso de prueba.<br>
-    <br>
-    <strong>Escenario 3: Dispositivo no compatible con la demo</strong><br>
-    <strong>Dado que</strong> el dispositivo del usuario no cumple con los requisitos mínimos de la aplicación,<br>
-    <strong>Cuando</strong> intenta abrir la demo interactiva,<br>
-    <strong>Entonces</strong> el sistema le sugiere actualizar la aplicación o el sistema operativo de su dispositivo.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Ordenamiento exitoso</strong><br>
+      <strong>Dado que</strong> el conductor tiene 5 recojos programados,<br>
+      <strong>Cuando</strong> solicita la ruta del día,<br>
+      <strong>Entonces</strong> el sistema devuelve los domicilios ordenados según proximidad.
+    </td>
+  </tr>
 </table>
 
-<!--US5-->
+<br>
+
+<!--US05-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -857,44 +906,36 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-05</td>
-    <td>Usuario de la aplicación</td>
-    <td>Media</td>
-    <td>EP01</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Gestión de Perfil y Datos Personales</td>
+    <td colspan="3">Transmisión de GPS en Segundo Plano</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como usuario de la aplicación, quiero actualizar mi número de teléfono y foto de perfil para mantener mi información de contacto al día.</td>
+    <td colspan="4">Como conductor, quiero que la aplicación emita mi ubicación mientras está minimizada para poder concentrarme en manejar.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Actualización de número de teléfono</strong><br>
-    <strong>Dado que</strong> el usuario está en su perfil,<br>
-    <strong>Cuando</strong> actualiza su número de teléfono y guarda los cambios,<br>
-    <strong>Entonces</strong> el sistema almacena el nuevo número como dato de contacto vigente.<br>
-    <br>
-    <strong>Escenario 2: Actualización de foto de perfil</strong><br>
-    <strong>Dado que</strong> el usuario desea cambiar su foto de perfil,<br>
-    <strong>Cuando</strong> selecciona una nueva imagen y confirma,<br>
-    <strong>Entonces</strong> el sistema reemplaza la foto anterior por la nueva.<br>
-    <br>
-    <strong>Escenario 3: Dato inválido en el formulario</strong><br>
-    <strong>Dado que</strong> el usuario intenta actualizar su perfil,<br>
-    <strong>Cuando</strong> ingresa un número de teléfono con formato inválido,<br>
-    <strong>Entonces</strong> el sistema muestra un mensaje de error y no guarda el cambio.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Emisión en background</strong><br>
+      <strong>Dado que</strong> el viaje está activo,<br>
+      <strong>Cuando</strong> el sistema operativo minimiza la aplicación,<br>
+      <strong>Entonces</strong> el servicio continúa enviando las coordenadas al servidor cada 15 segundos.
+    </td>
+  </tr>
 </table>
 
-<!--US6-->
+<br>
+
+<!--US06-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -904,44 +945,40 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-06</td>
-    <td>Administrador</td>
+    <td>Conductor</td>
     <td>Alta</td>
-    <td>EP02</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Registro de Conductores</td>
+    <td colspan="3">Check-in de Abordaje Offline</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como administrador de la empresa de movilidad escolar, quiero crear cuentas de conductores y asignar rutas y alumnos para establecer grupos de recojo por proximidad.</td>
+    <td colspan="4">Como conductor, quiero registrar la subida de un niño incluso sin acceso a internet para no perder los datos del viaje.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Creación exitosa de perfil</strong><br>
-    <strong>Dado que</strong> el administrador ingresa datos válidos del conductor,<br>
-    <strong>Cuando</strong> guarda el registro,<br>
-    <strong>Entonces</strong> el sistema crea el perfil del conductor.<br>
-    <br>
-    <strong>Escenario 2: Validación de licencia subida</strong><br>
-    <strong>Dado que</strong> el conductor sube su licencia de conducir,<br>
-    <strong>Cuando</strong> el sistema valida el documento,<br>
-    <strong>Entonces</strong> el estado del conductor cambia a "Verificado".<br>
-    <br>
-    <strong>Escenario 3: Registro con DNI duplicado</strong><br>
-    <strong>Dado que</strong> el administrador intenta registrar un conductor con un DNI ya existente,<br>
-    <strong>Cuando</strong> intenta guardar,<br>
-    <strong>Entonces</strong> el sistema muestra el mensaje "Usuario ya existe".<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Registro sin internet</strong><br>
+      <strong>Dado que</strong> el dispositivo carece de conexión a la red,<br>
+      <strong>Cuando</strong> el conductor marca la asistencia de un alumno,<br>
+      <strong>Entonces</strong> el sistema guarda el evento localmente en la memoria del dispositivo.<br><br>
+      <strong>Escenario 2: Sincronización diferida</strong><br>
+      <strong>Dado que</strong> existen registros locales pendientes,<br>
+      <strong>Cuando</strong> el dispositivo recupera la conexión a internet,<br>
+      <strong>Entonces</strong> el sistema sincroniza automáticamente los datos con la base de datos principal.
+    </td>
+  </tr>
 </table>
 
-<!--US7-->
+<br>
+
+<!--US07-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -951,44 +988,36 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-07</td>
-    <td>Padre de familia</td>
+    <td>Padre de Familia</td>
     <td>Alta</td>
-    <td>EP02</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Solicitud a Conductor Independiente</td>
+    <td colspan="3">Alerta de Geofencing</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como padre de familia, quiero solicitar un contrato a un conductor independiente para inscribir a mi hijo en su movilidad.</td>
+    <td colspan="4">Como padre de familia, quiero recibir una notificación automática cuando la movilidad esté a 500 metros de mi casa para salir a tiempo.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Envío de invitación por correo válido</strong><br>
-    <strong>Dado que</strong> el padre de familia ingresa un correo válido del conductor independiente,<br>
-    <strong>Cuando</strong> registra la solicitud,<br>
-    <strong>Entonces</strong> el sistema envía una invitación al conductor.<br>
-    <br>
-    <strong>Escenario 2: Habilitación de vista de mapa</strong><br>
-    <strong>Dado que</strong> el conductor confirma el vínculo con el alumno,<br>
-    <strong>Cuando</strong> se completa la confirmación,<br>
-    <strong>Entonces</strong> el sistema habilita la vista de mapa para el padre.<br>
-    <br>
-    <strong>Escenario 3: Correo con formato inválido</strong><br>
-    <strong>Dado que</strong> el padre de familia ingresa un correo con formato inválido,<br>
-    <strong>Cuando</strong> intenta enviar la solicitud,<br>
-    <strong>Entonces</strong> el sistema muestra el mensaje "Formato no soportado".<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Activación de alerta</strong><br>
+      <strong>Dado que</strong> el vehículo transmite su ubicación,<br>
+      <strong>Cuando</strong> la coordenada ingresa al radio de 500 metros del hogar,<br>
+      <strong>Entonces</strong> el sistema dispara un evento de notificación push al dispositivo del padre.
+    </td>
+  </tr>
 </table>
 
-<!--US8-->
+<br>
+
+<!--US08-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -998,44 +1027,36 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-08</td>
-    <td>Administrador</td>
-    <td>Alta</td>
-    <td>EP02</td>
+    <td>Padre de Familia</td>
+    <td>Media</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Asignación de Conductor Idóneo</td>
+    <td colspan="3">Monitoreo de Ruta en Tiempo Real</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como administrador de la empresa de movilidad escolar, quiero revisar las solicitudes de padres y asignarles el conductor con espacio o ruta factible para completar el proceso de contratación.</td>
+    <td colspan="4">Como padre de familia, quiero visualizar la ubicación actual de la movilidad en un mapa para tener certeza sobre el trayecto de mi hijo.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Asignación exitosa</strong><br>
-    <strong>Dado que</strong> existe una solicitud de un padre de familia,<br>
-    <strong>Cuando</strong> el administrador encuentra un conductor con espacio y ruta factible,<br>
-    <strong>Entonces</strong> el sistema le asigna el conductor a la solicitud.<br>
-    <br>
-    <strong>Escenario 2: Sin conductor factible</strong><br>
-    <strong>Dado que</strong> no hay conductores con espacio o ruta factible,<br>
-    <strong>Cuando</strong> el administrador revisa la solicitud,<br>
-    <strong>Entonces</strong> el sistema indica que no hay conductores disponibles por el momento.<br>
-    <br>
-    <strong>Escenario 3: Reasignación tras rechazo</strong><br>
-    <strong>Dado que</strong> un padre rechazó una asignación previa,<br>
-    <strong>Cuando</strong> el administrador revisa la solicitud nuevamente,<br>
-    <strong>Entonces</strong> puede asignarle un conductor distinto.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Actualización de mapa</strong><br>
+      <strong>Dado que</strong> el viaje está en curso,<br>
+      <strong>Cuando</strong> el padre consulta la ruta,<br>
+      <strong>Entonces</strong> el sistema renderiza un marcador geográfico que se actualiza según las coordenadas recibidas del conductor.
+    </td>
+  </tr>
 </table>
 
-<!--US9-->
+<br>
+
+<!--US09-->
 <table>
   <tr>
     <th><strong>Story ID</strong></th>
@@ -1045,42 +1066,34 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-09</td>
-    <td>Padre de familia</td>
-    <td>Alta</td>
-    <td>EP02</td>
+    <td>Padre de Familia</td>
+    <td>Media</td>
+    <td>EP07</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Confirmación de Conductor Asignado</td>
+    <td colspan="3">Reporte de Ausencia Temprana</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como padre de familia, quiero visualizar los datos del conductor asignado por la empresa y confirmar o rechazar la asignación para asegurarme de que el servicio es de mi conformidad.</td>
+    <td colspan="4">Como padre de familia, quiero avisar al sistema que mi hijo no asistirá al colegio hoy para que el conductor no pierda tiempo yendo a mi domicilio.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Confirmación de la asignación</strong><br>
-    <strong>Dado que</strong> un padre de familia visualiza los datos del conductor asignado,<br>
-    <strong>Cuando</strong> confirma la asignación,<br>
-    <strong>Entonces</strong> el sistema activa el servicio de movilidad para su hijo.<br>
-    <br>
-    <strong>Escenario 2: Rechazo de la asignación</strong><br>
-    <strong>Dado que</strong> un padre de familia no está conforme con el conductor asignado,<br>
-    <strong>Cuando</strong> rechaza la asignación,<br>
-    <strong>Entonces</strong> el sistema notifica al administrador para reasignar otro conductor.<br>
-    <br>
-    <strong>Escenario 3: Datos incompletos del conductor</strong><br>
-    <strong>Dado que</strong> la información del conductor asignado está incompleta,<br>
-    <strong>Cuando</strong> el padre intenta revisarla,<br>
-    <strong>Entonces</strong> el sistema muestra un aviso de "Datos en actualización".<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Cancelación exitosa</strong><br>
+      <strong>Dado que</strong> el viaje aún no ha iniciado,<br>
+      <strong>Cuando</strong> el padre marca al alumno como ausente,<br>
+      <strong>Entonces</strong> el sistema remueve esa parada de la lista diaria del conductor y le envía una notificación.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US10-->
 <table>
@@ -1092,42 +1105,34 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
   </tr>
   <tr>
     <td>US-10</td>
-    <td>Padre de familia</td>
-    <td>Alta</td>
-    <td>EP02</td>
+    <td>Conductor</td>
+    <td>Media</td>
+    <td>EP07</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Consulta de Precios</td>
+    <td colspan="3">Botón de Incidencias Rápido</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como padre de familia, quiero ver los costos de las distintas movilidades para elegir la que se ajuste a mi presupuesto.</td>
+    <td colspan="4">Como conductor, quiero emitir una alerta general de retraso (por tráfico o accidente) a todos los padres de la ruta de manera simultánea.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Consulta del precio mensual</strong><br>
-    <strong>Dado que</strong> un padre de familia visualiza el perfil de una movilidad,<br>
-    <strong>Cuando</strong> consulta la tabla de precios,<br>
-    <strong>Entonces</strong> el sistema muestra el costo mensual del servicio establecido por el conductor o la empresa.<br>
-    <br>
-    <strong>Escenario 2: Precios mostrados en soles</strong><br>
-    <strong>Dado que</strong> el padre de familia consulta los costos de las distintas movilidades,<br>
-    <strong>Cuando</strong> visualiza la tabla de precios,<br>
-    <strong>Entonces</strong> todos los montos se muestran en Soles (PEN), sin opción de otra moneda.<br>
-    <br>
-    <strong>Escenario 3: Plan alternativo no configurado</strong><br>
-    <strong>Dado que</strong> un conductor o administrador no ha configurado un plan alternativo (por ejemplo, uno anual de pago único),<br>
-    <strong>Cuando</strong> el padre intenta visualizarlo,<br>
-    <strong>Entonces</strong> el sistema muestra la etiqueta "No disponible" para ese plan.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Emisión masiva</strong><br>
+      <strong>Dado que</strong> el conductor reporta tráfico intenso,<br>
+      <strong>Cuando</strong> se emite el evento de incidencia,<br>
+      <strong>Entonces</strong> el sistema despacha alertas push simultáneas a todas las familias de los alumnos a bordo.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US11-->
 <table>
@@ -1554,52 +1559,218 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 | **US-40** | Historial de Asistencia | Como padre de familia, quiero consultar el registro histórico de asistencia de mi hijo para verificar los días en que mi hijo usó el servicio de transporte. | **Escenario 1: Consulta del historial de uso** <br>**Dado que** un padre de familia desea revisar el uso del servicio, <br>**Cuando** consulta el historial de su hijo, <br>**Entonces** el sistema muestra los días en que usó el servicio de transporte. <br>**Escenario 2: Historial sin registros** <br>**Dado que** el hijo del padre aún no ha usado el servicio, <br>**Cuando** consulta el historial, <br>**Entonces** el sistema muestra un mensaje indicando que no hay registros disponibles. <br>**Escenario 3: Filtro por rango de fechas** <br>**Dado que** el padre quiere revisar un periodo específico, <br>**Cuando** aplica un filtro de fechas, <br>**Entonces** el sistema muestra únicamente los registros del rango seleccionado. | **EP07** |
 | **US-41** | Gestión de Reclamos | Como padre de familia, quiero presentar un reclamo formal sobre el servicio para que el administrador lo revise y dé una solución. | **Escenario 1: Registro de un reclamo formal** <br>**Dado que** un padre está insatisfecho con el servicio, <br>**Cuando** presenta un reclamo formal, <br>**Entonces** el sistema lo registra y notifica al administrador. <br>**Escenario 2: Seguimiento del estado del reclamo** <br>**Dado que** un padre presentó un reclamo previamente, <br>**Cuando** consulta su estado, <br>**Entonces** el sistema muestra si está pendiente, en revisión o resuelto. <br>**Escenario 3: Reclamo sin descripción** <br>**Dado que** un padre intenta enviar un reclamo sin descripción, <br>**Cuando** presiona el botón de enviar, <br>**Entonces** el sistema le solicita completar el campo antes de continuar. | **EP07** |
 
+<br>
 
 #### Technical Stories
 
+<!--TS01-->
 <table>
   <tr>
-    <th width="15%">Story ID</th>
-    <th width="25%">User</th>
-    <th width="20%">Priority</th>
-    <th width="40%">Epic</th>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
   </tr>
   <tr>
-    <td>TS01</td>
+    <td>TS-01</td>
     <td>Developer</td>
-    <td>High</td>
-    <td>EP01: Identity & Access Management</td>
+    <td>Alta</td>
+    <td>EP01</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Title:</strong> Autenticación de API vía JWT</td>
+    <th>Title</th>
+    <td colspan="3">Autenticación de API vía JWT</td>
   </tr>
   <tr>
-    <td colspan="4"><strong>Description:</strong> Como Developer, quiero implementar un endpoint RESTful seguro para autenticar a los usuarios móviles y emitir tokens de acceso.</td>
+    <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"><strong>Acceptance Criteria:</strong><br>
-      <b>Escenario:</b> Generación de Token JWT con credenciales válidas<br>
-      <b>Given</b> un cliente móvil con credenciales de conductor registradas en la base de datos,<br>
-      <b>When</b> el cliente envía un request POST al endpoint `/api/v1/auth/login` con un payload JSON válido,<br>
-      <b>Then</b> el servidor valida el hash de la contraseña y responde con un HTTP Status `200 OK` retornando un token JWT válido con vigencia de 24 horas.
+    <td colspan="4">Como Developer, quiero implementar un endpoint RESTful seguro para autenticar a los usuarios móviles y emitir tokens JWT con tiempo de expiración.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Generación de token</strong><br>
+      <strong>Dado que</strong> un cliente envía credenciales válidas al endpoint de login,<br>
+      <strong>Cuando</strong> el servidor valida el hash de la contraseña,<br>
+      <strong>Entonces</strong> el sistema responde con un JSON Web Token válido por 24 horas y código HTTP 200.
     </td>
   </tr>
 </table>
 
 <br>
 
+<!--TS02-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-02</td>
+    <td>Developer</td>
+    <td>Alta</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Caché Local para Abordajes (Offline First)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como Developer, quiero configurar una base de datos local (ej. Room/SQLite) en la app nativa para garantizar la persistencia temporal de los abordajes sin internet.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Persistencia sin red</strong><br>
+      <strong>Dado que</strong> la aplicación detecta error de conectividad (Timeout),<br>
+      <strong>Cuando</strong> se genera un evento de abordaje,<br>
+      <strong>Entonces</strong> el evento se escribe en la tabla local `PendingSync_Events` con un timestamp exacto.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--TS03-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-03</td>
+    <td>Developer</td>
+    <td>Media</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Integración de Firebase Cloud Messaging (FCM)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como Developer, quiero acoplar los microservicios de notificaciones con FCM para asegurar la entrega masiva de alertas a los dispositivos móviles.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Entrega de payload</strong><br>
+      <strong>Dado que</strong> el servicio backend genera un evento `ProximityGeofenceTriggered`,<br>
+      <strong>Cuando</strong> el sistema despacha el payload hacia FCM,<br>
+      <strong>Entonces</strong> el servidor de Google retorna un `message_id` de confirmación.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<br>
+
 #### Spike Stories
 
-* **Spike ID:** SS01
-* **Título:** Investigar la implementación de Background Location Tracking en Android/iOS usando Kotlin Multiplatform.
-* **Contexto:** El requerimiento principal del sistema es rastrear la ubicación del conductor sin que este mantenga la pantalla de la aplicación encendida. Existen fuertes restricciones a nivel de sistema operativo en las últimas versiones de Android e iOS respecto al uso de GPS en segundo plano para ahorrar batería, lo cual genera incertidumbre técnica.
-* **Spike Story:** Como equipo de desarrollo móvil, quiero investigar y prototipar los permisos y servicios requeridos para implementar el rastreo de ubicación en segundo plano utilizando KMP (Kotlin Multiplatform), para entender los riesgos técnicos, las limitaciones de consumo de batería y el esfuerzo de implementación.
-* **Criterios de Aceptación:**
-  * **Dado que** el equipo necesita validar el seguimiento en segundo plano, **Cuando** el desarrollador construye un proof-of-concept (PoC) y lo ejecuta con la pantalla apagada por 15 minutos, **Entonces** el PoC es funcional, registra la ubicación correctamente y el hallazgo se documenta en un informe técnico de viabilidad detallando los permisos necesarios (`ACCESS_BACKGROUND_LOCATION` / `UIBackgroundModes`).
+<!--SS01-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-01</td>
+    <td>Architect</td>
+    <td>Alta</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Investigación: Consumo de Batería en Foreground vs Background Service</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como Arquitecto, necesito investigar qué API de geolocalización de Android e iOS minimiza el consumo de batería durante trayectos largos.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Documentación entregable</strong><br>
+      <strong>Dado que</strong> se realiza la investigación de la documentación oficial de Fused Location Provider,<br>
+      <strong>Cuando</strong> finaliza el timebox de 8 horas,<br>
+      <strong>Entonces</strong> se debe entregar un documento con la comparativa de drenaje de batería y la recomendación del intervalo de actualización (polling rate).
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--SS02-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-02</td>
+    <td>Architect</td>
+    <td>Media</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Prueba de Latencia: WebSockets vs FCM para Geofencing</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como Arquitecto, necesito evaluar la latencia de entrega de alertas geográficas para decidir el protocolo de comunicación con la App de Padres.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Benchmark de latencia</strong><br>
+      <strong>Dado que</strong> se requiere tiempo real para alertas críticas,<br>
+      <strong>Cuando</strong> finaliza el timebox de pruebas,<br>
+      <strong>Entonces</strong> el equipo debe documentar el tiempo promedio en milisegundos de entrega de un payload mediante socket abierto frente a un push notification tradicional.
+    </td>
+  </tr>
+</table>
 
 ### 2.4.2. Impact Mapping
 
+El *Impact Mapping* es una técnica de planificación estratégica formalizada por Adzic (2012) que previene que los equipos de desarrollo pierdan de vista los objetivos macro del negocio. Esta herramienta visual nos permite trazar una línea directa entre el objetivo del proyecto (el *Por qué*), los actores involucrados (el *Quién*), los cambios de comportamiento deseados (el *Cómo*) y los entregables de software (el *Qué*), garantizando que ninguna funcionalidad se construya sin una justificación de negocio.
+
+*(Insertar diagrama de Impact Mapping aquí)*
+
+El **Impact Mapping** anterior evidencia cómo nuestros objetivos de negocio (*Business Outcomes*) trazados en el Lean UX Canvas se conectan directamente con los actores del sistema (Administrador, Conductor, Padres). Finalmente, la rama exterior del mapa justifica las funcionalidades detalladas en las User Stories, sirviendo como puente entre la estrategia y el desarrollo de requerimientos.
+
 ### 2.4.3. Product Backlog
+
+El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena todo el trabajo necesario para la evolución del producto (Schwaber & Sutherland, 2020). Para RouteGuard, las historias han sido estimadas mediante Puntos de Historia (Fibonacci) y priorizadas bajo el criterio de maximización de valor temprano (Rubin, 2012), asegurando que las funcionalidades críticas para el *Minimum Viable Product* (MVP) se desarrollen en los primeros *sprints*.
 
 | # Orden | User Story ID | Título | Descripción | Story Points |
 | :---: | :--- | :--- | :--- | :---: |
@@ -1846,23 +2017,126 @@ Se descartó. Trip Monitoring opera incluso sin conectividad prolongada, por lo 
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
-### 2.6.x. Bounded Context: [Bounded Context Name]
+Mientras que el diseño estratégico de la sección anterior nos permitió delimitar las fronteras de nuestros *Bounded Contexts*, el nivel táctico del *Domain-Driven Design* proporciona los bloques de construcción precisos (Entidades, Objetos de Valor, Agregados y Servicios) necesarios para materializar el *Ubiquitous Language* en código fuente (Evans, 2003). Como sostiene Vernon (2013), aplicar estos patrones arquitectónicos dentro de una estructura en capas (Dominio, Interfaz, Aplicación, Infraestructura) aísla la lógica de negocio de los detalles tecnológicos, promoviendo un software escalable, testeable y mantenible.
 
-#### 2.6.x.1. Domain Layer
+### 2.6.1. Bounded Context: Identity & Access Management (IAM)
+#### 2.6.1.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.1.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.1.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.1.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.1.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.1.6. Code Level Diagrams
+##### 2.6.1.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.1.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
-#### 2.6.x.2. Interface Layer
+### 2.6.2. Bounded Context: Suscription & Onboarding
+#### 2.6.2.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.2.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.2.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.2.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.2.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.2.6. Code Level Diagrams
+##### 2.6.2.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.2.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
-#### 2.6.x.3. Application Layer
+### 2.6.3. Bounded Context: Fleet & Compliance
+#### 2.6.3.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.3.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.3.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.3.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.3.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.3.6. Code Level Diagrams
+##### 2.6.3.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.3.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
-#### 2.6.x.4 Infrastructure Layer
+### 2.6.4. Bounded Context: Trip Management
+#### 2.6.4.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.4.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.4.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.4.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.4.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.4.6. Code Level Diagrams
+##### 2.6.4.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.4.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
-#### 2.6.x.5. Bounded Context Software Architecture Component Level Diagrams
+### 2.6.5. Bounded Context: Real-time Tracking
+#### 2.6.5.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.5.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.5.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.5.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.5.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.5.6. Code Level Diagrams
+##### 2.6.5.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.5.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
-#### 2.6.x.6. Bounded Context Software Architecture Code Level Diagrams
+### 2.6.6. Bounded Context: Notifications & Geofencing
+#### 2.6.6.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.6.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.6.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.6.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.6.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.6.6. Code Level Diagrams
+##### 2.6.6.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.6.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
-##### 2.6.x.6.1. Bounded Context Domain Layer Class Diagrams
-
-##### 2.6.x.6.2. Bounded Context Database Design Diagram
+### 2.6.7. Bounded Context: Community & Support
+#### 2.6.7.1. Domain Layer
+*(Insertar descripción y detalles de la capa de dominio aquí)*
+#### 2.6.7.2. Interface Layer
+*(Insertar detalles de la capa de interfaz aquí)*
+#### 2.6.7.3. Application Layer
+*(Insertar detalles de la capa de aplicación aquí)*
+#### 2.6.7.4. Infrastructure Layer
+*(Insertar detalles de infraestructura aquí)*
+#### 2.6.7.5. Component Level Diagrams
+*(Insertar diagrama de Componentes aquí)*
+#### 2.6.7.6. Code Level Diagrams
+##### 2.6.7.6.1. Domain Layer Class Diagram
+*(Insertar diagrama de Clases aquí)*
+##### 2.6.7.6.2. Database Design Diagram
+*(Insertar diagrama de Base de Datos aquí)*
 
 <div style="page-break-after: always;"></div>
 
