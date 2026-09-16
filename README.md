@@ -2594,6 +2594,65 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 | 44 | US-29 | Reporte de Bloqueo de Vías | EP05 | 3 |
 | 45 | US-30 | Chat Interno Conductor - Padre | EP07 | 5 |
 
+## 2.5. Strategic-Level Domain-Driven Design
+
+### 2.5.1. EventStorming
+
+### 2.5.1.1. Candidate Context Discovery
+
+En esta sesión aplicamos la técnica de *Candidate Context Discovery* para identificar y separar los posibles Bounded Contexts del sistema RouteGuard. La sesión se realizó en **Miro** con la participación de los cuatro integrantes del equipo y tuvo una duración de una hora y cuarenta minutos, dentro del límite de dos horas recomendado para esta técnica.
+ 
+Utilizamos las tres técnicas sugeridas de forma encadenada, ya que cada una responde una pregunta distinta. Con **start-with-simple** descompusimos la línea temporal en tres fases secuenciales —configuración y contratación, operación diaria, y cierre y postventa— para obtener un modelo manejable antes de intentar agrupar. Con **look-for-pivotal-events** identificamos los eventos que marcan cambios de estado entre partes distintas del proceso de negocio, que resultaron ser las costuras naturales del dominio. Finalmente, con **start-with-value** determinamos qué agrupaciones concentran el mayor valor para el negocio, contrastándolas con la propuesta de valor.
+ 
+Los eventos pivote identificados fueron los siguientes:
+ 
+| Evento pivote | Cambio de estado que señala |
+|---|---|
+| `RouteActivationFinalized` | La ruta pasa de configuración a disponible para operar; separa la planificación de la ejecución. |
+| `TripStarted` | El plan de ruta pasa de intención a ejecución; separa la planificación del registro operativo. |
+| `BoardingQueuedOffline` | El registro de abordaje pasa de confirmado a provisional en el dispositivo; marca el punto donde el dominio deja de asumir conectividad continua. |
+| `BoardingSynchronized` | El registro pasa de provisional en el dispositivo a confirmado en el servidor. |
+| `SubscriptionActivated` | El vínculo comercial pasa de solicitud a acceso habilitado; separa la capa comercial de la operativa. |
+| `TripCompleted` | La ejecución pasa a cierre; separa la operación diaria de la postventa. |
+ 
+Al analizar estos eventos pudimos observar que cada grupo implicaba responsabilidades, reglas y garantías de consistencia distintas dentro del sistema, lo que nos permitió agruparlos en contextos bien definidos, evitando ambigüedad y facilitando la organización del dominio.
+ 
+A continuación se presenta la evolución progresiva del EventStorm durante la sesión.
+ 
+*Paso 1 — Domain Events:* los eventos trazados sobre la línea temporal, en pasado participio y con el lenguaje ubicuo en inglés.
+ 
+![Domain Events](resources/chapter-2/EventStorming/Events.jpg)
+ 
+*Paso 2 — Commands:* sobre cada evento se identificó el comando que lo dispara.
+ 
+![Commands](resources/chapter-2/EventStorming/Commands.jpg)
+ 
+*Paso 3 — Actors:* se determinó qué actor ejecuta cada comando.
+ 
+![Actors](resources/chapter-2/EventStorming/Actors.jpg)
+ 
+*Paso 4 — Agrupación:* aplicando los eventos pivote como líneas de corte, los eventos se agruparon por los agregados que comparten.
+ 
+![Bounded Context Decomposition](resources/chapter-2/EventStorming/Design-Level-Event-Storming.jpg)
+ 
+Este proceso nos llevó a definir los siguientes Bounded Contexts:
+ 
+| Bounded Context | Descripción | Eventos clave |
+|---|---|---|
+| **Identity & Access Management** | Gestiona el registro, la autenticación y el control de acceso por rol de los usuarios de la plataforma. | User Authenticated, Administrator Account Created, Driver Account Provisioned, Parent Account Provisioned |
+| **Subscription & Plan Management** | Administra los planes SaaS, procesa el cobro y habilita el acceso comercial a la plataforma. | Plan Selected, Payment Confirmed, Subscription Activated, Plan Upgraded, Quotas Increased |
+| **Fleet & Route Management** | Custodia el plan de recorrido vigente: paradas, vehículo, conductor y programación de servicio de cada ruta. | Route Defined, Waypoint Selected, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
+| **Stakeholder & Asset Management** | Registra a conductores y padres de familia, vincula estudiantes y organiza los grupos por ruta. | Driver Profile Created, Parent Profile Created, Child Linked To Parent, Group Finalized |
+| **Trip Execution & Monitoring** | Registra la ejecución real del viaje diario, incluyendo el registro de abordaje con soporte de sincronización *offline*. | Trip Started, Boarding Opened, Student Boarded, Boarding Queued Offline, Boarding Synchronized, Incident Reported, Trip Completed |
+| **Notifications & Communication** | Traduce los eventos del dominio en notificaciones para los padres de familia, incluyendo alertas de alta prioridad y avisos del conductor. | Notification Dispatched, Panic Alert Triggered, Announcement Published |
+ 
+Aplicando finalmente *start-with-value*, clasificamos los contextos según su aporte estratégico. **Trip Execution & Monitoring** constituye el *Core Domain*: es el contexto donde RouteGuard concentra su ventaja competitiva, al garantizar que ningún registro de abordaje se pierda incluso sin conectividad. **Fleet & Route Management**, **Stakeholder & Asset Management** y **Notifications & Communication** son *Supporting Subdomains*: indispensables para el negocio pero no diferenciadores; Notifications & Communication se extiende sobre el contexto heredado con la integración de un proveedor de mensajería push (FCM), para que los eventos del viaje lleguen al dispositivo del padre sin que este tenga que abrir la app. **Identity & Access Management** y **Subscription & Plan Management** son *Generic Subdomains*, problemas ya resueltos por la industria en los que se prioriza la reutilización.
+ 
+La capacidad que distingue a RouteGuard es la resiliencia ante la falta de conectividad dentro de Trip Execution & Monitoring, y es ahí donde se concentra el esfuerzo de diseño táctico en las siguientes secciones.
+
+### 2.5.1.2. Domain Message Flows Modeling
+
+### 2.5.1.3. Bounded Context Canvases
 
 
 <div style="page-break-after: always;"></div>
