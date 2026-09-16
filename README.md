@@ -2799,6 +2799,92 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | **Business Decisions** | La suscripción se activa solo tras la confirmación de pago de la pasarela externa. Una mejora de plan incrementa las cuotas de ruta y conductor sin interrumpir el servicio vigente. |
 | **Outbound Communication** | *Messages:* Solicitar procesamiento de pago, Entregar límites del plan activo. *Collaborators:* Pasarela de pago |
 
+
+### 2.5.2. Context Mapping
+
+El *Context Map* (Mapa de Contextos) establece las fronteras de nuestros Bounded Contexts y define explícitamente los patrones de integración y comunicación entre ellos, evitando que los modelos de dominio se contaminen entre sí. 
+
+En RouteGuard, hemos identificado los siguientes patrones de relación:
+*   **Customer/Supplier:** El contexto de *Trip Execution & Monitoring* actúa como Customer de *Fleet & Route Management* (Supplier), ya que el viaje no puede ejecutarse si no existe la planificación previa de la ruta.
+*   **Publish/Subscribe (Event-Driven):** Utilizamos integración basada en eventos donde el contexto de *Trip Execution & Monitoring* publica eventos (ej. `StudentBoarded`) en un Message Broker, y el contexto de *Notifications & Communication* actúa como suscriptor para despachar las alertas sin acoplamiento temporal.
+*   **Conformist / Shared Kernel:** El contexto de *Identity & Access Management* (IAM) provee la autenticación. Los demás contextos asumen el rol de Conformist frente al token JWT emitido por IAM para validar roles y permisos.
+
+*(Nota: Inserta aquí tu diagrama de Context Map)*
+![Context Map](resources/chapter-2/context-mapping.png)
+
+## 2.6. Tactical-Level Domain-Driven Design
+
+### 2.6.1. Bounded Context: Trip Execution & Monitoring (Tracking)
+
+Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaje. Para asegurar su máxima resiliencia, soporta la sincronización de abordajes *Offline-First* mediante caché local y el monitoreo GPS constante.
+
+#### 2.6.1.1. Domain Layer
+*   **Entities:** `Route` (Raíz del Agregado), `LocationRecord`, `Waypoint`.
+*   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery), `Timestamp`.
+*   **Domain Events:** `TripStarted`, `StudentBoarded`, `OfflineSyncCompleted`.
+
+#### 2.6.1.2. Interface Layer
+*   **REST Controllers:** `TripCommandController` (Inicia/cancela rutas), `WaypointController` (Marca abordajes).
+*   **Event Listeners:** `SyncOfflineAbordajesListener` (Recibe lotes de datos SQLite en reconexión).
+*   **WebSockets:** `RouteTrackingSocketHandler` (Emite la coordenada en vivo a los padres).
+
+#### 2.6.1.3. Application Layer
+*   **Application Services:** `RouteTrackingService` (Calcula la distancia a la siguiente parada y publica eventos al bus). `MapboxRoutingService` (Integración para ETA).
+
+#### 2.6.1.4. Infrastructure Layer
+*   **Persistence:** Base de datos con capacidades espaciales (PostGIS / GeoJSON) para almacenamiento geométrico.
+*   **External APIs:** Mapbox API / Google Maps Platform.
+
+#### 2.6.1.5. Component Level Diagrams
+*(Nota: Inserta aquí tu diagrama de componentes para Tracking)*
+![Tracking Components](resources/chapter-2/tracking-components.png)
+
+#### 2.6.1.6. Code Level Diagrams
+##### 2.6.1.6.1. Domain Layer Class Diagram
+*(Nota: Inserta aquí el diagrama PlantUML de Tracking Domain que te pasé)*
+![Tracking Domain Diagram](resources/chapter-2/tracking-domain.png)
+
+##### 2.6.1.6.2. Database Design Diagram
+*(Nota: Inserta aquí el diagrama PlantUML de Tracking Database que te pasé)*
+![Tracking DB Diagram](resources/chapter-2/tracking-database.png)
+
+
+### 2.6.2. Bounded Context: Notifications & Communication
+
+Este contexto reacciona a los eventos del sistema para notificar asíncronamente a los dispositivos móviles, asegurando alta disponibilidad a través de colas de mensajería y evitando cuellos de botella en la ejecución de los viajes.
+
+#### 2.6.2.1. Domain Layer
+*   **Entities:** `Notification` (Raíz), `GeofenceAlert` (Alerta generada por proximidad).
+*   **Value Objects:** `PushPayload`, `DeviceToken`, `NotificationPriority`.
+*   **Domain Events:** `NotificationDispatched`, `GeofenceBreached`.
+
+#### 2.6.2.2. Interface Layer
+*   **Message Consumers:** `TrackingEventConsumer` (Consume los eventos del viaje vía RabbitMQ/Kafka).
+*   **REST Controllers:** `NotificationPreferencesController` (Gestión de preferencias del padre).
+
+#### 2.6.2.3. Application Layer
+*   **Application Services:** `GeofencingService` (Calcula intersecciones de radios), `PushNotificationDispatcher` (Genera el payload para el dispositivo).
+
+#### 2.6.2.4. Infrastructure Layer
+*   **Message Broker:** RabbitMQ para desacoplar el envío masivo de notificaciones.
+*   **External Integrations:** Firebase Cloud Messaging (FCM) SDK.
+
+#### 2.6.2.5. Component Level Diagrams
+*(Nota: Inserta aquí tu diagrama de componentes para Notificaciones)*
+![Notifications Components](resources/chapter-2/notifications-components.png)
+
+#### 2.6.2.6. Code Level Diagrams
+##### 2.6.2.6.1. Domain Layer Class Diagram
+*(Nota: Inserta aquí el diagrama PlantUML de Notifications Domain que te pasé)*
+![Notifications Domain Diagram](resources/chapter-2/notifications-domain.png)
+
+##### 2.6.2.6.2. Database Design Diagram
+*(Nota: Inserta aquí el diagrama PlantUML de Notifications Database que te pasé)*
+![Notifications DB Diagram](resources/chapter-2/notifications-database.png)
+
+*(Nota para el resto del equipo: A partir del 2.6.3 en adelante, deben inyectar el Tactical DDD de sus Bounded Contexts asignados como IAM, Fleet, etc.)*
+
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo III: Solution UI/UX Design
