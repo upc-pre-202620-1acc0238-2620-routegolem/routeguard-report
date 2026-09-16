@@ -124,6 +124,52 @@
       - [2.6.2.6. Code Level Diagrams](#2626-code-level-diagrams)
         - [2.6.2.6.1. Domain Layer Class Diagram](#26261-domain-layer-class-diagram)
         - [2.6.2.6.2. Database Design Diagram](#26262-database-design-diagram)
+    - [2.6.3. Bounded Context: Identity \& Access Management (IAM)](#263-bounded-context-identity--access-management-iam)
+      - [2.6.3.1. Domain Layer](#2631-domain-layer)
+      - [2.6.3.2. Interface Layer](#2632-interface-layer)
+      - [2.6.3.3. Application Layer](#2633-application-layer)
+      - [2.6.3.4. Infrastructure Layer](#2634-infrastructure-layer)
+      - [2.6.3.5. Component Level Diagrams](#2635-component-level-diagrams)
+      - [2.6.3.6. Code Level Diagrams](#2636-code-level-diagrams)
+        - [2.6.3.6.1. Domain Layer Class Diagram](#26361-domain-layer-class-diagram)
+        - [2.6.3.6.2. Database Design Diagram](#26362-database-design-diagram)
+    - [2.6.4. Bounded Context: Subscription \& Onboarding](#264-bounded-context-subscription--onboarding)
+      - [2.6.4.1. Domain Layer](#2641-domain-layer)
+      - [2.6.4.2. Interface Layer](#2642-interface-layer)
+      - [2.6.4.3. Application Layer](#2643-application-layer)
+      - [2.6.4.4. Infrastructure Layer](#2644-infrastructure-layer)
+      - [2.6.4.5. Component Level Diagrams](#2645-component-level-diagrams)
+      - [2.6.4.6. Code Level Diagrams](#2646-code-level-diagrams)
+        - [2.6.4.6.1. Domain Layer Class Diagram](#26461-domain-layer-class-diagram)
+        - [2.6.4.6.2. Database Design Diagram](#26462-database-design-diagram)
+    - [2.6.5. Bounded Context: Fleet \& Compliance](#265-bounded-context-fleet--compliance)
+      - [2.6.5.1. Domain Layer](#2651-domain-layer)
+      - [2.6.5.2. Interface Layer](#2652-interface-layer)
+      - [2.6.5.3. Application Layer](#2653-application-layer)
+      - [2.6.5.4. Infrastructure Layer](#2654-infrastructure-layer)
+      - [2.6.5.5. Component Level Diagrams](#2655-component-level-diagrams)
+      - [2.6.5.6. Code Level Diagrams](#2656-code-level-diagrams)
+        - [2.6.5.6.1. Domain Layer Class Diagram](#26561-domain-layer-class-diagram)
+        - [2.6.5.6.2. Database Design Diagram](#26562-database-design-diagram)
+    - [2.6.6. Bounded Context: Trip Management](#266-bounded-context-trip-management)
+      - [2.6.6.1. Domain Layer](#2661-domain-layer)
+      - [2.6.6.2. Interface Layer](#2662-interface-layer)
+      - [2.6.6.3. Application Layer](#2663-application-layer)
+      - [2.6.6.4. Infrastructure Layer](#2664-infrastructure-layer)
+      - [2.6.6.5. Component Level Diagrams](#2665-component-level-diagrams)
+      - [2.6.6.6. Code Level Diagrams](#2666-code-level-diagrams)
+        - [2.6.6.6.1. Domain Layer Class Diagram](#26661-domain-layer-class-diagram)
+        - [2.6.6.6.2. Database Design Diagram](#26662-database-design-diagram)
+    - [2.6.7. Bounded Context: Community \& Support](#267-bounded-context-community--support)
+      - [2.6.7.1. Domain Layer](#2671-domain-layer)
+      - [2.6.7.2. Interface Layer](#2672-interface-layer)
+      - [2.6.7.3. Application Layer](#2673-application-layer)
+      - [2.6.7.4. Infrastructure Layer](#2674-infrastructure-layer)
+      - [2.6.7.5. Component Level Diagrams](#2675-component-level-diagrams)
+      - [2.6.7.6. Code Level Diagrams](#2676-code-level-diagrams)
+        - [2.6.7.6.1. Domain Layer Class Diagram](#26761-domain-layer-class-diagram)
+        - [2.6.7.6.2. Database Design Diagram](#26762-database-design-diagram)
+
 - [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
   - [3.1. Product design](#31-product-design)
     - [3.1.1. Style Guidelines](#311-style-guidelines)
@@ -2832,6 +2878,101 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ![Notifications DB Diagram](resources/chapter-2/notifications-database.png)
 
 
+
+
+### 2.6.3. Bounded Context: Identity & Access Management (IAM)
+
+#### 2.6.3.1. Domain Layer
+
+#### 2.6.3.2. Interface Layer
+
+#### 2.6.3.3. Application Layer
+
+#### 2.6.3.4. Infrastructure Layer
+
+#### 2.6.3.5. Component Level Diagrams
+
+#### 2.6.3.6. Code Level Diagrams
+
+##### 2.6.3.6.1. Domain Layer Class Diagram
+
+##### 2.6.3.6.2. Database Design Diagram
+
+
+### 2.6.4. Bounded Context: Subscription & Onboarding
+
+#### 2.6.4.1. Domain Layer
+
+#### 2.6.4.2. Interface Layer
+
+#### 2.6.4.3. Application Layer
+
+#### 2.6.4.4. Infrastructure Layer
+
+#### 2.6.4.5. Component Level Diagrams
+
+#### 2.6.4.6. Code Level Diagrams
+
+##### 2.6.4.6.1. Domain Layer Class Diagram
+
+##### 2.6.4.6.2. Database Design Diagram
+
+
+### 2.6.5. Bounded Context: Fleet & Compliance
+
+#### 2.6.5.1. Domain Layer
+
+#### 2.6.5.2. Interface Layer
+
+#### 2.6.5.3. Application Layer
+
+#### 2.6.5.4. Infrastructure Layer
+
+#### 2.6.5.5. Component Level Diagrams
+
+#### 2.6.5.6. Code Level Diagrams
+
+##### 2.6.5.6.1. Domain Layer Class Diagram
+
+##### 2.6.5.6.2. Database Design Diagram
+
+
+### 2.6.6. Bounded Context: Trip Management
+
+#### 2.6.6.1. Domain Layer
+
+#### 2.6.6.2. Interface Layer
+
+#### 2.6.6.3. Application Layer
+
+#### 2.6.6.4. Infrastructure Layer
+
+#### 2.6.6.5. Component Level Diagrams
+
+#### 2.6.6.6. Code Level Diagrams
+
+##### 2.6.6.6.1. Domain Layer Class Diagram
+
+##### 2.6.6.6.2. Database Design Diagram
+
+
+### 2.6.7. Bounded Context: Community & Support
+
+#### 2.6.7.1. Domain Layer
+
+#### 2.6.7.2. Interface Layer
+
+#### 2.6.7.3. Application Layer
+
+#### 2.6.7.4. Infrastructure Layer
+
+#### 2.6.7.5. Component Level Diagrams
+
+#### 2.6.7.6. Code Level Diagrams
+
+##### 2.6.7.6.1. Domain Layer Class Diagram
+
+##### 2.6.7.6.2. Database Design Diagram
 
 
 <div style="page-break-after: always;"></div>
