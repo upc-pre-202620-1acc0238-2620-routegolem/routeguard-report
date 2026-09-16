@@ -2598,7 +2598,7 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 
 ### 2.5.1. EventStorming
 
-### 2.5.1.1. Candidate Context Discovery
+#### 2.5.1.1. Candidate Context Discovery
 
 En esta sesión aplicamos la técnica de *Candidate Context Discovery* para identificar y separar los posibles Bounded Contexts del sistema RouteGuard. La sesión se realizó en **Miro** con la participación de los cuatro integrantes del equipo y tuvo una duración de una hora y cuarenta minutos, dentro del límite de dos horas recomendado para esta técnica.
  
@@ -2650,7 +2650,7 @@ Aplicando finalmente *start-with-value*, clasificamos los contextos según su ap
  
 La capacidad que distingue a RouteGuard es la resiliencia ante la falta de conectividad dentro de Trip Execution & Monitoring, y es ahí donde se concentra el esfuerzo de diseño táctico en las siguientes secciones.
 
-### 2.5.1.2. Domain Message Flows Modeling
+#### 2.5.1.2. Domain Message Flows Modeling
 
 El *Domain Message Flow Modelling* es una técnica que permite representar cómo fluyen los mensajes de dominio —*commands*, *events* y *queries*— entre los distintos Bounded Contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto al resolver un caso concreto del negocio.
  
@@ -2705,8 +2705,99 @@ La bifurcación entre los pasos 4a y 4b concentra la lógica central de resilien
  
 Notifications & Communication concentra tanto la traducción del evento como la decisión de prioridad, delegando únicamente la entrega final al proveedor push, sin requerir que Trip Execution & Monitoring conozca la lógica de despacho.
 
-### 2.5.1.3. Bounded Context Canvases
-
+#### 2.5.1.3. Bounded Context Canvases
+ 
+El *Bounded Context Canvas* permite representar de forma clara los límites, responsabilidades e interacciones de cada contexto dentro de un sistema complejo, facilitando que el equipo construya una visión compartida sobre su propósito, sus agregados y las reglas de negocio que lo gobiernan. El equipo utilizó la plantilla oficial *Bounded Context Canvas v4* de ddd-crew, siguiendo el proceso iterativo de seis pasos que la técnica establece: **Context Overview Definition**, **Business Rules Distillation & Ubiquitous Language Capture**, **Capability Analysis**, **Capability Layering** (donde aplica), **Dependencies Capture** y **Design Critique**. Los seis canvases se trabajaron en el orden de importancia definido en 2.5.1.1, comenzando por el Core Domain.
+ 
+**Canvas 1: Trip Execution & Monitoring**
+ 
+![Trip Execution and Monitoring Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-01-trip-execution.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Trip Execution & Monitoring |
+| **Description** | Registra la ejecución real del viaje diario del conductor, incluyendo el registro de abordaje con soporte de sincronización *offline* para zonas sin cobertura. |
+| **Strategic Classification** | Domain: core · Business Model: revenue generator · Evolution: custom built |
+| **Domain Roles** | Execution Context |
+| **Inbound Communication** | *Commands:* Select Route Card, Start Trip, Open Boarding, Set Boarding Status, Sync Offline Queue, Report Incident, Complete Trip, Archive Trip. *Events:* Trip Started, Boarding Opened, Student Boarded, Boarding Queued Offline, Boarding Synchronized, Incident Reported, Trip Completed, Trip Archived |
+| **Ubiquitous Language** | **Trip:** ejecución física de una ruta en una fecha y hora específica. **Boarding:** acto en que un estudiante ingresa o desciende del vehículo. **Offline Queue:** registro de abordaje guardado localmente cuando el dispositivo no tiene señal. **Incident:** evento inesperado que altera el curso normal del viaje. |
+| **Business Decisions** | Un viaje inicia con el estado "Boarding Opened" antes de aceptar registros de abordaje. Un registro sin señal se guarda localmente con el *timestamp* del dispositivo, sin bloquear la operación. La sincronización es idempotente por `(tripId, studentId)`: un reintento posterior a la confirmación no genera un registro duplicado. Un viaje completado se archiva y deja de aceptar nuevos registros. |
+| **Outbound Communication** | *Messages:* Notificar abordaje al padre, Notificar incidencia. *Collaborators:* Notifications & Communication |
+ 
+**Canvas 2: Fleet & Route Management**
+ 
+![Fleet and Route Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-02-fleet-route.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Fleet & Route Management |
+| **Description** | Custodia el plan de recorrido vigente de cada ruta escolar: secuencia de paradas, vehículo y conductor asignados, días de servicio y hora de salida. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre servicios de mapas de terceros |
+| **Domain Roles** | Specification Context |
+| **Inbound Communication** | *Commands:* Define Route, Pick Waypoints, Assign Students To Route, Select Vehicle, Define Service Days, Set Departure Time. *Events:* Route Defined, Waypoint Selected, Stop Count Updated, Passenger Manifest Generated, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
+| **Ubiquitous Language** | **Route:** secuencia predefinida de paradas entre un origen y un colegio. **Stop:** ubicación geográfica donde un estudiante sube o baja del vehículo. **Passenger Manifest:** listado de estudiantes asignados a una ruta. **Service Days:** días de la semana en que la ruta opera. |
+| **Business Decisions** | Una ruta no puede activarse sin vehículo y conductor asignados. El conteo de paradas se recalcula automáticamente al agregar o quitar un *waypoint*. Los estudiantes asignables a una ruta provienen del manifiesto ya finalizado en Stakeholder & Asset Management. |
+| **Outbound Communication** | *Messages:* Entregar plan de ruta vigente. *Collaborators:* Trip Execution & Monitoring |
+ 
+**Canvas 3: Stakeholder & Asset Management**
+ 
+![Stakeholder and Asset Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-03-stakeholder.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Stakeholder & Asset Management |
+| **Description** | Registra a conductores y padres de familia, vincula estudiantes a sus padres y organiza los grupos de estudiantes que luego se asignan a una ruta. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built |
+| **Domain Roles** | Registry Context |
+| **Inbound Communication** | *Commands:* Register Driver, Register Parent, Register Child, Link Child To Parent, Create Group, Assign Parents To Group, Include Linked Students, Finalize Group. *Events:* Driver Profile Created, Parent Profile Created, Child Profile Created, Child Linked To Parent, Group Name Assigned, Parents Assigned To Group, Students Included In Group, Group Finalized |
+| **Ubiquitous Language** | **Driver:** persona registrada que opera una unidad de transporte. **Parent:** persona registrada responsable de uno o más estudiantes. **Group:** conjunto de estudiantes vinculados a los padres asignados, previo a su incorporación a una ruta. |
+| **Business Decisions** | Un estudiante solo puede vincularse a un padre ya registrado. Un grupo no puede finalizarse sin al menos un padre y sus estudiantes incluidos. Una vez finalizado, el grupo genera el manifiesto que Fleet & Route Management consume. |
+| **Outbound Communication** | *Messages:* Exportar manifiesto del grupo. *Collaborators:* Fleet & Route Management |
+ 
+**Canvas 4: Notifications & Communication**
+ 
+![Notifications and Communication Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-04-notifications.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Notifications & Communication |
+| **Description** | Traduce los eventos relevantes del viaje en notificaciones push para los padres de familia, entregadas directamente en su dispositivo sin necesidad de abrir la app, incluyendo alertas de alta prioridad ante incidencias y anuncios difundidos por el conductor. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre proveedor de mensajería push de terceros |
+| **Domain Roles** | Dispatch Context |
+| **Inbound Communication** | *Commands:* Prepare Boarding Notification, Trigger Panic Alert, Post Broadcast Message, Retry Notification, Register Device Token. *Events:* Student Boarded, Incident Reported, Notification Created, Notification Queued, Notification Dispatched, Panic Alert Triggered, Announcement Published, Notification Delivered, Notification Failed |
+| **Ubiquitous Language** | **Notification:** mensaje push entregado al dispositivo del padre de familia ante un evento del viaje. **Panic Alert:** notificación de alta prioridad originada por una incidencia. **Broadcast:** anuncio del conductor distribuido a todos los padres de su ruta. **Device Token:** identificador del dispositivo del padre ante el proveedor de mensajería, registrado al iniciar sesión. |
+| **Business Decisions** | Toda notificación pasa por un estado de cola antes de despacharse al proveedor push. Una notificación fallida se reintenta automáticamente; si el reintento también falla, queda registrada como no entregada. Una alerta de pánico se trata con prioridad distinta a una notificación de abordaje ordinaria. Sin un *device token* vigente, la notificación se registra en el log sin intento de envío. |
+| **Outbound Communication** | *Messages:* Despachar notificación push. *Collaborators:* Proveedor push (FCM) |
+ 
+**Canvas 5: Identity & Access Management**
+ 
+![Identity and Access Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-05-iam.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Identity & Access Management |
+| **Description** | Gestiona el registro, la autenticación y el control de acceso de los usuarios de la plataforma, resolviendo el rol activo que determina las funcionalidades visibles para cada perfil. |
+| **Strategic Classification** | Domain: generic · Business Model: compliance enforcement · Evolution: product |
+| **Domain Roles** | Gateway Context |
+| **Inbound Communication** | *Commands:* Sign In, Register Administrator, Generate Session Token, Generate Password. *Events:* User Authenticated, Administrator Account Created, Driver Account Provisioned, Parent Account Provisioned, JWT Session Token Issued, Password Generated |
+| **Ubiquitous Language** | **Account:** identidad única de un usuario en la plataforma. **Session Token:** credencial temporal emitida tras una autenticación válida. **Role:** perfil activo (Administrador, Conductor, Padre) que determina las funcionalidades visibles. |
+| **Business Decisions** | Un usuario debe estar registrado para acceder a la plataforma. Las cuentas de conductor y padre se provisionan con credenciales generadas automáticamente al momento del registro por el administrador. Al iniciar sesión desde la app del padre, el dispositivo registra su *device token* para que Notifications & Communication pueda despachar notificaciones push. |
+| **Outbound Communication** | *Messages:* Entregar identidad y rol por token. *Collaborators:* Todos los Bounded Contexts |
+ 
+**Canvas 6: Subscription & Plan Management**
+ 
+![Subscription and Plan Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-06-subscription.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Subscription & Plan Management |
+| **Description** | Administra los planes SaaS, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma según el plan vigente del administrador. |
+| **Strategic Classification** | Domain: generic · Business Model: revenue generator · Evolution: product |
+| **Domain Roles** | Gateway Context |
+| **Inbound Communication** | *Commands:* Select Plan, Initiate Payment Process, Upgrade Plan. *Events:* Plan Selected, Payment Confirmed, Subscription Activated, Plan Features Enabled, Plan Upgraded, Quotas Increased |
+| **Ubiquitous Language** | **Subscription:** vínculo comercial vigente entre el administrador y la plataforma. **Plan:** nivel de servicio contratado, con límites propios de unidades gestionables. **Quota:** número máximo de rutas y conductores habilitados por el plan. |
+| **Business Decisions** | La suscripción se activa solo tras la confirmación de pago de la pasarela externa. Una mejora de plan incrementa las cuotas de ruta y conductor sin interrumpir el servicio vigente. |
+| **Outbound Communication** | *Messages:* Solicitar procesamiento de pago, Entregar límites del plan activo. *Collaborators:* Pasarela de pago |
 
 <div style="page-break-after: always;"></div>
 
