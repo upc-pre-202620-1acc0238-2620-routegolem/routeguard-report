@@ -106,7 +106,7 @@
       - [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
     - [2.5.2. Context Mapping](#252-context-mapping)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
-    - [2.6.1. Bounded Context: Trip Execution \& Monitoring (Tracking)](#261-bounded-context-trip-execution--monitoring-tracking)
+    - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring-tracking)
       - [2.6.1.1. Domain Layer](#2611-domain-layer)
       - [2.6.1.2. Interface Layer](#2612-interface-layer)
       - [2.6.1.3. Application Layer](#2613-application-layer)
@@ -124,7 +124,7 @@
       - [2.6.2.6. Code Level Diagrams](#2626-code-level-diagrams)
         - [2.6.2.6.1. Domain Layer Class Diagram](#26261-domain-layer-class-diagram)
         - [2.6.2.6.2. Database Design Diagram](#26262-database-design-diagram)
-    - [2.6.3. Bounded Context: Identity \& Access Management (IAM)](#263-bounded-context-identity--access-management-iam)
+    - [2.6.3. Bounded Context: Identity \& Access Management](#263-bounded-context-identity--access-management-iam)
       - [2.6.3.1. Domain Layer](#2631-domain-layer)
       - [2.6.3.2. Interface Layer](#2632-interface-layer)
       - [2.6.3.3. Application Layer](#2633-application-layer)
@@ -133,7 +133,7 @@
       - [2.6.3.6. Code Level Diagrams](#2636-code-level-diagrams)
         - [2.6.3.6.1. Domain Layer Class Diagram](#26361-domain-layer-class-diagram)
         - [2.6.3.6.2. Database Design Diagram](#26362-database-design-diagram)
-    - [2.6.4. Bounded Context: Subscription \& Onboarding](#264-bounded-context-subscription--onboarding)
+    - [2.6.4. Bounded Context: Subscription \& Plan Management](#264-bounded-context-subscription--onboarding)
       - [2.6.4.1. Domain Layer](#2641-domain-layer)
       - [2.6.4.2. Interface Layer](#2642-interface-layer)
       - [2.6.4.3. Application Layer](#2643-application-layer)
@@ -142,7 +142,7 @@
       - [2.6.4.6. Code Level Diagrams](#2646-code-level-diagrams)
         - [2.6.4.6.1. Domain Layer Class Diagram](#26461-domain-layer-class-diagram)
         - [2.6.4.6.2. Database Design Diagram](#26462-database-design-diagram)
-    - [2.6.5. Bounded Context: Fleet \& Compliance](#265-bounded-context-fleet--compliance)
+    - [2.6.5. Bounded Context: Fleet \& Route Management](#265-bounded-context-fleet--compliance)
       - [2.6.5.1. Domain Layer](#2651-domain-layer)
       - [2.6.5.2. Interface Layer](#2652-interface-layer)
       - [2.6.5.3. Application Layer](#2653-application-layer)
@@ -151,7 +151,7 @@
       - [2.6.5.6. Code Level Diagrams](#2656-code-level-diagrams)
         - [2.6.5.6.1. Domain Layer Class Diagram](#26561-domain-layer-class-diagram)
         - [2.6.5.6.2. Database Design Diagram](#26562-database-design-diagram)
-    - [2.6.6. Bounded Context: Trip Management](#266-bounded-context-trip-management)
+    - [2.6.6. Bounded Context: Stakeholder & Asset Management](#266-bounded-context-trip-management)
       - [2.6.6.1. Domain Layer](#2661-domain-layer)
       - [2.6.6.2. Interface Layer](#2662-interface-layer)
       - [2.6.6.3. Application Layer](#2663-application-layer)
@@ -160,15 +160,6 @@
       - [2.6.6.6. Code Level Diagrams](#2666-code-level-diagrams)
         - [2.6.6.6.1. Domain Layer Class Diagram](#26661-domain-layer-class-diagram)
         - [2.6.6.6.2. Database Design Diagram](#26662-database-design-diagram)
-    - [2.6.7. Bounded Context: Community \& Support](#267-bounded-context-community--support)
-      - [2.6.7.1. Domain Layer](#2671-domain-layer)
-      - [2.6.7.2. Interface Layer](#2672-interface-layer)
-      - [2.6.7.3. Application Layer](#2673-application-layer)
-      - [2.6.7.4. Infrastructure Layer](#2674-infrastructure-layer)
-      - [2.6.7.5. Component Level Diagrams](#2675-component-level-diagrams)
-      - [2.6.7.6. Code Level Diagrams](#2676-code-level-diagrams)
-        - [2.6.7.6.1. Domain Layer Class Diagram](#26761-domain-layer-class-diagram)
-        - [2.6.7.6.2. Database Design Diagram](#26762-database-design-diagram)
 - [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
   - [3.1. Product design](#31-product-design)
     - [3.1.1. Style Guidelines](#311-style-guidelines)
@@ -247,7 +238,7 @@ Para garantizar el desarrollo ordenado y exitoso del ecosistema RouteGuard a lo 
   * **T (Tiempo):** Antes de la Semana 4 (Hito AV1).
 
 **Objetivo 2: Arquitectura de Software y Despliegue Inicial (Backend)**
-* Diseñar, programar y desplegar en la nube la arquitectura base de la plataforma, completando el Landing Page y los endpoints RESTful fundamentales del *Identity & Access Management (IAM) Bounded Context*, cumpliendo la totalidad de los Story Points asignados al Sprint 1 para la Semana 7.
+* Diseñar, programar y desplegar en la nube la arquitectura base de la plataforma, completando el Landing Page y los endpoints RESTful fundamentales del *Identity & Access Management Bounded Context*, cumpliendo la totalidad de los Story Points asignados al Sprint 1 para la Semana 7.
   * **S:** Despliegue del Landing Page y endpoints de IAM.
   * **M:** Cumplimiento del 100% de los Story Points del Sprint 1.
   * **A:** Realizable utilizando frameworks modernos y CI/CD.
@@ -710,13 +701,12 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 
 | Epic ID | Título (Bounded Context) | Descripción | Criterios de Aceptación |
 | :--- | :--- | :--- | :--- |
-| **EP01** | **Identity & Access Management (IAM)** | Como nuevo usuario, quiero registrarme, elegir mi rol y gestionar mi perfil para acceder de forma segura al ecosistema. | **Escenario 1:**<br>**Dado que** el usuario es nuevo, <br>**Cuando** completa sus datos básicos y selecciona su rol, <br>**Entonces** el sistema crea la cuenta y le otorga los permisos correspondientes. |
-| **EP02** | **Suscription & Onboarding** | Como administrador o padre, quiero gestionar pagos y afiliaciones para mantener el servicio activo y formalizado. | **Escenario 1:**<br>**Dado que** el administrador elige un plan SaaS, <br>**Cuando** se procesa el pago exitosamente, <br>**Entonces** el sistema habilita el registro de múltiples vehículos. |
-| **EP03** | **Fleet & Compliance** | Como administrador, quiero registrar vehículos y choferes para cumplir con la normativa de seguridad y capacidad. | **Escenario 1:**<br>**Dado que** se ingresa la placa de un vehículo, <br>**Cuando** se registran los asientos disponibles, <br>**Entonces** el sistema restringe la asignación de pasajeros a ese límite máximo. |
-| **EP04** | **Trip Management** | Como conductor, quiero planificar la ruta y ordenar las paradas para optimizar el tiempo de recojo escolar. | **Escenario 1:**<br>**Dado que** hay una lista de alumnos asignados, <br>**Cuando** el conductor genera la ruta del día, <br>**Entonces** el sistema ordena las paradas geográficamente. |
-| **EP05** | **Real-time Tracking** | Como conductor, quiero que la app transmita mi ubicación y me permita marcar asistencias para tener trazabilidad del viaje. | **Escenario 1:**<br>**Dado que** el conductor inicia el trayecto, <br>**Cuando** el vehículo se desplaza, <br>**Entonces** el sistema emite coordenadas periódicamente sin intervención manual. |
-| **EP06** | **Notifications & Geofencing** | Como padre de familia, quiero recibir alertas automáticas cuando la movilidad se acerque para salir a tiempo. | **Escenario 1:**<br>**Dado que** el viaje está en curso, <br>**Cuando** la movilidad entra al radio de proximidad del hogar, <br>**Entonces** el sistema envía una alerta inmediata al dispositivo del padre. |
-| **EP07** | **Community & Support** | Como padre o administrador, quiero calificar el servicio y reportar incidentes para mantener un estándar de calidad. | **Escenario 1:**<br>**Dado que** el viaje finalizó, <br>**Cuando** el padre envía una calificación negativa, <br>**Entonces** el sistema registra el reporte en el perfil del conductor. |
+| **EP01** | **Identity & Access Management** | Como usuario, quiero registrarme y autenticarme según mi rol para usar la plataforma. | **Escenario 1:**<br>**Dado que** el usuario es válido, <br>**Cuando** ingresa sus credenciales, <br>**Entonces** accede a las funciones de su perfil. |
+| **EP02** | **Subscription & Plan Management** | Como administrador, quiero gestionar los pagos y planes SaaS para habilitar las funcionalidades. | **Escenario 1:**<br>**Dado que** el pago es exitoso, <br>**Cuando** se valida con la pasarela, <br>**Entonces** el sistema activa el acceso a la plataforma. |
+| **EP03** | **Fleet & Route Management** | Como conductor, quiero gestionar mi flota y planificar rutas para asegurar un recojo eficiente. | **Escenario 1:**<br>**Dado que** tengo alumnos asignados, <br>**Cuando** genero la ruta, <br>**Entonces** el sistema ordena las paradas geográficamente. |
+| **EP04** | **Stakeholder & Asset Management** | Como administrador o padre, quiero gestionar perfiles, calificar el servicio y vincular estudiantes a rutas. | **Escenario 1:**<br>**Dado que** un estudiante es validado, <br>**Cuando** el padre lo vincula a la movilidad, <br>**Entonces** el estudiante se agrega al grupo del conductor. |
+| **EP05** | **Trip Execution & Monitoring** | Como conductor y padre, quiero transmitir y consultar la ubicación GPS y registrar abordajes offline. | **Escenario 1:**<br>**Dado que** el conductor avanza, <br>**Cuando** marca un abordaje sin internet, <br>**Entonces** se guarda localmente y sincroniza después. |
+| **EP06** | **Notifications & Communication** | Como usuario, quiero recibir alertas automáticas, avisos y chatear para mantener la comunicación al momento. | **Escenario 1:**<br>**Dado que** el viaje está activo, <br>**Cuando** la movilidad entra al geocerca, <br>**Entonces** el padre recibe un Push Notification. |
 
 <br>
 
@@ -863,7 +853,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-04</td>
     <td>Conductor</td>
     <td>Alta</td>
-    <td>EP04</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1062,7 +1052,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-09</td>
     <td>Padre de Familia</td>
     <td>Media</td>
-    <td>EP07</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1101,7 +1091,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-10</td>
     <td>Conductor</td>
     <td>Media</td>
-    <td>EP07</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1269,7 +1259,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-14</td>
     <td>Padre de Familia</td>
     <td>Media</td>
-    <td>EP07</td>
+    <td>EP04</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1308,7 +1298,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-15</td>
     <td>Padre de Familia</td>
     <td>Baja</td>
-    <td>EP04</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1390,7 +1380,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-17</td>
     <td>Administrador</td>
     <td>Baja</td>
-    <td>EP04</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1429,7 +1419,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-18</td>
     <td>Nuevo Usuario</td>
     <td>Baja</td>
-    <td>EP07</td>
+    <td>EP04</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1547,7 +1537,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-21</td>
     <td>Conductor</td>
     <td>Media</td>
-    <td>EP04</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1586,7 +1576,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-22</td>
     <td>Conductor</td>
     <td>Alta</td>
-    <td>EP04</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1625,7 +1615,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-23</td>
     <td>Padre de Familia</td>
     <td>Baja</td>
-    <td>EP07</td>
+    <td>EP04</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1664,7 +1654,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-24</td>
     <td>Conductor</td>
     <td>Media</td>
-    <td>EP07</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1783,7 +1773,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-27</td>
     <td>Padre de Familia</td>
     <td>Alta</td>
-    <td>EP04</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1822,7 +1812,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-28</td>
     <td>Administrador</td>
     <td>Media</td>
-    <td>EP04</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1900,7 +1890,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-30</td>
     <td>Padre de Familia</td>
     <td>Baja</td>
-    <td>EP07</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -2553,8 +2543,8 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 | 9 | US-02 | Adquisición de Plan de Suscripción | EP02 | 5 |
 | 10 | US-12 | Control de Documentación (SOAT) | EP03 | 5 |
 | 11 | US-20 | Historial de Mantenimientos | EP03 | 3 |
-| 12 | US-04 | Listado y Secuencia de Paradas | EP04 | 5 |
-| 13 | US-22 | Reporte de Llegada al Colegio | EP04 | 3 |
+| 12 | US-04 | Listado y Secuencia de Paradas | EP03 | 5 |
+| 13 | US-22 | Reporte de Llegada al Colegio | EP05 | 3 |
 | 14 | SS-04 | Spike: Resolución de Conflictos Offline | EP05 | 5 |
 | 15 | TS-02 | Caché Local para Abordajes (Offline First) | EP05 | 8 |
 | 16 | US-06 | Check-in de Abordaje Offline | EP05 | 5 |
@@ -2572,21 +2562,21 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 | 28 | US-16 | Asignación de Conductor a Vehículo | EP03 | 3 |
 | 29 | US-03 | Gestión de Capacidad Vehicular | EP03 | 3 |
 | 30 | US-13 | Gestión de Perfil de Usuario | EP01 | 2 |
-| 31 | US-10 | Botón de Incidencias Rápido | EP07 | 3 |
-| 32 | US-21 | Cancelación de Viaje por Fuerza Mayor | EP04 | 3 |
-| 33 | US-14 | Calificación del Servicio | EP07 | 3 |
-| 34 | US-24 | Foro de Anuncios del Conductor | EP07 | 2 |
-| 35 | US-09 | Reporte de Ausencia Temprana | EP07 | 2 |
-| 36 | US-17 | Generación de Reporte de Asistencia | EP04 | 3 |
-| 37 | US-15 | Historial de Viajes Finalizados | EP04 | 2 |
-| 38 | US-18 | Sección de Preguntas Frecuentes (FAQ) | EP07 | 2 |
-| 39 | US-23 | Envío de Ticket de Soporte | EP07 | 2 |
+| 31 | US-10 | Botón de Incidencias Rápido | EP06 | 3 |
+| 32 | US-21 | Cancelación de Viaje por Fuerza Mayor | EP03 | 3 |
+| 33 | US-14 | Calificación del Servicio | EP04 | 3 |
+| 34 | US-24 | Foro de Anuncios del Conductor | EP06 | 2 |
+| 35 | US-09 | Reporte de Ausencia Temprana | EP06 | 2 |
+| 36 | US-17 | Generación de Reporte de Asistencia | EP05 | 3 |
+| 37 | US-15 | Historial de Viajes Finalizados | EP05 | 2 |
+| 38 | US-18 | Sección de Preguntas Frecuentes (FAQ) | EP04 | 2 |
+| 39 | US-23 | Envío de Ticket de Soporte | EP04 | 2 |
 | 40 | US-25 | Sección Tutorial interactiva (Onboarding) | EP02 | 3 |
 | 41 | US-26 | Registro de Gastos Operativos | EP03 | 2 |
-| 42 | US-27 | Cambio Temporal de Dirección de Recojo | EP04 | 5 |
-| 43 | US-28 | Reasignación de Rutas por Ausencias | EP04 | 5 |
+| 42 | US-27 | Cambio Temporal de Dirección de Recojo | EP03 | 5 |
+| 43 | US-28 | Reasignación de Rutas por Ausencias | EP03 | 5 |
 | 44 | US-29 | Reporte de Bloqueo de Vías | EP05 | 3 |
-| 45 | US-30 | Chat Interno Conductor - Padre | EP07 | 5 |
+| 45 | US-30 | Chat Interno Conductor - Padre | EP06 | 5 |
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
@@ -2808,7 +2798,7 @@ En RouteGuard, hemos identificado los siguientes patrones de relación:
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
-### 2.6.1. Bounded Context: Trip Execution & Monitoring (Tracking)
+### 2.6.1. Bounded Context: Trip Execution & Monitoring
 
 Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaje. Para asegurar su máxima resiliencia, soporta la sincronización de abordajes *Offline-First* mediante caché local y el monitoreo GPS constante.
 
@@ -2879,7 +2869,7 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 
 
-### 2.6.3. Bounded Context: Identity & Access Management (IAM)
+### 2.6.3. Bounded Context: Identity & Access Management
 
 #### 2.6.3.1. Domain Layer
 
@@ -2898,7 +2888,7 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ##### 2.6.3.6.2. Database Design Diagram
 
 
-### 2.6.4. Bounded Context: Subscription & Onboarding
+### 2.6.4. Bounded Context: Subscription & Plan Management
 
 #### 2.6.4.1. Domain Layer
 
@@ -2917,7 +2907,7 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ##### 2.6.4.6.2. Database Design Diagram
 
 
-### 2.6.5. Bounded Context: Fleet & Compliance
+### 2.6.5. Bounded Context: Fleet & Route Management
 
 #### 2.6.5.1. Domain Layer
 
@@ -2936,7 +2926,7 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ##### 2.6.5.6.2. Database Design Diagram
 
 
-### 2.6.6. Bounded Context: Trip Management
+### 2.6.6. Bounded Context: Stakeholder & Asset Management
 
 #### 2.6.6.1. Domain Layer
 
@@ -2955,23 +2945,6 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ##### 2.6.6.6.2. Database Design Diagram
 
 
-### 2.6.7. Bounded Context: Community & Support
-
-#### 2.6.7.1. Domain Layer
-
-#### 2.6.7.2. Interface Layer
-
-#### 2.6.7.3. Application Layer
-
-#### 2.6.7.4. Infrastructure Layer
-
-#### 2.6.7.5. Component Level Diagrams
-
-#### 2.6.7.6. Code Level Diagrams
-
-##### 2.6.7.6.1. Domain Layer Class Diagram
-
-##### 2.6.7.6.2. Database Design Diagram
 
 
 <div style="page-break-after: always;"></div>
