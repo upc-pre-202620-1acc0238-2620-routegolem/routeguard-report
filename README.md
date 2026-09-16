@@ -1976,6 +1976,47 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 <br>
 
 
+
+<!--TS08-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-08</td>
+    <td>Backend Developer</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">API para Validación de Códigos QR</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador backend, quiero exponer un endpoint para la generación y validación de códigos QR únicos por alumno, permitiendo un escaneo rápido para el abordaje offline y online.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Validación exitosa</strong><br>
+      <strong>Dado que</strong> el conductor escanea un QR válido,<br>
+      <strong>Cuando</strong> la app envía el payload al backend,<br>
+      <strong>Entonces</strong> el sistema marca al estudiante como abordado y actualiza su estado.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
 **SPIKE STORIES**
 
 <!--SS01-->
@@ -2212,6 +2253,47 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 <br>
 
 
+
+<!--SS07-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-07</td>
+    <td>Arquitecto</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Spike: Evaluación de Mapbox vs Google Maps</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como equipo de desarrollo, queremos evaluar y comparar los proveedores de mapas (Google Maps Platform vs. Mapbox) para determinar cuál ofrece la mejor rentabilidad y precisión para el trazado de rutas y geovallas.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Decisión del proveedor</strong><br>
+      <strong>Dado que</strong> se realiza un análisis de costos y cuotas gratuitas,<br>
+      <strong>Cuando</strong> el equipo presenta el reporte técnico,<br>
+      <strong>Entonces</strong> se escoge un proveedor definitivo para implementar en la aplicación.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
 ---
 
 ### 2.4.2. Impact Mapping
@@ -2246,27 +2328,30 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 | 14 | SS-04 | Spike: Resolución de Conflictos Offline | EP05 | 5 |
 | 15 | TS-02 | Caché Local para Abordajes (Offline First) | EP05 | 8 |
 | 16 | US-06 | Check-in de Abordaje Offline | EP05 | 5 |
-| 17 | SS-03 | Spike: Precisión GPS vs Consumo de Red | EP05 | 3 |
-| 18 | TS-06 | Configuración de Base de Datos Espacial | EP05 | 8 |
-| 19 | US-05 | Transmisión de GPS en Segundo Plano | EP05 | 8 |
-| 20 | US-08 | Monitoreo de Ruta en Tiempo Real | EP05 | 8 |
-| 21 | SS-02 | Prueba de Latencia: WebSockets vs FCM | EP06 | 2 |
-| 22 | TS-03 | Integración de Firebase Cloud Messaging (FCM) | EP06 | 5 |
-| 23 | TS-07 | Implementación de Cola de Mensajería | EP06 | 5 |
-| 24 | SS-06 | Spike: Consumo de Geofencing OS-Level | EP06 | 3 |
-| 25 | US-07 | Alerta de Geofencing | EP06 | 5 |
-| 26 | US-16 | Asignación de Conductor a Vehículo | EP03 | 3 |
-| 27 | US-03 | Gestión de Capacidad Vehicular | EP03 | 3 |
-| 28 | US-13 | Gestión de Perfil de Usuario | EP01 | 2 |
-| 29 | US-10 | Botón de Incidencias Rápido | EP07 | 3 |
-| 30 | US-21 | Cancelación de Viaje por Fuerza Mayor | EP04 | 3 |
-| 31 | US-14 | Calificación del Servicio | EP07 | 3 |
-| 32 | US-24 | Foro de Anuncios del Conductor | EP07 | 2 |
-| 33 | US-09 | Reporte de Ausencia Temprana | EP07 | 2 |
-| 34 | US-17 | Generación de Reporte de Asistencia | EP04 | 3 |
-| 35 | US-15 | Historial de Viajes Finalizados | EP04 | 2 |
-| 36 | US-18 | Sección de Preguntas Frecuentes (FAQ) | EP07 | 2 |
-| 37 | US-23 | Envío de Ticket de Soporte | EP07 | 2 |
+| 17 | TS-08 | API para Validación de Códigos QR | EP05 | 5 |
+| 18 | SS-03 | Spike: Precisión GPS vs Consumo de Red | EP05 | 3 |
+| 19 | TS-06 | Configuración de Base de Datos Espacial | EP05 | 8 |
+| 20 | US-05 | Transmisión de GPS en Segundo Plano | EP05 | 8 |
+| 21 | SS-07 | Spike: Evaluación de Mapbox vs Google Maps | EP05 | 3 |
+| 22 | US-08 | Monitoreo de Ruta en Tiempo Real | EP05 | 8 |
+| 23 | SS-02 | Prueba de Latencia: WebSockets vs FCM | EP06 | 2 |
+| 24 | TS-03 | Integración de Firebase Cloud Messaging (FCM) | EP06 | 5 |
+| 25 | TS-07 | Implementación de Cola de Mensajería | EP06 | 5 |
+| 26 | SS-06 | Spike: Consumo de Geofencing OS-Level | EP06 | 3 |
+| 27 | US-07 | Alerta de Geofencing | EP06 | 5 |
+| 28 | US-16 | Asignación de Conductor a Vehículo | EP03 | 3 |
+| 29 | US-03 | Gestión de Capacidad Vehicular | EP03 | 3 |
+| 30 | US-13 | Gestión de Perfil de Usuario | EP01 | 2 |
+| 31 | US-10 | Botón de Incidencias Rápido | EP07 | 3 |
+| 32 | US-21 | Cancelación de Viaje por Fuerza Mayor | EP04 | 3 |
+| 33 | US-14 | Calificación del Servicio | EP07 | 3 |
+| 34 | US-24 | Foro de Anuncios del Conductor | EP07 | 2 |
+| 35 | US-09 | Reporte de Ausencia Temprana | EP07 | 2 |
+| 36 | US-17 | Generación de Reporte de Asistencia | EP04 | 3 |
+| 37 | US-15 | Historial de Viajes Finalizados | EP04 | 2 |
+| 38 | US-18 | Sección de Preguntas Frecuentes (FAQ) | EP07 | 2 |
+| 39 | US-23 | Envío de Ticket de Soporte | EP07 | 2 |
+
 
 
 <div style="page-break-after: always;"></div>
