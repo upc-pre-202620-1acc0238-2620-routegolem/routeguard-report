@@ -2652,6 +2652,59 @@ La capacidad que distingue a RouteGuard es la resiliencia ante la falta de conec
 
 ### 2.5.1.2. Domain Message Flows Modeling
 
+El *Domain Message Flow Modelling* es una técnica que permite representar cómo fluyen los mensajes de dominio —*commands*, *events* y *queries*— entre los distintos Bounded Contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto al resolver un caso concreto del negocio.
+ 
+Para cada escenario se documenta la secuencia numerada de mensajes, que es la que se representa en el diagrama: los comandos en azul, los eventos en naranja y las consultas en verde, con los contextos dibujados como nubes y los actores como participantes externos.
+ 
+**Escenario 01: Conformación del grupo de estudiantes y asignación a la ruta**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Crear grupo de estudiantes | Administrador | Stakeholder & Asset Management |
+| 2 | Command | Asignar padres e incluir hijos vinculados al grupo | Administrador | Stakeholder & Asset Management |
+| 3 | Command | Finalizar grupo | Administrador | Stakeholder & Asset Management |
+| 4 | Event | Group Finalized | Stakeholder & Asset Management | Stakeholder & Asset Management |
+| 5 | Query | Exportar manifiesto del grupo al contexto de ruta | Stakeholder & Asset Management | Fleet & Route Management |
+| 6 | Command | Asignar estudiantes a la ruta | Administrador | Fleet & Route Management |
+| 7 | Event | Passenger Manifest Generated | Fleet & Route Management | Fleet & Route Management |
+ 
+![Escenario 01: Conformación de grupo y asignación a ruta](resources/chapter-2/domain-message-flows/escenario-01-grupo-ruta.png)
+ 
+La nómina de estudiantes que puede asignarse a una ruta proviene del grupo ya finalizado en Stakeholder & Asset Management, consultado en el paso 5.
+ 
+**Escenario 02: Ejecución del viaje con abordaje offline y notificación**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Iniciar viaje | Conductor | Trip Execution & Monitoring |
+| 2 | Event | Trip Started | Trip Execution & Monitoring | Trip Execution & Monitoring |
+| 3 | Command | Marcar estado de abordaje | Conductor | Trip Execution & Monitoring |
+| 4a | Event | Student Boarded (con señal) | Trip Execution & Monitoring | Notifications & Communication |
+| 4b | Event | Boarding Queued Offline (sin señal) | Trip Execution & Monitoring | Almacenamiento local |
+| 5 | Command | Sincronizar cola de abordaje | App del conductor | Trip Execution & Monitoring |
+| 6 | Event | Boarding Synchronized | Trip Execution & Monitoring | Notifications & Communication |
+| 7 | Command | Despachar notificación push | Notifications & Communication | Proveedor push (FCM) |
+| 8 | Event | Notification Dispatched | Proveedor push (FCM) | Padre de familia |
+ 
+![Escenario 02: Abordaje offline y notificación](resources/chapter-2/domain-message-flows/escenario-02-abordaje-offline.png)
+ 
+La bifurcación entre los pasos 4a y 4b concentra la lógica central de resiliencia de RouteGuard. El paso 6 conserva el *timestamp* original del dispositivo, no el de la sincronización, para que la notificación al padre refleje la hora real del abordaje y no la hora en que el sistema recuperó conectividad. El paso 7 delega la entrega al proveedor push, de modo que el padre recibe el aviso en su dispositivo sin necesidad de tener la app abierta.
+ 
+**Escenario 03: Incidencia y alerta de alta prioridad**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Reportar incidencia | Conductor | Trip Execution & Monitoring |
+| 2 | Event | Incident Reported | Trip Execution & Monitoring | Notifications & Communication |
+| 3 | Command | Disparar alerta de alta prioridad | Notifications & Communication | Notifications & Communication |
+| 4 | Event | Panic Alert Triggered | Notifications & Communication | Notifications & Communication |
+| 5 | Command | Difundir alerta a los padres del viaje | Notifications & Communication | Proveedor push (FCM) |
+| 6 | Event | Notification Sent | Proveedor push (FCM) | Padres de estudiantes a bordo |
+ 
+![Escenario 03: Incidencia y alerta de alta prioridad](resources/chapter-2/domain-message-flows/escenario-03-incidencia-alerta.png)
+ 
+Notifications & Communication concentra tanto la traducción del evento como la decisión de prioridad, delegando únicamente la entrega final al proveedor push, sin requerir que Trip Execution & Monitoring conozca la lógica de despacho.
+
 ### 2.5.1.3. Bounded Context Canvases
 
 
