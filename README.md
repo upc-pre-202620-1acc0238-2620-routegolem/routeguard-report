@@ -1698,6 +1698,242 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 <br>
 
 
+
+<!--US25-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-25</td>
+    <td>Nuevo Usuario</td>
+    <td>Media</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Sección Tutorial interactiva (Onboarding)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como nuevo usuario, quiero acceder a un tutorial interactivo al iniciar sesión por primera vez para aprender a utilizar las funcionalidades principales de la aplicación.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Completar onboarding</strong><br>
+      <strong>Dado que</strong> el usuario ingresa por primera vez,<br>
+      <strong>Cuando</strong> navega por las 3 pantallas de tutorial,<br>
+      <strong>Entonces</strong> el sistema marca el onboarding como completado y no lo vuelve a mostrar.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US26-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-26</td>
+    <td>Conductor</td>
+    <td>Baja</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de Gastos Operativos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero registrar mis gastos diarios (combustible, peajes, lavado) para tener un control financiero directamente en la aplicación de gestión de flota.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Ingreso de gasto</strong><br>
+      <strong>Dado que</strong> el conductor realiza una recarga de combustible,<br>
+      <strong>Cuando</strong> ingresa el monto y adjunta la foto del comprobante,<br>
+      <strong>Entonces</strong> el sistema añade el gasto al reporte financiero mensual.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US27-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-27</td>
+    <td>Padre de Familia</td>
+    <td>Alta</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Cambio Temporal de Dirección de Recojo</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero poder solicitar un cambio de dirección de recojo por un solo día (ej. casa de abuelos) para que el conductor ajuste su ruta sin alterar mi dirección base.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Aprobación de cambio temporal</strong><br>
+      <strong>Dado que</strong> el padre envía una solicitud de desvío con 12 horas de anticipación,<br>
+      <strong>Cuando</strong> el conductor la acepta,<br>
+      <strong>Entonces</strong> el sistema actualiza temporalmente la coordenada de la parada para el día siguiente.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US28-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-28</td>
+    <td>Administrador</td>
+    <td>Media</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reasignación de Rutas por Ausencias</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero recalcular y reasignar las rutas si un conductor reporta una avería o falta, para garantizar que todos los alumnos sean recogidos por otro vehículo disponible.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Traspaso de ruta</strong><br>
+      <strong>Dado que</strong> el conductor A reporta una avería severa,<br>
+      <strong>Cuando</strong> el administrador transfiere sus paradas al conductor B,<br>
+      <strong>Entonces</strong> el sistema notifica a los padres y fusiona las secuencias de recojo en el dispositivo de B.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US29-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-29</td>
+    <td>Conductor</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reporte de Bloqueo de Vías</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero poder reportar un bloqueo de vía en tiempo real en mi mapa, para recalcular la ruta automáticamente y advertir a la central sobre la demora.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Recálculo por incidencia</strong><br>
+      <strong>Dado que</strong> el conductor se topa con tráfico bloqueado,<br>
+      <strong>Cuando</strong> marca el segmento vial como cerrado en la app,<br>
+      <strong>Entonces</strong> el sistema genera una ruta alternativa hacia la siguiente parada.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US30-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-30</td>
+    <td>Padre de Familia</td>
+    <td>Baja</td>
+    <td>EP07</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Chat Interno Conductor - Padre</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero tener un chat interno con el conductor asignado para comunicarme directamente sobre detalles urgentes (ej. "el niño está saliendo, espere 1 minuto").</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Envío de mensaje</strong><br>
+      <strong>Dado que</strong> el conductor está en camino a la parada del padre,<br>
+      <strong>Cuando</strong> el padre envía un mensaje de texto,<br>
+      <strong>Entonces</strong> el dispositivo del conductor lo recibe y, si está conduciendo, lo lee mediante Voice-to-Text.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
 **TECHNICAL STORIES**
 
 
@@ -2351,6 +2587,12 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 | 37 | US-15 | Historial de Viajes Finalizados | EP04 | 2 |
 | 38 | US-18 | Sección de Preguntas Frecuentes (FAQ) | EP07 | 2 |
 | 39 | US-23 | Envío de Ticket de Soporte | EP07 | 2 |
+| 40 | US-25 | Sección Tutorial interactiva (Onboarding) | EP02 | 3 |
+| 41 | US-26 | Registro de Gastos Operativos | EP03 | 2 |
+| 42 | US-27 | Cambio Temporal de Dirección de Recojo | EP04 | 5 |
+| 43 | US-28 | Reasignación de Rutas por Ausencias | EP04 | 5 |
+| 44 | US-29 | Reporte de Bloqueo de Vías | EP05 | 3 |
+| 45 | US-30 | Chat Interno Conductor - Padre | EP07 | 5 |
 
 
 
