@@ -169,7 +169,6 @@
       - [2.6.7.6. Code Level Diagrams](#2676-code-level-diagrams)
         - [2.6.7.6.1. Domain Layer Class Diagram](#26761-domain-layer-class-diagram)
         - [2.6.7.6.2. Database Design Diagram](#26762-database-design-diagram)
-
 - [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
   - [3.1. Product design](#31-product-design)
     - [3.1.1. Style Guidelines](#311-style-guidelines)
@@ -3121,17 +3120,25 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 **Métodos y técnicas de ingeniería de software**
 
+* Adzic, G. (2012). *Impact Mapping: Making a big impact with software products and projects.* Provoking Thoughts.
 * Brandolini, A. (2021). *Introducing EventStorming: An Act of Deliberate Collective Learning.* Leanpub.
 * Chen, Y., & Zhao, M. (2025). Passive monitoring and location-based notifications in family tracking applications. *Journal of Mobile Human-Computer Interaction,* 15(2), 45-60. https://doi.org/10.1016/j.jmhci.2025.104221
 * Cooper, A. (1999). *The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity.* Sams Publishing.
+* Cohn, M. (2004). *User Stories Applied: For Agile Software Development.* Addison-Wesley Professional.
 * Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software.* Addison-Wesley Professional.
 * Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing Great Products with Agile Teams* (3rd ed.). O'Reilly Media.
 * Kumar, A., & Lee, S. (2024). Role-based task frequency analysis in mobile interface design for logistics. *International Journal of Human-Computer Studies,* 182, 103-118. https://doi.org/10.1016/j.ijhcs.2024.103118
+* Rubin, K. S. (2012). *Essential Scrum: A Practical Guide to the Most Popular Agile Process.* Addison-Wesley.
+* Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide.* Scrum.org.
 * Stickdorn, M., Hormess, M. E., Lawrence, A., & Schneider, J. (2018). *This Is Service Design Doing: Applying Service Design Thinking in the Real World*. O'Reilly Media.
+* Vernon, V. (2013). *Implementing Domain-Driven Design.* Addison-Wesley.
 
 **Lenguajes, frameworks y herramientas**
 
-*(Nota para el equipo: Aquí deberán ir agregando las citas de las documentaciones oficiales de Kotlin, Flutter, Spring Boot / ASP.NET, Figma, etc., conforme avancen en el desarrollo)*
+* Google. (2024). *Firebase Cloud Messaging Documentation.* Google Developers. https://firebase.google.com/docs/cloud-messaging
+* Mapbox. (2024). *Mapbox Navigation SDK for Mobile.* Mapbox. https://docs.mapbox.com/
+* PostGIS Project Steering Committee. (2024). *PostGIS: Spatial and Geographic Objects for PostgreSQL.* OSGeo. https://postgis.net/
+* VMware. (2024). *RabbitMQ: Messaging that just works.* Broadcom. https://www.rabbitmq.com/
 
 <div style="page-break-after: always;"></div>
 
