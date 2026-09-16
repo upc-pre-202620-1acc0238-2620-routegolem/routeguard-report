@@ -97,8 +97,6 @@
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
   - [2.4. Requirements specification](#24-requirements-specification)
     - [2.4.1. User Stories](#241-user-stories)
-      - [Technical Stories](#technical-stories)
-      - [Spike Stories](#spike-stories)
     - [2.4.2. Impact Mapping](#242-impact-mapping)
     - [2.4.3. Product Backlog](#243-product-backlog)
   - [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
@@ -107,12 +105,8 @@
       - [2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)
       - [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
     - [2.5.2. Context Mapping](#252-context-mapping)
-    - [2.5.3. Software Architecture](#253-software-architecture)
-      - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
-      - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
-      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
-    - [2.6.1. Bounded Context: Identity \& Access Management (IAM)](#261-bounded-context-identity--access-management-iam)
+    - [2.6.1. Bounded Context: Trip Execution \& Monitoring (Tracking)](#261-bounded-context-trip-execution--monitoring-tracking)
       - [2.6.1.1. Domain Layer](#2611-domain-layer)
       - [2.6.1.2. Interface Layer](#2612-interface-layer)
       - [2.6.1.3. Application Layer](#2613-application-layer)
@@ -121,7 +115,7 @@
       - [2.6.1.6. Code Level Diagrams](#2616-code-level-diagrams)
         - [2.6.1.6.1. Domain Layer Class Diagram](#26161-domain-layer-class-diagram)
         - [2.6.1.6.2. Database Design Diagram](#26162-database-design-diagram)
-    - [2.6.2. Bounded Context: Suscription \& Onboarding](#262-bounded-context-suscription--onboarding)
+    - [2.6.2. Bounded Context: Notifications \& Communication](#262-bounded-context-notifications--communication)
       - [2.6.2.1. Domain Layer](#2621-domain-layer)
       - [2.6.2.2. Interface Layer](#2622-interface-layer)
       - [2.6.2.3. Application Layer](#2623-application-layer)
@@ -130,51 +124,6 @@
       - [2.6.2.6. Code Level Diagrams](#2626-code-level-diagrams)
         - [2.6.2.6.1. Domain Layer Class Diagram](#26261-domain-layer-class-diagram)
         - [2.6.2.6.2. Database Design Diagram](#26262-database-design-diagram)
-    - [2.6.3. Bounded Context: Fleet \& Compliance](#263-bounded-context-fleet--compliance)
-      - [2.6.3.1. Domain Layer](#2631-domain-layer)
-      - [2.6.3.2. Interface Layer](#2632-interface-layer)
-      - [2.6.3.3. Application Layer](#2633-application-layer)
-      - [2.6.3.4. Infrastructure Layer](#2634-infrastructure-layer)
-      - [2.6.3.5. Component Level Diagrams](#2635-component-level-diagrams)
-      - [2.6.3.6. Code Level Diagrams](#2636-code-level-diagrams)
-        - [2.6.3.6.1. Domain Layer Class Diagram](#26361-domain-layer-class-diagram)
-        - [2.6.3.6.2. Database Design Diagram](#26362-database-design-diagram)
-    - [2.6.4. Bounded Context: Trip Management](#264-bounded-context-trip-management)
-      - [2.6.4.1. Domain Layer](#2641-domain-layer)
-      - [2.6.4.2. Interface Layer](#2642-interface-layer)
-      - [2.6.4.3. Application Layer](#2643-application-layer)
-      - [2.6.4.4. Infrastructure Layer](#2644-infrastructure-layer)
-      - [2.6.4.5. Component Level Diagrams](#2645-component-level-diagrams)
-      - [2.6.4.6. Code Level Diagrams](#2646-code-level-diagrams)
-        - [2.6.4.6.1. Domain Layer Class Diagram](#26461-domain-layer-class-diagram)
-        - [2.6.4.6.2. Database Design Diagram](#26462-database-design-diagram)
-    - [2.6.5. Bounded Context: Real-time Tracking](#265-bounded-context-real-time-tracking)
-      - [2.6.5.1. Domain Layer](#2651-domain-layer)
-      - [2.6.5.2. Interface Layer](#2652-interface-layer)
-      - [2.6.5.3. Application Layer](#2653-application-layer)
-      - [2.6.5.4. Infrastructure Layer](#2654-infrastructure-layer)
-      - [2.6.5.5. Component Level Diagrams](#2655-component-level-diagrams)
-      - [2.6.5.6. Code Level Diagrams](#2656-code-level-diagrams)
-        - [2.6.5.6.1. Domain Layer Class Diagram](#26561-domain-layer-class-diagram)
-        - [2.6.5.6.2. Database Design Diagram](#26562-database-design-diagram)
-    - [2.6.6. Bounded Context: Notifications \& Geofencing](#266-bounded-context-notifications--geofencing)
-      - [2.6.6.1. Domain Layer](#2661-domain-layer)
-      - [2.6.6.2. Interface Layer](#2662-interface-layer)
-      - [2.6.6.3. Application Layer](#2663-application-layer)
-      - [2.6.6.4. Infrastructure Layer](#2664-infrastructure-layer)
-      - [2.6.6.5. Component Level Diagrams](#2665-component-level-diagrams)
-      - [2.6.6.6. Code Level Diagrams](#2666-code-level-diagrams)
-        - [2.6.6.6.1. Domain Layer Class Diagram](#26661-domain-layer-class-diagram)
-        - [2.6.6.6.2. Database Design Diagram](#26662-database-design-diagram)
-    - [2.6.7. Bounded Context: Community \& Support](#267-bounded-context-community--support)
-      - [2.6.7.1. Domain Layer](#2671-domain-layer)
-      - [2.6.7.2. Interface Layer](#2672-interface-layer)
-      - [2.6.7.3. Application Layer](#2673-application-layer)
-      - [2.6.7.4. Infrastructure Layer](#2674-infrastructure-layer)
-      - [2.6.7.5. Component Level Diagrams](#2675-component-level-diagrams)
-      - [2.6.7.6. Code Level Diagrams](#2676-code-level-diagrams)
-        - [2.6.7.6.1. Domain Layer Class Diagram](#26761-domain-layer-class-diagram)
-        - [2.6.7.6.2. Database Design Diagram](#26762-database-design-diagram)
 - [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
   - [3.1. Product design](#31-product-design)
     - [3.1.1. Style Guidelines](#311-style-guidelines)
@@ -2836,16 +2785,16 @@ Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaj
 *   **External APIs:** Mapbox API / Google Maps Platform.
 
 #### 2.6.1.5. Component Level Diagrams
-*(Nota: Inserta aquí tu diagrama de componentes para Tracking)*
+
 ![Tracking Components](resources/chapter-2/tracking-components.png)
 
 #### 2.6.1.6. Code Level Diagrams
 ##### 2.6.1.6.1. Domain Layer Class Diagram
-*(Nota: Inserta aquí el diagrama PlantUML de Tracking Domain que te pasé)*
+
 ![Tracking Domain Diagram](resources/chapter-2/tracking-domain.png)
 
 ##### 2.6.1.6.2. Database Design Diagram
-*(Nota: Inserta aquí el diagrama PlantUML de Tracking Database que te pasé)*
+
 ![Tracking DB Diagram](resources/chapter-2/tracking-database.png)
 
 
@@ -2870,19 +2819,19 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 *   **External Integrations:** Firebase Cloud Messaging (FCM) SDK.
 
 #### 2.6.2.5. Component Level Diagrams
-*(Nota: Inserta aquí tu diagrama de componentes para Notificaciones)*
+
 ![Notifications Components](resources/chapter-2/notifications-components.png)
 
 #### 2.6.2.6. Code Level Diagrams
 ##### 2.6.2.6.1. Domain Layer Class Diagram
-*(Nota: Inserta aquí el diagrama PlantUML de Notifications Domain que te pasé)*
+
 ![Notifications Domain Diagram](resources/chapter-2/notifications-domain.png)
 
 ##### 2.6.2.6.2. Database Design Diagram
-*(Nota: Inserta aquí el diagrama PlantUML de Notifications Database que te pasé)*
+
 ![Notifications DB Diagram](resources/chapter-2/notifications-database.png)
 
-*(Nota para el resto del equipo: A partir del 2.6.3 en adelante, deben inyectar el Tactical DDD de sus Bounded Contexts asignados como IAM, Fleet, etc.)*
+
 
 
 <div style="page-break-after: always;"></div>
