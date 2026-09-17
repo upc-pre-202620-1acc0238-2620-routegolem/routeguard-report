@@ -2689,7 +2689,7 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
  
 **Canvas 1: Trip Execution & Monitoring**
  
-![Trip Execution and Monitoring Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-01-trip-execution.png)
+![Trip Execution and Monitoring Bounded Context Canvas](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-Trip.jpg)
  
 | Campo | Contenido |
 |---|---|
@@ -2704,22 +2704,22 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
  
 **Canvas 2: Fleet & Route Management**
  
-![Fleet and Route Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-02-fleet-route.png)
+![Fleet and Route Management Bounded Context Canvas](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-Fleet.jpg)
  
 | Campo | Contenido |
 |---|---|
 | **Name** | Fleet & Route Management |
 | **Description** | Custodia el plan de recorrido vigente de cada ruta escolar: secuencia de paradas, vehículo y conductor asignados, días de servicio y hora de salida. |
-| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre servicios de mapas de terceros |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built |
 | **Domain Roles** | Specification Context |
-| **Inbound Communication** | *Commands:* Define Route, Pick Waypoints, Assign Students To Route, Select Vehicle, Define Service Days, Set Departure Time. *Events:* Route Defined, Waypoint Selected, Stop Count Updated, Passenger Manifest Generated, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
+| **Inbound Communication** | *Commands:* Define Route, Pick Waypoints, Assign Students To Route, Select Vehicle, Define Service Days, Set Departure Time. *Events:* Route Defined, Waypoint Selected, Stop Count Updated, Passenger Manifest Generated, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized, Student Assigned To Route, Student Absence Notified, Vehicle Marked Unfit For Operation |
 | **Ubiquitous Language** | **Route:** secuencia predefinida de paradas entre un origen y un colegio. **Stop:** ubicación geográfica donde un estudiante sube o baja del vehículo. **Passenger Manifest:** listado de estudiantes asignados a una ruta. **Service Days:** días de la semana en que la ruta opera. |
 | **Business Decisions** | Una ruta no puede activarse sin vehículo y conductor asignados. El conteo de paradas se recalcula automáticamente al agregar o quitar un *waypoint*. Los estudiantes asignables a una ruta provienen del manifiesto ya finalizado en Stakeholder & Asset Management. |
 | **Outbound Communication** | *Messages:* Entregar plan de ruta vigente. *Collaborators:* Trip Execution & Monitoring |
  
 **Canvas 3: Stakeholder & Asset Management**
  
-![Stakeholder and Asset Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-03-stakeholder.png)
+![Stakeholder and Asset Management Bounded Context Canvas](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-StakeHolder.jpg)
  
 | Campo | Contenido |
 |---|---|
@@ -2734,13 +2734,13 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
  
 **Canvas 4: Notifications & Communication**
  
-![Notifications and Communication Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-04-notifications.png)
+![Notifications and Communication Bounded Context Canvas](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-Notifications.jpg)
  
 | Campo | Contenido |
 |---|---|
 | **Name** | Notifications & Communication |
 | **Description** | Traduce los eventos relevantes del viaje en notificaciones push para los padres de familia, entregadas directamente en su dispositivo sin necesidad de abrir la app, incluyendo alertas de alta prioridad ante incidencias y anuncios difundidos por el conductor. |
-| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre proveedor de mensajería push de terceros |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre proveedor push de terceros |
 | **Domain Roles** | Dispatch Context |
 | **Inbound Communication** | *Commands:* Prepare Boarding Notification, Trigger Panic Alert, Post Broadcast Message, Retry Notification, Register Device Token. *Events:* Student Boarded, Incident Reported, Notification Created, Notification Queued, Notification Dispatched, Panic Alert Triggered, Announcement Published, Notification Delivered, Notification Failed |
 | **Ubiquitous Language** | **Notification:** mensaje push entregado al dispositivo del padre de familia ante un evento del viaje. **Panic Alert:** notificación de alta prioridad originada por una incidencia. **Broadcast:** anuncio del conductor distribuido a todos los padres de su ruta. **Device Token:** identificador del dispositivo del padre ante el proveedor de mensajería, registrado al iniciar sesión. |
@@ -2749,7 +2749,7 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
  
 **Canvas 5: Identity & Access Management**
  
-![Identity and Access Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-05-iam.png)
+![Identity and Access Management Bounded Context Canvas](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-IAM.jpg)
  
 | Campo | Contenido |
 |---|---|
@@ -2764,19 +2764,18 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
  
 **Canvas 6: Subscription & Plan Management**
  
-![Subscription and Plan Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-06-subscription.png)
+![Subscription and Plan Management Bounded Context Canvas](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-Suscription.jpg)
  
 | Campo | Contenido |
 |---|---|
 | **Name** | Subscription & Plan Management |
-| **Description** | Administra los planes SaaS, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma según el plan vigente del administrador. |
+| **Description** | Administra los planes Básico, Intermedio y Completo, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma según el plan vigente del administrador. |
 | **Strategic Classification** | Domain: generic · Business Model: revenue generator · Evolution: product |
 | **Domain Roles** | Gateway Context |
 | **Inbound Communication** | *Commands:* Select Plan, Initiate Payment Process, Upgrade Plan. *Events:* Plan Selected, Payment Confirmed, Subscription Activated, Plan Features Enabled, Plan Upgraded, Quotas Increased |
 | **Ubiquitous Language** | **Subscription:** vínculo comercial vigente entre el administrador y la plataforma. **Plan:** nivel de servicio contratado, con límites propios de unidades gestionables. **Quota:** número máximo de rutas y conductores habilitados por el plan. |
 | **Business Decisions** | La suscripción se activa solo tras la confirmación de pago de la pasarela externa. Una mejora de plan incrementa las cuotas de ruta y conductor sin interrumpir el servicio vigente. |
 | **Outbound Communication** | *Messages:* Solicitar procesamiento de pago, Entregar límites del plan activo. *Collaborators:* Pasarela de pago |
-
 
 ### 2.5.2. Context Mapping
 
