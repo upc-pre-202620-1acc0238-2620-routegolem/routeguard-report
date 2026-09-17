@@ -2781,13 +2781,23 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 
 El *Context Map* (Mapa de Contextos) establece las fronteras de nuestros Bounded Contexts y define explícitamente los patrones de integración y comunicación entre ellos, evitando que los modelos de dominio se contaminen entre sí. 
 
-En RouteGuard, hemos identificado los siguientes patrones de relación:
-*   **Customer/Supplier:** El contexto de *Trip Execution & Monitoring* actúa como Customer de *Fleet & Route Management* (Supplier), ya que el viaje no puede ejecutarse si no existe la planificación previa de la ruta.
-*   **Publish/Subscribe (Event-Driven):** Utilizamos integración basada en eventos donde el contexto de *Trip Execution & Monitoring* publica eventos (ej. `StudentBoarded`) en un Message Broker, y el contexto de *Notifications & Communication* actúa como suscriptor para despachar las alertas sin acoplamiento temporal.
-*   **Conformist / Shared Kernel:** El contexto de *Identity & Access Management* (IAM) provee la autenticación. Los demás contextos asumen el rol de Conformist frente al token JWT emitido por IAM para validar roles y permisos.
+Durante las sesiones de diseño, se respondieron algunas dudas para validar la robustez y definir las relaciones de los contextos:
 
-*(Nota: Inserta aquí tu diagrama de Context Map)*
-![Context Map](resources/chapter-2/context-mapping.png)
+- **¿Qué pasaría si Fleet & Route Management consultara directamente las entidades internas de Stakeholder & Asset Management para armar el manifiesto de pasajeros?**
+Se descartó. El manifiesto de una ruta solo necesita saber qué estudiantes pertenecen a un grupo ya finalizado, no la estructura completa de padres, vínculos y perfiles que administra Stakeholder & Asset Management. Exponer esa consulta como un **Open Host Service** con un **Published Language** propio —el manifiesto exportado— evita que un cambio futuro en cómo Stakeholder modela a un padre o un vínculo familiar obligue a modificar Fleet & Route Management.
+ 
+- **¿Qué pasaría si Trip Execution & Monitoring dependiera del modelo interno de Notifications & Communication para saber cómo se construye una notificación?**
+Se descartó. Trip Execution & Monitoring solo necesita informar *qué ocurrió* —un abordaje, una incidencia—; la lógica de cola, reintento y prioridad de Notifications & Communication es una responsabilidad que no le compete. La relación se modela como **Customer/Supplier**, con Trip Execution & Monitoring como cliente aguas arriba: es el evento del viaje el que dispara la notificación, nunca al revés.
+ 
+- **¿Qué pasaría si aislamos Identity & Access Management y Subscription & Plan Management del resto del sistema?**
+Al ser ambos *Generic Subdomain*, el resto de los contextos los consume tal como están, sin invertir esfuerzo en adaptarlos a las particularidades de RouteGuard. Esto corresponde al patrón **Conformist**: el costo de adaptarse es menor que el de mantener una traducción para un contexto que no evoluciona según las necesidades propias de RouteGuard.
+ 
+- **¿Qué pasaría si duplicáramos el manifiesto de pasajeros dentro de Trip Execution & Monitoring para no depender de Fleet & Route Management en tiempo real?**
+Se descartó. El manifiesto puede cambiar entre la planificación de la ruta y la ejecución del viaje —una reasignación de última hora, por ejemplo—, y duplicarlo arriesgaría a que el conductor opere con una lista desactualizada. Se mantiene la relación **Customer/Supplier**, con Fleet & Route Management como proveedor autoritativo del plan vigente.
+ 
+**Diagrama de Context Mapping**
+ 
+![Context Mapping RouteGuard](resources/chapter-2/ContextMapping.jpg)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
