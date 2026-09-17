@@ -5,3 +5,4 @@ remap.ps1
 removetoc.ps1
 settings.json
 diagrama.puml
+fix_readme.py
