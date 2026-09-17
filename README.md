@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
   <img src="https://github.com/upc-pre-202620-1acc0238-2620-routegolem/routeguard-report/blob/develop/resources/cover/upc-logo.png" width="150" alt="Logo de la UPC">
   <br><br>
   <strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong>
@@ -97,8 +97,6 @@
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
   - [2.4. Requirements specification](#24-requirements-specification)
     - [2.4.1. User Stories](#241-user-stories)
-      - [Technical Stories](#technical-stories)
-      - [Spike Stories](#spike-stories)
     - [2.4.2. Impact Mapping](#242-impact-mapping)
     - [2.4.3. Product Backlog](#243-product-backlog)
   - [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
@@ -107,12 +105,8 @@
       - [2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)
       - [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
     - [2.5.2. Context Mapping](#252-context-mapping)
-    - [2.5.3. Software Architecture](#253-software-architecture)
-      - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
-      - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
-      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
-    - [2.6.1. Bounded Context: Identity \& Access Management (IAM)](#261-bounded-context-identity--access-management-iam)
+    - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring-tracking)
       - [2.6.1.1. Domain Layer](#2611-domain-layer)
       - [2.6.1.2. Interface Layer](#2612-interface-layer)
       - [2.6.1.3. Application Layer](#2613-application-layer)
@@ -121,7 +115,7 @@
       - [2.6.1.6. Code Level Diagrams](#2616-code-level-diagrams)
         - [2.6.1.6.1. Domain Layer Class Diagram](#26161-domain-layer-class-diagram)
         - [2.6.1.6.2. Database Design Diagram](#26162-database-design-diagram)
-    - [2.6.2. Bounded Context: Suscription \& Onboarding](#262-bounded-context-suscription--onboarding)
+    - [2.6.2. Bounded Context: Notifications \& Communication](#262-bounded-context-notifications--communication)
       - [2.6.2.1. Domain Layer](#2621-domain-layer)
       - [2.6.2.2. Interface Layer](#2622-interface-layer)
       - [2.6.2.3. Application Layer](#2623-application-layer)
@@ -130,7 +124,7 @@
       - [2.6.2.6. Code Level Diagrams](#2626-code-level-diagrams)
         - [2.6.2.6.1. Domain Layer Class Diagram](#26261-domain-layer-class-diagram)
         - [2.6.2.6.2. Database Design Diagram](#26262-database-design-diagram)
-    - [2.6.3. Bounded Context: Fleet \& Compliance](#263-bounded-context-fleet--compliance)
+    - [2.6.3. Bounded Context: Identity \& Access Management](#263-bounded-context-identity--access-management-iam)
       - [2.6.3.1. Domain Layer](#2631-domain-layer)
       - [2.6.3.2. Interface Layer](#2632-interface-layer)
       - [2.6.3.3. Application Layer](#2633-application-layer)
@@ -139,7 +133,7 @@
       - [2.6.3.6. Code Level Diagrams](#2636-code-level-diagrams)
         - [2.6.3.6.1. Domain Layer Class Diagram](#26361-domain-layer-class-diagram)
         - [2.6.3.6.2. Database Design Diagram](#26362-database-design-diagram)
-    - [2.6.4. Bounded Context: Trip Management](#264-bounded-context-trip-management)
+    - [2.6.4. Bounded Context: Subscription \& Plan Management](#264-bounded-context-subscription--onboarding)
       - [2.6.4.1. Domain Layer](#2641-domain-layer)
       - [2.6.4.2. Interface Layer](#2642-interface-layer)
       - [2.6.4.3. Application Layer](#2643-application-layer)
@@ -148,7 +142,7 @@
       - [2.6.4.6. Code Level Diagrams](#2646-code-level-diagrams)
         - [2.6.4.6.1. Domain Layer Class Diagram](#26461-domain-layer-class-diagram)
         - [2.6.4.6.2. Database Design Diagram](#26462-database-design-diagram)
-    - [2.6.5. Bounded Context: Real-time Tracking](#265-bounded-context-real-time-tracking)
+    - [2.6.5. Bounded Context: Fleet \& Route Management](#265-bounded-context-fleet--compliance)
       - [2.6.5.1. Domain Layer](#2651-domain-layer)
       - [2.6.5.2. Interface Layer](#2652-interface-layer)
       - [2.6.5.3. Application Layer](#2653-application-layer)
@@ -157,7 +151,7 @@
       - [2.6.5.6. Code Level Diagrams](#2656-code-level-diagrams)
         - [2.6.5.6.1. Domain Layer Class Diagram](#26561-domain-layer-class-diagram)
         - [2.6.5.6.2. Database Design Diagram](#26562-database-design-diagram)
-    - [2.6.6. Bounded Context: Notifications \& Geofencing](#266-bounded-context-notifications--geofencing)
+    - [2.6.6. Bounded Context: Stakeholder & Asset Management](#266-bounded-context-trip-management)
       - [2.6.6.1. Domain Layer](#2661-domain-layer)
       - [2.6.6.2. Interface Layer](#2662-interface-layer)
       - [2.6.6.3. Application Layer](#2663-application-layer)
@@ -166,15 +160,6 @@
       - [2.6.6.6. Code Level Diagrams](#2666-code-level-diagrams)
         - [2.6.6.6.1. Domain Layer Class Diagram](#26661-domain-layer-class-diagram)
         - [2.6.6.6.2. Database Design Diagram](#26662-database-design-diagram)
-    - [2.6.7. Bounded Context: Community \& Support](#267-bounded-context-community--support)
-      - [2.6.7.1. Domain Layer](#2671-domain-layer)
-      - [2.6.7.2. Interface Layer](#2672-interface-layer)
-      - [2.6.7.3. Application Layer](#2673-application-layer)
-      - [2.6.7.4. Infrastructure Layer](#2674-infrastructure-layer)
-      - [2.6.7.5. Component Level Diagrams](#2675-component-level-diagrams)
-      - [2.6.7.6. Code Level Diagrams](#2676-code-level-diagrams)
-        - [2.6.7.6.1. Domain Layer Class Diagram](#26761-domain-layer-class-diagram)
-        - [2.6.7.6.2. Database Design Diagram](#26762-database-design-diagram)
 - [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
   - [3.1. Product design](#31-product-design)
     - [3.1.1. Style Guidelines](#311-style-guidelines)
@@ -253,7 +238,7 @@ Para garantizar el desarrollo ordenado y exitoso del ecosistema RouteGuard a lo 
   * **T (Tiempo):** Antes de la Semana 4 (Hito AV1).
 
 **Objetivo 2: Arquitectura de Software y Despliegue Inicial (Backend)**
-* Diseñar, programar y desplegar en la nube la arquitectura base de la plataforma, completando el Landing Page y los endpoints RESTful fundamentales del *Identity & Access Management (IAM) Bounded Context*, cumpliendo la totalidad de los Story Points asignados al Sprint 1 para la Semana 7.
+* Diseñar, programar y desplegar en la nube la arquitectura base de la plataforma, completando el Landing Page y los endpoints RESTful fundamentales del *Identity & Access Management Bounded Context*, cumpliendo la totalidad de los Story Points asignados al Sprint 1 para la Semana 7.
   * **S:** Despliegue del Landing Page y endpoints de IAM.
   * **M:** Cumplimiento del 100% de los Story Points del Sprint 1.
   * **A:** Realizable utilizando frameworks modernos y CI/CD.
@@ -704,11 +689,11 @@ Siguiendo los principios fundamentales del *Domain-Driven Design* (Evans, 2003),
 
 ## 2.4. Requirements specification
 
-La especificación de requerimientos en entornos de desarrollo ágil reemplaza la documentación extensa y rígida por formatos ligeros. Estos aseguran el fomento de la colaboración y capturan el valor directo para el cliente (Cohn, 2004). En este proyecto, integramos técnicas de agilidad con los principios de *Domain-Driven Design* (Evans, 2003) para garantizar que las necesidades del negocio se reflejen fielmente en la estructura del software.
+La especificación de requerimientos en entornos de desarrollo ágil reemplaza la documentación extensa y rígida por formatos ligeros que fomentan la colaboración y capturan el valor directo para el cliente (Cohn, 2004). En este proyecto, integramos técnicas de agilidad con los principios de *Domain-Driven Design* (Evans, 2003) para garantizar que las necesidades del negocio se reflejen fielmente en la estructura del software.
 
 ### 2.4.1. User Stories
 
-Las Historias de Usuario y las Épicas son herramientas fundamentales en Scrum y metodologías ágiles. De acuerdo con Cohn (2004), el propósito de su diseño radica en desplazar el enfoque de "escribir requerimientos" hacia "fomentar conversaciones" sobre ellos.
+Las Historias de Usuario (*User Stories*) y las Épicas son herramientas fundamentales en Scrum y metodologías ágiles, diseñadas para desplazar el enfoque de "escribir requerimientos" hacia "fomentar conversaciones" sobre ellos (Cohn, 2004). 
 
 Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se alineen uno a uno con los *Bounded Contexts* descubiertos en nuestro diseño estratégico. Esta decisión asegura una transición fluida entre el modelado del problema y el diseño de la solución (Vernon, 2013). A continuación, se detallan las Épicas y sus respectivas Historias de Usuario, Historias Técnicas y Spikes, estructuradas bajo el formato de Criterios de Aceptación Gherkin (*Given-When-Then*).
 
@@ -716,13 +701,12 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 
 | Epic ID | Título (Bounded Context) | Descripción | Criterios de Aceptación |
 | :--- | :--- | :--- | :--- |
-| **EP01** | **Identity & Access Management (IAM)** | Como nuevo usuario, quiero registrarme, elegir mi rol y gestionar mi perfil para acceder de forma segura al ecosistema. | **Escenario 1:**<br>**Dado que** el usuario es nuevo, <br>**Cuando** completa sus datos básicos y selecciona su rol, <br>**Entonces** el sistema crea la cuenta y le otorga los permisos correspondientes. |
-| **EP02** | **Suscription & Onboarding** | Como administrador o padre, quiero gestionar pagos y afiliaciones para mantener el servicio activo y formalizado. | **Escenario 1:**<br>**Dado que** el administrador elige un plan SaaS, <br>**Cuando** se procesa el pago exitosamente, <br>**Entonces** el sistema habilita el registro de múltiples vehículos. |
-| **EP03** | **Fleet & Compliance** | Como administrador, quiero registrar vehículos y choferes para cumplir con la normativa de seguridad y capacidad. | **Escenario 1:**<br>**Dado que** se ingresa la placa de un vehículo, <br>**Cuando** se registran los asientos disponibles, <br>**Entonces** el sistema restringe la asignación de pasajeros a ese límite máximo. |
-| **EP04** | **Trip Management** | Como conductor, quiero planificar la ruta y ordenar las paradas para optimizar el tiempo de recojo escolar. | **Escenario 1:**<br>**Dado que** hay una lista de alumnos asignados, <br>**Cuando** el conductor genera la ruta del día, <br>**Entonces** el sistema ordena las paradas geográficamente. |
-| **EP05** | **Real-time Tracking** | Como conductor, quiero que la app transmita mi ubicación y me permita marcar asistencias para tener trazabilidad del viaje. | **Escenario 1:**<br>**Dado que** el conductor inicia el trayecto, <br>**Cuando** el vehículo se desplaza, <br>**Entonces** el sistema emite coordenadas periódicamente sin intervención manual. |
-| **EP06** | **Notifications & Geofencing** | Como padre de familia, quiero recibir alertas automáticas cuando la movilidad se acerque para salir a tiempo. | **Escenario 1:**<br>**Dado que** el viaje está en curso, <br>**Cuando** la movilidad entra al radio de proximidad del hogar, <br>**Entonces** el sistema envía una alerta inmediata al dispositivo del padre. |
-| **EP07** | **Community & Support** | Como padre o administrador, quiero calificar el servicio y reportar incidentes para mantener un estándar de calidad. | **Escenario 1:**<br>**Dado que** el viaje finalizó, <br>**Cuando** el padre envía una calificación negativa, <br>**Entonces** el sistema registra el reporte en el perfil del conductor. |
+| **EP01** | **Identity & Access Management** | Como usuario, quiero registrarme y autenticarme según mi rol para usar la plataforma. | **Escenario 1:**<br>**Dado que** el usuario es válido, <br>**Cuando** ingresa sus credenciales, <br>**Entonces** accede a las funciones de su perfil. |
+| **EP02** | **Subscription & Plan Management** | Como administrador, quiero gestionar los pagos y planes SaaS para habilitar las funcionalidades. | **Escenario 1:**<br>**Dado que** el pago es exitoso, <br>**Cuando** se valida con la pasarela, <br>**Entonces** el sistema activa el acceso a la plataforma. |
+| **EP03** | **Fleet & Route Management** | Como conductor, quiero gestionar mi flota y planificar rutas para asegurar un recojo eficiente. | **Escenario 1:**<br>**Dado que** tengo alumnos asignados, <br>**Cuando** genero la ruta, <br>**Entonces** el sistema ordena las paradas geográficamente. |
+| **EP04** | **Stakeholder & Asset Management** | Como administrador o padre, quiero gestionar perfiles, calificar el servicio y vincular estudiantes a rutas. | **Escenario 1:**<br>**Dado que** un estudiante es validado, <br>**Cuando** el padre lo vincula a la movilidad, <br>**Entonces** el estudiante se agrega al grupo del conductor. |
+| **EP05** | **Trip Execution & Monitoring** | Como conductor y padre, quiero transmitir y consultar la ubicación GPS y registrar abordajes offline. | **Escenario 1:**<br>**Dado que** el conductor avanza, <br>**Cuando** marca un abordaje sin internet, <br>**Entonces** se guarda localmente y sincroniza después. |
+| **EP06** | **Notifications & Communication** | Como usuario, quiero recibir alertas automáticas, avisos y chatear para mantener la comunicación al momento. | **Escenario 1:**<br>**Dado que** el viaje está activo, <br>**Cuando** la movilidad entra al geocerca, <br>**Entonces** el padre recibe un Push Notification. |
 
 <br>
 
@@ -869,7 +853,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-04</td>
     <td>Conductor</td>
     <td>Alta</td>
-    <td>EP04</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1068,7 +1052,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-09</td>
     <td>Padre de Familia</td>
     <td>Media</td>
-    <td>EP07</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1107,7 +1091,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <td>US-10</td>
     <td>Conductor</td>
     <td>Media</td>
-    <td>EP07</td>
+    <td>EP06</td>
   </tr>
   <tr>
     <th>Title</th>
@@ -1144,42 +1128,38 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
   </tr>
   <tr>
     <td>US-11</td>
-    <td>Conductor</td>
+    <td>Padre de Familia</td>
     <td>Alta</td>
     <td>EP02</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Admisión de Alumnos</td>
+    <td colspan="3">Registro de Múltiples Hijos</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como conductor de movilidad escolar, quiero registrar nuevos alumnos en mi lista para incluir sus datos, casa y colegio en los recorridos.</td>
+    <td colspan="4">Como padre de familia, quiero vincular a más de un hijo en mi cuenta para poder monitorear los viajes de todos desde una sola sesión.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Registro en lista de espera</strong><br>
-    <strong>Dado que</strong> el conductor ingresa los datos del menor,<br>
-    <strong>Cuando</strong> guarda el registro,<br>
-    <strong>Entonces</strong> el alumno aparece en la lista de espera.<br>
-    <br>
-    <strong>Escenario 2: Generación de carné digital</strong><br>
-    <strong>Dado que</strong> el conductor sube la foto del alumno,<br>
-    <strong>Cuando</strong> guarda el registro,<br>
-    <strong>Entonces</strong> el sistema muestra la foto en el carné digital del alumno.<br>
-    <br>
-    <strong>Escenario 3: Validación de campos obligatorios</strong><br>
-    <strong>Dado que</strong> el conductor deja campos vacíos en el formulario,<br>
-    <strong>Cuando</strong> intenta guardar el registro,<br>
-    <strong>Entonces</strong> el sistema resalta los campos obligatorios faltantes.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Vinculación exitosa</strong><br>
+      <strong>Dado que</strong> el padre tiene un hijo ya registrado,<br>
+      <strong>Cuando</strong> ingresa el código de vinculación de un segundo hijo,<br>
+      <strong>Entonces</strong> el sistema asocia ambos perfiles a la misma cuenta parental.<br><br>
+      <strong>Escenario 2: Límite de capacidad</strong><br>
+      <strong>Dado que</strong> el padre intenta vincular a un hijo en una ruta llena,<br>
+      <strong>Cuando</strong> envía la solicitud de asignación,<br>
+      <strong>Entonces</strong> el sistema la rechaza indicando falta de vacantes.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US12-->
 <table>
@@ -1191,42 +1171,38 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
   </tr>
   <tr>
     <td>US-12</td>
-    <td>Padre de familia</td>
-    <td>Media</td>
-    <td>EP02</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Registro de Múltiples Hijos</td>
+    <td colspan="3">Control de Documentación (SOAT)</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como padre de familia, quiero registrar a más de un hijo en mi cuenta para monitorear a todos desde una sola aplicación.</td>
+    <td colspan="4">Como conductor, quiero subir la documentación obligatoria de mi vehículo (SOAT, Revisión Técnica) para cumplir con las normativas y evitar suspensiones.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Registro de un segundo hijo</strong><br>
-    <strong>Dado que</strong> un padre de familia ya tiene un hijo registrado,<br>
-    <strong>Cuando</strong> agrega los datos de otro hijo,<br>
-    <strong>Entonces</strong> el sistema los vincula a la misma cuenta.<br>
-    <br>
-    <strong>Escenario 2: Visualización de todos los hijos</strong><br>
-    <strong>Dado que</strong> un padre tiene más de un hijo registrado,<br>
-    <strong>Cuando</strong> ingresa a su cuenta,<br>
-    <strong>Entonces</strong> el sistema muestra la lista completa de sus hijos.<br>
-    <br>
-    <strong>Escenario 3: Registro con datos incompletos</strong><br>
-    <strong>Dado que</strong> un padre intenta registrar a un nuevo hijo,<br>
-    <strong>Cuando</strong> deja campos obligatorios vacíos,<br>
-    <strong>Entonces</strong> el sistema no permite guardar el registro y resalta los campos faltantes.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Documento vigente</strong><br>
+      <strong>Dado que</strong> el conductor sube un SOAT válido,<br>
+      <strong>Cuando</strong> el sistema lee la fecha de expiración,<br>
+      <strong>Entonces</strong> el vehículo cambia su estado a "Apto para Operar".<br><br>
+      <strong>Escenario 2: Documento vencido</strong><br>
+      <strong>Dado que</strong> la fecha actual supera la expiración del SOAT registrado,<br>
+      <strong>Cuando</strong> el conductor intenta iniciar una ruta,<br>
+      <strong>Entonces</strong> el sistema bloquea el viaje y solicita la renovación.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US13-->
 <table>
@@ -1238,42 +1214,38 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
   </tr>
   <tr>
     <td>US-13</td>
-    <td>Conductor</td>
-    <td>Alta</td>
-    <td>EP03</td>
+    <td>Usuario</td>
+    <td>Media</td>
+    <td>EP01</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3">Mantenimiento y Documentación del Vehículo</td>
+    <td colspan="3">Gestión de Perfil de Usuario</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como conductor de movilidad escolar, quiero registrar el mantenimiento preventivo y SOAT de mi vehículo para cumplir con las normativas de tránsito vigentes.</td>
+    <td colspan="4">Como usuario, quiero actualizar mi número de teléfono y foto de perfil para mantener mi información de contacto al día.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: Registro de mantenimiento preventivo</strong><br>
-    <strong>Dado que</strong> el conductor realiza un mantenimiento preventivo a su vehículo,<br>
-    <strong>Cuando</strong> registra la fecha y el detalle en el sistema,<br>
-    <strong>Entonces</strong> queda almacenado en el historial del vehículo.<br>
-    <br>
-    <strong>Escenario 2: Carga del SOAT vigente</strong><br>
-    <strong>Dado que</strong> el conductor sube el documento del SOAT,<br>
-    <strong>Cuando</strong> el sistema valida la fecha de vigencia,<br>
-    <strong>Entonces</strong> actualiza el estado de documentación a "Vigente".<br>
-    <br>
-    <strong>Escenario 3: Documento vencido</strong><br>
-    <strong>Dado que</strong> el SOAT del conductor está vencido,<br>
-    <strong>Cuando</strong> el sistema detecta la fecha,<br>
-    <strong>Entonces</strong> marca al vehículo como "No apto para operar" hasta su renovación.<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Actualización exitosa</strong><br>
+      <strong>Dado que</strong> el usuario modifica su teléfono,<br>
+      <strong>Cuando</strong> guarda los cambios,<br>
+      <strong>Entonces</strong> el sistema persiste la actualización inmediatamente.<br><br>
+      <strong>Escenario 2: Teléfono inválido</strong><br>
+      <strong>Dado que</strong> el usuario ingresa letras en el campo numérico,<br>
+      <strong>Cuando</strong> intenta guardar,<br>
+      <strong>Entonces</strong> el sistema muestra un error de validación.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US14-->
 <table>
@@ -1284,48 +1256,35 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>EP03</td>
+    <td>US-14</td>
+    <td>Padre de Familia</td>
+    <td>Media</td>
+    <td>EP04</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Calificación del Servicio</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como padre de familia, quiero calificar el servicio del conductor al finalizar el mes para ayudar a mantener un estándar de calidad.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Envío de calificación</strong><br>
+      <strong>Dado que</strong> el sistema habilita la evaluación mensual,<br>
+      <strong>Cuando</strong> el padre asigna 5 estrellas,<br>
+      <strong>Entonces</strong> el sistema suma la puntuación al promedio histórico del conductor.
+    </td>
+  </tr>
 </table>
 
-| **US-14** | Gestión de Licencias y Antecedentes | Como conductor de movilidad escolar, quiero registrar y actualizar mis licencias de conducir y antecedentes penales para cumplir con los estándares de seguridad exigidos por las autoridades y la empresa. | **Escenario 1: Registro de licencia de conducir** <br>**Dado que** el conductor sube su licencia de conducir vigente, <br>**Cuando** el sistema valida el documento, <br>**Entonces** actualiza su estado de habilitación. <br>**Escenario 2: Registro de antecedentes penales** <br>**Dado que** el conductor sube su certificado de antecedentes penales, <br>**Cuando** el sistema lo procesa, <br>**Entonces** queda registrado en su perfil de cumplimiento. <br>**Escenario 3: Licencia próxima a vencer** <br>**Dado que** la licencia del conductor está próxima a vencer, <br>**Cuando** el sistema detecta la fecha límite, <br>**Entonces** le envía un recordatorio para renovarla. | **EP03** |
-| **US-15** | Registro de Gastos | Como conductor de movilidad escolar, quiero registrar los repostajes de combustible y gastos menores del vehículo para llevar un control de mis egresos diarios. | **Escenario 1: Registro de repostaje de combustible** <br>**Dado que** el conductor realiza un repostaje de combustible, <br>**Cuando** registra el monto y la fecha, <br>**Entonces** el sistema lo agrega a su historial de gastos. <br>**Escenario 2: Registro de gasto menor** <br>**Dado que** el conductor tiene un gasto menor del vehículo, <br>**Cuando** lo registra en el sistema, <br>**Entonces** queda reflejado en su resumen de egresos diarios. <br>**Escenario 3: Monto inválido** <br>**Dado que** el conductor intenta registrar un gasto, <br>**Cuando** ingresa un monto negativo o no numérico, <br>**Entonces** el sistema muestra un mensaje de error y no guarda el registro. | **EP03** |
-| **US-16** | Reporte de Kilometraje Diario | Como conductor de movilidad escolar, quiero registrar el kilometraje inicial y final de la jornada para llevar un control del desgaste del vehículo y rendimiento de combustible. | **Escenario 1: Registro de kilometraje inicial** <br>**Dado que** el conductor inicia su jornada, <br>**Cuando** registra el kilometraje inicial del vehículo, <br>**Entonces** el sistema lo almacena como punto de partida del día. <br>**Escenario 2: Registro de kilometraje final** <br>**Dado que** el conductor finaliza su jornada, <br>**Cuando** registra el kilometraje final, <br>**Entonces** el sistema calcula el total recorrido en el día. <br>**Escenario 3: Kilometraje final menor al inicial** <br>**Dado que** el conductor ingresa un kilometraje final menor al inicial, <br>**Cuando** intenta guardar el registro, <br>**Entonces** el sistema muestra un mensaje de error por dato inconsistente. | **EP03** |
-| **US-17** | Control de Capacidad y Asientos | Como conductor de movilidad escolar, quiero visualizar el límite de asientos ocupados de mi vehículo para no exceder la capacidad reglamentaria permitida. | **Escenario 1: Visualización de asientos disponibles** <br>**Dado que** el conductor consulta su vehículo, <br>**Cuando** revisa la capacidad de asientos, <br>**Entonces** el sistema muestra los asientos ocupados y disponibles. <br>**Escenario 2: Alerta por capacidad al límite** <br>**Dado que** el vehículo alcanza su capacidad máxima permitida, <br>**Cuando** el conductor intenta agregar un alumno adicional, <br>**Entonces** el sistema le impide asignarlo y muestra una alerta. <br>**Escenario 3: Actualización tras baja de un alumno** <br>**Dado que** un alumno es dado de baja de la ruta, <br>**Cuando** el sistema actualiza la lista, <br>**Entonces** libera un asiento disponible en el conteo de capacidad | **EP03** |
+<br>
 
 <!--US15-->
 <table>
@@ -1336,43 +1295,35 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>EP03</td>
+    <td>US-15</td>
+    <td>Padre de Familia</td>
+    <td>Baja</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Historial de Viajes Finalizados</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como padre de familia, quiero acceder al historial de viajes de la semana pasada para verificar los horarios exactos en los que mi hijo fue recogido.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Visualización de bitácora</strong><br>
+      <strong>Dado que</strong> existen viajes completados,<br>
+      <strong>Cuando</strong> el padre navega al historial,<br>
+      <strong>Entonces</strong> el sistema devuelve una lista ordenada cronológicamente con las horas exactas de abordaje.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US16-->
 <table>
@@ -1383,43 +1334,39 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-16</td>
+    <td>Administrador</td>
+    <td>Media</td>
     <td>EP03</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Asignación de Conductor a Vehículo</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como administrador, quiero asignar conductores específicos a los vehículos registrados para mantener un orden interno de la flota.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Asignación uno a uno</strong><br>
+      <strong>Dado que</strong> existe un vehículo sin piloto,<br>
+      <strong>Cuando</strong> el administrador selecciona un conductor libre,<br>
+      <strong>Entonces</strong> el sistema vincula ambas entidades operativamente.<br><br>
+      <strong>Escenario 2: Vehículo ya ocupado</strong><br>
+      <strong>Dado que</strong> un vehículo ya tiene piloto asignado,<br>
+      <strong>Cuando</strong> se intenta asignar a otro,<br>
+      <strong>Entonces</strong> el sistema requiere confirmación de reemplazo.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US17-->
 <table>
@@ -1430,43 +1377,35 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>EP03</td>
+    <td>US-17</td>
+    <td>Administrador</td>
+    <td>Baja</td>
+    <td>EP05</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Generación de Reporte de Asistencia</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como administrador, quiero generar un reporte mensual con las inasistencias y tardanzas para poder justificar incidentes ante los padres.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Descarga de reporte</strong><br>
+      <strong>Dado que</strong> el mes escolar ha concluido,<br>
+      <strong>Cuando</strong> el administrador solicita el informe de un alumno,<br>
+      <strong>Entonces</strong> el sistema consolida los eventos `StudentBoarded` y `StudentAbsent` en un documento tabular.
+    </td>
+  </tr>
 </table>
+
+<br>
 
 <!--US18-->
 <table>
@@ -1477,91 +1416,510 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     <th>Epic</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>US-18</td>
+    <td>Nuevo Usuario</td>
+    <td>Baja</td>
+    <td>EP04</td>
   </tr>
   <tr>
     <th>Title</th>
-    <td colspan="3"></td>
+    <td colspan="3">Sección de Preguntas Frecuentes (FAQ)</td>
   </tr>
   <tr>
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4"></td>
+    <td colspan="4">Como nuevo usuario, quiero consultar una sección de dudas comunes para resolver problemas sin necesidad de contactar a soporte técnico.</td>
   </tr>
   <tr>
   <th colspan="4">Acceptance Criteria</th>
-</tr>
-<tr>
-  <td colspan="4">
-    <strong>Escenario 1: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 2: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-    <br>
-    <strong>Escenario 3: </strong><br>
-    <strong>Dado que</strong> ,<br>
-    <strong>Cuando</strong> ,<br>
-    <strong>Entonces</strong> ,<br>
-  </td>
-</tr>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Búsqueda de FAQ</strong><br>
+      <strong>Dado que</strong> el usuario tiene dudas sobre los precios,<br>
+      <strong>Cuando</strong> ingresa el término "pago",<br>
+      <strong>Entonces</strong> el sistema filtra dinámicamente las preguntas relevantes.
+    </td>
+  </tr>
 </table>
-
-| Story ID | Título | Descripción | Criterios de Aceptación | Epic ID |
-| :--- | :--- | :--- | :--- | :--- |
-| **US-01** | Elección de Roles | Como nuevo usuario, quiero conocer las vistas y funcionalidades para elegir el rol que tomaré al utilizar la aplicación y acceder a ellas. | **Escenario 1: Selección de rol Padre** <br>**Dado que** el usuario está en la sección de roles, <br>**Cuando** elige el rol "Padre", <br>**Entonces** el sistema muestra capturas de la App de padres. <br>**Escenario 2: Selección de rol Conductor** <br>**Dado que** el usuario está en la sección de roles, <br>**Cuando** elige el rol "Conductor", <br>**Entonces** el sistema muestra la gestión de rutas. <br>**Escenario 3: Rol por defecto sin selección** <br>**Dado que** el usuario no selecciona ninguna opción, <br>**Cuando** visualiza la sección de roles, <br>**Entonces** el sistema muestra el rol "Admin" por defecto. | **EP01** |
-| **US-02** | Sección Tutorial | Como nuevo usuario, quiero ver los pasos iniciales para saber cómo empezar a utilizar la aplicación. | **Escenario 1: Navegación por infografía** <br>**Dado que** el usuario visualiza la infografía del tutorial, <br>**Cuando** sigue los pasos del 1 al 5, <br>**Entonces** comprende el flujo de contrato del servicio. <br>**Escenario 2: Reproducción del video demo** <br>**Dado que** el usuario ve la sección de tutorial, <br>**Cuando** pulsa el botón "Play" del video demo, <br>**Entonces** visualiza el funcionamiento real de la aplicación. <br>**Escenario 3: Compatibilidad con navegador antiguo** <br>**Dado que** el usuario accede desde un dispositivo antiguo, <br>**Cuando** el video intenta cargar, <br>**Entonces** el sistema muestra una imagen estática en su lugar. | **EP01** |
-| **US-03** | Preguntas Frecuentes (FAQ) | Como nuevo usuario, quiero ver dudas comunes para evitar llamadas de soporte. | **Escenario 1: Despliegue de respuesta** <br>**Dado que** el usuario visualiza la lista de preguntas frecuentes, <br>**Cuando** toca una pregunta, <br>**Entonces** el sistema despliega la respuesta correspondiente. <br>**Escenario 2: Búsqueda por palabra clave** <br>**Dado que** el usuario usa el buscador de FAQs, <br>**Cuando** escribe "precio", <br>**Entonces** el sistema filtra las preguntas relacionadas a ese término. <br>**Escenario 3: Contacto por duda no resuelta** <br>**Dado que** el usuario no encuentra respuesta a su duda, <br>**Cuando** llega al final de la lista de FAQs, <br>**Entonces** el sistema muestra un botón de contacto directo. | **EP01** |
-| **US-04** | Demo Interactiva | Como padre de familia, quiero probar un simulador de mapa antes de establecer algún contrato para verificar que es la experiencia que deseo tener respecto al transporte de mi hijo. | **Escenario 1: Reproducción de la demo** <br>**Dado que** el padre de familia ingresa al mapa demo, <br>**Cuando** pulsa el botón "Play", <br>**Entonces** visualiza un bus moviéndose de forma ficticia por el mapa. <br>**Escenario 2: Aviso de prueba en punto de llegada** <br>**Dado que** la demo está en ejecución, <br>**Cuando** el bus ficticio llega a un punto de parada, <br>**Entonces** el sistema reproduce un aviso de prueba. <br>**Escenario 3: Dispositivo no compatible con la demo** <br>**Dado que** el dispositivo del usuario no cumple con los requisitos mínimos de la aplicación, <br>**Cuando** intenta abrir la demo interactiva, <br>**Entonces** el sistema le sugiere actualizar la aplicación o el sistema operativo de su dispositivo. | **EP01** |
-| **US-05** | Gestión de Perfil y Datos Personales | Como usuario de la aplicación, quiero actualizar mi número de teléfono y foto de perfil para mantener mi información de contacto al día. | **Escenario 1: Actualización de número de teléfono** <br>**Dado que** el usuario está en su perfil, <br>**Cuando** actualiza su número de teléfono y guarda los cambios, <br>**Entonces** el sistema almacena el nuevo número como dato de contacto vigente. <br>**Escenario 2: Actualización de foto de perfil** <br>**Dado que** el usuario desea cambiar su foto de perfil, <br>**Cuando** selecciona una nueva imagen y confirma, <br>**Entonces** el sistema reemplaza la foto anterior por la nueva. <br>**Escenario 3: Dato inválido en el formulario** <br>**Dado que** el usuario intenta actualizar su perfil, <br>**Cuando** ingresa un número de teléfono con formato inválido, <br>**Entonces** el sistema muestra un mensaje de error y no guarda el cambio. | **EP01** |
-| **US-06** | Registro de Conductores | Como administrador de la empresa de movilidad escolar, quiero crear cuentas de conductores y asignar rutas y alumnos para establecer grupos de recojo por proximidad. | **Escenario 1: Creación exitosa de perfil** <br>**Dado que** el administrador ingresa datos válidos del conductor, <br>**Cuando** guarda el registro, <br>**Entonces** el sistema crea el perfil del conductor. <br>**Escenario 2: Validación de licencia subida** <br>**Dado que** el conductor sube su licencia de conducir, <br>**Cuando** el sistema valida el documento, <br>**Entonces** el estado del conductor cambia a "Verificado". <br>**Escenario 3: Registro con DNI duplicado** <br>**Dado que** el administrador intenta registrar un conductor con un DNI ya existente, <br>**Cuando** intenta guardar, <br>**Entonces** el sistema muestra el mensaje "Usuario ya existe". | **EP02** |
-| **US-07** | Solicitud a Conductor Independiente | Como padre de familia, quiero solicitar un contrato a un conductor independiente para inscribir a mi hijo en su movilidad. | **Escenario 1: Envío de invitación por correo válido** <br>**Dado que** el padre de familia ingresa un correo válido del conductor independiente, <br>**Cuando** registra la solicitud, <br>**Entonces** el sistema envía una invitación al conductor. <br>**Escenario 2: Habilitación de vista de mapa** <br>**Dado que** el conductor confirma el vínculo con el alumno, <br>**Cuando** se completa la confirmación, <br>**Entonces** el sistema habilita la vista de mapa para el padre. <br>**Escenario 3: Correo con formato inválido** <br>**Dado que** el padre de familia ingresa un correo con formato inválido, <br>**Cuando** intenta enviar la solicitud, <br>**Entonces** el sistema muestra el mensaje "Formato no soportado". | **EP02** |
-| **US-08** | Asignación de Conductor Idóneo | Como administrador de la empresa de movilidad escolar, quiero revisar las solicitudes de padres y asignarles el conductor con espacio o ruta factible para completar el proceso de contratación. | **Escenario 1: Asignación exitosa** <br>**Dado que** existe una solicitud de un padre de familia, <br>**Cuando** el administrador encuentra un conductor con espacio y ruta factible, <br>**Entonces** el sistema le asigna el conductor a la solicitud. <br>**Escenario 2: Sin conductor factible** <br>**Dado que** no hay conductores con espacio o ruta factible, <br>**Cuando** el administrador revisa la solicitud, <br>**Entonces** el sistema indica que no hay conductores disponibles por el momento. <br>**Escenario 3: Reasignación tras rechazo** <br>**Dado que** un padre rechazó una asignación previa, <br>**Cuando** el administrador revisa la solicitud nuevamente, <br>**Entonces** puede asignarle un conductor distinto. | **EP02** |
-| **US-09** | Confirmación de Conductor Asignado | Como padre de familia, quiero visualizar los datos del conductor asignado por la empresa y confirmar o rechazar la asignación para asegurarme de que el servicio es de mi conformidad. | **Escenario 1: Confirmación de la asignación** <br>**Dado que** un padre de familia visualiza los datos del conductor asignado, <br>**Cuando** confirma la asignación, <br>**Entonces** el sistema activa el servicio de movilidad para su hijo. <br>**Escenario 2: Rechazo de la asignación** <br>**Dado que** un padre de familia no está conforme con el conductor asignado, <br>**Cuando** rechaza la asignación, <br>**Entonces** el sistema notifica al administrador para reasignar otro conductor. <br>**Escenario 3: Datos incompletos del conductor** <br>**Dado que** la información del conductor asignado está incompleta, <br>**Cuando** el padre intenta revisarla, <br>**Entonces** el sistema muestra un aviso de "Datos en actualización". | **EP02** |
-| **US-10** | Consulta de Precios | Como padre de familia, quiero ver los costos de las distintas movilidades para elegir la que se ajuste a mi presupuesto. | **Escenario 1: Consulta del precio mensual** <br>**Dado que** un padre de familia visualiza el perfil de una movilidad, <br>**Cuando** consulta la tabla de precios, <br>**Entonces** el sistema muestra el costo mensual del servicio, establecido por el conductor o la empresa. <br>**Escenario 2: Precios mostrados en soles** <br>**Dado que** el padre de familia consulta los costos de las distintas movilidades, <br>**Cuando** visualiza la tabla de precios, <br>**Entonces** todos los montos se muestran en Soles (PEN), sin opción de otra moneda. <br>**Escenario 3: Plan alternativo no configurado** <br>**Dado que** un conductor o administrador no ha configurado un plan alternativo (por ejemplo, uno anual de pago único), <br>**Cuando** el padre intenta visualizarlo, <br>**Entonces** el sistema muestra la etiqueta "No disponible" para ese plan. | **EP02** |
-| **US-11** | Admisión de Alumnos | Como conductor de movilidad escolar, quiero registrar nuevos alumnos en mi lista para incluir sus datos, casa y colegio en los recorridos. | **Escenario 1: Registro en lista de espera** <br>**Dado que** el conductor ingresa los datos del menor, <br>**Cuando** guarda el registro, <br>**Entonces** el alumno aparece en la lista de espera. <br>**Escenario 2: Generación de carné digital** <br>**Dado que** el conductor sube la foto del alumno, <br>**Cuando** guarda el registro, <br>**Entonces** el sistema muestra la foto en el carné digital del alumno. <br>**Escenario 3: Validación de campos obligatorios** <br>**Dado que** el conductor deja campos vacíos en el formulario, <br>**Cuando** intenta guardar el registro, <br>**Entonces** el sistema resalta los campos obligatorios faltantes. | **EP02** |
-| **US-12** | Registro de Múltiples Hijos | Como padre de familia, quiero registrar a más de un hijo en mi cuenta para monitorear a todos desde una sola aplicación. | **Escenario 1: Registro de un segundo hijo** <br>**Dado que** un padre de familia ya tiene un hijo registrado, <br>**Cuando** agrega los datos de otro hijo, <br>**Entonces** el sistema los vincula a la misma cuenta. <br>**Escenario 2: Visualización de todos los hijos** <br>**Dado que** un padre tiene más de un hijo registrado, <br>**Cuando** ingresa a su cuenta, <br>**Entonces** el sistema muestra la lista completa de sus hijos. <br>**Escenario 3: Registro con datos incompletos** <br>**Dado que** un padre intenta registrar a un nuevo hijo, <br>**Cuando** deja campos obligatorios vacíos, <br>**Entonces** el sistema no permite guardar el registro y resalta los campos faltantes. | **EP02** |
-| **US-13** | Mantenimiento y Documentación del Vehículo | Como conductor de movilidad escolar, quiero registrar el mantenimiento preventivo y SOAT de mi vehículo para cumplir con las normativas de tránsito vigentes. | **Escenario 1: Registro de mantenimiento preventivo** <br>**Dado que** el conductor realiza un mantenimiento preventivo a su vehículo, <br>**Cuando** registra la fecha y el detalle en el sistema, <br>**Entonces** queda almacenado en el historial del vehículo. <br>**Escenario 2: Carga del SOAT vigente** <br>**Dado que** el conductor sube el documento del SOAT, <br>**Cuando** el sistema valida la fecha de vigencia, <br>**Entonces** actualiza el estado de documentación a "Vigente". <br>**Escenario 3: Documento vencido** <br>**Dado que** el SOAT del conductor está vencido, <br>**Cuando** el sistema detecta la fecha, <br>**Entonces** marca al vehículo como "No apto para operar" hasta su renovación. | **EP03** |
-| **US-14** | Gestión de Licencias y Antecedentes | Como conductor de movilidad escolar, quiero registrar y actualizar mis licencias de conducir y antecedentes penales para cumplir con los estándares de seguridad exigidos por las autoridades y la empresa. | **Escenario 1: Registro de licencia de conducir** <br>**Dado que** el conductor sube su licencia de conducir vigente, <br>**Cuando** el sistema valida el documento, <br>**Entonces** actualiza su estado de habilitación. <br>**Escenario 2: Registro de antecedentes penales** <br>**Dado que** el conductor sube su certificado de antecedentes penales, <br>**Cuando** el sistema lo procesa, <br>**Entonces** queda registrado en su perfil de cumplimiento. <br>**Escenario 3: Licencia próxima a vencer** <br>**Dado que** la licencia del conductor está próxima a vencer, <br>**Cuando** el sistema detecta la fecha límite, <br>**Entonces** le envía un recordatorio para renovarla. | **EP03** |
-| **US-15** | Registro de Gastos | Como conductor de movilidad escolar, quiero registrar los repostajes de combustible y gastos menores del vehículo para llevar un control de mis egresos diarios. | **Escenario 1: Registro de repostaje de combustible** <br>**Dado que** el conductor realiza un repostaje de combustible, <br>**Cuando** registra el monto y la fecha, <br>**Entonces** el sistema lo agrega a su historial de gastos. <br>**Escenario 2: Registro de gasto menor** <br>**Dado que** el conductor tiene un gasto menor del vehículo, <br>**Cuando** lo registra en el sistema, <br>**Entonces** queda reflejado en su resumen de egresos diarios. <br>**Escenario 3: Monto inválido** <br>**Dado que** el conductor intenta registrar un gasto, <br>**Cuando** ingresa un monto negativo o no numérico, <br>**Entonces** el sistema muestra un mensaje de error y no guarda el registro. | **EP03** |
-| **US-16** | Reporte de Kilometraje Diario | Como conductor de movilidad escolar, quiero registrar el kilometraje inicial y final de la jornada para llevar un control del desgaste del vehículo y rendimiento de combustible. | **Escenario 1: Registro de kilometraje inicial** <br>**Dado que** el conductor inicia su jornada, <br>**Cuando** registra el kilometraje inicial del vehículo, <br>**Entonces** el sistema lo almacena como punto de partida del día. <br>**Escenario 2: Registro de kilometraje final** <br>**Dado que** el conductor finaliza su jornada, <br>**Cuando** registra el kilometraje final, <br>**Entonces** el sistema calcula el total recorrido en el día. <br>**Escenario 3: Kilometraje final menor al inicial** <br>**Dado que** el conductor ingresa un kilometraje final menor al inicial, <br>**Cuando** intenta guardar el registro, <br>**Entonces** el sistema muestra un mensaje de error por dato inconsistente. | **EP03** |
-| **US-17** | Control de Capacidad y Asientos | Como conductor de movilidad escolar, quiero visualizar el límite de asientos ocupados de mi vehículo para no exceder la capacidad reglamentaria permitida. | **Escenario 1: Visualización de asientos disponibles** <br>**Dado que** el conductor consulta su vehículo, <br>**Cuando** revisa la capacidad de asientos, <br>**Entonces** el sistema muestra los asientos ocupados y disponibles. <br>**Escenario 2: Alerta por capacidad al límite** <br>**Dado que** el vehículo alcanza su capacidad máxima permitida, <br>**Cuando** el conductor intenta agregar un alumno adicional, <br>**Entonces** el sistema le impide asignarlo y muestra una alerta. <br>**Escenario 3: Actualización tras baja de un alumno** <br>**Dado que** un alumno es dado de baja de la ruta, <br>**Cuando** el sistema actualiza la lista, <br>**Entonces** libera un asiento disponible en el conteo de capacidad | **EP03** |
-| **US-18** | Creación de Rutas | Como conductor de movilidad escolar, quiero trazar rutas y paradas personalizadas para optimizar el tiempo de recorrido. | **Escenario 1: Cálculo de tiempo estimado** <br>**Dado que** el conductor define un punto A y un punto B, <br>**Cuando** traza la ruta en el mapa, <br>**Entonces** el sistema calcula el tiempo estimado del recorrido. <br>**Escenario 2: Recalculo por nuevas paradas** <br>**Dado que** el conductor agrega nuevas paradas a la ruta, <br>**Cuando** las guarda, <br>**Entonces** el sistema recalcula el orden óptimo del recorrido. <br>**Escenario 3: Ruta no transitable** <br>**Dado que** el conductor intenta trazar una ruta hacia puntos inaccesibles, <br>**Cuando** el sistema procesa el trazado, <br>**Entonces** muestra el mensaje "Ruta no transitable". | **EP04** |
-| **US-19** | Visualización de Alumnos por Parada | Como conductor de movilidad escolar, quiero ver el listado específico de niños que debo recoger en cada parada programada para agilizar el embarque y evitar confusiones en la ruta. | **Escenario 1: Listado de alumnos por parada** <br>**Dado que** el conductor llega a una parada programada, <br>**Cuando** consulta la lista de esa parada, <br>**Entonces** el sistema muestra los alumnos que debe recoger ahí. <br>**Escenario 2: Parada sin alumnos asignados** <br>**Dado que** una parada no tiene alumnos asignados ese día, <br>**Cuando** el conductor la consulta, <br>**Entonces** el sistema indica que no hay alumnos pendientes en esa parada. <br>**Escenario 3: Actualización tras ausencia de última hora** <br>**Dado que** un padre notifica la ausencia de su hijo, <br>**Cuando** el conductor consulta la lista de la parada, <br>**Entonces** el sistema ya no muestra a ese alumno como pendiente. | **EP04** |
-| **US-20** | Cambio Temporal de Dirección de Recojo | Como padre de familia, quiero solicitar un cambio puntual en la dirección de recojo o entrega para cubrir situaciones excepcionales, como quedarme en casa de un familiar. | **Escenario 1: Cambio de dirección aceptado** <br>**Dado que** un padre de familia solicita un cambio puntual de dirección de recojo, <br>**Cuando** el conductor lo acepta, <br>**Entonces** el sistema actualiza la ruta para ese día únicamente. <br>**Escenario 2: Solicitud fuera de zona de cobertura** <br>**Dado que** un padre solicita un cambio de dirección fuera de la zona de cobertura del conductor, <br>**Cuando** el sistema valida la ubicación, <br>**Entonces** rechaza la solicitud y notifica al padre. <br>**Escenario 3: Solicitud fuera de tiempo límite** <br>**Dado que** un padre solicita el cambio después del horario límite permitido, <br>**Cuando** intenta enviarla, <br>**Entonces** el sistema muestra un mensaje indicando que ya no es posible modificar la ruta de ese día. | **EP04** |
-| **US-21** | Notificación de Ausencia del Alumno | Como padre de familia, quiero avisar al conductor que mi hijo no asistirá ese día para que no pierda tiempo esperándolo en la parada. | **Escenario 1: Aviso registrado a tiempo** <br>**Dado que** un padre de familia sabe que su hijo no asistirá ese día, <br>**Cuando** registra el aviso de ausencia antes del inicio de la ruta, <br>**Entonces** el conductor recibe la notificación y omite esa parada. <br>**Escenario 2: Aviso de ausencia tardío** <br>**Dado que** el conductor ya inició la ruta, <br>**Cuando** un padre intenta registrar la ausencia de su hijo, <br>**Entonces** el sistema le advierte que el aviso podría no llegar a tiempo. <br>**Escenario 3: Cancelación del aviso** <br>**Dado que** un padre había registrado una ausencia, <br>**Cuando** decide cancelarla antes del inicio de la ruta, <br>**Entonces** el sistema restablece la parada como activa. | **EP04** |
-| **US-22** | Reasignación de Rutas por Ausencias | Como administrador de la empresa de movilidad escolar, quiero reasignar conductores a diferentes rutas para optimizar la flota ante ausencias imprevistas del personal. | **Escenario 1: Reasignación exitosa** <br>**Dado que** un conductor reporta una ausencia imprevista, <br>**Cuando** el administrador reasigna su ruta a otro conductor disponible, <br>**Entonces** el sistema actualiza la asignación y notifica a los padres afectados. <br>**Escenario 2: Sin conductores disponibles** <br>**Dado que** no hay conductores disponibles para cubrir la ruta, <br>**Cuando** el administrador intenta reasignarla, <br>**Entonces** el sistema le indica que no hay opciones factibles. <br>**Escenario 3: Reasignación parcial** <br>**Dado que** solo parte de los alumnos de la ruta pueden ser cubiertos por otro conductor, <br>**Cuando** el administrador realiza la reasignación, <br>**Entonces** el sistema distribuye a los alumnos entre los conductores disponibles. | **EP04** |
-| **US-23** | Check de Seguridad | Como conductor de movilidad escolar, quiero una lista de chequeo del estado del vehículo para garantizar la seguridad de los niños que transporto. | **Escenario 1: Habilitación de ruta tras check aprobado** <br>**Dado que** el conductor inicia su día, <br>**Cuando** marca como correctos los ítems de luces y frenos, <br>**Entonces** el sistema habilita el inicio de la ruta. <br>**Escenario 2: Bloqueo por falla detectada** <br>**Dado que** el conductor detecta una falla durante el check, <br>**Cuando** la reporta en el sistema, <br>**Entonces** el sistema bloquea la unidad por seguridad. <br>**Escenario 3: Recordatorio por check incompleto** <br>**Dado que** el conductor no completó el checklist de seguridad, <br>**Cuando** intenta iniciar el viaje, <br>**Entonces** el sistema le recuerda que la revisión es obligatoria. | **EP05** |
-| **US-24** | Inicio de la Ruta | Como conductor de movilidad escolar, quiero activar la ruta para notificar a los padres que voy en camino a recoger a sus hijos. | **Escenario 1: Cambio de estado a "En camino"** <br>**Dado que** la ruta está lista para iniciar, <br>**Cuando** el conductor pulsa "Iniciar", <br>**Entonces** el sistema cambia el estado de la ruta a "En camino". <br>**Escenario 2: Transmisión de coordenadas GPS** <br>**Dado que** el GPS del conductor está activo, <br>**Cuando** inicia la ruta, <br>**Entonces** el sistema comienza a transmitir sus coordenadas en tiempo real. <br>**Escenario 3: Inicio sin conexión** <br>**Dado que** el conductor no tiene conexión a internet, <br>**Cuando** intenta iniciar la ruta, <br>**Entonces** el sistema muestra el mensaje "Modo Offline: reconectando". | **EP05** |
-| **US-25** | Marcación de Abordaje | Como conductor de movilidad escolar, quiero registrar el abordaje de cada niño para confirmar que subió al vehículo. | **Escenario 1: Notificación al padre por abordaje** <br>**Dado que** el conductor llega a la parada de un alumno, <br>**Cuando** marca el check de abordaje, <br>**Entonces** el sistema notifica al padre correspondiente. <br>**Escenario 2: Registro automático mediante QR** <br>**Dado que** el conductor escanea el código QR del alumno, <br>**Cuando** el sistema lo reconoce, <br>**Entonces** registra el abordaje de forma automática. <br>**Escenario 3: Alerta por alumno incorrecto** <br>**Dado que** el conductor intenta marcar el abordaje de un alumno que no pertenece a esa parada, <br>**Cuando** confirma la marcación, <br>**Entonces** el sistema muestra la alerta "Alumno no pertenece a esta parada". | **EP05** |
-| **US-26** | Navegación Integrada | Como conductor de movilidad escolar, quiero acceder a mapas externos para hallar la ruta más rápida en caso de imprevistos tras recoger a todos los niños. | **Escenario 1: Apertura de app externa** <br>**Dado que** el viaje ya está iniciado, <br>**Cuando** el conductor pulsa "Navegar", <br>**Entonces** el sistema abre la aplicación externa de mapas. <br>**Escenario 2: Actualización del ETA por desvío** <br>**Dado que** la aplicación de mapas sugiere un desvío por cambio de tráfico, <br>**Cuando** el conductor lo sigue, <br>**Entonces** el sistema actualiza el tiempo estimado de llegada (ETA). <br>**Escenario 3: App de mapas no instalada** <br>**Dado que** el conductor no tiene instalada una aplicación de mapas, <br>**Cuando** intenta abrir la navegación, <br>**Entonces** el sistema le sugiere descargar una. | **EP05** |
-| **US-27** | Finalización de Ruta | Como conductor de movilidad escolar, quiero finalizar la ruta para notificar a los padres que sus hijos ya fueron entregados o recogidos y poder retornar a mis actividades diarias. | **Escenario 1: Detención del GPS al finalizar** <br>**Dado que** el conductor llega al fin del recorrido, <br>**Cuando** pulsa "Cerrar", <br>**Entonces** el sistema detiene la transmisión del GPS. <br>**Escenario 2: Advertencia por alumnos pendientes** <br>**Dado que** aún hay alumnos a bordo del vehículo, <br>**Cuando** el conductor intenta cerrar la ruta, <br>**Entonces** el sistema le advierte "Hay alumnos a bordo". <br>**Escenario 3: Guardado local por error de servidor** <br>**Dado que** ocurre un error de conexión con el servidor, <br>**Cuando** el conductor cierra la ruta, <br>**Entonces** el sistema guarda los datos localmente para sincronizarlos después. | **EP05** |
-| **US-28** | Sincronización de Datos Offline | Como conductor de movilidad escolar, quiero que la aplicación guarde localmente el registro de abordajes si pierdo conexión a internet para sincronizarlos automáticamente al recuperar señal. | **Escenario 1: Guardado local sin conexión** <br>**Dado que** el conductor pierde conexión a internet durante la ruta, <br>**Cuando** marca el abordaje de un alumno, <br>**Entonces** el sistema guarda el registro localmente en el dispositivo. <br>**Escenario 2: Sincronización automática al recuperar señal** <br>**Dado que** el conductor recupera la conexión a internet, <br>**Cuando** el sistema detecta la señal, <br>**Entonces** sincroniza automáticamente los registros guardados localmente. <br>**Escenario 3: Conflicto de datos al sincronizar** <br>**Dado que** existen registros locales y del servidor con diferencias, <br>**Cuando** el sistema intenta sincronizar, <br>**Entonces** prioriza el registro más reciente y notifica al conductor del ajuste. | **EP05** |
-| **US-29** | Bloqueo de Vías | Como conductor de movilidad escolar, quiero marcar una calle o tramo como bloqueado temporalmente para que el sistema sugiera un desvío inmediato en el mapa. | **Escenario 1: Marcado de vía bloqueada** <br>**Dado que** el conductor identifica una calle bloqueada, <br>**Cuando** la marca como bloqueada en el mapa, <br>**Entonces** el sistema sugiere un desvío inmediato. <br>**Escenario 2: Desbloqueo de vía marcada** <br>**Dado que** una vía marcada como bloqueada vuelve a estar habilitada, <br>**Cuando** el conductor la desmarca, <br>**Entonces** el sistema restablece la ruta original si es más óptima. <br>**Escenario 3: Sin ruta alternativa disponible** <br>**Dado que** no existe una ruta alternativa viable al tramo bloqueado, <br>**Cuando** el conductor marca el bloqueo, <br>**Entonces** el sistema le notifica que no hay desvío disponible. | **EP05** |
-| **US-30** | Gestión de Notificaciones | Como conductor de movilidad escolar, quiero enviar avisos globales a los padres de los niños que llevo a bordo para informar eventos o imprevistos ocurridos en la ruta. | **Escenario 1: Envío de aviso global** <br>**Dado que** ocurre un evento imprevisto en la ruta, <br>**Cuando** el conductor escribe un mensaje global, <br>**Entonces** todos los padres reciben una notificación push. <br>**Escenario 2: Envío de aviso programado** <br>**Dado que** el conductor programa un aviso con una fecha específica, <br>**Cuando** llega esa fecha, <br>**Entonces** el sistema lo envía automáticamente. <br>**Escenario 3: Bloqueo por mensaje vacío** <br>**Dado que** el conductor intenta enviar una notificación sin contenido, <br>**Cuando** presiona el botón de enviar, <br>**Entonces** el sistema mantiene el botón bloqueado. | **EP05** |
-| **US-31** | Botón de Pánico | Como conductor de movilidad escolar, quiero contar con un botón de SOS que llame directamente a un servicio de emergencias en caso de algún imprevisto grave. | **Escenario 1: Envío de alerta de emergencia** <br>**Dado que** el conductor se encuentra en una situación de peligro, <br>**Cuando** presiona el botón de SOS durante 3 segundos, <br>**Entonces** el sistema envía una alerta con su ubicación GPS. <br>**Escenario 2: Apertura de canal de audio** <br>**Dado que** la alerta de pánico está activa, <br>**Cuando** el administrador responde a la alerta, <br>**Entonces** el sistema abre un canal de audio entre ambos. <br>**Escenario 3: Cancelación de alerta accidental** <br>**Dado que** el conductor presionó el botón por accidente, <br>**Cuando** cancela la alerta dentro de los primeros 2 segundos, <br>**Entonces** el sistema no envía la alerta. | **EP05** |
-| **US-32** | Reporte de Incidencias | Como conductor de movilidad escolar, quiero mantener un registro de las incidencias presentadas a diario para reportárselo a los padres y estén al tanto de lo que ocurre. | **Escenario 1: Actualización de ETA por retraso** <br>**Dado que** el conductor enfrenta tráfico denso, <br>**Cuando** reporta el retraso en el sistema, <br>**Entonces** se actualiza el ETA para todos los padres afectados. <br>**Escenario 2: Aviso a central por falla mecánica** <br>**Dado que** el conductor tiene una falla mecánica, <br>**Cuando** selecciona el tipo de incidencia, <br>**Entonces** el sistema avisa a la central de auxilio. <br>**Escenario 3: Reporte sin señal GPS** <br>**Dado que** el conductor no cuenta con señal GPS, <br>**Cuando** intenta reportar una incidencia, <br>**Entonces** el sistema le pide ingresar la ubicación manualmente. | **EP05** |
-| **US-33** | Rastreo en Tiempo Real | Como padre de familia, quiero visualizar el vehículo en el mapa para saber la ubicación de mi hijo si es que llega o esta en camino. | **Escenario 1: Visualización del vehículo en movimiento** <br>**Dado que** el viaje está activo, <br>**Cuando** el padre abre el mapa, <br>**Entonces** visualiza el ícono del vehículo moviéndose en tiempo real. <br>**Escenario 2: Consulta de distancia a la parada propia** <br>**Dado que** el padre visualiza el mapa, <br>**Cuando** toca el ícono del vehículo, <br>**Entonces** el sistema muestra la distancia en kilómetros hasta su parada. <br>**Escenario 3: Mapa tras finalizar el viaje** <br>**Dado que** el viaje ya finalizó, <br>**Cuando** el padre abre el mapa, <br>**Entonces** el sistema muestra el mensaje "Servicio concluido". | **EP06** |
-| **US-34** | Alerta de Proximidad | Como padre de familia, quiero recibir un aviso previo de que mi hijo está por llegar a mi hogar para recibirlo y no dejarlo esperando afuera. | **Escenario 1: Notificación por cercanía geográfica** <br>**Dado que** el vehículo se encuentra a 500 metros del hogar, <br>**Cuando** entra a la geovalla configurada, <br>**Entonces** el padre recibe una notificación push. <br>**Escenario 2: Vibración por proximidad en tiempo** <br>**Dado que** el vehículo está a 2 minutos de llegar, <br>**Cuando** se cumple ese tiempo estimado, <br>**Entonces** el teléfono del padre vibra como aviso. <br>**Escenario 3: Registro sin notificación activa** <br>**Dado que** el padre tiene las notificaciones desactivadas, <br>**Cuando** el vehículo llega a su ubicación, <br>**Entonces** el sistema solo registra el evento en el log, sin enviar alerta. | **EP06** |
-| **US-35** | Confirmación de Llegada | Como padre de familia, quiero recibir un aviso de que mi hijo llegó al colegio para estar tranquilo y dedicarme a mis actividades. | **Escenario 1: Confirmación de llegada al colegio** <br>**Dado que** el vehículo llega al colegio, <br>**Cuando** el conductor cierra el viaje, <br>**Entonces** el padre recibe una notificación de éxito. <br>**Escenario 2: Confirmación de entrega en casa** <br>**Dado que** el viaje es de retorno, <br>**Cuando** el vehículo llega a la casa del alumno, <br>**Entonces** el padre recibe la notificación "Hijo entregado". <br>**Escenario 3: Alerta por demora prolongada** <br>**Dado que** el viaje presenta un retraso mayor a 20 minutos, <br>**Cuando** ese tiempo transcurre, <br>**Entonces** el padre recibe una alerta de demora. | **EP06** |
-| **US-36** | Geocerca del Colegio | Como padre de familia, quiero recibir una notificación automática cuando el vehículo entre o salga del colegio para saber que mi hijo llegó o partió. | **Escenario 1: Notificación de entrada al colegio** <br>**Dado que** el vehículo se acerca al colegio, <br>**Cuando** ingresa a la geovalla del colegio, <br>**Entonces** el sistema notifica al padre que su hijo llegó. <br>**Escenario 2: Notificación de salida del colegio** <br>**Dado que** el vehículo recoge al alumno del colegio, <br>**Cuando** sale de la geovalla del colegio, <br>**Entonces** el sistema notifica al padre que su hijo partió. <br>**Escenario 3: Geovalla mal configurada** <br>**Dado que** la geovalla del colegio no está correctamente configurada, <br>**Cuando** el vehículo entra o sale del área real, <br>**Entonces** el sistema no genera la notificación correspondiente. | **EP06** |
-| **US-37** | Alerta de Retraso Prolongado | Como padre de familia, quiero recibir una alerta cuando la ruta presente un retraso mayor al habitual para estar informado sin necesidad de revisar el mapa constantemente. | **Escenario 1: Alerta por retraso mayor al habitual** <br>**Dado que** la ruta presenta un retraso mayor al tiempo habitual, <br>**Cuando** el sistema detecta la desviación, <br>**Entonces** envía una alerta al padre de familia. <br>**Escenario 2: Sin alerta por retraso menor** <br>**Dado que** la ruta tiene un retraso dentro del rango normal, <br>**Cuando** el sistema evalúa el tiempo, <br>**Entonces** no genera ninguna alerta al padre. <br>**Escenario 3: Actualización de la alerta con nuevo ETA** <br>**Dado que** ya se envió una alerta de retraso, <br>**Cuando** el sistema recalcula un nuevo tiempo estimado de llegada, <br>**Entonces** actualiza la notificación al padre con el nuevo ETA. | **EP06** |
-| **US-38** | Chat Interno Conductor - Padre | Como usuario (conductor o padre), quiero comunicarme mediante un chat interno para coordinar detalles específicos sin usar mensajería externa. | **Escenario 1: Envío de mensaje por chat interno** <br>**Dado que** un padre tiene una duda sobre el recorrido, <br>**Cuando** envía un mensaje al conductor por el chat interno, <br>**Entonces** el conductor recibe la notificación del mensaje. <br>**Escenario 2: Respuesta del conductor** <br>**Dado que** el conductor recibe un mensaje de un padre, <br>**Cuando** responde desde el chat interno, <br>**Entonces** el padre recibe la respuesta sin salir de la aplicación. <br>**Escenario 3: Envío de mensaje vacío** <br>**Dado que** un usuario intenta enviar un mensaje sin contenido, <br>**Cuando** presiona el botón de enviar, <br>**Entonces** el sistema no permite el envío. | **EP06** |
-| **US-39** | Calificación del Servicio | Como padre de familia, quiero calificar el desempeño del conductor y la puntualidad del servicio para garantizar la calidad del servicio de transporte. | **Escenario 1: Calificación registrada al finalizar el mes** <br>**Dado que** finaliza el mes de servicio, <br>**Cuando** el padre califica el desempeño del conductor y la puntualidad, <br>**Entonces** el sistema registra la valoración en el historial del conductor. <br>**Escenario 2: Calificación con comentario** <br>**Dado que** el padre califica el servicio, <br>**Cuando** además agrega un comentario, <br>**Entonces** el sistema almacena tanto la puntuación como el comentario. <br>**Escenario 3: Calificar sin servicio activo** <br>**Dado que** un padre no tiene un servicio de movilidad activo o finalizado ese mes, <br>**Cuando** intenta calificar, <br>**Entonces** el sistema no le permite registrar una valoración. | **EP07** |
-| **US-40** | Historial de Asistencia | Como padre de familia, quiero consultar el registro histórico de asistencia de mi hijo para verificar los días en que mi hijo usó el servicio de transporte. | **Escenario 1: Consulta del historial de uso** <br>**Dado que** un padre de familia desea revisar el uso del servicio, <br>**Cuando** consulta el historial de su hijo, <br>**Entonces** el sistema muestra los días en que usó el servicio de transporte. <br>**Escenario 2: Historial sin registros** <br>**Dado que** el hijo del padre aún no ha usado el servicio, <br>**Cuando** consulta el historial, <br>**Entonces** el sistema muestra un mensaje indicando que no hay registros disponibles. <br>**Escenario 3: Filtro por rango de fechas** <br>**Dado que** el padre quiere revisar un periodo específico, <br>**Cuando** aplica un filtro de fechas, <br>**Entonces** el sistema muestra únicamente los registros del rango seleccionado. | **EP07** |
-| **US-41** | Gestión de Reclamos | Como padre de familia, quiero presentar un reclamo formal sobre el servicio para que el administrador lo revise y dé una solución. | **Escenario 1: Registro de un reclamo formal** <br>**Dado que** un padre está insatisfecho con el servicio, <br>**Cuando** presenta un reclamo formal, <br>**Entonces** el sistema lo registra y notifica al administrador. <br>**Escenario 2: Seguimiento del estado del reclamo** <br>**Dado que** un padre presentó un reclamo previamente, <br>**Cuando** consulta su estado, <br>**Entonces** el sistema muestra si está pendiente, en revisión o resuelto. <br>**Escenario 3: Reclamo sin descripción** <br>**Dado que** un padre intenta enviar un reclamo sin descripción, <br>**Cuando** presiona el botón de enviar, <br>**Entonces** el sistema le solicita completar el campo antes de continuar. | **EP07** |
 
 <br>
 
-#### Technical Stories
+
+<!--US19-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-19</td>
+    <td>Usuario General</td>
+    <td>Alta</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recuperación de Contraseña</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario, quiero poder recuperar mi contraseña mediante mi correo electrónico para recuperar el acceso a mi cuenta en caso de olvido.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Envío de enlace de recuperación</strong><br>
+      <strong>Dado que</strong> el usuario ingresa su correo registrado,<br>
+      <strong>Cuando</strong> solicita la recuperación,<br>
+      <strong>Entonces</strong> el sistema envía un correo con un token seguro de restablecimiento con vigencia de 15 minutos.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US20-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-20</td>
+    <td>Administrador</td>
+    <td>Media</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Historial de Mantenimientos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero visualizar el historial de mantenimientos preventivos y correctivos de cada vehículo para gestionar las fechas de su próxima revisión.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Revisión de bitácora vehicular</strong><br>
+      <strong>Dado que</strong> el administrador selecciona un vehículo de la flota,<br>
+      <strong>Cuando</strong> navega a la pestaña de mantenimiento,<br>
+      <strong>Entonces</strong> el sistema lista todas las intervenciones pasadas ordenadas por fecha.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US21-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-21</td>
+    <td>Conductor</td>
+    <td>Media</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Cancelación de Viaje por Fuerza Mayor</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero poder cancelar un viaje en curso en caso de avería mecánica extrema o emergencia para detener el monitoreo y notificar automáticamente a los padres afectados.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Cancelación de ruta activa</strong><br>
+      <strong>Dado que</strong> el conductor se encuentra en medio de un viaje,<br>
+      <strong>Cuando</strong> presiona el botón de cancelación por fuerza mayor y confirma,<br>
+      <strong>Entonces</strong> el sistema cambia el estado de la ruta a "Cancelado" y emite una alerta a los padres restantes.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US22-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-22</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reporte de Llegada al Colegio</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero registrar el check-in final al llegar al colegio para que el sistema marque la finalización exitosa del viaje matutino.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Check-in de destino final</strong><br>
+      <strong>Dado que</strong> el vehículo se encuentra en el radio del colegio,<br>
+      <strong>Cuando</strong> el conductor confirma la llegada,<br>
+      <strong>Entonces</strong> el sistema desembarca virtualmente a todos los alumnos a bordo y da por finalizada la ruta.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US23-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-23</td>
+    <td>Padre de Familia</td>
+    <td>Baja</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Envío de Ticket de Soporte</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero poder crear un ticket de soporte dentro de la aplicación para resolver problemas técnicos con mi cuenta o pagos.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Generación de ticket</strong><br>
+      <strong>Dado que</strong> el usuario tiene un problema en la app,<br>
+      <strong>Cuando</strong> llena el formulario de contacto y lo envía,<br>
+      <strong>Entonces</strong> el sistema genera un ID de seguimiento y lo notifica al área de soporte.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US24-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-24</td>
+    <td>Conductor</td>
+    <td>Media</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Foro de Anuncios del Conductor</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero tener una sección de anuncios (ej. "Mañana no hay servicio por feriado") para comunicar información relevante de manera asíncrona a todos los padres de mi ruta.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Publicación de anuncio global</strong><br>
+      <strong>Dado que</strong> el conductor publica un anuncio en su muro,<br>
+      <strong>Cuando</strong> los padres vinculados ingresan a su perfil,<br>
+      <strong>Entonces</strong> visualizan el mensaje resaltado en la parte superior.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+
+<!--US25-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-25</td>
+    <td>Nuevo Usuario</td>
+    <td>Media</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Sección Tutorial interactiva (Onboarding)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como nuevo usuario, quiero acceder a un tutorial interactivo al iniciar sesión por primera vez para aprender a utilizar las funcionalidades principales de la aplicación.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Completar onboarding</strong><br>
+      <strong>Dado que</strong> el usuario ingresa por primera vez,<br>
+      <strong>Cuando</strong> navega por las 3 pantallas de tutorial,<br>
+      <strong>Entonces</strong> el sistema marca el onboarding como completado y no lo vuelve a mostrar.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US26-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-26</td>
+    <td>Conductor</td>
+    <td>Baja</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registro de Gastos Operativos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero registrar mis gastos diarios (combustible, peajes, lavado) para tener un control financiero directamente en la aplicación de gestión de flota.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Ingreso de gasto</strong><br>
+      <strong>Dado que</strong> el conductor realiza una recarga de combustible,<br>
+      <strong>Cuando</strong> ingresa el monto y adjunta la foto del comprobante,<br>
+      <strong>Entonces</strong> el sistema añade el gasto al reporte financiero mensual.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US27-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-27</td>
+    <td>Padre de Familia</td>
+    <td>Alta</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Cambio Temporal de Dirección de Recojo</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero poder solicitar un cambio de dirección de recojo por un solo día (ej. casa de abuelos) para que el conductor ajuste su ruta sin alterar mi dirección base.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Aprobación de cambio temporal</strong><br>
+      <strong>Dado que</strong> el padre envía una solicitud de desvío con 12 horas de anticipación,<br>
+      <strong>Cuando</strong> el conductor la acepta,<br>
+      <strong>Entonces</strong> el sistema actualiza temporalmente la coordenada de la parada para el día siguiente.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US28-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-28</td>
+    <td>Administrador</td>
+    <td>Media</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reasignación de Rutas por Ausencias</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero recalcular y reasignar las rutas si un conductor reporta una avería o falta, para garantizar que todos los alumnos sean recogidos por otro vehículo disponible.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Traspaso de ruta</strong><br>
+      <strong>Dado que</strong> el conductor A reporta una avería severa,<br>
+      <strong>Cuando</strong> el administrador transfiere sus paradas al conductor B,<br>
+      <strong>Entonces</strong> el sistema notifica a los padres y fusiona las secuencias de recojo en el dispositivo de B.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US29-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-29</td>
+    <td>Conductor</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reporte de Bloqueo de Vías</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero poder reportar un bloqueo de vía en tiempo real en mi mapa, para recalcular la ruta automáticamente y advertir a la central sobre la demora.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Recálculo por incidencia</strong><br>
+      <strong>Dado que</strong> el conductor se topa con tráfico bloqueado,<br>
+      <strong>Cuando</strong> marca el segmento vial como cerrado en la app,<br>
+      <strong>Entonces</strong> el sistema genera una ruta alternativa hacia la siguiente parada.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--US30-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US-30</td>
+    <td>Padre de Familia</td>
+    <td>Baja</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Chat Interno Conductor - Padre</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como padre de familia, quiero tener un chat interno con el conductor asignado para comunicarme directamente sobre detalles urgentes (ej. "el niño está saliendo, espere 1 minuto").</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Envío de mensaje</strong><br>
+      <strong>Dado que</strong> el conductor está en camino a la parada del padre,<br>
+      <strong>Cuando</strong> el padre envía un mensaje de texto,<br>
+      <strong>Entonces</strong> el dispositivo del conductor lo recibe y, si está conduciendo, lo lee mediante Voice-to-Text.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+**TECHNICAL STORIES**
+
 
 <!--TS01-->
 <table>
@@ -1678,11 +2036,208 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
   </tr>
 </table>
 
-<br>
 
 <br>
 
-#### Spike Stories
+<!--TS04-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-04</td>
+    <td>DevOps / Developer</td>
+    <td>Alta</td>
+    <td>General</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Pipeline de Integración Continua (CI/CD)</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador, quiero configurar un pipeline de CI/CD (e.g., GitHub Actions) para compilar y ejecutar pruebas automáticamente con cada push a la rama principal.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Ejecución exitosa de pruebas</strong><br>
+      <strong>Dado que</strong> se realiza un Pull Request hacia <code>develop</code>,<br>
+      <strong>Cuando</strong> el pipeline se activa automáticamente,<br>
+      <strong>Entonces</strong> se compila la solución, se corren las pruebas unitarias y se reporta el estado en GitHub.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--TS05-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-05</td>
+    <td>Developer</td>
+    <td>Media</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Integración de Pasarela de Pagos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador, quiero integrar la API de una pasarela de pagos (ej. Stripe o Niubiz) para procesar las suscripciones de los conductores de forma segura.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Tokenización de tarjeta</strong><br>
+      <strong>Dado que</strong> el usuario ingresa sus datos de tarjeta,<br>
+      <strong>Cuando</strong> la pasarela responde con éxito,<br>
+      <strong>Entonces</strong> el backend almacena únicamente el token de pago seguro y no los datos sensibles de la tarjeta.
+    </td>
+  </tr>
+</table>
+
+
+
+<!--TS06-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-06</td>
+    <td>Database Admin</td>
+    <td>Alta</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configuración de Base de Datos Espacial</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador de base de datos, quiero configurar un motor de BD con capacidades espaciales (ej. PostgreSQL con PostGIS o MongoDB con GeoJSON) para realizar consultas eficientes de geocercas y proximidad.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Inserción y consulta geoespacial</strong><br>
+      <strong>Dado que</strong> se recibe una coordenada de latitud/longitud,<br>
+      <strong>Cuando</strong> el sistema la persiste en la base de datos,<br>
+      <strong>Entonces</strong> es capaz de usar índices espaciales para encontrarla en consultas de "puntos dentro de un polígono" en menos de 50ms.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--TS07-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-07</td>
+    <td>Backend Developer</td>
+    <td>Media</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Implementación de Cola de Mensajería</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador backend, quiero implementar un Message Broker (RabbitMQ o Kafka) para encolar el procesamiento de notificaciones masivas, evitando bloqueos en el hilo principal del servidor.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Encolado de eventos masivos</strong><br>
+      <strong>Dado que</strong> se dispara una alerta general de retraso,<br>
+      <strong>Cuando</strong> el controlador recibe la petición,<br>
+      <strong>Entonces</strong> delega la creación de las 30 notificaciones individuales a la cola de mensajería para su procesamiento en background, respondiendo inmediatamente HTTP 202 Accepted al cliente.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+
+<!--TS08-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>TS-08</td>
+    <td>Backend Developer</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">API para Validación de Códigos QR</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador backend, quiero exponer un endpoint para la generación y validación de códigos QR únicos por alumno, permitiendo un escaneo rápido para el abordaje offline y online.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Validación exitosa</strong><br>
+      <strong>Dado que</strong> el conductor escanea un QR válido,<br>
+      <strong>Cuando</strong> la app envía el payload al backend,<br>
+      <strong>Entonces</strong> el sistema marca al estudiante como abordado y actualiza su estado.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+**SPIKE STORIES**
 
 <!--SS01-->
 <table>
@@ -1759,6 +2314,207 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
     </td>
   </tr>
 </table>
+<br>
+
+<!--SS03-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-03</td>
+    <td>Arquitecto</td>
+    <td>Alta</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Spike: Precisión GPS vs Consumo de Red</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como arquitecto de software, quiero evaluar la frecuencia de muestreo del GPS en zonas urbanas para determinar el balance óptimo entre precisión en vivo y consumo de datos móviles del conductor.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Documentación de hallazgos</strong><br>
+      <strong>Dado que</strong> el equipo realiza pruebas de campo con muestreo cada 5, 10 y 15 segundos,<br>
+      <strong>Cuando</strong> se analizan los resultados,<br>
+      <strong>Entonces</strong> se documenta el intervalo ideal que mantiene un error de desviación menor a 15 metros sin saturar el plan de datos.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--SS04-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-04</td>
+    <td>Developer</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Spike: Resolución de Conflictos Offline</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador, quiero investigar estrategias de sincronización de datos locales (SQLite) a la nube para resolver conflictos cuando dos dispositivos (ej. auxiliar y conductor) marcan un abordaje al mismo tiempo sin conexión.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Definición de estrategia</strong><br>
+      <strong>Dado que</strong> se prueban patrones de sincronización transaccional,<br>
+      <strong>Cuando</strong> se evalúa la política *Last-Writer-Wins* vs. *Timestamp Merge*,<br>
+      <strong>Entonces</strong> el equipo decide e implementa en un prototipo la estrategia elegida.
+    </td>
+  </tr>
+</table>
+
+
+
+<!--SS05-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-05</td>
+    <td>Mobile Developer</td>
+    <td>Baja</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Spike: Viabilidad de Inicio de Sesión Biométrico</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador móvil, quiero investigar la implementación de autenticación biométrica (FaceID / Fingerprint) en Flutter o Swift/Kotlin para agilizar el login de los conductores.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Prototipo funcional</strong><br>
+      <strong>Dado que</strong> el equipo finaliza la investigación,<br>
+      <strong>Cuando</strong> exponen los resultados técnicos,<br>
+      <strong>Entonces</strong> presentan un prototipo local que lee la credencial biométrica del OS y la vincula a un token JWT de sesión.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!--SS06-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-06</td>
+    <td>Arquitecto</td>
+    <td>Media</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Spike: Consumo de Geofencing OS-Level</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como arquitecto de software, quiero evaluar la diferencia de consumo de batería al delegar el *Geofencing* directamente a las APIs nativas de iOS/Android versus calcular la distancia constantemente en el hilo de la aplicación.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Decisión arquitectónica</strong><br>
+      <strong>Dado que</strong> se elabora un cuadro comparativo de consumo en miliamperios (mAh),<br>
+      <strong>Cuando</strong> el equipo discute los hallazgos,<br>
+      <strong>Entonces</strong> se emite un documento técnico (ADR) que dictamina si se usarán los listeners nativos del SO o un cálculo periódico propio.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+
+<!--SS07-->
+<table>
+  <tr>
+    <th><strong>Story ID</strong></th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SS-07</td>
+    <td>Arquitecto</td>
+    <td>Media</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Spike: Evaluación de Mapbox vs Google Maps</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como equipo de desarrollo, queremos evaluar y comparar los proveedores de mapas (Google Maps Platform vs. Mapbox) para determinar cuál ofrece la mejor rentabilidad y precisión para el trazado de rutas y geovallas.</td>
+  </tr>
+  <tr>
+  <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <strong>Escenario 1: Decisión del proveedor</strong><br>
+      <strong>Dado que</strong> se realiza un análisis de costos y cuotas gratuitas,<br>
+      <strong>Cuando</strong> el equipo presenta el reporte técnico,<br>
+      <strong>Entonces</strong> se escoge un proveedor definitivo para implementar en la aplicación.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+---
 
 ### 2.4.2. Impact Mapping
 
@@ -1768,82 +2524,67 @@ El *Impact Mapping* es una técnica de planificación estratégica formalizada p
 
 El **Impact Mapping** anterior evidencia cómo nuestros objetivos de negocio (*Business Outcomes*) trazados en el Lean UX Canvas se conectan directamente con los actores del sistema (Administrador, Conductor, Padres). Finalmente, la rama exterior del mapa justifica las funcionalidades detalladas en las User Stories, sirviendo como puente entre la estrategia y el desarrollo de requerimientos.
 
+---
+
 ### 2.4.3. Product Backlog
 
 El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena todo el trabajo necesario para la evolución del producto (Schwaber & Sutherland, 2020). Para RouteGuard, las historias han sido estimadas mediante Puntos de Historia (Fibonacci) y priorizadas bajo el criterio de maximización de valor temprano (Rubin, 2012), asegurando que las funcionalidades críticas para el *Minimum Viable Product* (MVP) se desarrollen en los primeros *sprints*.
 
-| # Orden | User Story ID | Título | Descripción | Story Points |
-| :---: | :--- | :--- | :--- | :---: |
-| 1 | US-01 | Elección de Roles | Como nuevo usuario, quiero conocer las vistas y funcionalidades para elegir el rol que tomaré al utilizar la aplicación y acceder a ellas. | 2 |
-| 2 | US-05 | Gestión de Perfil y Datos Personales | Como usuario de la aplicación, quiero actualizar mi número de teléfono y foto de perfil para mantener mi información de contacto al día. | 1 |
-| 3 | US-02 | Sección Tutorial | Como nuevo usuario, quiero ver los pasos iniciales para saber cómo empezar a utilizar la aplicación. | 2 |
-| 4 | US-03 | Preguntas Frecuentes (FAQ) | Como nuevo usuario, quiero ver dudas comunes para evitar llamadas de soporte. | 2 |
-| 5 | US-04 | Demo Interactiva | Como padre de familia, quiero probar un simulador de mapa antes de establecer algún contrato para verificar que es la experiencia que deseo tener respecto al transporte de mi hijo. | 5 |
-| 6 | US-06 | Registro de Conductores | Como administrador de la empresa de movilidad escolar, quiero crear cuentas de conductores y asignar rutas y alumnos para establecer grupos de recojo por proximidad. | 3 |
-| 7 | US-14 | Gestión de Licencias y Antecedentes | Como conductor de movilidad escolar, quiero registrar y actualizar mis licencias de conducir y antecedentes penales para cumplir con los estándares de seguridad exigidos por las autoridades y la empresa. | 3 |
-| 8 | US-13 | Mantenimiento y Documentación del Vehículo | Como conductor de movilidad escolar, quiero registrar el mantenimiento preventivo y SOAT de mi vehículo para cumplir con las normativas de tránsito vigentes. | 3 |
-| 9 | US-10 | Consulta de Precios | Como padre de familia, quiero ver los costos de las distintas movilidades para elegir la que se ajuste a mi presupuesto. | 1 |
-| 10 | US-12 | Registro de Múltiples Hijos | Como padre de familia, quiero registrar a más de un hijo en mi cuenta para monitorear a todos desde una sola aplicación. | 2 |
-| 11 | US-07 | Solicitud a Conductor Independiente | Como padre de familia, quiero solicitar un contrato a un conductor independiente para inscribir a mi hijo en su movilidad. | 3 |
-| 12 | US-08 | Asignación de Conductor Idóneo | Como administrador de la empresa de movilidad escolar, quiero revisar las solicitudes de padres y asignarles el conductor con espacio o ruta factible para completar el proceso de contratación. | 3 |
-| 13 | US-09 | Confirmación de Conductor Asignado | Como padre de familia, quiero visualizar los datos del conductor asignado por la empresa y confirmar o rechazar la asignación para asegurarme de que el servicio es de mi conformidad. | 2 |
-| 14 | US-11 | Admisión de Alumnos | Como conductor de movilidad escolar, quiero registrar nuevos alumnos en mi lista para incluir sus datos, casa y colegio en los recorridos. | 3 |
-| 15 | US-17 | Control de Capacidad y Asientos | Como conductor de movilidad escolar, quiero visualizar el límite de asientos ocupados de mi vehículo para no exceder la capacidad reglamentaria permitida. | 2 |
-| 16 | US-15 | Registro de Gastos | Como conductor de movilidad escolar, quiero registrar los repostajes de combustible y gastos menores del vehículo para llevar un control de mis egresos diarios. | 2 |
-| 17 | US-16 | Reporte de Kilometraje Diario | Como conductor de movilidad escolar, quiero registrar el kilometraje inicial y final de la jornada para llevar un control del desgaste del vehículo y rendimiento de combustible. | 2 |
-| 18 | US-18 | Creación de Rutas | Como conductor de movilidad escolar, quiero trazar rutas y paradas personalizadas para optimizar el tiempo de recorrido. | 8 |
-| 19 | US-19 | Visualización de Alumnos por Parada | Como conductor de movilidad escolar, quiero ver el listado específico de niños que debo recoger en cada parada programada para agilizar el embarque y evitar confusiones en la ruta. | 2 |
-| 20 | US-20 | Cambio Temporal de Dirección de Recojo | Como padre de familia, quiero solicitar un cambio puntual en la dirección de recojo o entrega para cubrir situaciones excepcionales, como quedarme en casa de un familiar. | 3 |
-| 21 | US-21 | Notificación de Ausencia del Alumno | Como padre de familia, quiero avisar al conductor que mi hijo no asistirá ese día para que no pierda tiempo esperándolo en la parada. | 2 |
-| 22 | US-22 | Reasignación de Rutas por Ausencias | Como administrador de la empresa de movilidad escolar, quiero reasignar conductores a diferentes rutas para optimizar la flota ante ausencias imprevistas del personal. | 5 |
-| 23 | US-23 | Check de Seguridad | Como conductor de movilidad escolar, quiero una lista de chequeo del estado del vehículo para garantizar la seguridad de los niños que transporto. | 3 |
-| 24 | US-24 | Inicio de la Ruta | Como conductor de movilidad escolar, quiero activar la ruta para notificar a los padres que voy en camino a recoger a sus hijos. | 5 |
-| 25 | US-25 | Marcación de Abordaje | Como conductor de movilidad escolar, quiero registrar el abordaje de cada niño para confirmar que subió al vehículo. | 5 |
-| 26 | US-26 | Navegación Integrada | Como conductor de movilidad escolar, quiero acceder a mapas externos para hallar la ruta más rápida en caso de imprevistos tras recoger a todos los niños. | 3 |
-| 27 | US-28 | Sincronización de Datos Offline | Como conductor de movilidad escolar, quiero que la aplicación guarde localmente el registro de abordajes si pierdo conexión a internet para sincronizarlos automáticamente al recuperar señal. | 8 |
-| 28 | US-29 | Bloqueo de Vías | Como conductor de movilidad escolar, quiero marcar una calle o tramo como bloqueado temporalmente para que el sistema sugiera un desvío inmediato en el mapa. | 5 |
-| 29 | US-30 | Gestión de Notificaciones | Como conductor de movilidad escolar, quiero enviar avisos globales a los padres de los niños que llevo a bordo para informar eventos o imprevistos ocurridos en la ruta. | 3 |
-| 30 | US-32 | Reporte de Incidencias | Como conductor de movilidad escolar, quiero mantener un registro de las incidencias presentadas a diario para reportárselo a los padres y estén al tanto de lo que ocurre. | 5 |
-| 31 | US-31 | Botón de Pánico | Como conductor de movilidad escolar, quiero contar con un botón de SOS que llame directamente a un servicio de emergencias en caso de algún imprevisto grave. | 5 |
-| 32 | US-27 | Finalización de Ruta | Como conductor de movilidad escolar, quiero finalizar la ruta para notificar a los padres que sus hijos ya fueron entregados o recogidos y poder retornar a mis actividades diarias. | 3 |
-| 33 | US-33 | Rastreo en Tiempo Real | Como padre de familia, quiero visualizar el vehículo en el mapa para saber la ubicación de mi hijo si es que llega o esta en camino. | 5 |
-| 34 | US-34 | Alerta de Proximidad | Como padre de familia, quiero recibir un aviso previo de que mi hijo está por llegar a mi hogar para recibirlo y no dejarlo esperando afuera. | 3 |
-| 35 | US-36 | Geocerca del Colegio | Como padre de familia, quiero recibir una notificación automática cuando el vehículo entre o salga del colegio para saber que mi hijo llegó o partió. | 3 |
-| 36 | US-35 | Confirmación de Llegada | Como padre de familia, quiero recibir un aviso de que mi hijo llegó al colegio para estar tranquilo y dedicarme a mis actividades. | 2 |
-| 37 | US-37 | Alerta de Retraso Prolongado | Como padre de familia, quiero recibir una alerta cuando la ruta presente un retraso mayor al habitual para estar informado sin necesidad de revisar el mapa constantemente. | 3 |
-| 38 | US-38 | Chat Interno Conductor - Padre | Como usuario (conductor o padre), quiero comunicarme mediante un chat interno para coordinar detalles específicos sin usar mensajería externa. | 5 |
-| 39 | US-39 | Calificación del Servicio | Como padre de familia, quiero calificar el desempeño del conductor y la puntualidad del servicio para garantizar la calidad del servicio de transporte. | 2 |
-| 40 | US-40 | Historial de Asistencia | Como padre de familia, quiero consultar el registro histórico de asistencia de mi hijo para verificar los días en que mi hijo usó el servicio de transporte. | 2 |
-| 41 | US-41 | Gestión de Reclamos | Como padre de familia, quiero presentar un reclamo formal sobre el servicio para que el administrador lo revise y dé una solución. | 3 |
+| Orden | ID | Título | Epic | Story Points |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | TS-04 | Pipeline de Integración Continua (CI/CD) | General | 5 |
+| 2 | TS-01 | Autenticación de API vía JWT | EP01 | 5 |
+| 3 | SS-01 | Investigación: Consumo de Batería (Background Service) | EP05 | 3 |
+| 4 | US-01 | Registro y Asignación de Rol | EP01 | 3 |
+| 5 | SS-05 | Spike: Viabilidad de Inicio de Sesión Biométrico | EP01 | 3 |
+| 6 | US-19 | Recuperación de Contraseña | EP01 | 3 |
+| 7 | US-11 | Registro de Múltiples Hijos | EP02 | 3 |
+| 8 | TS-05 | Integración de Pasarela de Pagos | EP02 | 5 |
+| 9 | US-02 | Adquisición de Plan de Suscripción | EP02 | 5 |
+| 10 | US-12 | Control de Documentación (SOAT) | EP03 | 5 |
+| 11 | US-20 | Historial de Mantenimientos | EP03 | 3 |
+| 12 | US-04 | Listado y Secuencia de Paradas | EP03 | 5 |
+| 13 | US-22 | Reporte de Llegada al Colegio | EP05 | 3 |
+| 14 | SS-04 | Spike: Resolución de Conflictos Offline | EP05 | 5 |
+| 15 | TS-02 | Caché Local para Abordajes (Offline First) | EP05 | 8 |
+| 16 | US-06 | Check-in de Abordaje Offline | EP05 | 5 |
+| 17 | TS-08 | API para Validación de Códigos QR | EP05 | 5 |
+| 18 | SS-03 | Spike: Precisión GPS vs Consumo de Red | EP05 | 3 |
+| 19 | TS-06 | Configuración de Base de Datos Espacial | EP05 | 8 |
+| 20 | US-05 | Transmisión de GPS en Segundo Plano | EP05 | 8 |
+| 21 | SS-07 | Spike: Evaluación de Mapbox vs Google Maps | EP05 | 3 |
+| 22 | US-08 | Monitoreo de Ruta en Tiempo Real | EP05 | 8 |
+| 23 | SS-02 | Prueba de Latencia: WebSockets vs FCM | EP06 | 2 |
+| 24 | TS-03 | Integración de Firebase Cloud Messaging (FCM) | EP06 | 5 |
+| 25 | TS-07 | Implementación de Cola de Mensajería | EP06 | 5 |
+| 26 | SS-06 | Spike: Consumo de Geofencing OS-Level | EP06 | 3 |
+| 27 | US-07 | Alerta de Geofencing | EP06 | 5 |
+| 28 | US-16 | Asignación de Conductor a Vehículo | EP03 | 3 |
+| 29 | US-03 | Gestión de Capacidad Vehicular | EP03 | 3 |
+| 30 | US-13 | Gestión de Perfil de Usuario | EP01 | 2 |
+| 31 | US-10 | Botón de Incidencias Rápido | EP06 | 3 |
+| 32 | US-21 | Cancelación de Viaje por Fuerza Mayor | EP03 | 3 |
+| 33 | US-14 | Calificación del Servicio | EP04 | 3 |
+| 34 | US-24 | Foro de Anuncios del Conductor | EP06 | 2 |
+| 35 | US-09 | Reporte de Ausencia Temprana | EP06 | 2 |
+| 36 | US-17 | Generación de Reporte de Asistencia | EP05 | 3 |
+| 37 | US-15 | Historial de Viajes Finalizados | EP05 | 2 |
+| 38 | US-18 | Sección de Preguntas Frecuentes (FAQ) | EP04 | 2 |
+| 39 | US-23 | Envío de Ticket de Soporte | EP04 | 2 |
+| 40 | US-25 | Sección Tutorial interactiva (Onboarding) | EP02 | 3 |
+| 41 | US-26 | Registro de Gastos Operativos | EP03 | 2 |
+| 42 | US-27 | Cambio Temporal de Dirección de Recojo | EP03 | 5 |
+| 43 | US-28 | Reasignación de Rutas por Ausencias | EP03 | 5 |
+| 44 | US-29 | Reporte de Bloqueo de Vías | EP05 | 3 |
+| 45 | US-30 | Chat Interno Conductor - Padre | EP06 | 5 |
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
 ### 2.5.1. EventStorming
 
-Para el proceso de EventStorming utilizamos la herramienta Miro y realizamos 4 pasos para llegar a definir los bounded context que se van atrabajar.En primer lugar, debemos identificar los eventos y trazarlos mediante una linea de tiempo imaginaria que va de izquierda a derecha. Además,empleamos la siguiente paleta de colores como leyenda: 
-
-<img src="resources\chapter-2\EventStorming\paleta-colores.png" width="900">
-
-Como primer paso, empleamos post-it anaranjado para identificar a los eventos.
-
-<img src="resources\chapter-2\EventStorming\Events.jpeg" width="900">
-
-Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
-
-<img src="resources\chapter-2\EventStorming\Commands.jpeg" width="900">
-
-Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
-
-<img src="resources\chapter-2\EventStorming\Actors.jpeg" width="900">
-
-Como último paso, identificamos los eventos que se relacionen entre sí mediante los agregados y entidades que utilizan, agrupandolos porBounded Context.
-
-
-<img src="resources\chapter-2\EventStorming\Design-Level-Event-Storming.jpeg" width="900">
-
 #### 2.5.1.1. Candidate Context Discovery
 
-En esta sesión aplicamos la técnica de Candidate Context Discovery para identificar y separar los posibles Bounded Contexts del sistema RouteGuard. La sesión se realizó en **Miro** con la participación de los cuatro integrantes del equipo y tuvo una duración de una hora y cuarenta minutos, dentro del límite de dos horas recomendado para esta técnica.
+En esta sesión aplicamos la técnica de *Candidate Context Discovery* para identificar y separar los posibles Bounded Contexts del sistema RouteGuard. La sesión se realizó en **Miro** con la participación de los cuatro integrantes del equipo y tuvo una duración de una hora y cuarenta minutos, dentro del límite de dos horas recomendado para esta técnica.
  
 Utilizamos las tres técnicas sugeridas de forma encadenada, ya que cada una responde una pregunta distinta. Con **start-with-simple** descompusimos la línea temporal en tres fases secuenciales —configuración y contratación, operación diaria, y cierre y postventa— para obtener un modelo manejable antes de intentar agrupar. Con **look-for-pivotal-events** identificamos los eventos que marcan cambios de estado entre partes distintas del proceso de negocio, que resultaron ser las costuras naturales del dominio. Finalmente, con **start-with-value** determinamos qué agrupaciones concentran el mayor valor para el negocio, contrastándolas con la propuesta de valor.
  
@@ -1851,12 +2592,12 @@ Los eventos pivote identificados fueron los siguientes:
  
 | Evento pivote | Cambio de estado que señala |
 |---|---|
-| `VehicleMarkedUnfitForOperation` | La unidad pasa de habilitada a bloqueada; separa el cumplimiento legal de la operación. |
-| `DriverAssignmentConfirmed` | El vínculo pasa de negociación a servicio activo; separa la contratación de la planificación. |
+| `RouteActivationFinalized` | La ruta pasa de configuración a disponible para operar; separa la planificación de la ejecución. |
 | `TripStarted` | El plan de ruta pasa de intención a ejecución; separa la planificación del registro operativo. |
-| `ProximityGeofenceTriggered` | La telemetría cruda pasa a ser un hecho accionable; separa el procesamiento de señal del despacho de alertas. |
-| `OfflineLogSynchronized` | El registro pasa de provisional en el dispositivo a confirmado en el servidor. |
-| `TripFinished` | La ejecución pasa a cierre; separa la operación de la postventa. |
+| `BoardingQueuedOffline` | El registro de abordaje pasa de confirmado a provisional en el dispositivo; marca el punto donde el dominio deja de asumir conectividad continua. |
+| `BoardingSynchronized` | El registro pasa de provisional en el dispositivo a confirmado en el servidor. |
+| `SubscriptionActivated` | El vínculo comercial pasa de solicitud a acceso habilitado; separa la capa comercial de la operativa. |
+| `TripCompleted` | La ejecución pasa a cierre; separa la operación diaria de la postventa. |
  
 Al analizar estos eventos pudimos observar que cada grupo implicaba responsabilidades, reglas y garantías de consistencia distintas dentro del sistema, lo que nos permitió agruparlos en contextos bien definidos, evitando ambigüedad y facilitando la organización del dominio.
  
@@ -1864,35 +2605,34 @@ A continuación se presenta la evolución progresiva del EventStorm durante la s
  
 *Paso 1 — Domain Events:* los eventos trazados sobre la línea temporal, en pasado participio y con el lenguaje ubicuo en inglés.
  
-<img src="resources\chapter-2\EventStorming\Events.jpeg" width="900">
+![Domain Events](resources/chapter-2/EventStorming/Events.jpg)
  
 *Paso 2 — Commands:* sobre cada evento se identificó el comando que lo dispara.
  
-<img src="resources\chapter-2\EventStorming\Commands.jpeg" width="900">
+![Commands](resources/chapter-2/EventStorming/Commands.jpg)
  
 *Paso 3 — Actors:* se determinó qué actor ejecuta cada comando.
  
-<img src="resources\chapter-2\EventStorming\Actors.jpeg" width="900">
+![Actors](resources/chapter-2/EventStorming/Actors.jpg)
  
 *Paso 4 — Agrupación:* aplicando los eventos pivote como líneas de corte, los eventos se agruparon por los agregados que comparten.
  
-<img src="resources\chapter-2\EventStorming\Design-Level-Event-Storming.jpeg" width="900">
+![Bounded Context Decomposition](resources/chapter-2/EventStorming/Design-Level-Event-Storming.jpg)
  
 Este proceso nos llevó a definir los siguientes Bounded Contexts:
  
 | Bounded Context | Descripción | Eventos clave |
 |---|---|---|
-| **Identity & Access Management (IAM)** | Maneja el registro, la autenticación y el control de acceso por rol de los usuarios. | Driver Account Created, User Authenticated |
-| **Subscription & Billing** | Administra los planes SaaS y habilita el acceso comercial a la plataforma. | Subscription Plan Purchased |
-| **Community Management** | Formaliza el vínculo entre familias y transportistas, sostiene la comunicación y recoge la percepción de calidad. | Contract Requested, Driver Assigned To Request, Driver Assignment Confirmed, Student Enrolled, Internal Message Sent, Service Rated, Complaint Filed |
-| **Fleet & Route Management** | Custodia la aptitud legal de las unidades, el control de costos y el plan de recorrido vigente. | Vehicle Document Registered, Vehicle Marked Unfit For Operation, Odometer Reading Recorded, Operating Expense Recorded, School Route Created, Student Assigned To Route, Student Absence Notified, Pickup Address Change Requested, Route Reassigned, Road Blockage Reported |
-| **Trip Monitoring** | Registra la ejecución real del servicio diario con valor probatorio, incluso sin conectividad. | Safety Checklist Completed, Trip Started, Student Boarded, Boarding Record Queued Offline, Offline Log Synchronized, Incident Reported, Panic Alert Triggered, Student Dropped Off, Trip Finished, Daily Report Generated |
-| **Tracking** | Procesa la telemetría de ubicación en segundo plano y evalúa perímetros y desviaciones de tiempo. | Trip Location Updated, Proximity Geofence Triggered, Delay Threshold Exceeded |
-| **Notifications** | Traduce los eventos del dominio en entregas efectivas al dispositivo del destinatario. | Parent Notification Dispatched |
+| **Identity & Access Management** | Gestiona el registro, la autenticación y el control de acceso por rol de los usuarios de la plataforma. | User Authenticated, Administrator Account Created, Driver Account Provisioned, Parent Account Provisioned |
+| **Subscription & Plan Management** | Administra los planes SaaS, procesa el cobro y habilita el acceso comercial a la plataforma. | Plan Selected, Payment Confirmed, Subscription Activated, Plan Upgraded, Quotas Increased |
+| **Fleet & Route Management** | Custodia el plan de recorrido vigente: paradas, vehículo, conductor y programación de servicio de cada ruta. | Route Defined, Waypoint Selected, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
+| **Stakeholder & Asset Management** | Registra a conductores y padres de familia, vincula estudiantes y organiza los grupos por ruta. | Driver Profile Created, Parent Profile Created, Child Linked To Parent, Group Finalized |
+| **Trip Execution & Monitoring** | Registra la ejecución real del viaje diario, incluyendo el registro de abordaje con soporte de sincronización *offline*. | Trip Started, Boarding Opened, Student Boarded, Boarding Queued Offline, Boarding Synchronized, Incident Reported, Trip Completed |
+| **Notifications & Communication** | Traduce los eventos del dominio en notificaciones para los padres de familia, incluyendo alertas de alta prioridad y avisos del conductor. | Notification Dispatched, Panic Alert Triggered, Announcement Published |
  
-Aplicando finalmente *start-with-value*, clasificamos los contextos según su aporte estratégico. **Trip Monitoring** y **Tracking** constituyen el *Core Domain*, ya que sin el registro irrefutable de la ejecución y sin el procesamiento de la ubicación en segundo plano la propuesta de valor del producto no se cumple. **Fleet & Route Management**, **Community Management** y **Notifications** son *Supporting Subdomains*: indispensables pero no diferenciadores. **IAM** y **Subscription & Billing** son *Generic Subdomains*, problemas ya resueltos por la industria en los que se prioriza la reutilización.
+Aplicando finalmente *start-with-value*, clasificamos los contextos según su aporte estratégico. **Trip Execution & Monitoring** constituye el *Core Domain*: es el contexto donde RouteGuard concentra su ventaja competitiva, al garantizar que ningún registro de abordaje se pierda incluso sin conectividad. **Fleet & Route Management**, **Stakeholder & Asset Management** y **Notifications & Communication** son *Supporting Subdomains*: indispensables para el negocio pero no diferenciadores; Notifications & Communication se extiende sobre el contexto heredado con la integración de un proveedor de mensajería push (FCM), para que los eventos del viaje lleguen al dispositivo del padre sin que este tenga que abrir la app. **Identity & Access Management** y **Subscription & Plan Management** son *Generic Subdomains*, problemas ya resueltos por la industria en los que se prioriza la reutilización.
  
-La separación entre Trip Monitoring y Tracking fue la decisión más discutida, porque ambos hablan del mismo `Trip`. La diferencia está en la naturaleza del dato: Trip Monitoring custodia hechos con valor probatorio que no pueden perderse, mientras que Tracking procesa una coordenada cada pocos segundos donde perder una posición individual es irrelevante. Fusionarlos obligaría a aplicar las garantías más estrictas al volumen más alto, o a relajar las garantías de la bitácora de abordaje.
+La capacidad que distingue a RouteGuard es la resiliencia ante la falta de conectividad dentro de Trip Execution & Monitoring, y es ahí donde se concentra el esfuerzo de diseño táctico en las siguientes secciones.
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
@@ -1900,243 +2640,312 @@ El *Domain Message Flow Modelling* es una técnica que permite representar cómo
  
 Para cada escenario se documenta la secuencia numerada de mensajes, que es la que se representa en el diagrama: los comandos en azul, los eventos en naranja y las consultas en verde, con los contextos dibujados como nubes y los actores como participantes externos.
  
-**Escenario 01: Contratación y matrícula de un estudiante**
+**Escenario 01: Conformación del grupo de estudiantes y asignación a la ruta**
  
 | # | Tipo | Mensaje | Origen | Destino |
 |---|---|---|---|---|
-| 1 | Command | Solicitar contrato | Padre de familia | Community Management |
-| 2 | Query | Obtener aptitud y capacidad del vehículo | Community Management | Fleet & Route Management |
-| 3 | Command | Asignar conductor a solicitud | Administrador | Community Management |
-| 4 | Event | Driver Assigned To Request | Community Management | Notifications |
-| 5 | Command | Confirmar asignación | Padre de familia | Community Management |
-| 6 | Event | Driver Assignment Confirmed | Community Management | Community Management |
-| 7 | Event | Student Enrolled | Community Management | Fleet & Route Management |
+| 1 | Command | Crear grupo de estudiantes | Administrador | Stakeholder & Asset Management |
+| 2 | Command | Asignar padres e incluir hijos vinculados al grupo | Administrador | Stakeholder & Asset Management |
+| 3 | Command | Finalizar grupo | Administrador | Stakeholder & Asset Management |
+| 4 | Event | Group Finalized | Stakeholder & Asset Management | Stakeholder & Asset Management |
+| 5 | Query | Exportar manifiesto del grupo al contexto de ruta | Stakeholder & Asset Management | Fleet & Route Management |
+| 6 | Command | Asignar estudiantes a la ruta | Administrador | Fleet & Route Management |
+| 7 | Event | Passenger Manifest Generated | Fleet & Route Management | Fleet & Route Management |
  
-<img src="resources\chapter-2\Domain-Message-Flows\1.png" width="1000">
+![Escenario 01: Conformación de grupo y asignación a ruta](resources/chapter-2/Domain-Message-Flows/escenario-01-grupo-ruta.png)
  
-La consulta del paso 2 materializa la regla de que ningún estudiante puede vincularse a una unidad marcada como no apta para operar.
+La nómina de estudiantes que puede asignarse a una ruta proviene del grupo ya finalizado en Stakeholder & Asset Management, consultado en el paso 5.
  
-**Escenario 02: Abordaje en zona sin cobertura y sincronización diferida**
- 
-| # | Tipo | Mensaje | Origen | Destino |
-|---|---|---|---|---|
-| 1 | Command | Completar checklist de seguridad | Conductor | Trip Monitoring |
-| 2 | Command | Iniciar viaje | Conductor | Trip Monitoring |
-| 3 | Event | Trip Started | Trip Monitoring | Tracking |
-| 4 | Command | Marcar abordaje sin conexión | Conductor | Trip Monitoring |
-| 5 | Event | Boarding Record Queued Offline | Trip Monitoring | Almacenamiento local |
-| 6 | Command | Sincronizar cola de registros | App del conductor | Trip Monitoring |
-| 7 | Event | Offline Log Synchronized | Trip Monitoring | Trip Monitoring |
-| 8 | Event | Student Boarded | Trip Monitoring | Notifications |
- 
-<img src="resources\chapter-2\Domain-Message-Flows\2.png" width="1000">
- 
-El desfase entre los pasos 4 y 7 es la razón por la que el registro conserva el *timestamp* del dispositivo y no el de recepción del servidor: la bitácora debe reflejar cuándo ocurrió el hecho, no cuándo el sistema lo supo.
- 
-**Escenario 03: Alerta de proximidad al hogar**
+**Escenario 02: Ejecución del viaje con abordaje offline y notificación**
  
 | # | Tipo | Mensaje | Origen | Destino |
 |---|---|---|---|---|
-| 1 | Command | Transmitir ubicación en segundo plano | App del conductor | Tracking |
-| 2 | Query | Obtener perímetro de la parada | Tracking | Fleet & Route Management |
-| 3 | Event | Trip Location Updated | Tracking | Tracking |
-| 4 | Event | Proximity Geofence Triggered | Tracking | Notifications |
-| 5 | Command | Despachar notificación al padre | Notifications | Proveedor push (FCM) |
-| 6 | Event | Parent Notification Dispatched | Notifications | Padre de familia |
-| 7 | Query | Obtener ubicación del vehículo | Padre de familia | Tracking |
+| 1 | Command | Iniciar viaje | Conductor | Trip Execution & Monitoring |
+| 2 | Event | Trip Started | Trip Execution & Monitoring | Trip Execution & Monitoring |
+| 3 | Command | Marcar estado de abordaje | Conductor | Trip Execution & Monitoring |
+| 4a | Event | Student Boarded (con señal) | Trip Execution & Monitoring | Notifications & Communication |
+| 4b | Event | Boarding Queued Offline (sin señal) | Trip Execution & Monitoring | Almacenamiento local |
+| 5 | Command | Sincronizar cola de abordaje | App del conductor | Trip Execution & Monitoring |
+| 6 | Event | Boarding Synchronized | Trip Execution & Monitoring | Notifications & Communication |
+| 7 | Command | Despachar notificación push | Notifications & Communication | Proveedor push (FCM) |
+| 8 | Event | Notification Dispatched | Proveedor push (FCM) | Padre de familia |
  
-<img src="resources\chapter-2\Domain-Message-Flows\3.png" width="1000">
+![Escenario 02: Abordaje offline y notificación](resources/chapter-2/Domain-Message-Flows/escenario-02-abordaje-offline.png)
  
-Este escenario sustenta el Objetivo SMART 4, que exige una latencia menor a 5 segundos entre los pasos 1 y 6. La consulta del paso 7 es opcional y refleja la experiencia pasiva del segmento: el padre recibe la alerta sin necesidad de abrir la aplicación.
+La bifurcación entre los pasos 4a y 4b concentra la lógica central de resiliencia de RouteGuard. El paso 6 conserva el *timestamp* original del dispositivo, no el de la sincronización, para que la notificación al padre refleje la hora real del abordaje y no la hora en que el sistema recuperó conectividad. El paso 7 delega la entrega al proveedor push, de modo que el padre recibe el aviso en su dispositivo sin necesidad de tener la app abierta.
  
-**Escenario 04: Reporte de incidencia y difusión a los padres**
+**Escenario 03: Incidencia y alerta de alta prioridad**
  
 | # | Tipo | Mensaje | Origen | Destino |
 |---|---|---|---|---|
-| 1 | Command | Reportar incidencia | Conductor | Trip Monitoring |
-| 2 | Event | Incident Reported | Trip Monitoring | Tracking |
-| 3 | Query | Obtener tiempo estimado de llegada | Tracking | Proveedor de mapas |
-| 4 | Event | Delay Threshold Exceeded | Tracking | Notifications |
-| 5 | Event | Route Reassigned | Fleet & Route Management | Notifications |
-| 6 | Event | Parent Notification Dispatched | Notifications | Padres de alumnos a bordo |
+| 1 | Command | Reportar incidencia | Conductor | Trip Execution & Monitoring |
+| 2 | Event | Incident Reported | Trip Execution & Monitoring | Notifications & Communication |
+| 3 | Command | Disparar alerta de alta prioridad | Notifications & Communication | Notifications & Communication |
+| 4 | Event | Panic Alert Triggered | Notifications & Communication | Notifications & Communication |
+| 5 | Command | Difundir alerta a los padres del viaje | Notifications & Communication | Proveedor push (FCM) |
+| 6 | Event | Notification Sent | Proveedor push (FCM) | Padres de estudiantes a bordo |
  
-<img src="resources\chapter-2\Domain-Message-Flows\4.png" width="1000">
+![Escenario 03: Incidencia y alerta de alta prioridad](resources/chapter-2/Domain-Message-Flows/escenario-03-incidencia-alerta.png)
  
-El paso 6 contiene la restricción de alcance más importante del escenario: la difusión llega solo a los tutores de los estudiantes que se encuentran efectivamente a bordo, no a toda la ruta.
+Notifications & Communication concentra tanto la traducción del evento como la decisión de prioridad, delegando únicamente la entrega final al proveedor push, sin requerir que Trip Execution & Monitoring conozca la lógica de despacho.
 
 #### 2.5.1.3. Bounded Context Canvases
+ 
+El *Bounded Context Canvas* permite representar de forma clara los límites, responsabilidades e interacciones de cada contexto dentro de un sistema complejo, facilitando que el equipo construya una visión compartida sobre su propósito, sus agregados y las reglas de negocio que lo gobiernan. El equipo utilizó la plantilla oficial *Bounded Context Canvas v4* de ddd-crew, siguiendo el proceso iterativo de seis pasos que la técnica establece: **Context Overview Definition**, **Business Rules Distillation & Ubiquitous Language Capture**, **Capability Analysis**, **Capability Layering** (donde aplica), **Dependencies Capture** y **Design Critique**. Los seis canvases se trabajaron en el orden de importancia definido en 2.5.1.1, comenzando por el Core Domain.
+ 
+**Canvas 1: Trip Execution & Monitoring**
+ 
+![Trip Execution and Monitoring Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-01-trip-execution.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Trip Execution & Monitoring |
+| **Description** | Registra la ejecución real del viaje diario del conductor, incluyendo el registro de abordaje con soporte de sincronización *offline* para zonas sin cobertura. |
+| **Strategic Classification** | Domain: core · Business Model: revenue generator · Evolution: custom built |
+| **Domain Roles** | Execution Context |
+| **Inbound Communication** | *Commands:* Select Route Card, Start Trip, Open Boarding, Set Boarding Status, Sync Offline Queue, Report Incident, Complete Trip, Archive Trip. *Events:* Trip Started, Boarding Opened, Student Boarded, Boarding Queued Offline, Boarding Synchronized, Incident Reported, Trip Completed, Trip Archived |
+| **Ubiquitous Language** | **Trip:** ejecución física de una ruta en una fecha y hora específica. **Boarding:** acto en que un estudiante ingresa o desciende del vehículo. **Offline Queue:** registro de abordaje guardado localmente cuando el dispositivo no tiene señal. **Incident:** evento inesperado que altera el curso normal del viaje. |
+| **Business Decisions** | Un viaje inicia con el estado "Boarding Opened" antes de aceptar registros de abordaje. Un registro sin señal se guarda localmente con el *timestamp* del dispositivo, sin bloquear la operación. La sincronización es idempotente por `(tripId, studentId)`: un reintento posterior a la confirmación no genera un registro duplicado. Un viaje completado se archiva y deja de aceptar nuevos registros. |
+| **Outbound Communication** | *Messages:* Notificar abordaje al padre, Notificar incidencia. *Collaborators:* Notifications & Communication |
+ 
+**Canvas 2: Fleet & Route Management**
+ 
+![Fleet and Route Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-02-fleet-route.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Fleet & Route Management |
+| **Description** | Custodia el plan de recorrido vigente de cada ruta escolar: secuencia de paradas, vehículo y conductor asignados, días de servicio y hora de salida. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre servicios de mapas de terceros |
+| **Domain Roles** | Specification Context |
+| **Inbound Communication** | *Commands:* Define Route, Pick Waypoints, Assign Students To Route, Select Vehicle, Define Service Days, Set Departure Time. *Events:* Route Defined, Waypoint Selected, Stop Count Updated, Passenger Manifest Generated, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
+| **Ubiquitous Language** | **Route:** secuencia predefinida de paradas entre un origen y un colegio. **Stop:** ubicación geográfica donde un estudiante sube o baja del vehículo. **Passenger Manifest:** listado de estudiantes asignados a una ruta. **Service Days:** días de la semana en que la ruta opera. |
+| **Business Decisions** | Una ruta no puede activarse sin vehículo y conductor asignados. El conteo de paradas se recalcula automáticamente al agregar o quitar un *waypoint*. Los estudiantes asignables a una ruta provienen del manifiesto ya finalizado en Stakeholder & Asset Management. |
+| **Outbound Communication** | *Messages:* Entregar plan de ruta vigente. *Collaborators:* Trip Execution & Monitoring |
+ 
+**Canvas 3: Stakeholder & Asset Management**
+ 
+![Stakeholder and Asset Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-03-stakeholder.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Stakeholder & Asset Management |
+| **Description** | Registra a conductores y padres de familia, vincula estudiantes a sus padres y organiza los grupos de estudiantes que luego se asignan a una ruta. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built |
+| **Domain Roles** | Registry Context |
+| **Inbound Communication** | *Commands:* Register Driver, Register Parent, Register Child, Link Child To Parent, Create Group, Assign Parents To Group, Include Linked Students, Finalize Group. *Events:* Driver Profile Created, Parent Profile Created, Child Profile Created, Child Linked To Parent, Group Name Assigned, Parents Assigned To Group, Students Included In Group, Group Finalized |
+| **Ubiquitous Language** | **Driver:** persona registrada que opera una unidad de transporte. **Parent:** persona registrada responsable de uno o más estudiantes. **Group:** conjunto de estudiantes vinculados a los padres asignados, previo a su incorporación a una ruta. |
+| **Business Decisions** | Un estudiante solo puede vincularse a un padre ya registrado. Un grupo no puede finalizarse sin al menos un padre y sus estudiantes incluidos. Una vez finalizado, el grupo genera el manifiesto que Fleet & Route Management consume. |
+| **Outbound Communication** | *Messages:* Exportar manifiesto del grupo. *Collaborators:* Fleet & Route Management |
+ 
+**Canvas 4: Notifications & Communication**
+ 
+![Notifications and Communication Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-04-notifications.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Notifications & Communication |
+| **Description** | Traduce los eventos relevantes del viaje en notificaciones push para los padres de familia, entregadas directamente en su dispositivo sin necesidad de abrir la app, incluyendo alertas de alta prioridad ante incidencias y anuncios difundidos por el conductor. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre proveedor de mensajería push de terceros |
+| **Domain Roles** | Dispatch Context |
+| **Inbound Communication** | *Commands:* Prepare Boarding Notification, Trigger Panic Alert, Post Broadcast Message, Retry Notification, Register Device Token. *Events:* Student Boarded, Incident Reported, Notification Created, Notification Queued, Notification Dispatched, Panic Alert Triggered, Announcement Published, Notification Delivered, Notification Failed |
+| **Ubiquitous Language** | **Notification:** mensaje push entregado al dispositivo del padre de familia ante un evento del viaje. **Panic Alert:** notificación de alta prioridad originada por una incidencia. **Broadcast:** anuncio del conductor distribuido a todos los padres de su ruta. **Device Token:** identificador del dispositivo del padre ante el proveedor de mensajería, registrado al iniciar sesión. |
+| **Business Decisions** | Toda notificación pasa por un estado de cola antes de despacharse al proveedor push. Una notificación fallida se reintenta automáticamente; si el reintento también falla, queda registrada como no entregada. Una alerta de pánico se trata con prioridad distinta a una notificación de abordaje ordinaria. Sin un *device token* vigente, la notificación se registra en el log sin intento de envío. |
+| **Outbound Communication** | *Messages:* Despachar notificación push. *Collaborators:* Proveedor push (FCM) |
+ 
+**Canvas 5: Identity & Access Management**
+ 
+![Identity and Access Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-05-iam.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Identity & Access Management |
+| **Description** | Gestiona el registro, la autenticación y el control de acceso de los usuarios de la plataforma, resolviendo el rol activo que determina las funcionalidades visibles para cada perfil. |
+| **Strategic Classification** | Domain: generic · Business Model: compliance enforcement · Evolution: product |
+| **Domain Roles** | Gateway Context |
+| **Inbound Communication** | *Commands:* Sign In, Register Administrator, Generate Session Token, Generate Password. *Events:* User Authenticated, Administrator Account Created, Driver Account Provisioned, Parent Account Provisioned, JWT Session Token Issued, Password Generated |
+| **Ubiquitous Language** | **Account:** identidad única de un usuario en la plataforma. **Session Token:** credencial temporal emitida tras una autenticación válida. **Role:** perfil activo (Administrador, Conductor, Padre) que determina las funcionalidades visibles. |
+| **Business Decisions** | Un usuario debe estar registrado para acceder a la plataforma. Las cuentas de conductor y padre se provisionan con credenciales generadas automáticamente al momento del registro por el administrador. Al iniciar sesión desde la app del padre, el dispositivo registra su *device token* para que Notifications & Communication pueda despachar notificaciones push. |
+| **Outbound Communication** | *Messages:* Entregar identidad y rol por token. *Collaborators:* Todos los Bounded Contexts |
+ 
+**Canvas 6: Subscription & Plan Management**
+ 
+![Subscription and Plan Management Bounded Context Canvas](resources/chapter-2/bounded-context-canvases/bcc-06-subscription.png)
+ 
+| Campo | Contenido |
+|---|---|
+| **Name** | Subscription & Plan Management |
+| **Description** | Administra los planes SaaS, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma según el plan vigente del administrador. |
+| **Strategic Classification** | Domain: generic · Business Model: revenue generator · Evolution: product |
+| **Domain Roles** | Gateway Context |
+| **Inbound Communication** | *Commands:* Select Plan, Initiate Payment Process, Upgrade Plan. *Events:* Plan Selected, Payment Confirmed, Subscription Activated, Plan Features Enabled, Plan Upgraded, Quotas Increased |
+| **Ubiquitous Language** | **Subscription:** vínculo comercial vigente entre el administrador y la plataforma. **Plan:** nivel de servicio contratado, con límites propios de unidades gestionables. **Quota:** número máximo de rutas y conductores habilitados por el plan. |
+| **Business Decisions** | La suscripción se activa solo tras la confirmación de pago de la pasarela externa. Una mejora de plan incrementa las cuotas de ruta y conductor sin interrumpir el servicio vigente. |
+| **Outbound Communication** | *Messages:* Solicitar procesamiento de pago, Entregar límites del plan activo. *Collaborators:* Pasarela de pago |
 
-El Bounded Context Canvas es un instrumento visual del Domain-Driven Design que ayuda a delimitar con precisión el alcance, las responsabilidades y los puntos de contacto de cada contexto dentro de un sistema complejo. Su valor está en que el equipo llegue a un entendimiento común sobre qué hace cada contexto, qué agregados y entidades viven dentro de él y qué reglas de negocio rigen su comportamiento. A continuación se presentan los canvases elaborados para los contextos identificados en RouteGuard.
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas IAM.jpg" width="1000">
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Notifications.jpg" width="1000">
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Suscription.jpg" width="1000">
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Community.jpg" width="1000">
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Tracking.jpg" width="1000">
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Trip.jpg" width="1000">
-
-<img src="resources\chapter-2\Bounded-Context-Canvas\The Bounded Context Canvas Fleet.jpg" width="1000">
 
 ### 2.5.2. Context Mapping
 
-En esta sección se ha definido la estructura estratégica de la solución mediante la identificación de los Bounded Contexts y sus relaciones. El proceso de diseño se centró en aislar los dos contextos *Core Domain* —Trip Monitoring y Tracking— de las capacidades de soporte y de las capacidades genéricas, de modo que el esfuerzo del equipo se concentre donde está la ventaja competitiva de RouteGuard.
- 
-Durante las sesiones de diseño se plantearon las siguientes preguntas para validar la robustez de la descomposición y definir las relaciones entre contextos:
- 
-- **¿Qué pasaría si fusionamos Trip Monitoring y Tracking en un solo contexto?**
-Se decidió mantenerlos separados, tal como se sustentó en la sección 2.5.1.1: Trip Monitoring custodia hechos con valor probatorio que exigen consistencia fuerte, mientras que Tracking procesa telemetría de alto volumen y tolerante a pérdida. Sin embargo, ambos son *Core Domain* y avanzan en el mismo ritmo de desarrollo, coordinados por los eventos `TripStarted` y `TripFinished` que abren y cierran la ventana de escucha de Tracking. Esta coordinación cercana entre pares se modela con el patrón **Partnership**: ningún equipo puede avanzar sin coordinar con el otro, pero ninguno se subordina.
- 
-- **¿Qué pasaría si Community Management dependiera directamente del modelo de datos de Fleet & Route Management?**
-Community Management necesita consultar la aptitud del vehículo y la disponibilidad de asientos antes de confirmar una asignación (US-09). Si consumiera directamente las entidades `Vehicle` y `Route` de Fleet & Route Management, cualquier cambio en ese modelo —por ejemplo, al incorporar nuevos tipos de documento vehicular— rompería la lógica de contratación. Para evitar ese acoplamiento se determinó el uso de una **Anticorruption Layer (ACL)** en Community Management, que traduce la respuesta de Fleet & Route Management a los únicos dos hechos que la contratación necesita: *apto* y *con asientos disponibles*.
- 
-- **¿Qué pasaría si aislamos los contextos IAM y Subscription & Billing?**
-Al tratarse de funcionalidades necesarias pero no diferenciadoras, ambos se clasifican como *Generic Subdomain* y se resuelven mediante la reutilización de la implementación ya construida para la plataforma web del equipo (sección 2.5.1.1). El resto de los contextos consume su modelo tal como es, sin intentar influir en su diseño, lo que corresponde al patrón **Conformist**: el costo de adaptarse es menor que el de mantener una traducción para un contexto que no va a evolucionar según las necesidades particulares de RouteGuard.
- 
-- **¿Qué pasaría si cada contexto publicara sus eventos hacia Notifications con su propio formato?**
-Notifications recibe hechos de cuatro contextos distintos —Trip Monitoring, Tracking, Fleet & Route Management y Community Management—, cada uno con su propio lenguaje ubicuo. Publicar sin una convención común obligaría a Notifications a mantener cuatro traductores distintos y a cada contexto a conocer la estructura interna de Notifications. Se optó por que Notifications defina un **Open Host Service** con un **Published Language** propio: un contrato único de notificación (destinatario, tipo, prioridad, contenido) que todo contexto upstream debe producir. Cada contexto upstream actúa como proveedor de ese lenguaje publicado, y Notifications lo consume sin necesidad de una traducción particular por cada origen.
- 
-- **¿Qué pasaría si duplicamos la consulta del plan de ruta en Trip Monitoring en lugar de depender de Fleet & Route Management en tiempo real?**
-Se descartó. Trip Monitoring opera incluso sin conectividad prolongada, por lo que duplicar el plan de ruta introduciría el riesgo de que el conductor ejecute un plan desactualizado tras una reasignación. Se mantiene la relación **Customer/Supplier**, con Trip Monitoring como cliente aguas abajo: Fleet & Route Management prioriza en su backlog los cambios de contrato que Trip Monitoring necesita, pero conserva la autoridad sobre el modelo de ruta.
- 
-**Diagrama de Context Mapping**
- 
-<img src="resources\chapter-2\ContextMapping.jpg" width="1000">
+El *Context Map* (Mapa de Contextos) establece las fronteras de nuestros Bounded Contexts y define explícitamente los patrones de integración y comunicación entre ellos, evitando que los modelos de dominio se contaminen entre sí. 
 
-### 2.5.3. Software Architecture
+En RouteGuard, hemos identificado los siguientes patrones de relación:
+*   **Customer/Supplier:** El contexto de *Trip Execution & Monitoring* actúa como Customer de *Fleet & Route Management* (Supplier), ya que el viaje no puede ejecutarse si no existe la planificación previa de la ruta.
+*   **Publish/Subscribe (Event-Driven):** Utilizamos integración basada en eventos donde el contexto de *Trip Execution & Monitoring* publica eventos (ej. `StudentBoarded`) en un Message Broker, y el contexto de *Notifications & Communication* actúa como suscriptor para despachar las alertas sin acoplamiento temporal.
+*   **Conformist / Shared Kernel:** El contexto de *Identity & Access Management* (IAM) provee la autenticación. Los demás contextos asumen el rol de Conformist frente al token JWT emitido por IAM para validar roles y permisos.
 
-#### 2.5.3.1. Software Architecture Context Level Diagrams
-
-#### 2.5.3.2. Software Architecture Container Level Diagrams
-
-#### 2.5.3.3. Software Architecture Deployment Diagrams
+*(Nota: Inserta aquí tu diagrama de Context Map)*
+![Context Map](resources/chapter-2/context-mapping.png)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
-Mientras que el diseño estratégico de la sección anterior nos permitió delimitar las fronteras de nuestros *Bounded Contexts*, el nivel táctico del *Domain-Driven Design* proporciona los bloques de construcción precisos (Entidades, Objetos de Valor, Agregados y Servicios) necesarios para materializar el *Ubiquitous Language* en código fuente (Evans, 2003). Como sostiene Vernon (2013), aplicar estos patrones arquitectónicos dentro de una estructura en capas (Dominio, Interfaz, Aplicación, Infraestructura) aísla la lógica de negocio de los detalles tecnológicos, promoviendo un software escalable, testeable y mantenible.
+### 2.6.1. Bounded Context: Trip Execution & Monitoring
 
-### 2.6.1. Bounded Context: Identity & Access Management (IAM)
+Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaje. Para asegurar su máxima resiliencia, soporta la sincronización de abordajes *Offline-First* mediante caché local y el monitoreo GPS constante.
+
 #### 2.6.1.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
+*   **Entities:** `Route` (Raíz del Agregado), `LocationRecord`, `Waypoint`.
+*   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery), `Timestamp`.
+*   **Domain Events:** `TripStarted`, `StudentBoarded`, `OfflineSyncCompleted`.
+
 #### 2.6.1.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
+*   **REST Controllers:** `TripCommandController` (Inicia/cancela rutas), `WaypointController` (Marca abordajes).
+*   **Event Listeners:** `SyncOfflineAbordajesListener` (Recibe lotes de datos SQLite en reconexión).
+*   **WebSockets:** `RouteTrackingSocketHandler` (Emite la coordenada en vivo a los padres).
+
 #### 2.6.1.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
+*   **Application Services:** `RouteTrackingService` (Calcula la distancia a la siguiente parada y publica eventos al bus). `MapboxRoutingService` (Integración para ETA).
+
 #### 2.6.1.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
+*   **Persistence:** Base de datos con capacidades espaciales (PostGIS / GeoJSON) para almacenamiento geométrico.
+*   **External APIs:** Mapbox API / Google Maps Platform.
+
 #### 2.6.1.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
+
+![Tracking Components](resources/chapter-2/tracking-components.png)
+
 #### 2.6.1.6. Code Level Diagrams
 ##### 2.6.1.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
-##### 2.6.1.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
 
-### 2.6.2. Bounded Context: Suscription & Onboarding
+![Tracking Domain Diagram](resources/chapter-2/tracking-domain.png)
+
+##### 2.6.1.6.2. Database Design Diagram
+
+![Tracking DB Diagram](resources/chapter-2/tracking-database.png)
+
+
+### 2.6.2. Bounded Context: Notifications & Communication
+
+Este contexto reacciona a los eventos del sistema para notificar asíncronamente a los dispositivos móviles, asegurando alta disponibilidad a través de colas de mensajería y evitando cuellos de botella en la ejecución de los viajes.
+
 #### 2.6.2.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
+*   **Entities:** `Notification` (Raíz), `GeofenceAlert` (Alerta generada por proximidad).
+*   **Value Objects:** `PushPayload`, `DeviceToken`, `NotificationPriority`.
+*   **Domain Events:** `NotificationDispatched`, `GeofenceBreached`.
+
 #### 2.6.2.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
+*   **Message Consumers:** `TrackingEventConsumer` (Consume los eventos del viaje vía RabbitMQ/Kafka).
+*   **REST Controllers:** `NotificationPreferencesController` (Gestión de preferencias del padre).
+
 #### 2.6.2.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
+*   **Application Services:** `GeofencingService` (Calcula intersecciones de radios), `PushNotificationDispatcher` (Genera el payload para el dispositivo).
+
 #### 2.6.2.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
+*   **Message Broker:** RabbitMQ para desacoplar el envío masivo de notificaciones.
+*   **External Integrations:** Firebase Cloud Messaging (FCM) SDK.
+
 #### 2.6.2.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
+
+![Notifications Components](resources/chapter-2/notifications-components.png)
+
 #### 2.6.2.6. Code Level Diagrams
 ##### 2.6.2.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
+
+![Notifications Domain Diagram](resources/chapter-2/notifications-domain.png)
+
 ##### 2.6.2.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
 
-### 2.6.3. Bounded Context: Fleet & Compliance
+![Notifications DB Diagram](resources/chapter-2/notifications-database.png)
+
+
+
+
+### 2.6.3. Bounded Context: Identity & Access Management
+
 #### 2.6.3.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
+
 #### 2.6.3.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
+
 #### 2.6.3.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
+
 #### 2.6.3.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
+
 #### 2.6.3.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
+
 #### 2.6.3.6. Code Level Diagrams
+
 ##### 2.6.3.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
+
 ##### 2.6.3.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
 
-### 2.6.4. Bounded Context: Trip Management
+
+### 2.6.4. Bounded Context: Subscription & Plan Management
+
 #### 2.6.4.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
+
 #### 2.6.4.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
+
 #### 2.6.4.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
+
 #### 2.6.4.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
+
 #### 2.6.4.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
+
 #### 2.6.4.6. Code Level Diagrams
+
 ##### 2.6.4.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
+
 ##### 2.6.4.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
 
-### 2.6.5. Bounded Context: Real-time Tracking
+
+### 2.6.5. Bounded Context: Fleet & Route Management
+
 #### 2.6.5.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
+
 #### 2.6.5.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
+
 #### 2.6.5.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
+
 #### 2.6.5.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
+
 #### 2.6.5.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
+
 #### 2.6.5.6. Code Level Diagrams
+
 ##### 2.6.5.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
+
 ##### 2.6.5.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
 
-### 2.6.6. Bounded Context: Notifications & Geofencing
+
+### 2.6.6. Bounded Context: Stakeholder & Asset Management
+
 #### 2.6.6.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
-#### 2.6.6.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
-#### 2.6.6.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
-#### 2.6.6.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
-#### 2.6.6.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
-#### 2.6.6.6. Code Level Diagrams
-##### 2.6.6.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
-##### 2.6.6.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
 
-### 2.6.7. Bounded Context: Community & Support
-#### 2.6.7.1. Domain Layer
-*(Insertar descripción y detalles de la capa de dominio aquí)*
-#### 2.6.7.2. Interface Layer
-*(Insertar detalles de la capa de interfaz aquí)*
-#### 2.6.7.3. Application Layer
-*(Insertar detalles de la capa de aplicación aquí)*
-#### 2.6.7.4. Infrastructure Layer
-*(Insertar detalles de infraestructura aquí)*
-#### 2.6.7.5. Component Level Diagrams
-*(Insertar diagrama de Componentes aquí)*
-#### 2.6.7.6. Code Level Diagrams
-##### 2.6.7.6.1. Domain Layer Class Diagram
-*(Insertar diagrama de Clases aquí)*
-##### 2.6.7.6.2. Database Design Diagram
-*(Insertar diagrama de Base de Datos aquí)*
+#### 2.6.6.2. Interface Layer
+
+#### 2.6.6.3. Application Layer
+
+#### 2.6.6.4. Infrastructure Layer
+
+#### 2.6.6.5. Component Level Diagrams
+
+#### 2.6.6.6. Code Level Diagrams
+
+##### 2.6.6.6.1. Domain Layer Class Diagram
+
+##### 2.6.6.6.2. Database Design Diagram
+
+
+
 
 <div style="page-break-after: always;"></div>
 
@@ -2284,17 +3093,25 @@ Mientras que el diseño estratégico de la sección anterior nos permitió delim
 
 **Métodos y técnicas de ingeniería de software**
 
+* Adzic, G. (2012). *Impact Mapping: Making a big impact with software products and projects.* Provoking Thoughts.
 * Brandolini, A. (2021). *Introducing EventStorming: An Act of Deliberate Collective Learning.* Leanpub.
 * Chen, Y., & Zhao, M. (2025). Passive monitoring and location-based notifications in family tracking applications. *Journal of Mobile Human-Computer Interaction,* 15(2), 45-60. https://doi.org/10.1016/j.jmhci.2025.104221
 * Cooper, A. (1999). *The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity.* Sams Publishing.
+* Cohn, M. (2004). *User Stories Applied: For Agile Software Development.* Addison-Wesley Professional.
 * Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software.* Addison-Wesley Professional.
 * Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing Great Products with Agile Teams* (3rd ed.). O'Reilly Media.
 * Kumar, A., & Lee, S. (2024). Role-based task frequency analysis in mobile interface design for logistics. *International Journal of Human-Computer Studies,* 182, 103-118. https://doi.org/10.1016/j.ijhcs.2024.103118
+* Rubin, K. S. (2012). *Essential Scrum: A Practical Guide to the Most Popular Agile Process.* Addison-Wesley.
+* Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide.* Scrum.org.
 * Stickdorn, M., Hormess, M. E., Lawrence, A., & Schneider, J. (2018). *This Is Service Design Doing: Applying Service Design Thinking in the Real World*. O'Reilly Media.
+* Vernon, V. (2013). *Implementing Domain-Driven Design.* Addison-Wesley.
 
 **Lenguajes, frameworks y herramientas**
 
-*(Nota para el equipo: Aquí deberán ir agregando las citas de las documentaciones oficiales de Kotlin, Flutter, Spring Boot / ASP.NET, Figma, etc., conforme avancen en el desarrollo)*
+* Google. (2024). *Firebase Cloud Messaging Documentation.* Google Developers. https://firebase.google.com/docs/cloud-messaging
+* Mapbox. (2024). *Mapbox Navigation SDK for Mobile.* Mapbox. https://docs.mapbox.com/
+* PostGIS Project Steering Committee. (2024). *PostGIS: Spatial and Geographic Objects for PostgreSQL.* OSGeo. https://postgis.net/
+* VMware. (2024). *RabbitMQ: Messaging that just works.* Broadcom. https://www.rabbitmq.com/
 
 <div style="page-break-after: always;"></div>
 
