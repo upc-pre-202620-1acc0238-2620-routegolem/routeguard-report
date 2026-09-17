@@ -2518,13 +2518,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 
 ### 2.4.2. Impact Mapping
 
-El *Impact Mapping* es una técnica de planificación estratégica formalizada por Adzic (2012) que previene que los equipos de desarrollo pierdan de vista los objetivos macro del negocio. Esta herramienta visual nos permite trazar una línea directa entre el objetivo del proyecto (el *Por qué*), los actores involucrados (el *Quién*), los cambios de comportamiento deseados (el *Cómo*) y los entregables de software (el *Qué*), garantizando que ninguna funcionalidad se construya sin una justificación de negocio.
-
-*(Insertar diagrama de Impact Mapping aquí)*
-
-El **Impact Mapping** anterior evidencia cómo nuestros objetivos de negocio (*Business Outcomes*) trazados en el Lean UX Canvas se conectan directamente con los actores del sistema (Administrador, Conductor, Padres). Finalmente, la rama exterior del mapa justifica las funcionalidades detalladas en las User Stories, sirviendo como puente entre la estrategia y el desarrollo de requerimientos.
-
----
+![Impact Mapping](resources/chapter-2/Impact%20Mapping/Impact%20Mapping%20-%20Route%20Golem.png)
 
 ### 2.4.3. Product Backlog
 
