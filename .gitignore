@@ -6,3 +6,5 @@ removetoc.ps1
 settings.json
 diagrama.puml
 fix_readme.py
+plantuml.jar
+resources/chapter-2/plantuml-src/

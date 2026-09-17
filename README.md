@@ -2835,7 +2835,11 @@ Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaj
 #### 2.6.1.6. Code Level Diagrams
 ##### 2.6.1.6.1. Domain Layer Class Diagram
 
-![Tracking Domain Diagram](resources/chapter-2/tracking-domain.png)
+**Versión Detallada:**
+![Tracking Domain Diagram Detailed](resources/chapter-2/tracking-domain-detailed.png)
+
+**Versión Legible (Simplificada):**
+![Tracking Domain Diagram Readable](resources/chapter-2/tracking-domain-readable.png)
 
 ##### 2.6.1.6.2. Database Design Diagram
 
@@ -2869,7 +2873,11 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 #### 2.6.2.6. Code Level Diagrams
 ##### 2.6.2.6.1. Domain Layer Class Diagram
 
-![Notifications Domain Diagram](resources/chapter-2/notifications-domain.png)
+**Versión Detallada:**
+![Notifications Domain Diagram Detailed](resources/chapter-2/notifications-domain-detailed.png)
+
+**Versión Legible (Simplificada):**
+![Notifications Domain Diagram Readable](resources/chapter-2/notifications-domain-readable.png)
 
 ##### 2.6.2.6.2. Database Design Diagram
 
@@ -3125,4 +3133,5 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 <div style="page-break-after: always;"></div>
 
 # Anexos
+
 
