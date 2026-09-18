@@ -84,6 +84,7 @@
       - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
       - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
       - [Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)](#entrevistado-4-iván-oscco-cosío-segmento-conductor--transportista)
+      - [Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)](#entrevistada-5-diana-chávez-omonte-segmento-padres-de-familia)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
@@ -595,7 +596,7 @@ Manuel es un padre de familia con un hijo de 13 años, quien contrató el servic
 * **Edad:** 57
 * **Distrito de residencia:** Lurín, Lima
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** [Ej: 00:15:20]
+* **Timing de inicio:** []
 * **Screenshot del video:**
   ![Extrevista 2 - Luis](resources/chapter-2/interviews/luis.png)
 
@@ -610,7 +611,7 @@ Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa co
 * **Edad:** [Ingresar Edad]
 * **Distrito de residencia:** [Ingresar Distrito]
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** [Ej: 00:15:20]
+* **Timing de inicio:** []
 * **Screenshot del video:**
   ![Extrevista 3 - Máximo](resources/chapter-2/interviews/maximo.png)
 
@@ -623,9 +624,9 @@ Máximo es un padre de familia con un hijo de 7 años. Optó por contratar movil
 
 #### Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)
 * **Edad:** 51 años
-* **Distrito de residencia:** Surco
+* **Distrito de residencia:** Santiago de Surco, Lima
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** [Ej: 00:11:30 - Llenar cuando edites tu video final]
+* **Timing de inicio:** []
 * **Screenshot del video:**
   ![Extrevista 4 - Iván](resources/chapter-2/interviews/ivan.png)
 
@@ -635,6 +636,21 @@ Iván es un conductor independiente con más de 25 años de experiencia en el tr
 * **Comportamiento actual:** Su servicio se contrata de forma anual. Para el control de asistencia, aplica una estrategia por descarte: asume que todos suben y solo anota a los ausentes en su Excel. Para evitar retrasos en las mañanas, ha establecido reglas estrictas acordadas mediante un "padre delegado"; si un niño no sale, él espera máximo 5 minutos y se retira para no perjudicar al resto. Con los padres que suelen tardar, ha optado por escribirles un mensaje de WhatsApp 5 minutos antes de llegar a su casa. Ocasionalmente, comparte su ubicación en tiempo real por WhatsApp a pedido de los padres.
 * **Frustraciones (Pain Points):** Su principal frustración es la distracción al volante causada por llamadas nerviosas de las madres cuando hay mucho tráfico, por lo que ha tenido que pedirles expresamente que solo envíen mensajes de texto. Además, sufre con las cancelaciones tardías: a menudo le avisan que un niño está enfermo cuando él ya está a punto de llegar a su casa, impidiéndole recalcular su ruta a tiempo y generándole estrés matutino. También menciona la presión de los padres para que no mire la pantalla del celular mientras maneja, obligándolo a usar solo los comandos de voz del GPS.
 * **Percepción de la solución propuesta:** Iván se muestra sumamente abierto a adoptar un sistema automatizado. Considera que una aplicación que pase lista con un solo toque y que le envíe notificaciones automáticas de ubicación a los padres (ej. cada 5 minutos) solucionaría el problema de las llamadas entrantes y la necesidad de compartir su ubicación manual por WhatsApp. Afirma que este sistema no interrumpiría su rutina, le permitiría mantener los ojos en la pista y le daría mucha más tranquilidad tanto a él como a los apoderados.
+
+#### Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)
+* **Edad:** 31 años
+* **Distrito de residencia:** Santiago de Surco, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** []
+* **Screenshot del video:**
+  ![Extrevista 5 - Diana](resources/chapter-2/interviews/diana.png)
+
+**Resumen de la entrevista:**
+Diana es una madre de familia trabajadora con un hijo de 8 años. Decidió contratar el servicio de movilidad escolar privada por motivos de tiempo, ya que su jornada laboral le impide realizar los traslados personalmente. Su rutina actual involucra trayectos de 35 a 40 minutos dependiendo del tráfico. A nivel tecnológico, su único canal de interacción con el servicio es un grupo de WhatsApp conformado por las madres del distrito y el personal de la movilidad. 
+
+* **Comportamiento actual:** A diferencia de otros servicios, el vehículo de su hijo cuenta con un conductor y un acompañante. Este acompañante se encarga de enviar mensajes al grupo de WhatsApp 5 minutos antes de llegar al domicilio de cada niño, tanto en el recojo matutino como en la entrega por la tarde. El servicio no utiliza el claxon; simplemente envían el mensaje y esperan que el niño esté listo en la puerta, siguiendo pautas de puntualidad preestablecidas.
+* **Frustraciones (Pain Points):** A pesar de contar con un acompañante enviando mensajes, Diana indica que la comunicación sigue siendo deficiente y "un poco tediosa". Su principal frustración ocurre cuando hace preguntas por el chat y no recibe respuesta inmediata, dejándola con la incertidumbre de si la movilidad ya salió del domicilio anterior o cuánto tardará. Además, en caso de emergencias médicas de última hora, considera que tener que redactar un mensaje al grupo para cancelar el recojo quita tiempo valioso cuando la prioridad es atender la salud de su hijo.
+* **Percepción de la solución propuesta:** Diana tiene un perfil más analítico y cauteloso frente a nuevas tecnologías. Se muestra abierta a probar una aplicación móvil que envíe notificaciones automáticas y mantenga un historial exacto, con el fin de compararla con su método actual (fotos y chats) y evaluar cuál se adapta mejor a sus necesidades. Respecto a cambiar de transportista por uno más tecnológico, indica que primero intentaría persuadir a su conductor actual para que pruebe el sistema, ya que les tiene confianza. Finalmente, valora de forma muy positiva la opción de configurar familiares como contactos de emergencia para que reciban alertas cuando ella esté ocupada en el trabajo.
 
 ### 2.2.3. Análisis de entrevistas
 
