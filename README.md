@@ -80,6 +80,9 @@
       - [A. Segmento 1: Transportistas Escolares (Administradores y Conductores)](#a-segmento-1-transportistas-escolares-administradores-y-conductores)
       - [B. Segmento 2: Padres de Familia](#b-segmento-2-padres-de-familia)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+      - [Entrevistado 1: Manuel Jesús Francia Huambachano (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachano-segmento-padres-de-familia)
+      - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
+      - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
@@ -571,6 +574,51 @@ El objetivo de estas entrevistas es validar la magnitud de los problemas de comu
 
 
 ### 2.2.2. Registro de entrevistas
+
+#### Entrevistado 1: Manuel Jesús Francia Huambachano (Segmento: Padres de Familia)
+* **Edad:** 50
+* **Distrito de residencia:** Lurín, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** 00:00:01
+* **Screenshot del video:**
+  ![Extrevista 1 - Manuel](resources/chapter-2/interviews/manuel.png)
+
+**Resumen de la entrevista:**
+Manuel es un padre de familia con un hijo de 13 años, quien contrató el servicio de movilidad escolar debido a la lejanía del centro educativo y la incompatibilidad de sus horarios. A nivel tecnológico, es un usuario activo de canales digitales: utiliza WhatsApp para comunicación, realiza pagos mediante billeteras digitales (Yape) y transferencias bancarias, y emplea aplicaciones de control parental (*Google Family Link*) para rastrear el dispositivo de su hijo. 
+
+* **Comportamiento actual:** Actualmente, su único canal de interacción en tiempo real para saber que la movilidad llegó es escuchar el claxon en la puerta. Para emergencias o retrasos, su única alternativa es realizar llamadas telefónicas directas a la conductora. Él y su esposa mantienen un control manual para asegurar el cumplimiento de los pagos puntuales de la pensión.
+* **Frustraciones (Pain Points):** Su mayor frustración radica en la incertidumbre y la falta de visibilidad. Señala que ocurren episodios donde su hijo está listo con 10 minutos de anticipación, pero la movilidad se retrasa hasta 15 minutos sin previo aviso debido al tráfico, obligándolos a esperar a ciegas. Le resulta muy incómodo y peligroso tener que llamar por teléfono a la conductora para conocer su ubicación, ya que ella se encuentra manejando. Además, indica que si bien usa *Family Link*, esta herramienta no está diseñada para este contexto, ya que no le muestra el tráfico, desvíos ni el tiempo estimado de llegada de la movilidad. Tampoco cuenta con información formal sobre las condiciones de seguridad y aforo del vehículo.
+* **Percepción de la solución propuesta:** Manuel ve un alto valor en la propuesta tecnológica. Considera indispensable contar con notificaciones automáticas de proximidad (alertas de que la movilidad está cerca) y valora mucho la función de tener un historial diario que registre la hora exacta de abordaje y llegada al colegio. Indica que un botón para reportar ausencias (añadiendo el motivo) reduciría drásticamente los problemas de comunicación. Su interés por la seguridad es tan alto que afirma estar dispuesto a cambiar de transportista si su servicio actual se negara a modernizarse y usar una plataforma tecnológica de este tipo.
+
+#### Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)
+* **Edad:** 57
+* **Distrito de residencia:** Lurín, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ej: 00:15:20]
+* **Screenshot del video:**
+  ![Extrevista 2 - Luis](resources/chapter-2/interviews/luis.png)
+
+**Resumen de la entrevista:**
+Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa con casi 5 años en el rubro dedicada al transporte de personal, turismo y taxis. Actualmente presta servicios corporativos, tanto directos como tercerizados (ej. empresa Netafin), para trasladar personal operativo hacia fábricas y plantas industriales. Su dinámica de trabajo diaria se basa en horarios estrictos y turnos rotativos (Guardias A, B y C). A nivel tecnológico, su principal y única herramienta de coordinación en tiempo real es **WhatsApp**, a través del cual reporta su ubicación a los supervisores de la planta. 
+
+* **Comportamiento actual:** La gestión de los pasajeros la realiza de forma manual mediante **listas impresas en papel** proporcionadas por el área de logística de la empresa cliente. Luis no recoge a los pasajeros puerta por puerta, sino que cumple con 3 o 4 "puntos de recojo" fijos con horarios preestablecidos. A medida que avanza en su ruta, escribe mensajes en el grupo de WhatsApp (ej. *"Llegando al punto 1"*) para que los jefes sepan que el transporte está en curso. Sus pagos se manejan mediante contratos a 30 días con el área de logística.
+* **Frustraciones (Pain Points):** El mayor estrés en su ruta son los imprevistos de tráfico por choques o rotura de tuberías. Si el retraso supera los 10 o 15 minutos, se convierte en un problema crítico para la fábrica, ya que *"las máquinas no paran"* y los trabajadores del turno anterior deben quedarse trabajando horas extras. Notificar estos retrasos mientras conduce es ineficiente y recae totalmente en la comunicación manual por chat, lo cual no le permite actualizar de forma automática los tiempos estimados de llegada (ETA) para los trabajadores que lo esperan en los siguientes paraderos.
+* **Percepción de la solución propuesta:** Luis considera que una aplicación móvil de monitoreo y gestión sería una herramienta invaluable, especialmente para escalar su negocio. Reconoce que actualmente lleva el control "así nomás" (hojas y chats), pero entiende que para manejar flotas más grandes un software de trazabilidad es obligatorio. Ve un impacto muy positivo en el uso de la app para transmitir una **imagen más formal y profesional** frente a sus clientes corporativos, y afirmó estar dispuesto a pagar una suscripción mensual por esta tecnología conforme su empresa de transportes siga creciendo.
+
+#### Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)
+* **Edad:** [Ingresar Edad]
+* **Distrito de residencia:** [Ingresar Distrito]
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ej: 00:15:20]
+* **Screenshot del video:**
+  ![Extrevista 3 - Máximo](resources/chapter-2/interviews/maximo.png)
+
+**Resumen de la entrevista:**
+Máximo es un padre de familia con un hijo de 7 años. Optó por contratar movilidad escolar privada para optimizar su tiempo frente al complejo tráfico de Lima, permitiéndole dirigirse directamente a su centro de labores. Su perfil es marcadamente tecnológico y analítico; está muy familiarizado con aplicativos financieros y valora la eficiencia digital, afirmando firmemente que *"quienes no se adaptan a la tecnología en el siglo XXI se quedan atrás"*.
+
+* **Comportamiento actual:** La comunicación que mantiene con el servicio de movilidad se da exclusivamente a través de mensajes o llamadas. Del mismo modo, el control de los pagos de la pensión escolar de su hijo se realiza por WhatsApp, donde recibe las notificaciones de cobro de manera informal y manual.
+* **Frustraciones (Pain Points):** Su principal dolor es la falta de comunicación en tiempo real y la gran angustia que esto le genera. Relató un episodio crítico donde la movilidad se retrasó 20 minutos; al no tener forma de rastrear el vehículo, sintió un altísimo nivel de estrés temiendo un accidente o un extravío, viéndose obligado a timbrar desesperadamente a la directora del colegio. Adicionalmente, encuentra ineficiente llevar el control de pagos por WhatsApp, ya que a menudo se generan confusiones, desorden y *"los montos no cuadran"*.
+* **Percepción de la solución propuesta:** Máximo aprueba rotundamente la creación de la aplicación. Debido a la alta concentración que exige su trabajo (análisis de costos), prefiere recibir **notificaciones automáticas en segundo plano** en lugar de tener que vigilar activamente un mapa. Destaca la necesidad de tener un historial integrado, tanto para registrar las horas exactas de los viajes, como para llevar un control transparente de los pagos (comparándolo con una app bancaria). Es tan firme en su postura que asegura que **descartaría de inmediato** a su transportista actual si este se negara a usar el aplicativo. Finalmente, respalda con entusiasmo la función de reportar inasistencias con un botón y la opción de incluir contactos de emergencia.
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -2579,9 +2627,30 @@ El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena to
 ## 2.5. Strategic-Level Domain-Driven Design
 
 ### 2.5.1. EventStorming
+ 
+Para el proceso de EventStorming a nivel de diseño utilizamos la herramienta **Miro** y seguimos cuatro pasos hasta llegar a la definición de los Bounded Contexts del sistema.
+ 
+**Paso 1: Identificación de Domain Events.** Trazamos los eventos sobre una línea de tiempo imaginaria de izquierda a derecha, redactados en pasado participio y utilizando el lenguaje ubicuo en inglés. Los eventos se representan con post-it de color anaranjado.
+ 
+**Paso 2: Identificación de Commands.** Sobre cada evento identificamos el comando que lo dispara, es decir, la intención explícita que provoca el hecho. Los comandos se representan con post-it de color azul.
+ 
+**Paso 3: Identificación de Actors.** Determinamos qué actor ejecuta cada comando, distinguiendo los tres roles del ecosistema (Administrador, Conductor y Padre de familia) de los procesos que dispara el propio sistema. Los actores se representan con post-it de color amarillo.
+ 
+**Paso 4: Agrupación en Bounded Contexts.** Finalmente agrupamos los eventos que se relacionan entre sí a través de los agregados y entidades que comparten, delimitando los Bounded Contexts del sistema.
+ 
+A lo largo del tablero utilizamos además cuatro tipos de post-it complementarios para enriquecer el modelo:
+ 
+| Color | Tipo | Descripción |
+|---|---|---|
+| Amarillo pálido | Agregado | Entidad o conjunto de entidades que agrupan el comportamiento y el estado sobre el que actúa un comando. |
+| Rosado | Sistema Externo | Servicio de terceros con el que el sistema se integra (pasarela de pago, proveedor de mapas, proveedor push, broker de mensajería). |
+| Morado | Política | Regla de negocio que conecta automáticamente un evento con el siguiente comando, sin intervención de un actor humano. |
+| Verde | Pantalla | Vista de la aplicación desde la que un actor dispara un comando. |
 
+<img src="resources\chapter-2\EventStorming\paleta-colores.png" width="1000">
+ 
 #### 2.5.1.1. Candidate Context Discovery
-
+ 
 En esta sesión aplicamos la técnica de *Candidate Context Discovery* para identificar y separar los posibles Bounded Contexts del sistema RouteGuard. La sesión se realizó en **Miro** con la participación de los cuatro integrantes del equipo y tuvo una duración de una hora y cuarenta minutos, dentro del límite de dos horas recomendado para esta técnica.
  
 Utilizamos las tres técnicas sugeridas de forma encadenada, ya que cada una responde una pregunta distinta. Con **start-with-simple** descompusimos la línea temporal en tres fases secuenciales —configuración y contratación, operación diaria, y cierre y postventa— para obtener un modelo manejable antes de intentar agrupar. Con **look-for-pivotal-events** identificamos los eventos que marcan cambios de estado entre partes distintas del proceso de negocio, que resultaron ser las costuras naturales del dominio. Finalmente, con **start-with-value** determinamos qué agrupaciones concentran el mayor valor para el negocio, contrastándolas con la propuesta de valor.
@@ -2590,10 +2659,11 @@ Los eventos pivote identificados fueron los siguientes:
  
 | Evento pivote | Cambio de estado que señala |
 |---|---|
-| `RouteActivationFinalized` | La ruta pasa de configuración a disponible para operar; separa la planificación de la ejecución. |
+| `RouteActivationFinalized` | La ruta pasa de configuración a disponible para operar; separa la planificación de la ejecución, y es el evento que directamente dispara `Start Trip` en Trip Execution & Monitoring. |
 | `TripStarted` | El plan de ruta pasa de intención a ejecución; separa la planificación del registro operativo. |
-| `BoardingQueuedOffline` | El registro de abordaje pasa de confirmado a provisional en el dispositivo; marca el punto donde el dominio deja de asumir conectividad continua. |
-| `BoardingSynchronized` | El registro pasa de provisional en el dispositivo a confirmado en el servidor. |
+| `LocationUpdated` | La posición del vehículo pasa de dato crudo transmitido por el dispositivo a telemetría persistida del viaje; abre el flujo de monitoreo en tiempo real y dispara la evaluación de geocerca en Notifications & Communication. |
+| `GeofenceBreached` | La telemetría cruda pasa a ser un hecho accionable: el vehículo penetra el radio de una parada, disparando la alerta hacia el padre. |
+| `GroupFinalized` | El grupo de estudiantes pasa de configuración a disponible para asignar; es el evento que, a través de la política `Export Group Manifest to Route Context`, dispara `Assign Students to Route` en Fleet & Route Management. |
 | `SubscriptionActivated` | El vínculo comercial pasa de solicitud a acceso habilitado; separa la capa comercial de la operativa. |
 | `TripCompleted` | La ejecución pasa a cierre; separa la operación diaria de la postventa. |
  
@@ -2603,93 +2673,122 @@ A continuación se presenta la evolución progresiva del EventStorm durante la s
  
 *Paso 1 — Domain Events:* los eventos trazados sobre la línea temporal, en pasado participio y con el lenguaje ubicuo en inglés.
  
-![Domain Events](resources/chapter-2/EventStorming/Events.jpg)
- 
+<img src="resources\chapter-2\EventStorming\Events.jpg" width="1000">
+
 *Paso 2 — Commands:* sobre cada evento se identificó el comando que lo dispara.
  
-![Commands](resources/chapter-2/EventStorming/Commands.jpg)
- 
+<img src="resources\chapter-2\EventStorming\Commands.jpg" width="1000">
+
 *Paso 3 — Actors:* se determinó qué actor ejecuta cada comando.
  
-![Actors](resources/chapter-2/EventStorming/Actors.jpg)
- 
+<img src="resources\chapter-2\EventStorming\Actors.jpg" width="1000">
+
 *Paso 4 — Agrupación:* aplicando los eventos pivote como líneas de corte, los eventos se agruparon por los agregados que comparten.
  
-![Bounded Context Decomposition](resources/chapter-2/EventStorming/Design-Level-Event-Storming.jpg)
- 
+<img src="resources\chapter-2\EventStorming\Design-Level-Event-Storming.jpg" width="1000">
+
 Este proceso nos llevó a definir los siguientes Bounded Contexts:
  
 | Bounded Context | Descripción | Eventos clave |
 |---|---|---|
-| **Identity & Access Management** | Gestiona el registro, la autenticación y el control de acceso por rol de los usuarios de la plataforma. | User Authenticated, Administrator Account Created, Driver Account Provisioned, Parent Account Provisioned |
-| **Subscription & Plan Management** | Administra los planes SaaS, procesa el cobro y habilita el acceso comercial a la plataforma. | Plan Selected, Payment Confirmed, Subscription Activated, Plan Upgraded, Quotas Increased |
-| **Fleet & Route Management** | Custodia el plan de recorrido vigente: paradas, vehículo, conductor y programación de servicio de cada ruta. | Route Defined, Waypoint Selected, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
-| **Stakeholder & Asset Management** | Registra a conductores y padres de familia, vincula estudiantes y organiza los grupos por ruta. | Driver Profile Created, Parent Profile Created, Child Linked To Parent, Group Finalized |
-| **Trip Execution & Monitoring** | Registra la ejecución real del viaje diario, incluyendo el registro de abordaje con soporte de sincronización *offline*. | Trip Started, Boarding Opened, Student Boarded, Boarding Queued Offline, Boarding Synchronized, Incident Reported, Trip Completed |
-| **Notifications & Communication** | Traduce los eventos del dominio en notificaciones para los padres de familia, incluyendo alertas de alta prioridad y avisos del conductor. | Notification Dispatched, Panic Alert Triggered, Announcement Published |
+| **Identity & Access Management** | Gestiona el registro, la autenticación y el control de acceso por rol de los usuarios de la plataforma. | Login Accepted, User Authenticated, JWT Session Token Issued, User Logged In, Administrator Account Created, Admin Role Privileges Granted, Driver Account Provisioned, Parent Account Provisioned, Password Generated |
+| **Subscription & Plan Management** | Administra los planes SaaS, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma. | Plan Selected, Payment Confirmed, Subscription Activated, Plan Features Enabled, Plan Upgraded, Quotas Increased |
+| **Fleet & Route Management** | Custodia el plan de recorrido vigente: paradas, vehículo, conductor y programación de servicio de cada ruta. | Route Defined, Waypoint Selected, Stop Count Updated, Student Assigned To Route, Passenger Manifest Generated, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized |
+| **Stakeholder & Asset Management** | Registra a conductores y padres de familia, vincula estudiantes y organiza los grupos por ruta. | Driver Profile Created, Parent Profile Created, Child Profile Created, Child Linked To Parent, Group Name Assigned, Parents Assigned To Group, Students Included In Group, Group Finalized |
+| **Trip Execution & Monitoring** | Registra la ejecución real del viaje diario, incluyendo el registro de abordaje con soporte *offline* (US-06/TS-02), y la transmisión de la ubicación GPS en tiempo real del vehículo. | Trip Started, Boarding Opened, Student Boarded, Student Dropped Off, Location Updated, Incident Reported, Trip Completed, Trip Archived |
+| **Notifications & Communication** | Consume los eventos del viaje, evalúa la penetración de geocercas y traduce los eventos del dominio en notificaciones push para los padres de familia. | Notification Created, Notification Queued, Notification Dispatched, High Priority Alert Created, Geofence Breached, Announcement Published, Notification Sent |
  
-Aplicando finalmente *start-with-value*, clasificamos los contextos según su aporte estratégico. **Trip Execution & Monitoring** constituye el *Core Domain*: es el contexto donde RouteGuard concentra su ventaja competitiva, al garantizar que ningún registro de abordaje se pierda incluso sin conectividad. **Fleet & Route Management**, **Stakeholder & Asset Management** y **Notifications & Communication** son *Supporting Subdomains*: indispensables para el negocio pero no diferenciadores; Notifications & Communication se extiende sobre el contexto heredado con la integración de un proveedor de mensajería push (FCM), para que los eventos del viaje lleguen al dispositivo del padre sin que este tenga que abrir la app. **Identity & Access Management** y **Subscription & Plan Management** son *Generic Subdomains*, problemas ya resueltos por la industria en los que se prioriza la reutilización.
+Aplicando finalmente *start-with-value*, clasificamos los contextos según su aporte estratégico. **Trip Execution & Monitoring** constituye el *Core Domain*: es el contexto donde RouteGuard concentra su ventaja competitiva, al garantizar tanto el registro de abordaje sin pérdida de datos ante la falta de conectividad como el monitoreo en tiempo real del trayecto. **Fleet & Route Management**, **Stakeholder & Asset Management** y **Notifications & Communication** son *Supporting Subdomains*: indispensables para el negocio pero no diferenciadores. **Identity & Access Management** y **Subscription & Plan Management** son *Generic Subdomains*, problemas ya resueltos por la industria en los que se prioriza la reutilización.
  
-La capacidad que distingue a RouteGuard es la resiliencia ante la falta de conectividad dentro de Trip Execution & Monitoring, y es ahí donde se concentra el esfuerzo de diseño táctico en las siguientes secciones.
+La capacidad que distingue a RouteGuard es la combinación de resiliencia ante la falta de conectividad con monitoreo en tiempo real dentro de Trip Execution & Monitoring, y es ahí donde se concentra el mayor esfuerzo de diseño táctico en las siguientes secciones.
+ 
+**Conexiones confirmadas entre Bounded Contexts**
+ 
+| # | Origen | Evento | Política | Destino | Comando / Evento |
+|---|---|---|---|---|---|
+| 1 | Stakeholder & Asset Management | `Group Finalized` | `Export Group Manifest to Route Context` | Fleet & Route Management | `Assign Students to Route` |
+| 2 | Fleet & Route Management | `Route Activation Finalized` | — | Trip Execution & Monitoring | `Start Trip` |
+| 3 | Trip Execution & Monitoring | `Student Boarded` | — | Notifications & Communication | `Student Boarded` (consumido) |
+| 4 | Trip Execution & Monitoring | `Incident Reported` | — | Notifications & Communication | `Incident Reported` (consumido) |
+| 5 | Trip Execution & Monitoring | `Location Updated` | *(evaluación de geocerca)* | Notifications & Communication | `Geofence Breached` |
+ 
+**Identity & Access Management** se conecta de forma transversal con los cinco contextos restantes a través de `User Authenticated`/`JWT Session Token Issued`, pero esta no es una política de negocio sino una dependencia de identidad.
+ 
+**Subscription & Plan Management** no tiene ninguna conexión hacia otro Bounded Context: su único vínculo externo es con la pasarela de pago (Payment Gateway), un sistema externo. Ningún otro contexto consulta sus cuotas o límites en tiempo real.
 
 #### 2.5.1.2. Domain Message Flows Modeling
-
-El *Domain Message Flow Modelling* es una técnica que permite representar cómo fluyen los mensajes de dominio —*commands*, *events* y *queries*— entre los distintos Bounded Contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto al resolver un caso concreto del negocio.
  
-Para cada escenario se documenta la secuencia numerada de mensajes, que es la que se representa en el diagrama: los comandos en azul, los eventos en naranja y las consultas en verde, con los contextos dibujados como nubes y los actores como participantes externos.
+El *Domain Message Flow Modelling* es una técnica que permite representar cómo fluyen los mensajes de dominio —*commands*, *events* y *queries*— entre los distintos Bounded Contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto al resolver un caso concreto del negocio.
+
+Para cada escenario se documenta la secuencia numerada de mensajes, que es la que se representa en el diagrama: los comandos en azul, los eventos en naranja y las políticas en morado, con los contextos dibujados como nubes.
  
 **Escenario 01: Conformación del grupo de estudiantes y asignación a la ruta**
  
 | # | Tipo | Mensaje | Origen | Destino |
 |---|---|---|---|---|
 | 1 | Command | Crear grupo de estudiantes | Administrador | Stakeholder & Asset Management |
-| 2 | Command | Asignar padres e incluir hijos vinculados al grupo | Administrador | Stakeholder & Asset Management |
+| 2 | Command | Asignar padres e incluir hijos vinculados | Administrador | Stakeholder & Asset Management |
 | 3 | Command | Finalizar grupo | Administrador | Stakeholder & Asset Management |
-| 4 | Event | Group Finalized | Stakeholder & Asset Management | Stakeholder & Asset Management |
-| 5 | Query | Exportar manifiesto del grupo al contexto de ruta | Stakeholder & Asset Management | Fleet & Route Management |
-| 6 | Command | Asignar estudiantes a la ruta | Administrador | Fleet & Route Management |
-| 7 | Event | Passenger Manifest Generated | Fleet & Route Management | Fleet & Route Management |
+| 4 | Event | `Group Finalized` | Stakeholder & Asset Management | Stakeholder & Asset Management |
+| 5 | Policy | `Export Group Manifest to Route Context` | Stakeholder & Asset Management | Fleet & Route Management |
+| 6 | Command | `Assign Students to Route` | Fleet & Route Management | Fleet & Route Management |
+| 7 | Event | `Student Assigned to Route` | Fleet & Route Management | Fleet & Route Management |
  
 ![Escenario 01: Conformación de grupo y asignación a ruta](resources/chapter-2/Domain-Message-Flows/escenario-01-grupo-ruta.png)
  
-La nómina de estudiantes que puede asignarse a una ruta proviene del grupo ya finalizado en Stakeholder & Asset Management, consultado en el paso 5.
+Este es el único cruce del sistema donde la conexión pasa explícitamente por una política (post-it morado) antes del comando destino, en vez de ir directo de evento a comando.
  
-**Escenario 02: Ejecución del viaje con abordaje offline y notificación**
- 
-| # | Tipo | Mensaje | Origen | Destino |
-|---|---|---|---|---|
-| 1 | Command | Iniciar viaje | Conductor | Trip Execution & Monitoring |
-| 2 | Event | Trip Started | Trip Execution & Monitoring | Trip Execution & Monitoring |
-| 3 | Command | Marcar estado de abordaje | Conductor | Trip Execution & Monitoring |
-| 4a | Event | Student Boarded (con señal) | Trip Execution & Monitoring | Notifications & Communication |
-| 4b | Event | Boarding Queued Offline (sin señal) | Trip Execution & Monitoring | Almacenamiento local |
-| 5 | Command | Sincronizar cola de abordaje | App del conductor | Trip Execution & Monitoring |
-| 6 | Event | Boarding Synchronized | Trip Execution & Monitoring | Notifications & Communication |
-| 7 | Command | Despachar notificación push | Notifications & Communication | Proveedor push (FCM) |
-| 8 | Event | Notification Dispatched | Proveedor push (FCM) | Padre de familia |
- 
-![Escenario 02: Abordaje offline y notificación](resources/chapter-2/Domain-Message-Flows/escenario-02-abordaje-offline.png)
- 
-La bifurcación entre los pasos 4a y 4b concentra la lógica central de resiliencia de RouteGuard. El paso 6 conserva el *timestamp* original del dispositivo, no el de la sincronización, para que la notificación al padre refleje la hora real del abordaje y no la hora en que el sistema recuperó conectividad. El paso 7 delega la entrega al proveedor push, de modo que el padre recibe el aviso en su dispositivo sin necesidad de tener la app abierta.
- 
-**Escenario 03: Incidencia y alerta de alta prioridad**
+**Escenario 02: Activación de ruta e inicio del viaje**
  
 | # | Tipo | Mensaje | Origen | Destino |
 |---|---|---|---|---|
-| 1 | Command | Reportar incidencia | Conductor | Trip Execution & Monitoring |
-| 2 | Event | Incident Reported | Trip Execution & Monitoring | Notifications & Communication |
-| 3 | Command | Disparar alerta de alta prioridad | Notifications & Communication | Notifications & Communication |
-| 4 | Event | Panic Alert Triggered | Notifications & Communication | Notifications & Communication |
-| 5 | Command | Difundir alerta a los padres del viaje | Notifications & Communication | Proveedor push (FCM) |
-| 6 | Event | Notification Sent | Proveedor push (FCM) | Padres de estudiantes a bordo |
+| 1 | Command | Definir días de servicio y hora de salida | Administrador | Fleet & Route Management |
+| 2 | Event | `Route Activation Finalized` | Fleet & Route Management | Trip Execution & Monitoring |
+| 3 | Command | `Start Trip` | Conductor | Trip Execution & Monitoring |
+| 4 | Event | `Trip Started` | Trip Execution & Monitoring | Trip Execution & Monitoring |
  
-![Escenario 03: Incidencia y alerta de alta prioridad](resources/chapter-2/Domain-Message-Flows/escenario-03-incidencia-alerta.png)
+![Escenario 02: Activación de ruta e inicio del viaje](resources/chapter-2/Domain-Message-Flows/escenario-02-activacion-inicio.png)
  
-Notifications & Communication concentra tanto la traducción del evento como la decisión de prioridad, delegando únicamente la entrega final al proveedor push, sin requerir que Trip Execution & Monitoring conozca la lógica de despacho.
+`Route Activation Finalized` es evento pivote: marca el punto exacto donde el plan de ruta, propiedad de Fleet & Route Management, deja de poder modificarse en caliente y habilita a Trip Execution & Monitoring a operar sobre él.
+ 
+**Escenario 03: Transmisión de ubicación en tiempo real y alerta de geocerca**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Transmitir ubicación en segundo plano | App del conductor | Trip Execution & Monitoring |
+| 2 | Event | `Location Updated` | Trip Execution & Monitoring | RabbitMQ (broker) |
+| 3 | Event | Recibe de broker | RabbitMQ (broker) | Notifications & Communication |
+| 4 | Command | Evaluar intersección de geocerca | Notifications & Communication | Notifications & Communication |
+| 5 | Event | `Geofence Breached` | Notifications & Communication | Notifications & Communication |
+| 6 | Command | `Dispatch Notification` | Notifications & Communication | Proveedor push (FCM) |
+| 7 | Event | `Notification Sent` | Proveedor push (FCM) | Padre de familia |
+ 
+![Escenario 03: Ubicación en tiempo real y alerta de geocerca](resources/chapter-2/Domain-Message-Flows/escenario-03-geofence.png)
+ 
+Este escenario sustenta directamente el Objetivo SMART 4 (latencia menor a 5 segundos entre la transmisión de ubicación y la alerta recibida por el padre). A diferencia del Escenario 01, aquí no hay una política intermedia visible en el Miro entre `Location Updated` y la evaluación de geocerca; el paso 4 representa el comando implícito que Notifications & Communication ejecuta al consumir el evento del broker.
+ 
+**Escenario 04: Abordaje e incidencia notificados al padre**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Marcar abordaje | Conductor | Trip Execution & Monitoring |
+| 2 | Event | `Student Boarded` | Trip Execution & Monitoring | RabbitMQ (broker) |
+| 3 | Event | Recibe de broker | RabbitMQ (broker) | Notifications & Communication |
+| 4 | Event | `Notification Sent` | Notifications & Communication | Padre de familia |
+| 5 | Command | Reportar incidencia | Conductor | Trip Execution & Monitoring |
+| 6 | Event | `Incident Reported` | Trip Execution & Monitoring | RabbitMQ (broker) |
+| 7 | Event | Recibe de broker | RabbitMQ (broker) | Notifications & Communication |
+| 8 | Command | `Trigger Panic Alert` | Notifications & Communication | Notifications & Communication |
+| 9 | Event | `High Priority Alert Created` | Notifications & Communication | Notifications & Communication |
+| 10 | Event | `Notification Sent` | Notifications & Communication | Padre de familia |
+ 
+![Escenario 04: Abordaje e incidencia](resources/chapter-2/Domain-Message-Flows/escenario-04-abordaje-incidencia.png)
+ 
+Ambas rutas —abordaje e incidencia— llegan a Notifications & Communication como eventos consumidos, sin que Trip Execution & Monitoring conozca la lógica de despacho ni de priorización.
 
 #### 2.5.1.3. Bounded Context Canvases
  
-El *Bounded Context Canvas* permite representar de forma clara los límites, responsabilidades e interacciones de cada contexto dentro de un sistema complejo, facilitando que el equipo construya una visión compartida sobre su propósito, sus agregados y las reglas de negocio que lo gobiernan. El equipo utilizó la plantilla oficial *Bounded Context Canvas v4* de ddd-crew, siguiendo el proceso iterativo de seis pasos que la técnica establece: **Context Overview Definition**, **Business Rules Distillation & Ubiquitous Language Capture**, **Capability Analysis**, **Capability Layering** (donde aplica), **Dependencies Capture** y **Design Critique**. Los seis canvases se trabajaron en el orden de importancia definido en 2.5.1.1, comenzando por el Core Domain.
+El *Bounded Context Canvas* permite representar de forma clara los límites, responsabilidades e interacciones de cada contexto dentro de un sistema complejo, facilitando que el equipo construya una visión compartida sobre su propósito, sus agregados y las reglas de negocio que lo gobiernan. El equipo utilizó la plantilla oficial *Bounded Context Canvas v4* de ddd-crew.
  
 **Canvas 1: Trip Execution & Monitoring**
  
@@ -2698,13 +2797,13 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | Campo | Contenido |
 |---|---|
 | **Name** | Trip Execution & Monitoring |
-| **Description** | Registra la ejecución real del viaje diario del conductor, incluyendo el registro de abordaje con soporte de sincronización *offline* para zonas sin cobertura. |
+| **Description** | Registra la ejecución real del viaje diario del conductor: el abordaje con soporte de sincronización *offline* (US-06/TS-02), y la transmisión de la ubicación GPS en tiempo real durante todo el trayecto. |
 | **Strategic Classification** | Domain: core · Business Model: revenue generator · Evolution: custom built |
 | **Domain Roles** | Execution Context |
-| **Inbound Communication** | *Commands:* Select Route Card, Start Trip, Open Boarding, Set Boarding Status, Sync Offline Queue, Report Incident, Complete Trip, Archive Trip. *Events:* Trip Started, Boarding Opened, Student Boarded, Boarding Queued Offline, Boarding Synchronized, Incident Reported, Trip Completed, Trip Archived |
-| **Ubiquitous Language** | **Trip:** ejecución física de una ruta en una fecha y hora específica. **Boarding:** acto en que un estudiante ingresa o desciende del vehículo. **Offline Queue:** registro de abordaje guardado localmente cuando el dispositivo no tiene señal. **Incident:** evento inesperado que altera el curso normal del viaje. |
-| **Business Decisions** | Un viaje inicia con el estado "Boarding Opened" antes de aceptar registros de abordaje. Un registro sin señal se guarda localmente con el *timestamp* del dispositivo, sin bloquear la operación. La sincronización es idempotente por `(tripId, studentId)`: un reintento posterior a la confirmación no genera un registro duplicado. Un viaje completado se archiva y deja de aceptar nuevos registros. |
-| **Outbound Communication** | *Messages:* Notificar abordaje al padre, Notificar incidencia. *Collaborators:* Notifications & Communication |
+| **Inbound Communication** | *Commands:* Select Route Card, Start Trip, Open Boarding, Set Boarding Status, Send Location Update, Report Incident, Complete Trip, Archive Trip. *Events:* Route Activation Finalized *(recibido de Fleet & Route Management)*, Trip Started, Boarding Opened, Student Boarded, Student Dropped Off, Location Updated, Incident Reported, Trip Completed, Trip Archived |
+| **Ubiquitous Language** | **Trip:** ejecución física de una ruta en una fecha y hora específica. **Boarding:** acto en que un estudiante ingresa o desciende del vehículo. **Location Update:** registro puntual de coordenadas transmitido por el dispositivo en segundo plano. **Incident:** evento inesperado que altera el curso normal del viaje. |
+| **Business Decisions** | El viaje inicia con `Boarding Opened` antes de aceptar registros de abordaje. Un registro sin señal se guarda localmente y sincroniza al recuperar conexión, de forma independiente al estado de la transmisión GPS.|
+| **Outbound Communication** | *Messages:* `Student Boarded`, `Incident Reported`, `Location Updated` — publicados hacia el broker. *Collaborators:* RabbitMQ (Message Broker) → Notifications & Communication |
  
 **Canvas 2: Fleet & Route Management**
  
@@ -2716,10 +2815,10 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | **Description** | Custodia el plan de recorrido vigente de cada ruta escolar: secuencia de paradas, vehículo y conductor asignados, días de servicio y hora de salida. |
 | **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built |
 | **Domain Roles** | Specification Context |
-| **Inbound Communication** | *Commands:* Define Route, Pick Waypoints, Assign Students To Route, Select Vehicle, Define Service Days, Set Departure Time. *Events:* Route Defined, Waypoint Selected, Stop Count Updated, Passenger Manifest Generated, Vehicle Assigned To Route, Service Days Defined, Route Activation Finalized, Student Assigned To Route, Student Absence Notified, Vehicle Marked Unfit For Operation |
-| **Ubiquitous Language** | **Route:** secuencia predefinida de paradas entre un origen y un colegio. **Stop:** ubicación geográfica donde un estudiante sube o baja del vehículo. **Passenger Manifest:** listado de estudiantes asignados a una ruta. **Service Days:** días de la semana en que la ruta opera. |
-| **Business Decisions** | Una ruta no puede activarse sin vehículo y conductor asignados. El conteo de paradas se recalcula automáticamente al agregar o quitar un *waypoint*. Los estudiantes asignables a una ruta provienen del manifiesto ya finalizado en Stakeholder & Asset Management. |
-| **Outbound Communication** | *Messages:* Entregar plan de ruta vigente. *Collaborators:* Trip Execution & Monitoring |
+| **Inbound Communication** | *Commands:* Define Route, Pick Waypoints, Assign Students to Route, Select Vehicle, Define Service Days, Set Departure Time. *Events:* Route Defined, Waypoint Selected, Stop Count Updated, Student Assigned to Route *(recibido vía política de Stakeholder & Asset Management)*, Passenger Manifest Generated, Vehicle Assigned to Route, Service Days Defined, Route Activation Finalized |
+| **Ubiquitous Language** | **Route:** secuencia predefinida de paradas entre un origen y un colegio. **Waypoint:** punto de paso seleccionado sobre el mapa al trazar la ruta. **Passenger Manifest:** listado de estudiantes asignados a una ruta. |
+| **Business Decisions** | Una ruta no puede activarse sin vehículo y conductor asignados. El conteo de paradas se recalcula automáticamente al agregar o quitar un *waypoint*. Los estudiantes asignables a una ruta provienen únicamente del manifiesto exportado por Stakeholder & Asset Management, nunca de una consulta directa a su modelo interno. |
+| **Outbound Communication** | *Messages:* `Route Activation Finalized`. *Collaborators:* Trip Execution & Monitoring |
  
 **Canvas 3: Stakeholder & Asset Management**
  
@@ -2731,10 +2830,10 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | **Description** | Registra a conductores y padres de familia, vincula estudiantes a sus padres y organiza los grupos de estudiantes que luego se asignan a una ruta. |
 | **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built |
 | **Domain Roles** | Registry Context |
-| **Inbound Communication** | *Commands:* Register Driver, Register Parent, Register Child, Link Child To Parent, Create Group, Assign Parents To Group, Include Linked Students, Finalize Group. *Events:* Driver Profile Created, Parent Profile Created, Child Profile Created, Child Linked To Parent, Group Name Assigned, Parents Assigned To Group, Students Included In Group, Group Finalized |
+| **Inbound Communication** | *Commands:* Register Driver, Register Parent, Register Child, Link Child to Parent, Create Group, Assign Parents to Group, Include Linked Students, Finalize Group. *Events:* Driver Profile Created, Parent Profile Created, Child Profile Created, Child Linked to Parent, Group Name Assigned, Parents Assigned to Group, Students Included in Group, Group Finalized |
 | **Ubiquitous Language** | **Driver:** persona registrada que opera una unidad de transporte. **Parent:** persona registrada responsable de uno o más estudiantes. **Group:** conjunto de estudiantes vinculados a los padres asignados, previo a su incorporación a una ruta. |
-| **Business Decisions** | Un estudiante solo puede vincularse a un padre ya registrado. Un grupo no puede finalizarse sin al menos un padre y sus estudiantes incluidos. Una vez finalizado, el grupo genera el manifiesto que Fleet & Route Management consume. |
-| **Outbound Communication** | *Messages:* Exportar manifiesto del grupo. *Collaborators:* Fleet & Route Management |
+| **Business Decisions** | Un estudiante solo se vincula a un padre ya registrado. Un grupo no se finaliza sin al menos un padre y sus estudiantes incluidos. Al finalizarse, la política `Export Group Manifest to Route Context` traduce el grupo al único dato que Fleet & Route Management necesita: la nómina de estudiantes. |
+| **Outbound Communication** | *Messages:* `Group Finalized` → política `Export Group Manifest to Route Context`. *Collaborators:* Fleet & Route Management |
  
 **Canvas 4: Notifications & Communication**
  
@@ -2743,13 +2842,13 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | Campo | Contenido |
 |---|---|
 | **Name** | Notifications & Communication |
-| **Description** | Traduce los eventos relevantes del viaje en notificaciones push para los padres de familia, entregadas directamente en su dispositivo sin necesidad de abrir la app, incluyendo alertas de alta prioridad ante incidencias y anuncios difundidos por el conductor. |
-| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre proveedor push de terceros |
+| **Description** | Consume de forma asíncrona los eventos del viaje publicados por Trip Execution & Monitoring, evalúa la penetración de geocercas y traduce los eventos relevantes en notificaciones push, incluyendo alertas de alta prioridad y anuncios del conductor. |
+| **Strategic Classification** | Domain: supporting · Business Model: engagement · Evolution: custom built sobre broker y proveedor push de terceros |
 | **Domain Roles** | Dispatch Context |
-| **Inbound Communication** | *Commands:* Prepare Boarding Notification, Trigger Panic Alert, Post Broadcast Message, Retry Notification, Register Device Token. *Events:* Student Boarded, Incident Reported, Notification Created, Notification Queued, Notification Dispatched, Panic Alert Triggered, Announcement Published, Notification Delivered, Notification Failed |
-| **Ubiquitous Language** | **Notification:** mensaje push entregado al dispositivo del padre de familia ante un evento del viaje. **Panic Alert:** notificación de alta prioridad originada por una incidencia. **Broadcast:** anuncio del conductor distribuido a todos los padres de su ruta. **Device Token:** identificador del dispositivo del padre ante el proveedor de mensajería, registrado al iniciar sesión. |
-| **Business Decisions** | Toda notificación pasa por un estado de cola antes de despacharse al proveedor push. Una notificación fallida se reintenta automáticamente; si el reintento también falla, queda registrada como no entregada. Una alerta de pánico se trata con prioridad distinta a una notificación de abordaje ordinaria. Sin un *device token* vigente, la notificación se registra en el log sin intento de envío. |
-| **Outbound Communication** | *Messages:* Despachar notificación push. *Collaborators:* Proveedor push (FCM) |
+| **Inbound Communication** | *Commands:* Trigger Panic Alert, Post Broadcast Message, Retry Notification. *Events (recibidos vía broker):* Student Boarded, Incident Reported, Location Updated. *Eventos propios:* Notification Created, Notification Queued, Geofence Breached, High Priority Alert Created, Notification Dispatched, Announcement Published, Notification Sent, Notification Failed |
+| **Ubiquitous Language** | **Notification:** mensaje push entregado al dispositivo del padre ante un evento del viaje. **Geofence:** perímetro virtual cuya intersección con la posición del vehículo dispara `Geofence Breached`. **High Priority Alert:** notificación generada a partir de una incidencia reportada por el conductor. |
+| **Business Decisions** | El consumo de eventos es asíncrono vía broker, sin bloquear la ejecución del viaje en Trip Execution & Monitoring. Una alerta de alta prioridad se despacha antes que las notificaciones ordinarias en cola. Una notificación fallida se reintenta automáticamente. Por decisión del equipo, no se genera ninguna notificación al completar o archivar un viaje. |
+| **Outbound Communication** | *Messages:* `Notification Dispatched` / `Notification Sent`. *Collaborators:* Proveedor push (FCM) |
  
 **Canvas 5: Identity & Access Management**
  
@@ -2761,10 +2860,10 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | **Description** | Gestiona el registro, la autenticación y el control de acceso de los usuarios de la plataforma, resolviendo el rol activo que determina las funcionalidades visibles para cada perfil. |
 | **Strategic Classification** | Domain: generic · Business Model: compliance enforcement · Evolution: product |
 | **Domain Roles** | Gateway Context |
-| **Inbound Communication** | *Commands:* Sign In, Register Administrator, Generate Session Token, Generate Password. *Events:* User Authenticated, Administrator Account Created, Driver Account Provisioned, Parent Account Provisioned, JWT Session Token Issued, Password Generated |
+| **Inbound Communication** | *Commands:* Sign In, Register Administrator, Generate Session Token, Generate Password. *Events:* Login Accepted, User Authenticated, JWT Session Token Issued, User Logged In, Administrator Account Created, Admin Role Privileges Granted, Driver Account Provisioned, Parent Account Provisioned, Password Generated |
 | **Ubiquitous Language** | **Account:** identidad única de un usuario en la plataforma. **Session Token:** credencial temporal emitida tras una autenticación válida. **Role:** perfil activo (Administrador, Conductor, Padre) que determina las funcionalidades visibles. |
-| **Business Decisions** | Un usuario debe estar registrado para acceder a la plataforma. Las cuentas de conductor y padre se provisionan con credenciales generadas automáticamente al momento del registro por el administrador. Al iniciar sesión desde la app del padre, el dispositivo registra su *device token* para que Notifications & Communication pueda despachar notificaciones push. |
-| **Outbound Communication** | *Messages:* Entregar identidad y rol por token. *Collaborators:* Todos los Bounded Contexts |
+| **Business Decisions** | Un usuario debe estar registrado para acceder a la plataforma. Las cuentas de conductor y padre se provisionan con credenciales generadas automáticamente al momento del registro por el administrador. |
+| **Outbound Communication** | *Messages:* `User Authenticated` / `JWT Session Token Issued`, consumidos sin traducción. *Collaborators:* Todos los Bounded Contexts (patrón Conformist, ver 2.5.2) |
  
 **Canvas 6: Subscription & Plan Management**
  
@@ -2773,35 +2872,45 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 | Campo | Contenido |
 |---|---|
 | **Name** | Subscription & Plan Management |
-| **Description** | Administra los planes Básico, Intermedio y Completo, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma según el plan vigente del administrador. |
+| **Description** | Administra los planes SaaS, procesa el cobro a través de la pasarela de pago y habilita el acceso comercial a la plataforma según el plan vigente del administrador. |
 | **Strategic Classification** | Domain: generic · Business Model: revenue generator · Evolution: product |
 | **Domain Roles** | Gateway Context |
 | **Inbound Communication** | *Commands:* Select Plan, Initiate Payment Process, Upgrade Plan. *Events:* Plan Selected, Payment Confirmed, Subscription Activated, Plan Features Enabled, Plan Upgraded, Quotas Increased |
 | **Ubiquitous Language** | **Subscription:** vínculo comercial vigente entre el administrador y la plataforma. **Plan:** nivel de servicio contratado, con límites propios de unidades gestionables. **Quota:** número máximo de rutas y conductores habilitados por el plan. |
-| **Business Decisions** | La suscripción se activa solo tras la confirmación de pago de la pasarela externa. Una mejora de plan incrementa las cuotas de ruta y conductor sin interrumpir el servicio vigente. |
-| **Outbound Communication** | *Messages:* Solicitar procesamiento de pago, Entregar límites del plan activo. *Collaborators:* Pasarela de pago |
+| **Business Decisions** | La suscripción se activa solo tras la confirmación de pago de la pasarela externa. Una mejora de plan incrementa las cuotas sin interrumpir el servicio vigente. Ningún otro Bounded Context consulta estas cuotas en tiempo real. |
+| **Outbound Communication** | *Messages:* Solicitar procesamiento de pago. *Collaborators:* Pasarela de pago (sistema externo) — sin colaboradores dentro del dominio propio |
 
 ### 2.5.2. Context Mapping
 
-El *Context Map* (Mapa de Contextos) establece las fronteras de nuestros Bounded Contexts y define explícitamente los patrones de integración y comunicación entre ellos, evitando que los modelos de dominio se contaminen entre sí. 
-
-Durante las sesiones de diseño, se respondieron algunas dudas para validar la robustez y definir las relaciones de los contextos:
-
-- **¿Qué pasaría si Fleet & Route Management consultara directamente las entidades internas de Stakeholder & Asset Management para armar el manifiesto de pasajeros?**
-Se descartó. El manifiesto de una ruta solo necesita saber qué estudiantes pertenecen a un grupo ya finalizado, no la estructura completa de padres, vínculos y perfiles que administra Stakeholder & Asset Management. Exponer esa consulta como un **Open Host Service** con un **Published Language** propio —el manifiesto exportado— evita que un cambio futuro en cómo Stakeholder modela a un padre o un vínculo familiar obligue a modificar Fleet & Route Management.
+El *Context Map* establece las fronteras de nuestros Bounded Contexts y define explícitamente los patrones de integración y comunicación entre ellos, evitando que los modelos de dominio se contaminen entre sí. A diferencia de la sección anterior, aquí no se descubren conexiones nuevas: se toman las cinco conexiones ya confirmadas en el EventStorming (sección 2.5.1.1) y se les asigna el patrón de Domain-Driven Design que mejor describe la relación de poder y acoplamiento entre las partes.
  
-- **¿Qué pasaría si Trip Execution & Monitoring dependiera del modelo interno de Notifications & Communication para saber cómo se construye una notificación?**
-Se descartó. Trip Execution & Monitoring solo necesita informar *qué ocurrió* —un abordaje, una incidencia—; la lógica de cola, reintento y prioridad de Notifications & Communication es una responsabilidad que no le compete. La relación se modela como **Customer/Supplier**, con Trip Execution & Monitoring como cliente aguas arriba: es el evento del viaje el que dispara la notificación, nunca al revés.
+Durante las sesiones de diseño se respondieron algunas dudas para validar la robustez y definir las relaciones de los contextos:
+ 
+- **¿Qué pasaría si Fleet & Route Management consultara directamente las entidades internas de Stakeholder & Asset Management para armar el manifiesto de pasajeros, en lugar de recibir el manifiesto ya exportado?**
+Se descartó. La conexión confirmada entre `Group Finalized` y `Assign Students to Route` ya pasa por una política explícita (`Export Group Manifest to Route Context`), que actúa como el contrato de traducción entre ambos contextos. El manifiesto de una ruta solo necesita saber qué estudiantes pertenecen a un grupo ya finalizado, no la estructura completa de padres, vínculos y perfiles que administra Stakeholder & Asset Management. Esto corresponde al patrón **Open Host Service** con un **Published Language** propio: el manifiesto exportado es el único dato que cruza la frontera.
+ 
+- **¿Qué pasaría si Notifications & Communication consultara directamente el estado de Trip Execution & Monitoring cada vez que necesita evaluar una geocerca o generar una alerta?**
+Se descartó. Las tres conexiones confirmadas desde Trip Execution & Monitoring (`Student Boarded`, `Incident Reported`, `Location Updated`) llegan a Notifications & Communication como eventos consumidos, no como consultas. Consultar en tiempo real acoplaría la disponibilidad de Notifications & Communication a la de Trip Execution & Monitoring, y ambos contextos escalan a ritmos distintos: uno recibe una posición cada pocos segundos por vehículo activo, el otro decide cuándo notificar. Se optó por que Trip Execution & Monitoring **publique** sus eventos a través de un broker de mensajería (RabbitMQ, según lo definido en la sección 2.6.1) y que Notifications & Communication los **consuma** de forma asíncrona: el patrón es **Published Language** sobre el broker, sin que ningún contexto conozca la implementación interna del otro.
  
 - **¿Qué pasaría si aislamos Identity & Access Management y Subscription & Plan Management del resto del sistema?**
-Al ser ambos *Generic Subdomain*, el resto de los contextos los consume tal como están, sin invertir esfuerzo en adaptarlos a las particularidades de RouteGuard. Esto corresponde al patrón **Conformist**: el costo de adaptarse es menor que el de mantener una traducción para un contexto que no evoluciona según las necesidades propias de RouteGuard.
+Al ser ambos *Generic Subdomain*, el resto de los contextos los consume tal como están, sin invertir esfuerzo en adaptarlos a las particularidades de RouteGuard. Identity & Access Management se conecta de forma transversal con los cinco contextos restantes a través de `User Authenticated`/`JWT Session Token Issued`, y esto corresponde al patrón **Conformist**: el costo de adaptarse es menor que el de mantener una traducción para un contexto que no evoluciona según las necesidades propias de RouteGuard. Subscription & Plan Management, en cambio, no tiene ninguna conexión confirmada hacia otro Bounded Context propio; su único vínculo es con la pasarela de pago, un sistema externo.
  
-- **¿Qué pasaría si duplicáramos el manifiesto de pasajeros dentro de Trip Execution & Monitoring para no depender de Fleet & Route Management en tiempo real?**
-Se descartó. El manifiesto puede cambiar entre la planificación de la ruta y la ejecución del viaje —una reasignación de última hora, por ejemplo—, y duplicarlo arriesgaría a que el conductor opere con una lista desactualizada. Se mantiene la relación **Customer/Supplier**, con Fleet & Route Management como proveedor autoritativo del plan vigente.
+- **¿Qué pasaría si duplicáramos el plan de ruta dentro de Trip Execution & Monitoring para no depender de Fleet & Route Management en tiempo real?**
+Se descartó. El plan puede cambiar entre la planificación de la ruta y la ejecución del viaje, y duplicarlo arriesgaría a que el conductor opere con una lista desactualizada. Se mantiene la relación **Customer/Supplier**, con Fleet & Route Management como proveedor autoritativo: es su evento `Route Activation Finalized` el que directamente habilita el comando `Start Trip` en Trip Execution & Monitoring.
  
-**Diagramas de Context Mapping**
+**Diagrama de Context Mapping**
  
 ![Context Mapping RouteGuard](resources/chapter-2/ContextMapping.jpg)
+ 
+*Identity & Access Management* es consumido como **Conformist** por los cinco contextos restantes: todos aceptan su modelo de identidad y rol sin traducción.
+ 
+*Subscription & Plan Management* opera aislado del resto del dominio operativo: su única relación externa es con la pasarela de pago. Ningún contexto consulta sus cuotas o límites en tiempo real, y por eso no aparece conectado a ningún otro Bounded Context en el mapa.
+ 
+*Stakeholder & Asset Management* actúa como proveedor de un **Open Host Service** hacia *Fleet & Route Management*, mediado por la política `Export Group Manifest to Route Context`.
+ 
+*Fleet & Route Management* y *Trip Execution & Monitoring* mantienen una relación **Customer/Supplier**: el plan de ruta es propiedad de Fleet & Route Management, y su finalización es la que habilita el inicio del viaje.
+ 
+*Trip Execution & Monitoring* es el contexto con más salidas confirmadas del sistema: las tres relaciones hacia *Notifications & Communication* (abordaje, incidencia y geocerca) se comunican exclusivamente a través de **RabbitMQ**, sin invocación directa entre ambos contextos. Esto permite que el alto volumen de telemetría GPS generado por Trip Execution & Monitoring no compita por recursos con la ejecución del viaje, y que Notifications & Communication escale su consumo de forma independiente.
 
 ### 2.5.3. Software Architecture
 
