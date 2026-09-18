@@ -3095,7 +3095,14 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 ##### 2.6.4.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![Subscription Domain Diagram Detailed](resources\chapter-2\software-architecture\Subscription\subscription-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Subscription Domain Diagram Readable](resources\chapter-2\software-architecture\Subscription\subscription-domain-readable.svg)
+
 ##### 2.6.4.6.2. Database Design Diagram
+
 
 
 ### 2.6.5. Bounded Context: Fleet & Route Management
