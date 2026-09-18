@@ -3103,7 +3103,7 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 ##### 2.6.4.6.2. Database Design Diagram
 
-
+![Subscription DB Diagram](resources\chapter-2\software-architecture\Subscription\subscription-database.svg)
 
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
