@@ -309,6 +309,10 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 |                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
 | ![foto](resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
 | ![foto](resources/assets/images/team/nickolas.png) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
+|                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+| ![foto](/resources/assets/images/team/Manuel.jpeg)                         | Francia Torres, Jhony Manuel |   U202417329    | Ingeniería de Software | Mi nombre es Jhony Manuel Francia Torres, tengo 19 años, actualmente estoy cursando el 6to  ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado del fútbol y la natación. Soy perseverante en lograr mis objetivos y metódico en mis proyectos. Mi objetivo en este grupo es poder desarrollar mis habilidades de trabajo en equipo y comunicación ágil, además de adquirir conocimientos en nuevos lenguajes de programación para el desarrollo de aplicaciones móviles. Mis aportes en este grupo serán cumplir responsablemente con las tareas que se me asignen y brindar ideas para el desarrollo del proyecto. |
+| ![foto](/resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
+| ![foto](/resources/assets/images/team/nickolas.png ) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
 
 ## 1.2. Solution Profile
 
@@ -3203,21 +3207,43 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
 #### 2.6.5.1. Domain Layer
+*   **Entities:** `Trip` (Raíz del Agregado), `Waypoint`, `LocationRecord`.
+*   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery, Heading), `Timestamp`.
+*   **Domain Events:** `TripStarted`, `StudentBoarded`, `TripFinished`, `OfflineSyncCompleted`.
 
 
 #### 2.6.5.2. Interface Layer
+*   **REST Controllers:** `TrackingController` (Expone los endpoints REST principales).
+*   **Event Listeners / Message Brokers:** `RabbitMqEventPublisher` (Publica eventos de dominio al bus de mensajes).
+*   **WebSockets / External Integrations:** `MapboxAdapter / TripApiService` (Integración remota para cálculo de ETA y rutas).
 
 #### 2.6.5.3. Application Layer
+*   **Application Services:** TrackingApp Service / Use Cases (`StartTripUseCase`, `BoardStudentUseCase`, `SyncOfflineRecordsUseCase`, `FinishTripUseCase`, `RouteTrackingService` - Maneja la lógica de casos de uso y cálculo de distancias/paradas).
 
 #### 2.6.5.4. Infrastructure Layer
+*   **Persistence:** Base de datos relacional principal con `PostgreSQL` y capacidades espaciales `PostGIS` (utilizando Trip JPA Repo / Room DAO para almacenamiento geométrico y local).
+*   **External APIs:** `Mapbox API / Retrofit` (Servicios externos para mapas, geolocalización y sincronización).
 
 #### 2.6.5.5. Component Level Diagrams
 
-#### 2.6.5.6. Code Level Diagrams
+![Route Frontend Components](resources/chapter-2/software-architecture/components_frontend_fleet.svg)
 
+![Route Backend Components](resources/chapter-2/software-architecture/components_backend_fleet.svg)
+
+#### 2.6.5.6. Code Level Diagrams
 ##### 2.6.5.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![Route Domain Diagram Detailed](resources/chapter-2/software-architecture/fleet-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Route Domain Diagram Readable](resources/chapter-2/software-architecture/fleet-domain-readable.svg)
+
 ##### 2.6.5.6.2. Database Design Diagram
+
+![Route DB Diagram](resources/chapter-2/software-architecture/fleet-database.svg)
+
+
 
 
 ### 2.6.6. Bounded Context: Stakeholder & Asset Management
