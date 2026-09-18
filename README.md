@@ -85,7 +85,7 @@
       - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
       - [Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)](#entrevistado-4-iván-oscco-cosío-segmento-conductor--transportista)
       - [Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)](#entrevistada-5-diana-chávez-omonte-segmento-padres-de-familia)
-      - [Entrevistado 6: Matías Aguilar (Segmento: Conductores)](#entrevistado-6-matías-aguilar-segmento-conductores)
+      - [Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)](#entrevistado-6-matías-aguilar-segmento-conductor--transportista)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
       - [Análisis del Segmento 1: Padres de Familia](#análisis-del-segmento-1-padres-de-familia)
       - [Análisis del Segmento 2: Conductores y Transportistas](#análisis-del-segmento-2-conductores-y-transportistas)
@@ -655,7 +655,7 @@ Diana es una madre de familia trabajadora con un hijo de 8 años. Decidió contr
 * **Frustraciones (Pain Points):** A pesar de contar con un acompañante enviando mensajes, Diana indica que la comunicación sigue siendo deficiente y "un poco tediosa". Su principal frustración ocurre cuando hace preguntas por el chat y no recibe respuesta inmediata, dejándola con la incertidumbre de si la movilidad ya salió del domicilio anterior o cuánto tardará. Además, en caso de emergencias médicas de última hora, considera que tener que redactar un mensaje al grupo para cancelar el recojo quita tiempo valioso cuando la prioridad es atender la salud de su hijo.
 * **Percepción de la solución propuesta:** Diana tiene un perfil más analítico y cauteloso frente a nuevas tecnologías. Se muestra abierta a probar una aplicación móvil que envíe notificaciones automáticas y mantenga un historial exacto, con el fin de compararla con su método actual (fotos y chats) y evaluar cuál se adapta mejor a sus necesidades. Respecto a cambiar de transportista por uno más tecnológico, indica que primero intentaría persuadir a su conductor actual para que pruebe el sistema, ya que les tiene confianza. Finalmente, valora de forma muy positiva la opción de configurar familiares como contactos de emergencia para que reciban alertas cuando ella esté ocupada en el trabajo.
 
-#### Entrevistado 6: Matías Aguilar (Segmento: Conductores)
+#### Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)
 * **Edad:** 24 años
 * **Distrito de residencia:** Santiago de Surco, Lima
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
