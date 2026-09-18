@@ -80,6 +80,9 @@
       - [A. Segmento 1: Transportistas Escolares (Administradores y Conductores)](#a-segmento-1-transportistas-escolares-administradores-y-conductores)
       - [B. Segmento 2: Padres de Familia](#b-segmento-2-padres-de-familia)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+      - [Entrevistado 1: Manuel Jesús Francia Huambachá (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachá-segmento-padres-de-familia)
+      - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
+    - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
@@ -571,6 +574,51 @@ El objetivo de estas entrevistas es validar la magnitud de los problemas de comu
 
 
 ### 2.2.2. Registro de entrevistas
+
+#### Entrevistado 1: Manuel Jesús Francia Huambachá (Segmento: Padres de Familia)
+* **Edad:** 50
+* **Distrito de residencia:** Lurín, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** 00:00:01
+* **Screenshot del video:**
+  ![Extrevista 1 - Manuel](resources/chapter-2/interviews/manuel.png)
+
+**Resumen de la entrevista:**
+Manuel es un padre de familia con un hijo de 13 años, quien contrató el servicio de movilidad escolar debido a la lejanía del centro educativo y la incompatibilidad de sus horarios. A nivel tecnológico, es un usuario activo de canales digitales: utiliza WhatsApp para comunicación, realiza pagos mediante billeteras digitales (Yape) y transferencias bancarias, y emplea aplicaciones de control parental (*Google Family Link*) para rastrear el dispositivo de su hijo. 
+
+* **Comportamiento actual:** Actualmente, su único canal de interacción en tiempo real para saber que la movilidad llegó es escuchar el claxon en la puerta. Para emergencias o retrasos, su única alternativa es realizar llamadas telefónicas directas a la conductora. Él y su esposa mantienen un control manual para asegurar el cumplimiento de los pagos puntuales de la pensión.
+* **Frustraciones (Pain Points):** Su mayor frustración radica en la incertidumbre y la falta de visibilidad. Señala que ocurren episodios donde su hijo está listo con 10 minutos de anticipación, pero la movilidad se retrasa hasta 15 minutos sin previo aviso debido al tráfico, obligándolos a esperar a ciegas. Le resulta muy incómodo y peligroso tener que llamar por teléfono a la conductora para conocer su ubicación, ya que ella se encuentra manejando. Además, indica que si bien usa *Family Link*, esta herramienta no está diseñada para este contexto, ya que no le muestra el tráfico, desvíos ni el tiempo estimado de llegada de la movilidad. Tampoco cuenta con información formal sobre las condiciones de seguridad y aforo del vehículo.
+* **Percepción de la solución propuesta:** Manuel ve un alto valor en la propuesta tecnológica. Considera indispensable contar con notificaciones automáticas de proximidad (alertas de que la movilidad está cerca) y valora mucho la función de tener un historial diario que registre la hora exacta de abordaje y llegada al colegio. Indica que un botón para reportar ausencias (añadiendo el motivo) reduciría drásticamente los problemas de comunicación. Su interés por la seguridad es tan alto que afirma estar dispuesto a cambiar de transportista si su servicio actual se negara a modernizarse y usar una plataforma tecnológica de este tipo.
+
+#### Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)
+* **Edad:** 57
+* **Distrito de residencia:** Lurín, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ej: 00:15:20]
+* **Screenshot del video:**
+  ![Extrevista 2 - Luis](resources/chapter-2/interviews/luis.png)
+
+**Resumen de la entrevista:**
+Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa con casi 5 años en el rubro dedicada al transporte de personal, turismo y taxis. Actualmente presta servicios corporativos, tanto directos como tercerizados (ej. empresa Netafin), para trasladar personal operativo hacia fábricas y plantas industriales. Su dinámica de trabajo diaria se basa en horarios estrictos y turnos rotativos (Guardias A, B y C). A nivel tecnológico, su principal y única herramienta de coordinación en tiempo real es **WhatsApp**, a través del cual reporta su ubicación a los supervisores de la planta. 
+
+* **Comportamiento actual:** La gestión de los pasajeros la realiza de forma manual mediante **listas impresas en papel** proporcionadas por el área de logística de la empresa cliente. Luis no recoge a los pasajeros puerta por puerta, sino que cumple con 3 o 4 "puntos de recojo" fijos con horarios preestablecidos. A medida que avanza en su ruta, escribe mensajes en el grupo de WhatsApp (ej. *"Llegando al punto 1"*) para que los jefes sepan que el transporte está en curso. Sus pagos se manejan mediante contratos a 30 días con el área de logística.
+* **Frustraciones (Pain Points):** El mayor estrés en su ruta son los imprevistos de tráfico por choques o rotura de tuberías. Si el retraso supera los 10 o 15 minutos, se convierte en un problema crítico para la fábrica, ya que *"las máquinas no paran"* y los trabajadores del turno anterior deben quedarse trabajando horas extras. Notificar estos retrasos mientras conduce es ineficiente y recae totalmente en la comunicación manual por chat, lo cual no le permite actualizar de forma automática los tiempos estimados de llegada (ETA) para los trabajadores que lo esperan en los siguientes paraderos.
+* **Percepción de la solución propuesta:** Luis considera que una aplicación móvil de monitoreo y gestión sería una herramienta invaluable, especialmente para escalar su negocio. Reconoce que actualmente lleva el control "así nomás" (hojas y chats), pero entiende que para manejar flotas más grandes un software de trazabilidad es obligatorio. Ve un impacto muy positivo en el uso de la app para transmitir una **imagen más formal y profesional** frente a sus clientes corporativos, y afirmó estar dispuesto a pagar una suscripción mensual por esta tecnología conforme su empresa de transportes siga creciendo.
+
+### Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)
+* **Edad:** [Ingresar Edad]
+* **Distrito de residencia:** [Ingresar Distrito]
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ej: 00:15:20]
+* **Screenshot del video:**
+  ![Extrevista 3 - Máximo](resources/chapter-2/interviews/maximo.png)
+
+**Resumen de la entrevista:**
+Máximo es un padre de familia con un hijo de 7 años. Optó por contratar movilidad escolar privada para optimizar su tiempo frente al complejo tráfico de Lima, permitiéndole dirigirse directamente a su centro de labores. Su perfil es marcadamente tecnológico y analítico; está muy familiarizado con aplicativos financieros y valora la eficiencia digital, afirmando firmemente que *"quienes no se adaptan a la tecnología en el siglo XXI se quedan atrás"*.
+
+* **Comportamiento actual:** La comunicación que mantiene con el servicio de movilidad se da exclusivamente a través de mensajes o llamadas. Del mismo modo, el control de los pagos de la pensión escolar de su hijo se realiza por WhatsApp, donde recibe las notificaciones de cobro de manera informal y manual.
+* **Frustraciones (Pain Points):** Su principal dolor es la falta de comunicación en tiempo real y la gran angustia que esto le genera. Relató un episodio crítico donde la movilidad se retrasó 20 minutos; al no tener forma de rastrear el vehículo, sintió un altísimo nivel de estrés temiendo un accidente o un extravío, viéndose obligado a timbrar desesperadamente a la directora del colegio. Adicionalmente, encuentra ineficiente llevar el control de pagos por WhatsApp, ya que a menudo se generan confusiones, desorden y *"los montos no cuadran"*.
+* **Percepción de la solución propuesta:** Máximo aprueba rotundamente la creación de la aplicación. Debido a la alta concentración que exige su trabajo (análisis de costos), prefiere recibir **notificaciones automáticas en segundo plano** en lugar de tener que vigilar activamente un mapa. Destaca la necesidad de tener un historial integrado, tanto para registrar las horas exactas de los viajes, como para llevar un control transparente de los pagos (comparándolo con una app bancaria). Es tan firme en su postura que asegura que **descartaría de inmediato** a su transportista actual si este se negara a usar el aplicativo. Finalmente, respalda con entusiasmo la función de reportar inasistencias con un botón y la opción de incluir contactos de emergencia.
 
 ### 2.2.3. Análisis de entrevistas
 
