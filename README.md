@@ -3050,20 +3050,21 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
 #### 2.6.5.1. Domain Layer
-*   **Entities:** `Notification` (Raíz), `GeofenceAlert` (Alerta generada por proximidad).
-*   **Value Objects:** `PushPayload`, `DeviceToken`, `NotificationPriority`.
-*   **Domain Events:** `NotificationDispatched`, `GeofenceBreached`.
+*   **Entities:** `Trip` (Raíz del Agregado), `Waypoint`, `LocationRecord`.
+*   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery, Heading), `Timestamp`.
+*   **Domain Events:** `TripStarted`, `StudentBoarded`, `TripFinished`, `OfflineSyncCompleted`.
 
 #### 2.6.5.2. Interface Layer
-*   **Message Consumers:** `TrackingEventConsumer` (Consume los eventos del viaje vía RabbitMQ/Kafka).
-*   **REST Controllers:** `NotificationPreferencesController` (Gestión de preferencias del padre).
+*   **REST Controllers:** `TrackingController` (Expone los endpoints REST principales).
+*   **Event Listeners / Message Brokers:** `RabbitMqEventPublisher` (Publica eventos de dominio al bus de mensajes).
+*   **WebSockets / External Integrations:** `MapboxAdapter / TripApiService` (Integración remota para cálculo de ETA y rutas).
 
 #### 2.6.5.3. Application Layer
-*   **Application Services:** `GeofencingService` (Calcula intersecciones de radios), `PushNotificationDispatcher` (Genera el payload para el dispositivo).
+*   **Application Services:** TrackingApp Service / Use Cases (`StartTripUseCase`, `BoardStudentUseCase`, `SyncOfflineRecordsUseCase`, `FinishTripUseCase`, `RouteTrackingService` - Maneja la lógica de casos de uso y cálculo de distancias/paradas).
 
 #### 2.6.5.4. Infrastructure Layer
-*   **Message Broker:** RabbitMQ para desacoplar el envío masivo de notificaciones.
-*   **External Integrations:** Firebase Cloud Messaging (FCM) SDK.
+*   **Persistence:** Base de datos relacional principal con `PostgreSQL` y capacidades espaciales `PostGIS` (utilizando Trip JPA Repo / Room DAO para almacenamiento geométrico y local).
+*   **External APIs:** `Mapbox API / Retrofit` (Servicios externos para mapas, geolocalización y sincronización).
 
 #### 2.6.5.5. Component Level Diagrams
 
