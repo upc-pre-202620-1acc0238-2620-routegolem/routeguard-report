@@ -3145,7 +3145,7 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.3.5. Component Level Diagrams
 
-![IAM Frontend Components](resources/chapter-2/software-architecture/IAM/Components-Front-IAM.svg)
+![IAM Frontend Components](resources\chapter-2\software-architecture\IAM\Components-Front-IAM.svg)
 
 ![IAM Backend Components](resources/chapter-2/software-architecture/IAM/Components-Back-IAM.svg)
 
@@ -3186,9 +3186,9 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.4.5. Component Level Diagrams
 
-![Subscription Frontend Components](resources\chapter-2\software-architecture\Subscription\Components_Front_Sub.svg)
+![Subscription Frontend Components](resources\chapter-2\software-architecture\Subscription\Components-Front-Sub.svg)
 
-![Subscription Backend Components](resources\chapter-2\software-architecture\Subscription\Components_Back_Sub.svg)
+![Subscription Backend Components](resources\chapter-2\software-architecture\Subscription\Components-Back-Sub.svg)
 
 #### 2.6.4.6. Code Level Diagrams
 
