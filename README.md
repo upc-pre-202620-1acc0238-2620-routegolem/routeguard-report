@@ -3126,6 +3126,12 @@ Contiene las implementaciones concretas de los repositorios (`ParentRepositoryIm
 
 ![Diagrama de Clases - Stakeholder Domain](resources/chapter-2/C4/stakeholder-domain.svg)
 
+##### 2.6.6.6.2. Database Design Diagram
+
+![Diagrama de Base de Datos - Stakeholder](resources/chapter-2/C4/stakeholder-database.svg)
+
+
+
 
 <div style="page-break-after: always;"></div>
 
