@@ -3105,7 +3105,9 @@ Esta capa expone la interacción con el usuario mediante pantallas como `Stakeho
 Aquí se ubican los casos de uso (Use Cases) que orquestan la lógica de negocio, como `AddEmergencyContactUseCase`, que coordina las validaciones y operaciones necesarias antes de delegar la persistencia a la capa de infraestructura.
 
 
+#### 2.6.6.4. Infrastructure Layer
 
+Contiene las implementaciones concretas de los repositorios (`ParentRepositoryImpl`), el acceso a datos locales mediante `ParentDao`, el consumo de servicios remotos con `ParentApiService`, y los mappers (`ParentMapper`) encargados de transformar los datos entre las distintas representaciones (entidad, DTO, modelo de dominio).
 
 
 <div style="page-break-after: always;"></div>
