@@ -3100,6 +3100,14 @@ En esta capa se definen las entidades principales del dominio de Stakeholder, co
 Esta capa expone la interacción con el usuario mediante pantallas como `StakeholderScreen`, que se comunican con el `StakeholderViewModel` para gestionar el estado de la interfaz (`StakeholderUiState`) y disparar las acciones del usuario hacia los casos de uso correspondientes.
 
 
+#### 2.6.6.3. Application Layer
+
+Aquí se ubican los casos de uso (Use Cases) que orquestan la lógica de negocio, como `AddEmergencyContactUseCase`, que coordina las validaciones y operaciones necesarias antes de delegar la persistencia a la capa de infraestructura.
+
+
+
+
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo III: Solution UI/UX Design
