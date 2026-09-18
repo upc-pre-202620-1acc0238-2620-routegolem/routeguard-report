@@ -2716,6 +2716,80 @@ La capacidad que distingue a RouteGuard es la combinación de resiliencia ante l
  
 **Subscription & Plan Management** no tiene ninguna conexión hacia otro Bounded Context: su único vínculo externo es con la pasarela de pago (Payment Gateway), un sistema externo. Ningún otro contexto consulta sus cuotas o límites en tiempo real.
 
+#### 2.5.1.2. Domain Message Flows Modeling
+ 
+El *Domain Message Flow Modelling* es una técnica que permite representar cómo fluyen los mensajes de dominio —*commands*, *events* y *queries*— entre los distintos Bounded Contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto al resolver un caso concreto del negocio.
+
+Para cada escenario se documenta la secuencia numerada de mensajes, que es la que se representa en el diagrama: los comandos en azul, los eventos en naranja y las políticas en morado, con los contextos dibujados como nubes.
+ 
+**Escenario 01: Conformación del grupo de estudiantes y asignación a la ruta**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Crear grupo de estudiantes | Administrador | Stakeholder & Asset Management |
+| 2 | Command | Asignar padres e incluir hijos vinculados | Administrador | Stakeholder & Asset Management |
+| 3 | Command | Finalizar grupo | Administrador | Stakeholder & Asset Management |
+| 4 | Event | `Group Finalized` | Stakeholder & Asset Management | Stakeholder & Asset Management |
+| 5 | Policy | `Export Group Manifest to Route Context` | Stakeholder & Asset Management | Fleet & Route Management |
+| 6 | Command | `Assign Students to Route` | Fleet & Route Management | Fleet & Route Management |
+| 7 | Event | `Student Assigned to Route` | Fleet & Route Management | Fleet & Route Management |
+ 
+![Escenario 01: Conformación de grupo y asignación a ruta](resources/chapter-2/Domain-Message-Flows/escenario-01-grupo-ruta.png)
+ 
+Este es el único cruce del sistema donde la conexión pasa explícitamente por una política (post-it morado) antes del comando destino, en vez de ir directo de evento a comando.
+ 
+**Escenario 02: Activación de ruta e inicio del viaje**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Definir días de servicio y hora de salida | Administrador | Fleet & Route Management |
+| 2 | Event | `Route Activation Finalized` | Fleet & Route Management | Trip Execution & Monitoring |
+| 3 | Command | `Start Trip` | Conductor | Trip Execution & Monitoring |
+| 4 | Event | `Trip Started` | Trip Execution & Monitoring | Trip Execution & Monitoring |
+ 
+![Escenario 02: Activación de ruta e inicio del viaje](resources/chapter-2/Domain-Message-Flows/escenario-02-activacion-inicio.png)
+ 
+`Route Activation Finalized` es evento pivote: marca el punto exacto donde el plan de ruta, propiedad de Fleet & Route Management, deja de poder modificarse en caliente y habilita a Trip Execution & Monitoring a operar sobre él.
+ 
+**Escenario 03: Transmisión de ubicación en tiempo real y alerta de geocerca**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Transmitir ubicación en segundo plano | App del conductor | Trip Execution & Monitoring |
+| 2 | Event | `Location Updated` | Trip Execution & Monitoring | RabbitMQ (broker) |
+| 3 | Event | Recibe de broker | RabbitMQ (broker) | Notifications & Communication |
+| 4 | Command | Evaluar intersección de geocerca | Notifications & Communication | Notifications & Communication |
+| 5 | Event | `Geofence Breached` | Notifications & Communication | Notifications & Communication |
+| 6 | Command | `Dispatch Notification` | Notifications & Communication | Proveedor push (FCM) |
+| 7 | Event | `Notification Sent` | Proveedor push (FCM) | Padre de familia |
+ 
+![Escenario 03: Ubicación en tiempo real y alerta de geocerca](resources/chapter-2/Domain-Message-Flows/escenario-03-geofence.png)
+ 
+Este escenario sustenta directamente el Objetivo SMART 4 (latencia menor a 5 segundos entre la transmisión de ubicación y la alerta recibida por el padre). A diferencia del Escenario 01, aquí no hay una política intermedia visible en el Miro entre `Location Updated` y la evaluación de geocerca; el paso 4 representa el comando implícito que Notifications & Communication ejecuta al consumir el evento del broker.
+ 
+**Escenario 04: Abordaje e incidencia notificados al padre**
+ 
+| # | Tipo | Mensaje | Origen | Destino |
+|---|---|---|---|---|
+| 1 | Command | Marcar abordaje | Conductor | Trip Execution & Monitoring |
+| 2 | Event | `Student Boarded` | Trip Execution & Monitoring | RabbitMQ (broker) |
+| 3 | Event | Recibe de broker | RabbitMQ (broker) | Notifications & Communication |
+| 4 | Event | `Notification Sent` | Notifications & Communication | Padre de familia |
+| 5 | Command | Reportar incidencia | Conductor | Trip Execution & Monitoring |
+| 6 | Event | `Incident Reported` | Trip Execution & Monitoring | RabbitMQ (broker) |
+| 7 | Event | Recibe de broker | RabbitMQ (broker) | Notifications & Communication |
+| 8 | Command | `Trigger Panic Alert` | Notifications & Communication | Notifications & Communication |
+| 9 | Event | `High Priority Alert Created` | Notifications & Communication | Notifications & Communication |
+| 10 | Event | `Notification Sent` | Notifications & Communication | Padre de familia |
+ 
+![Escenario 04: Abordaje e incidencia](resources/chapter-2/Domain-Message-Flows/escenario-04-abordaje-incidencia.png)
+ 
+Ambas rutas —abordaje e incidencia— llegan a Notifications & Communication como eventos consumidos, sin que Trip Execution & Monitoring conozca la lógica de despacho ni de priorización.
+
+#### 2.5.1.3. Bounded Context Canvases
+
+### 2.5.2. Context Mapping
+
 ### 2.5.3. Software Architecture
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
