@@ -3204,6 +3204,7 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.5.1. Domain Layer
 
+
 #### 2.6.5.2. Interface Layer
 
 #### 2.6.5.3. Application Layer
