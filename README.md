@@ -3065,8 +3065,15 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 ##### 2.6.3.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![IAM Domain Diagram Detailed](resources\chapter-2\software-architecture\IAM\iam-domain.svg)
+
+**Versión Legible (Simplificada):**
+![IAM Domain Diagram Readable](resources\chapter-2\software-architecture\IAM\iam-domain-readable.svg)
+
 ##### 2.6.3.6.2. Database Design Diagram
 
+![IAM DB Diagram](resources\chapter-2\software-architecture\IAM\iam-database.svg)
 
 ### 2.6.4. Bounded Context: Subscription & Plan Management
 
