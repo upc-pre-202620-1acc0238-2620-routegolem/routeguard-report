@@ -105,8 +105,12 @@
       - [2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)
       - [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
     - [2.5.2. Context Mapping](#252-context-mapping)
+    - [2.5.3. Software Architecture](#253-software-architecture)
+      - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
+      - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
+      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
-    - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring-tracking)
+    - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring)
       - [2.6.1.1. Domain Layer](#2611-domain-layer)
       - [2.6.1.2. Interface Layer](#2612-interface-layer)
       - [2.6.1.3. Application Layer](#2613-application-layer)
@@ -124,7 +128,7 @@
       - [2.6.2.6. Code Level Diagrams](#2626-code-level-diagrams)
         - [2.6.2.6.1. Domain Layer Class Diagram](#26261-domain-layer-class-diagram)
         - [2.6.2.6.2. Database Design Diagram](#26262-database-design-diagram)
-    - [2.6.3. Bounded Context: Identity \& Access Management](#263-bounded-context-identity--access-management-iam)
+    - [2.6.3. Bounded Context: Identity \& Access Management](#263-bounded-context-identity--access-management)
       - [2.6.3.1. Domain Layer](#2631-domain-layer)
       - [2.6.3.2. Interface Layer](#2632-interface-layer)
       - [2.6.3.3. Application Layer](#2633-application-layer)
@@ -133,7 +137,7 @@
       - [2.6.3.6. Code Level Diagrams](#2636-code-level-diagrams)
         - [2.6.3.6.1. Domain Layer Class Diagram](#26361-domain-layer-class-diagram)
         - [2.6.3.6.2. Database Design Diagram](#26362-database-design-diagram)
-    - [2.6.4. Bounded Context: Subscription \& Plan Management](#264-bounded-context-subscription--onboarding)
+    - [2.6.4. Bounded Context: Subscription \& Plan Management](#264-bounded-context-subscription--plan-management)
       - [2.6.4.1. Domain Layer](#2641-domain-layer)
       - [2.6.4.2. Interface Layer](#2642-interface-layer)
       - [2.6.4.3. Application Layer](#2643-application-layer)
@@ -142,7 +146,7 @@
       - [2.6.4.6. Code Level Diagrams](#2646-code-level-diagrams)
         - [2.6.4.6.1. Domain Layer Class Diagram](#26461-domain-layer-class-diagram)
         - [2.6.4.6.2. Database Design Diagram](#26462-database-design-diagram)
-    - [2.6.5. Bounded Context: Fleet \& Route Management](#265-bounded-context-fleet--compliance)
+    - [2.6.5. Bounded Context: Fleet \& Route Management](#265-bounded-context-fleet--route-management)
       - [2.6.5.1. Domain Layer](#2651-domain-layer)
       - [2.6.5.2. Interface Layer](#2652-interface-layer)
       - [2.6.5.3. Application Layer](#2653-application-layer)
@@ -151,7 +155,7 @@
       - [2.6.5.6. Code Level Diagrams](#2656-code-level-diagrams)
         - [2.6.5.6.1. Domain Layer Class Diagram](#26561-domain-layer-class-diagram)
         - [2.6.5.6.2. Database Design Diagram](#26562-database-design-diagram)
-    - [2.6.6. Bounded Context: Stakeholder & Asset Management](#266-bounded-context-trip-management)
+    - [2.6.6. Bounded Context: Stakeholder \& Asset Management](#266-bounded-context-stakeholder--asset-management)
       - [2.6.6.1. Domain Layer](#2661-domain-layer)
       - [2.6.6.2. Interface Layer](#2662-interface-layer)
       - [2.6.6.3. Application Layer](#2663-application-layer)
@@ -295,8 +299,8 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 |:----------------------------------------------------:|:---|:-----------:|:---|:---|
 |                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
 |                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
-|                        [Foto]                        | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
-| ![foto](/resources/assets/images/Team/nickolas.png ) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
+| ![foto](/resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
+| ![foto](/resources/assets/images/team/nickolas.png ) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
 
 ## 1.2. Solution Profile
 
@@ -2795,9 +2799,21 @@ Al ser ambos *Generic Subdomain*, el resto de los contextos los consume tal como
 - **¿Qué pasaría si duplicáramos el manifiesto de pasajeros dentro de Trip Execution & Monitoring para no depender de Fleet & Route Management en tiempo real?**
 Se descartó. El manifiesto puede cambiar entre la planificación de la ruta y la ejecución del viaje —una reasignación de última hora, por ejemplo—, y duplicarlo arriesgaría a que el conductor opere con una lista desactualizada. Se mantiene la relación **Customer/Supplier**, con Fleet & Route Management como proveedor autoritativo del plan vigente.
  
-**Diagrama de Context Mapping**
+**Diagramas de Context Mapping**
  
 ![Context Mapping RouteGuard](resources/chapter-2/ContextMapping.jpg)
+
+### 2.5.3. Software Architecture
+
+#### 2.5.3.1. Software Architecture Context Level Diagrams
+
+![System Context Diagram](resources/chapter-2/software-architecture/context-diagram.svg)
+
+#### 2.5.3.2. Software Architecture Container Level Diagrams
+
+![Container Diagram](resources/chapter-2/software-architecture/container-diagram.png)
+
+#### 2.5.3.3. Software Architecture Deployment Diagrams
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
@@ -2824,16 +2840,22 @@ Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaj
 
 #### 2.6.1.5. Component Level Diagrams
 
-![Tracking Components](resources/chapter-2/tracking-components.png)
+![Tracking Components](resources/chapter-2/software-architecture/components-frontend-tracking.svg)
+
+![Tracking Components](resources/chapter-2/software-architecture/components-backend-tracking.svg)
 
 #### 2.6.1.6. Code Level Diagrams
 ##### 2.6.1.6.1. Domain Layer Class Diagram
 
-![Tracking Domain Diagram](resources/chapter-2/tracking-domain.png)
+**Versión Detallada:**
+![Tracking Domain Diagram Detailed](resources/chapter-2/software-architecture/tracking-domain-detailed.svg)
+
+**Versión Legible (Simplificada):**
+![Tracking Domain Diagram Readable](resources/chapter-2/software-architecture/tracking-domain-readable.svg)
 
 ##### 2.6.1.6.2. Database Design Diagram
 
-![Tracking DB Diagram](resources/chapter-2/tracking-database.png)
+![Tracking DB Diagram](resources/chapter-2/software-architecture/tracking-database.svg)
 
 
 ### 2.6.2. Bounded Context: Notifications & Communication
@@ -2858,16 +2880,22 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 #### 2.6.2.5. Component Level Diagrams
 
-![Notifications Components](resources/chapter-2/notifications-components.png)
+![Notifications Frontend Components](resources/chapter-2/software-architecture/components-frontend-notifications.svg)
+
+![Notifications Backend Components](resources/chapter-2/software-architecture/components-backend-notifications.svg)
 
 #### 2.6.2.6. Code Level Diagrams
 ##### 2.6.2.6.1. Domain Layer Class Diagram
 
-![Notifications Domain Diagram](resources/chapter-2/notifications-domain.png)
+**Versión Detallada:**
+![Notifications Domain Diagram Detailed](resources/chapter-2/software-architecture/notifications-domain-detailed.svg)
+
+**Versión Legible (Simplificada):**
+![Notifications Domain Diagram Readable](resources/chapter-2/software-architecture/notifications-domain-readable.svg)
 
 ##### 2.6.2.6.2. Database Design Diagram
 
-![Notifications DB Diagram](resources/chapter-2/notifications-database.png)
+![Notifications DB Diagram](resources/chapter-2/software-architecture/notifications-database.svg)
 
 
 
@@ -3119,3 +3147,6 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 <div style="page-break-after: always;"></div>
 
 # Anexos
+
+
+
