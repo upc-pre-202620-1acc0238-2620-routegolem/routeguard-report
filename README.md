@@ -2882,6 +2882,36 @@ El *Bounded Context Canvas* permite representar de forma clara los límites, res
 
 ### 2.5.2. Context Mapping
 
+El *Context Map* establece las fronteras de nuestros Bounded Contexts y define explícitamente los patrones de integración y comunicación entre ellos, evitando que los modelos de dominio se contaminen entre sí. A diferencia de la sección anterior, aquí no se descubren conexiones nuevas: se toman las cinco conexiones ya confirmadas en el EventStorming (sección 2.5.1.1) y se les asigna el patrón de Domain-Driven Design que mejor describe la relación de poder y acoplamiento entre las partes.
+ 
+Durante las sesiones de diseño se respondieron algunas dudas para validar la robustez y definir las relaciones de los contextos:
+ 
+- **¿Qué pasaría si Fleet & Route Management consultara directamente las entidades internas de Stakeholder & Asset Management para armar el manifiesto de pasajeros, en lugar de recibir el manifiesto ya exportado?**
+Se descartó. La conexión confirmada entre `Group Finalized` y `Assign Students to Route` ya pasa por una política explícita (`Export Group Manifest to Route Context`), que actúa como el contrato de traducción entre ambos contextos. El manifiesto de una ruta solo necesita saber qué estudiantes pertenecen a un grupo ya finalizado, no la estructura completa de padres, vínculos y perfiles que administra Stakeholder & Asset Management. Esto corresponde al patrón **Open Host Service** con un **Published Language** propio: el manifiesto exportado es el único dato que cruza la frontera.
+ 
+- **¿Qué pasaría si Notifications & Communication consultara directamente el estado de Trip Execution & Monitoring cada vez que necesita evaluar una geocerca o generar una alerta?**
+Se descartó. Las tres conexiones confirmadas desde Trip Execution & Monitoring (`Student Boarded`, `Incident Reported`, `Location Updated`) llegan a Notifications & Communication como eventos consumidos, no como consultas. Consultar en tiempo real acoplaría la disponibilidad de Notifications & Communication a la de Trip Execution & Monitoring, y ambos contextos escalan a ritmos distintos: uno recibe una posición cada pocos segundos por vehículo activo, el otro decide cuándo notificar. Se optó por que Trip Execution & Monitoring **publique** sus eventos a través de un broker de mensajería (RabbitMQ, según lo definido en la sección 2.6.1) y que Notifications & Communication los **consuma** de forma asíncrona: el patrón es **Published Language** sobre el broker, sin que ningún contexto conozca la implementación interna del otro.
+ 
+- **¿Qué pasaría si aislamos Identity & Access Management y Subscription & Plan Management del resto del sistema?**
+Al ser ambos *Generic Subdomain*, el resto de los contextos los consume tal como están, sin invertir esfuerzo en adaptarlos a las particularidades de RouteGuard. Identity & Access Management se conecta de forma transversal con los cinco contextos restantes a través de `User Authenticated`/`JWT Session Token Issued`, y esto corresponde al patrón **Conformist**: el costo de adaptarse es menor que el de mantener una traducción para un contexto que no evoluciona según las necesidades propias de RouteGuard. Subscription & Plan Management, en cambio, no tiene ninguna conexión confirmada hacia otro Bounded Context propio; su único vínculo es con la pasarela de pago, un sistema externo.
+ 
+- **¿Qué pasaría si duplicáramos el plan de ruta dentro de Trip Execution & Monitoring para no depender de Fleet & Route Management en tiempo real?**
+Se descartó. El plan puede cambiar entre la planificación de la ruta y la ejecución del viaje, y duplicarlo arriesgaría a que el conductor opere con una lista desactualizada. Se mantiene la relación **Customer/Supplier**, con Fleet & Route Management como proveedor autoritativo: es su evento `Route Activation Finalized` el que directamente habilita el comando `Start Trip` en Trip Execution & Monitoring.
+ 
+**Diagrama de Context Mapping**
+ 
+![Context Mapping RouteGuard](resources/chapter-2/ContextMapping.jpg)
+ 
+*Identity & Access Management* es consumido como **Conformist** por los cinco contextos restantes: todos aceptan su modelo de identidad y rol sin traducción.
+ 
+*Subscription & Plan Management* opera aislado del resto del dominio operativo: su única relación externa es con la pasarela de pago. Ningún contexto consulta sus cuotas o límites en tiempo real, y por eso no aparece conectado a ningún otro Bounded Context en el mapa.
+ 
+*Stakeholder & Asset Management* actúa como proveedor de un **Open Host Service** hacia *Fleet & Route Management*, mediado por la política `Export Group Manifest to Route Context`.
+ 
+*Fleet & Route Management* y *Trip Execution & Monitoring* mantienen una relación **Customer/Supplier**: el plan de ruta es propiedad de Fleet & Route Management, y su finalización es la que habilita el inicio del viaje.
+ 
+*Trip Execution & Monitoring* es el contexto con más salidas confirmadas del sistema: las tres relaciones hacia *Notifications & Communication* (abordaje, incidencia y geocerca) se comunican exclusivamente a través de **RabbitMQ**, sin invocación directa entre ambos contextos. Esto permite que el alto volumen de telemetría GPS generado por Trip Execution & Monitoring no compita por recursos con la ejecución del viaje, y que Notifications & Communication escale su consumo de forma independiente.
+
 ### 2.5.3. Software Architecture
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
