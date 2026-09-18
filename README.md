@@ -3414,6 +3414,15 @@ Contiene las implementaciones concretas de los repositorios (`ParentRepositoryIm
 
 ### Conclusiones y recomendaciones
 
+
+1. Las entrevistas de validación confirmaron que la problemática es real: tanto padres (Manuel, Máximo) como transportistas (Luis Johnny) dependen de canales informales como WhatsApp y llamadas, validando la propuesta de valor de RouteGuard centrada en automatizar la comunicación y el monitoreo pasivo.
+
+2. El *Domain-Driven Design* aplicado permitió delimitar con claridad los seis Bounded Contexts del sistema, identificando a *Trip Execution & Monitoring* como el Core Domain, lo que asegura que el mayor esfuerzo de ingeniería se concentre en la funcionalidad que diferencia a RouteGuard de sus competidores.
+
+3. Dividir el ecosistema en dos aplicaciones nativa para el conductor con soporte offline y GPS en segundo plano, y multiplataforma pasiva para el padre responde a las diferencias de uso evidenciadas en el *User Task Matrix* y los *User Journey Maps* de ambos segmentos.
+
+4. La priorización del *Product Backlog* por valor temprano aseguró que las historias del Core Domain (autenticación, sincronización offline, GPS y monitoreo en tiempo real) queden al inicio del desarrollo, antes que funcionalidades secundarias.
+
 ### Video App Validation
 
 ### Video About the product
