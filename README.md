@@ -3145,23 +3145,23 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.3.5. Component Level Diagrams
 
-![IAM Frontend Components](.\resources\chapter-2\software-architecture\IAM\Components_Front_IAM.svg)
+![IAM Frontend Components](./resources/chapter-2/software-architecture/IAM/Components_Front_IAM.svg)
 
-![IAM Backend Components](.\resources\chapter-2\software-architecture\IAM\Components_Back_IAM.svg)
+![IAM Backend Components](./resources/chapter-2/software-architecture/IAM/Components_Back_IAM.svg)
 
 #### 2.6.3.6. Code Level Diagrams
 
 ##### 2.6.3.6.1. Domain Layer Class Diagram
 
 **Versión Detallada:**
-![IAM Domain Diagram Detailed](.\resources\chapter-2\software-architecture\IAM\iam-domain.svg)
+![IAM Domain Diagram Detailed](./resources/chapter-2/software-architecture/IAM/iam-domain.svg)
 
 **Versión Legible (Simplificada):**
-![IAM Domain Diagram Readable](.\resources\chapter-2\software-architecture\IAM\iam-domain-readable.svg)
+![IAM Domain Diagram Readable](./resources/chapter-2/software-architecture/IAM/iam-domain-readable.svg)
 
 ##### 2.6.3.6.2. Database Design Diagram
 
-![IAM DB Diagram](.\resources\chapter-2\software-architecture\IAM\iam-database.svg)
+![IAM DB Diagram](./resources/chapter-2/software-architecture/IAM/iam-database.svg)
 
 ### 2.6.4. Bounded Context: Subscription & Plan Management
 
