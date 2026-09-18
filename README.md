@@ -3055,6 +3055,50 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 *   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery, Heading), `Timestamp`.
 *   **Domain Events:** `TripStarted`, `StudentBoarded`, `TripFinished`, `OfflineSyncCompleted`.
 
+#### 2.6.5.2. Interface Layer
+*   **REST Controllers:** `TrackingController` (Expone los endpoints REST principales).
+*   **Event Listeners / Message Brokers:** `RabbitMqEventPublisher` (Publica eventos de dominio al bus de mensajes).
+*   **WebSockets / External Integrations:** `MapboxAdapter / TripApiService` (Integración remota para cálculo de ETA y rutas).
+
+#### 2.6.5.3. Application Layer
+*   **Application Services:** TrackingApp Service / Use Cases (`StartTripUseCase`, `BoardStudentUseCase`, `SyncOfflineRecordsUseCase`, `FinishTripUseCase`, `RouteTrackingService` - Maneja la lógica de casos de uso y cálculo de distancias/paradas).
+
+#### 2.6.5.4. Infrastructure Layer
+*   **Persistence:** Base de datos relacional principal con `PostgreSQL` y capacidades espaciales `PostGIS` (utilizando Trip JPA Repo / Room DAO para almacenamiento geométrico y local).
+*   **External APIs:** `Mapbox API / Retrofit` (Servicios externos para mapas, geolocalización y sincronización).
+
+#### 2.6.5.5. Component Level Diagrams
+
+![Route Frontend Components](resources/chapter-2/software-architecture/components_frontend_fleet.svg)
+
+![Route Backend Components](resources/chapter-2/software-architecture/components_backend_fleet.svg)
+
+#### 2.6.5.6. Code Level Diagrams
+##### 2.6.5.6.1. Domain Layer Class Diagram
+
+**Versión Detallada:**
+![Route Domain Diagram Detailed](resources/chapter-2/software-architecture/fleet-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Route Domain Diagram Readable](resources/chapter-2/software-architecture/fleet-domain-readable.svg)
+
+##### 2.6.5.6.2. Database Design Diagram
+
+![Route DB Diagram](resources/chapter-2/software-architecture/fleet-database.svg)
+
+
+### 2.6.6. Bounded Context: Stakeholder & Asset Management
+
+#### 2.6.6.1. Domain Layer
+
+En esta capa se definen las entidades principales del dominio de Stakeholder, como `Parent`, `Student`, `EmergencyContact` y `School`, junto con sus relaciones (por ejemplo, un padre puede tener varios hijos y varios contactos de emergencia asociados). También se incluyen contratos como `StakeholderRepository` que abstraen el acceso a los datos desde la lógica de negocio.
+
+
+
+#### 2.6.6.2. Interface Layer
+
+Esta capa expone la interacción con el usuario mediante pantallas como `StakeholderScreen`, que se comunican con el `StakeholderViewModel` para gestionar el estado de la interfaz (`StakeholderUiState`) y disparar las acciones del usuario hacia los casos de uso correspondientes.
+
 
 <div style="page-break-after: always;"></div>
 
