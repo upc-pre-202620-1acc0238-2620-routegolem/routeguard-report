@@ -82,7 +82,7 @@
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
       - [Entrevistado 1: Manuel Jesús Francia Huambachá (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachá-segmento-padres-de-familia)
       - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
-    - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
+      - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
@@ -605,7 +605,7 @@ Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa co
 * **Frustraciones (Pain Points):** El mayor estrés en su ruta son los imprevistos de tráfico por choques o rotura de tuberías. Si el retraso supera los 10 o 15 minutos, se convierte en un problema crítico para la fábrica, ya que *"las máquinas no paran"* y los trabajadores del turno anterior deben quedarse trabajando horas extras. Notificar estos retrasos mientras conduce es ineficiente y recae totalmente en la comunicación manual por chat, lo cual no le permite actualizar de forma automática los tiempos estimados de llegada (ETA) para los trabajadores que lo esperan en los siguientes paraderos.
 * **Percepción de la solución propuesta:** Luis considera que una aplicación móvil de monitoreo y gestión sería una herramienta invaluable, especialmente para escalar su negocio. Reconoce que actualmente lleva el control "así nomás" (hojas y chats), pero entiende que para manejar flotas más grandes un software de trazabilidad es obligatorio. Ve un impacto muy positivo en el uso de la app para transmitir una **imagen más formal y profesional** frente a sus clientes corporativos, y afirmó estar dispuesto a pagar una suscripción mensual por esta tecnología conforme su empresa de transportes siga creciendo.
 
-### Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)
+#### Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)
 * **Edad:** [Ingresar Edad]
 * **Distrito de residencia:** [Ingresar Distrito]
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
