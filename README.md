@@ -3091,11 +3091,22 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.4.1. Domain Layer
 
+*   **Entities:** `Subscription` (Raíz de Agregado), `Plan`, `Invoice`.
+*   **Value Objects:** `PaymentMethod`.
+*   **Domain Events:** `PlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `PlanFeaturesEnabled`, `PlanUpgraded`, `QuotasIncreased`.
+
 #### 2.6.4.2. Interface Layer
+
+*   **REST Controllers:** `Subscription Controller` (Endpoints de contratación, cobro y actualización de plan).
 
 #### 2.6.4.3. Application Layer
 
+*   **Application Services:** `Subscription App Service` (orquesta `CreateSubscriptionUseCase`, `ProcessPaymentUseCase` y `CheckSubscriptionStatusUseCase`).
+
 #### 2.6.4.4. Infrastructure Layer
+
+*   **Persistence:** `Plan JPA Repository`, persistido sobre las tablas `plans`, `subscriptions` e `invoices`.
+*   **External Integrations:** Pasarela de pago (procesamiento de `PaymentMethod` y confirmación asíncrona vía webhook).
 
 #### 2.6.4.5. Component Level Diagrams
 
