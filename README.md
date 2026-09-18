@@ -80,7 +80,7 @@
       - [A. Segmento 1: Transportistas Escolares (Administradores y Conductores)](#a-segmento-1-transportistas-escolares-administradores-y-conductores)
       - [B. Segmento 2: Padres de Familia](#b-segmento-2-padres-de-familia)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
-      - [Entrevistado 1: Manuel Jesús Francia Huambachá (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachá-segmento-padres-de-familia)
+      - [Entrevistado 1: Manuel Jesús Francia Huambachano (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachá-segmento-padres-de-familia)
       - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
       - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
