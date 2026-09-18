@@ -2948,11 +2948,15 @@ Se descartó. El plan puede cambiar entre la planificación de la ruta y la ejec
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
+Este diagrama muestra a RouteGuard como el sistema central que conecta a los tres roles del ecosistema de transporte escolar: Administrador, Conductor y Padre de familia, cada uno interactuando desde con el sistema de RouteGuard. El sistema se apoya además en cuatro servicios externos — pasarela de pago, proveedor de mapas, proveedor push y broker de mensajería.
+
 ![System Context Diagram](resources/chapter-2/software-architecture/context-diagram.svg)
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-![Container Diagram](resources/chapter-2/software-architecture/container-diagram.png)
+Este diagrama se definen los cinco contenedores principales para la interfaz responsiva, la aplicación movil, landing page, interfaz de la logica del negocio (API) y la base de datos.
+
+![Container Diagram](resources/chapter-2/software-architecture/container-diagram.svg)
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
