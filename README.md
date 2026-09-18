@@ -3050,20 +3050,41 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
 #### 2.6.5.1. Domain Layer
+*   **Entities:** `Notification` (Raíz), `GeofenceAlert` (Alerta generada por proximidad).
+*   **Value Objects:** `PushPayload`, `DeviceToken`, `NotificationPriority`.
+*   **Domain Events:** `NotificationDispatched`, `GeofenceBreached`.
 
 #### 2.6.5.2. Interface Layer
+*   **Message Consumers:** `TrackingEventConsumer` (Consume los eventos del viaje vía RabbitMQ/Kafka).
+*   **REST Controllers:** `NotificationPreferencesController` (Gestión de preferencias del padre).
 
 #### 2.6.5.3. Application Layer
+*   **Application Services:** `GeofencingService` (Calcula intersecciones de radios), `PushNotificationDispatcher` (Genera el payload para el dispositivo).
 
 #### 2.6.5.4. Infrastructure Layer
+*   **Message Broker:** RabbitMQ para desacoplar el envío masivo de notificaciones.
+*   **External Integrations:** Firebase Cloud Messaging (FCM) SDK.
 
 #### 2.6.5.5. Component Level Diagrams
 
-#### 2.6.5.6. Code Level Diagrams
+![Route Frontend Components](resources/chapter-2/software-architecture/components_frontend_fleet.svg)
 
+![Route Backend Components](resources/chapter-2/software-architecture/components_backend_fleet.svg)
+
+#### 2.6.5.6. Code Level Diagrams
 ##### 2.6.5.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![Route Domain Diagram Detailed](resources/chapter-2/software-architecture/fleet-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Route Domain Diagram Readable](resources/chapter-2/software-architecture/fleet-domain-readable.svg)
+
 ##### 2.6.5.6.2. Database Design Diagram
+
+![Route DB Diagram](resources/chapter-2/software-architecture/fleet-database.svg)
+
+
 
 
 ### 2.6.6. Bounded Context: Stakeholder & Asset Management
