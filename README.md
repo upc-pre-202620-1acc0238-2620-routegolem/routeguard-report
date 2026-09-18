@@ -2958,7 +2958,17 @@ Este diagrama se definen los cinco contenedores principales para la interfaz res
 
 ![Container Diagram](resources/chapter-2/software-architecture/container-diagram.svg)
 
-#### 2.5.3.3. Software Architecture Deployment Diagrams
+#### 2.5.3.3. Software Architecture Components Level Diagrams
+
+El nivel de Contenedores del modelo C4 descompone el sistema en las unidades de despliegue independientes que lo conforman: las aplicaciones que corren en el dispositivo del usuario y la API que las sirve.
+
+A continuación se presenta la vista macro de cada uno de los dos contenedores principales, mostrando sus módulos:
+
+![Vista general de la aplicación móvil](resources/chapter-2/software-architecture/Components_MobileApp_Macro.svg)
+
+![Vista general del backend REST API](resources/chapter-2/software-architecture/Components_RestApi_Macro.svg)
+
+#### 2.5.3.4. Software Architecture Deployment Diagrams
 
 
 
