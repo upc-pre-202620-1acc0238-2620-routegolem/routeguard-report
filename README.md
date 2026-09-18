@@ -1,5 +1,5 @@
 ﻿<div align="center">
-  <img src="https://github.com/upc-pre-202620-1acc0238-2620-routegolem/routeguard-report/blob/develop/resources/cover/upc-logo.png" width="150" alt="Logo de la UPC">
+  <img src="resources/cover/upc-logo.png" width="150" alt="Logo de la UPC">
   <br><br>
   <strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong>
   <br><br>
@@ -21,7 +21,7 @@
   <strong>RouteGuard</strong>
   <br><br>
   <strong>Integrantes:</strong><br>
-  [Código] - De la Cruz De los Santos, Mathias Marcelo<br>
+  u202424059 - De la Cruz De los Santos, Mathias Marcelo<br>
   [Código] - Francia Torres, Jhony Manuel<br>
   u202411627 - Pareja Calloapaza, Marcelo Fausto<br>
   [u202415551] - Ramirez Ruíz, Nickolas<br>
@@ -83,7 +83,12 @@
       - [Entrevistado 1: Manuel Jesús Francia Huambachano (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachano-segmento-padres-de-familia)
       - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
       - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
+      - [Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)](#entrevistado-4-iván-oscco-cosío-segmento-conductor--transportista)
+      - [Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)](#entrevistada-5-diana-chávez-omonte-segmento-padres-de-familia)
+      - [Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)](#entrevistado-6-matías-aguilar-segmento-conductor--transportista)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+      - [Análisis del Segmento 1: Padres de Familia](#análisis-del-segmento-1-padres-de-familia)
+      - [Análisis del Segmento 2: Conductores y Transportistas](#análisis-del-segmento-2-conductores-y-transportistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
       - [A. Segmento 1: El Transportista (Conductor)](#a-segmento-1-el-transportista-conductor)
@@ -111,7 +116,8 @@
     - [2.5.3. Software Architecture](#253-software-architecture)
       - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
       - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
-      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
+      - [2.5.3.3. Software Architecture Components Diagrams](#2533-software-architecture-components-diagrams)
+      - [2.5.3.4. Software Architecture Deployment Diagrams](#2534-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
     - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring)
       - [2.6.1.1. Domain Layer](#2611-domain-layer)
@@ -300,6 +306,10 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 
 |                         Foto                         | Apellidos y Nombres |   Código    | Carrera | Resumen |
 |:----------------------------------------------------:|:---|:-----------:|:---|:---|
+|                       ![Foto](resources/assets/images/team/mathias.jpg)                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software |Soy Mathias De la Cruz De los Santos, estudiante de quinto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado de la programación, así como del fútbol y los videojuegos, intereses que me han ayudado a desarrollar disciplina, paciencia y capacidad de trabajo en equipo. En cuanto al trabajo, aporto mis conocimientos técnicos junto con un enfoque responsable y comprometido, buscando siempre contribuir de forma constante al avance y la calidad del proyecto. |
+|                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+| ![foto](resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
+| ![foto](resources/assets/images/team/nickolas.png) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
 |                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
 | ![foto](/resources/assets/images/team/Manuel.jpeg)                         | Francia Torres, Jhony Manuel |   U202417329    | Ingeniería de Software | Mi nombre es Jhony Manuel Francia Torres, tengo 19 años, actualmente estoy cursando el 6to  ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado del fútbol y la natación. Soy perseverante en lograr mis objetivos y metódico en mis proyectos. Mi objetivo en este grupo es poder desarrollar mis habilidades de trabajo en equipo y comunicación ágil, además de adquirir conocimientos en nuevos lenguajes de programación para el desarrollo de aplicaciones móviles. Mis aportes en este grupo serán cumplir responsablemente con las tareas que se me asignen y brindar ideas para el desarrollo del proyecto. |
 | ![foto](/resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
@@ -441,7 +451,7 @@ Para el ecosistema de RouteGuard, hemos identificado dos segmentos de usuarios c
 
 ### Segmento 1: Transportistas Escolares (Administradores y Conductores)
 
-* **Demografía:** Hombres y mujeres de 30 a 60 años, residentes en Lima Metropolitana y otras principales zonas urbanas del país. Nivel socioeconómico B, C y D.
+* **Demografía:** Hombres y mujeres de 20 a 60 años, residentes en Lima Metropolitana y otras principales zonas urbanas del país. Nivel socioeconómico B, C y D.
 * **Perfil Ocupacional:** Microempresarios dueños de su propio vehículo (minivans) que operan de forma independiente, o administradores de pequeñas flotas (de 2 a 5 unidades) dedicadas exclusivamente al traslado escolar privado.
 * **Características y Comportamiento:** Poseen habilidades tecnológicas de nivel básico a intermedio. Pasan entre 4 y 6 horas diarias al volante lidiando con tráfico pesado. Buscan mantener o incrementar su cartera de clientes ofreciendo un servicio más profesional, pero evitan herramientas complejas que los distraigan. Requieren que la tecnología funcione como un asistente silencioso (GPS en segundo plano, soporte offline para zonas sin cobertura y botones grandes de 1 toque). Su mayor punto de dolor es la carga de responder llamadas y mensajes de padres mientras conducen.
 * **Información estadística de sustento:** Según la Autoridad de Transporte Urbano para Lima y Callao (ATU, 2024), se registró una caída del 25% en las movilidades escolares formalmente autorizadas, dejando un mercado altamente fragmentado e informal. Este segmento representa a miles de transportistas que necesitan urgentemente herramientas accesibles (SaaS) para digitalizar, organizar y dar valor agregado a su servicio frente a un mercado cada vez más exigente.
@@ -594,7 +604,7 @@ Manuel es un padre de familia con un hijo de 13 años, quien contrató el servic
 * **Edad:** 57
 * **Distrito de residencia:** Lurín, Lima
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** [Ej: 00:15:20]
+* **Timing de inicio:** []
 * **Screenshot del video:**
   ![Extrevista 2 - Luis](resources/chapter-2/interviews/luis.png)
 
@@ -609,7 +619,7 @@ Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa co
 * **Edad:** [Ingresar Edad]
 * **Distrito de residencia:** [Ingresar Distrito]
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** [Ej: 00:15:20]
+* **Timing de inicio:** []
 * **Screenshot del video:**
   ![Extrevista 3 - Máximo](resources/chapter-2/interviews/maximo.png)
 
@@ -620,7 +630,94 @@ Máximo es un padre de familia con un hijo de 7 años. Optó por contratar movil
 * **Frustraciones (Pain Points):** Su principal dolor es la falta de comunicación en tiempo real y la gran angustia que esto le genera. Relató un episodio crítico donde la movilidad se retrasó 20 minutos; al no tener forma de rastrear el vehículo, sintió un altísimo nivel de estrés temiendo un accidente o un extravío, viéndose obligado a timbrar desesperadamente a la directora del colegio. Adicionalmente, encuentra ineficiente llevar el control de pagos por WhatsApp, ya que a menudo se generan confusiones, desorden y *"los montos no cuadran"*.
 * **Percepción de la solución propuesta:** Máximo aprueba rotundamente la creación de la aplicación. Debido a la alta concentración que exige su trabajo (análisis de costos), prefiere recibir **notificaciones automáticas en segundo plano** en lugar de tener que vigilar activamente un mapa. Destaca la necesidad de tener un historial integrado, tanto para registrar las horas exactas de los viajes, como para llevar un control transparente de los pagos (comparándolo con una app bancaria). Es tan firme en su postura que asegura que **descartaría de inmediato** a su transportista actual si este se negara a usar el aplicativo. Finalmente, respalda con entusiasmo la función de reportar inasistencias con un botón y la opción de incluir contactos de emergencia.
 
+#### Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)
+* **Edad:** 51 años
+* **Distrito de residencia:** Santiago de Surco, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** []
+* **Screenshot del video:**
+  ![Extrevista 4 - Iván](resources/chapter-2/interviews/ivan.png)
+
+**Resumen de la entrevista:**
+Iván es un conductor independiente con más de 25 años de experiencia en el transporte escolar, operando actualmente con dos unidades móviles (conduce una y delega la otra según la demanda). A nivel tecnológico, utiliza WhatsApp para comunicarse con los padres, Waze y Google Maps (proyectados en una tablet grande) para la navegación, y lleva su control de asistencia mediante una hoja de cálculo en *Google Drive* y una app de *Checklist/Notas*. 
+
+* **Comportamiento actual:** Su servicio se contrata de forma anual. Para el control de asistencia, aplica una estrategia por descarte: asume que todos suben y solo anota a los ausentes en su Excel. Para evitar retrasos en las mañanas, ha establecido reglas estrictas acordadas mediante un "padre delegado"; si un niño no sale, él espera máximo 5 minutos y se retira para no perjudicar al resto. Con los padres que suelen tardar, ha optado por escribirles un mensaje de WhatsApp 5 minutos antes de llegar a su casa. Ocasionalmente, comparte su ubicación en tiempo real por WhatsApp a pedido de los padres.
+* **Frustraciones (Pain Points):** Su principal frustración es la distracción al volante causada por llamadas nerviosas de las madres cuando hay mucho tráfico, por lo que ha tenido que pedirles expresamente que solo envíen mensajes de texto. Además, sufre con las cancelaciones tardías: a menudo le avisan que un niño está enfermo cuando él ya está a punto de llegar a su casa, impidiéndole recalcular su ruta a tiempo y generándole estrés matutino. También menciona la presión de los padres para que no mire la pantalla del celular mientras maneja, obligándolo a usar solo los comandos de voz del GPS.
+* **Percepción de la solución propuesta:** Iván se muestra sumamente abierto a adoptar un sistema automatizado. Considera que una aplicación que pase lista con un solo toque y que le envíe notificaciones automáticas de ubicación a los padres (ej. cada 5 minutos) solucionaría el problema de las llamadas entrantes y la necesidad de compartir su ubicación manual por WhatsApp. Afirma que este sistema no interrumpiría su rutina, le permitiría mantener los ojos en la pista y le daría mucha más tranquilidad tanto a él como a los apoderados.
+
+#### Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)
+* **Edad:** 31 años
+* **Distrito de residencia:** Santiago de Surco, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** []
+* **Screenshot del video:**
+  ![Extrevista 5 - Diana](resources/chapter-2/interviews/diana.png)
+
+**Resumen de la entrevista:**
+Diana es una madre de familia trabajadora con un hijo de 8 años. Decidió contratar el servicio de movilidad escolar privada por motivos de tiempo, ya que su jornada laboral le impide realizar los traslados personalmente. Su rutina actual involucra trayectos de 35 a 40 minutos dependiendo del tráfico. A nivel tecnológico, su único canal de interacción con el servicio es un grupo de WhatsApp conformado por las madres del distrito y el personal de la movilidad. 
+
+* **Comportamiento actual:** A diferencia de otros servicios, el vehículo de su hijo cuenta con un conductor y un acompañante. Este acompañante se encarga de enviar mensajes al grupo de WhatsApp 5 minutos antes de llegar al domicilio de cada niño, tanto en el recojo matutino como en la entrega por la tarde. El servicio no utiliza el claxon; simplemente envían el mensaje y esperan que el niño esté listo en la puerta, siguiendo pautas de puntualidad preestablecidas.
+* **Frustraciones (Pain Points):** A pesar de contar con un acompañante enviando mensajes, Diana indica que la comunicación sigue siendo deficiente y "un poco tediosa". Su principal frustración ocurre cuando hace preguntas por el chat y no recibe respuesta inmediata, dejándola con la incertidumbre de si la movilidad ya salió del domicilio anterior o cuánto tardará. Además, en caso de emergencias médicas de última hora, considera que tener que redactar un mensaje al grupo para cancelar el recojo quita tiempo valioso cuando la prioridad es atender la salud de su hijo.
+* **Percepción de la solución propuesta:** Diana tiene un perfil más analítico y cauteloso frente a nuevas tecnologías. Se muestra abierta a probar una aplicación móvil que envíe notificaciones automáticas y mantenga un historial exacto, con el fin de compararla con su método actual (fotos y chats) y evaluar cuál se adapta mejor a sus necesidades. Respecto a cambiar de transportista por uno más tecnológico, indica que primero intentaría persuadir a su conductor actual para que pruebe el sistema, ya que les tiene confianza. Finalmente, valora de forma muy positiva la opción de configurar familiares como contactos de emergencia para que reciban alertas cuando ella esté ocupada en el trabajo.
+
+#### Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)
+* **Edad:** 24 años
+* **Distrito de residencia:** Santiago de Surco, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ingresar timing, ej: 00:00:00]
+* **Screenshot del video:**
+  ![Extrevista 6 - Matías](resources/chapter-2/interviews/matias.jpeg)
+
+**Resumen de la entrevista:**
+Matías es un conductor de movilidad escolar que trabaja de forma independiente y administra su propia unidad desde hace 4 años. Gestiona un volumen considerable de pasajeros, manejando dos rutas diarias con un promedio de 10 a 15 alumnos por turno. A nivel tecnológico, sus procesos administrativos son altamente manuales y analógicos; emplea un cuaderno físico para controlar la asistencia de los menores mediante un checklist mensual, y delega los cobros de las pensiones a un archivo de Excel y transferencias bancarias.
+
+* **Comportamiento actual:** Todo su canal de comunicación y recolección de ubicaciones se basa en grupos de WhatsApp. Al inicio de la temporada escolar, sufre tratando de organizar rutas nuevas recibiendo ubicaciones por Google Maps, anotándolas a mano y armando el orden del recorrido mentalmente. Durante la ruta, al transitar por zonas sin señal de internet, su registro de asistencia no se detiene al ser en papel, pero se ve imposibilitado de responderle a los padres, lo que genera angustia en las familias.
+* **Frustraciones (Pain Points):** Su principal frustración radica en las distracciones al volante; recibe entre 10 y 15 mensajes durante el trayecto, y ante retrasos graves, se ve forzado a cuadrar el vehículo para enviar notas de voz por WhatsApp. Además, padece serios problemas logísticos con las cancelaciones de última hora: los padres le avisan que su hijo faltará justo cuando él ya está manejando. Al no poder leer el celular de inmediato, se desvía inútilmente hasta la casa del niño, perdiendo entre 5 y 10 minutos de ruta. Finalmente, sufre estrés administrativo porque un 30% de los padres se retrasa en los pagos u olvida enviar el voucher, obligándolo a revisar su cuenta bancaria de forma constante.
+* **Percepción de la solución propuesta:** Matías reaccionó de manera muy positiva ante la propuesta tecnológica. Afirma que una plataforma automatizada le "quitaría un estrés enorme de encima", permitiéndole conducir tranquilo sin la presión de responder chats ni llamadas. Exhibe una clara intención de pago, indicando estar dispuesto a abonar una suscripción mensual equivalente al costo de "medio pasaje de un alumno". Valora que esta herramienta no solo agilizaría su trabajo (al evitarle discusiones), sino que le proyectaría una imagen mucho más profesional ante los colegios y apoderados.
+
 ### 2.2.3. Análisis de entrevistas
+
+A continuación, se presenta el análisis estadístico y cualitativo derivado de las entrevistas realizadas a los dos segmentos objetivo del proyecto. Este análisis extrae las características objetivas (datos demográficos y uso de tecnología) y subjetivas (frustraciones, motivaciones y comportamientos) más repetitivas, las cuales servirán como base fundamental para la construcción de los arquetipos (*User Personas*).
+
+#### Análisis del Segmento 1: Padres de Familia
+Se analizaron las entrevistas de 3 padres de familia (Manuel, Máximo y Diana) que actualmente utilizan servicios de movilidad escolar privada para sus hijos (con un rango de edad entre los 7 y 13 años).
+
+**A. Características Objetivas y Tecnológicas**
+| Característica / Hábito | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Uso de WhatsApp como canal principal | 3 de 3 | **100%** | Alta afinidad móvil, pero uso de canales no optimizados para rastreo. |
+| Incompatibilidad de horarios y falta de tiempo | 3 de 3 | **100%** | Demandan soluciones rápidas que no requieran vigilancia constante. |
+| Control manual/informal del pago de pensiones | 2 de 3 | **66%** | Digitalizados financieramente, pero con desorganización en los cobros. |
+
+**B. Características Subjetivas (Pains & Gains)**
+| Percepción / Frustración | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Ansiedad/Incertidumbre ante retrasos sin aviso | 3 de 3 | **100%** | Su mayor "Pain". Necesitan visibilidad absoluta para sentir tranquilidad. |
+| Disposición a adoptar notificaciones automáticas | 3 de 3 | **100%** | Alto interés en modernizar el servicio; su principal motivación (*Gain*). |
+| Frustración por falta de respuesta rápida al chat | 2 de 3 | **66%** | No les agrada la comunicación asíncrona en situaciones de emergencia. |
+
+**Conclusión del Segmento 1:** El arquetipo del Padre de Familia es un usuario altamente ocupado que sufre de "espera a ciegas" generada por el tráfico y la nula comunicación proactiva de la movilidad. Su principal motivación (*Gain*) es la tranquilidad mental respecto a la seguridad de su hijo, valorando enormemente las notificaciones en segundo plano.
+
+---
+
+#### Análisis del Segmento 2: Conductores y Transportistas
+Se analizaron las entrevistas de 3 transportistas (Luis, Iván y Matías) con experiencia variada (desde 4 hasta 25 años) que manejan flotas independientes o corporativas con rutas preestablecidas.
+
+**A. Características Objetivas y Tecnológicas**
+| Característica / Hábito | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Uso de WhatsApp para reportar ubicación | 3 de 3 | **100%** | Canal sobresaturado que mezcla emergencias, ubicaciones y reportes. |
+| Uso de registros físicos (papel) o listas manuales | 2 de 3 | **66%** | Resistencia a sistemas complejos; requieren botones grandes y simples. |
+| Facturación y cobros fuera de plataformas de gestión | 3 de 3 | **100%** | Administran su dinero de forma manual, propensos al desorden. |
+
+**B. Características Subjetivas (Pains & Gains)**
+| Percepción / Frustración | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Estrés por usar el celular mientras conducen | 3 de 3 | **100%** | Riesgo alto de accidentes; necesitan que la app avise por ellos (*Gain*). |
+| Interés en pagar por proyectar una imagen formal | 3 de 3 | **100%** | Buscan escalar su negocio y retener clientes mediante tecnología. |
+| Pérdida de tiempo por ausencias/cancelaciones tardías | 2 de 3 | **66%** | "Pain" logístico. Conducen o se desvían en vano hacia un punto de recojo. |
+
+**Conclusión del Segmento 2:** El arquetipo del Conductor es un trabajador que sufre de sobrecarga operativa y distracciones peligrosas al volante. Su principal dolor (*Pain*) es la desorganización provocada por mensajes cruzados y la incapacidad de notificar su ubicación de forma segura. Su motivación principal (*Gain*) es formalizar su negocio y conducir en paz, estando dispuesto a invertir económicamente en una solución tecnológica.
 
 ## 2.3. Needfinding
 
@@ -2916,13 +3013,31 @@ Se descartó. El plan puede cambiar entre la planificación de la ruta y la ejec
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
+Este diagrama muestra a RouteGuard como el sistema central que conecta a los tres roles del ecosistema de transporte escolar: Administrador, Conductor y Padre de familia, cada uno interactuando desde con el sistema de RouteGuard. El sistema se apoya además en cuatro servicios externos — pasarela de pago, proveedor de mapas, proveedor push y broker de mensajería.
+
 ![System Context Diagram](resources/chapter-2/software-architecture/context-diagram.svg)
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-![Container Diagram](resources/chapter-2/software-architecture/container-diagram.png)
+Este diagrama se definen los cinco contenedores principales para la interfaz responsiva, la aplicación movil, landing page, interfaz de la logica del negocio (API) y la base de datos.
 
-#### 2.5.3.3. Software Architecture Deployment Diagrams
+![Container Diagram](resources/chapter-2/software-architecture/container-diagram.svg)
+
+#### 2.5.3.3. Software Architecture Components Level Diagrams
+
+El nivel de Contenedores del modelo C4 descompone el sistema en las unidades de despliegue independientes que lo conforman: las aplicaciones que corren en el dispositivo del usuario y la API que las sirve.
+
+A continuación se presenta la vista macro de cada uno de los dos contenedores principales, mostrando sus módulos:
+
+![Vista general de la aplicación móvil](resources/chapter-2/software-architecture/Components_MobileApp_Macro.svg)
+
+![Vista general del backend REST API](resources/chapter-2/software-architecture/Components_RestApi_Macro.svg)
+
+#### 2.5.3.4. Software Architecture Deployment Diagrams
+
+Este diagrama describe la distribución del entorno en la nube de RouteGuard: los dispositivos del usuario, el servidor de aplicaciones, el broker de mensajería y la base de datos gestionada, asegurando que los componentes se desplieguen sobre infraestructura escalable.
+
+![Software Architecture Deployment](resources/chapter-2/software-architecture/Deployment-Diagrams.png)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
@@ -3007,45 +3122,88 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ![Notifications DB Diagram](resources/chapter-2/software-architecture/notifications-database.svg)
 
 
-
-
 ### 2.6.3. Bounded Context: Identity & Access Management
+
+Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticación y el control de acceso por rol de los tres tipos de usuario del ecosistema. Es el único Bounded Context del que dependen los cinco restantes.
 
 #### 2.6.3.1. Domain Layer
 
+*   **Entities:** `User` (Raíz de Agregado), `Role`, `Credential`.
+*   **Value Objects:** `Token`.
+*   **Domain Events:** `AdministratorAccountCreated`, `DriverAccountProvisioned`, `ParentAccountProvisioned`, `UserAuthenticated`, `JWTSessionTokenIssued`, `PasswordGenerated`.
+
 #### 2.6.3.2. Interface Layer
+
+*   **REST Controllers:** `IAM Controller` (Endpoints de autenticación y gestión de cuentas).
 
 #### 2.6.3.3. Application Layer
 
+*   **Application Services:** `IAM Application Service` (orquesta `AuthenticateUserUseCase`, `RegisterUserUseCase` y `RefreshTokenUseCase`).
+
 #### 2.6.3.4. Infrastructure Layer
 
+*   **Persistence:** `User JPA Repository`, persistido sobre las tablas `users`, `roles`, `user_roles` y `credentials`.
+
 #### 2.6.3.5. Component Level Diagrams
+
+![IAM Frontend Components](resources/chapter-2/software-architecture/IAM/Components-Front-IAM.svg)
+
+![IAM Backend Components](resources/chapter-2/software-architecture/IAM/Components-Back-IAM.svg)
 
 #### 2.6.3.6. Code Level Diagrams
 
 ##### 2.6.3.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![IAM Domain Diagram Detailed](resources/chapter-2/software-architecture/IAM/iam-domain.svg)
+
+**Versión Legible (Simplificada):**
+![IAM Domain Diagram Readable](resources/chapter-2/software-architecture/IAM/iam-domain-readable.svg)
+
 ##### 2.6.3.6.2. Database Design Diagram
 
+![IAM DB Diagram](resources/chapter-2/software-architecture/IAM/iam-database.svg)
 
 ### 2.6.4. Bounded Context: Subscription & Plan Management
 
 #### 2.6.4.1. Domain Layer
 
+*   **Entities:** `Subscription` (Raíz de Agregado), `Plan`, `Invoice`.
+*   **Value Objects:** `PaymentMethod`.
+*   **Domain Events:** `PlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `PlanFeaturesEnabled`, `PlanUpgraded`, `QuotasIncreased`.
+
 #### 2.6.4.2. Interface Layer
+
+*   **REST Controllers:** `Subscription Controller` (Endpoints de contratación, cobro y actualización de plan).
 
 #### 2.6.4.3. Application Layer
 
+*   **Application Services:** `Subscription App Service` (orquesta `CreateSubscriptionUseCase`, `ProcessPaymentUseCase` y `CheckSubscriptionStatusUseCase`).
+
 #### 2.6.4.4. Infrastructure Layer
 
+*   **Persistence:** `Plan JPA Repository`, persistido sobre las tablas `plans`, `subscriptions` e `invoices`.
+*   **External Integrations:** Pasarela de pago (procesamiento de `PaymentMethod` y confirmación asíncrona vía webhook).
+
 #### 2.6.4.5. Component Level Diagrams
+
+![Subscription Frontend Components](resources/chapter-2/software-architecture/Subscription/Components-Front-Sub.svg)
+
+![Subscription Backend Components](resources/chapter-2/software-architecture/Subscription/Components-Back-Sub.svg)
 
 #### 2.6.4.6. Code Level Diagrams
 
 ##### 2.6.4.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![Subscription Domain Diagram Detailed](resources/chapter-2/software-architecture/Subscription/subscription-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Subscription Domain Diagram Readable](resources/chapter-2/software-architecture/Subscription/subscription-domain-readable.svg)
+
 ##### 2.6.4.6.2. Database Design Diagram
 
+![Subscription DB Diagram](resources/chapter-2/software-architecture/Subscription/subscription-database.svg)
 
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
@@ -3053,6 +3211,7 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 *   **Entities:** `Trip` (Raíz del Agregado), `Waypoint`, `LocationRecord`.
 *   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery, Heading), `Timestamp`.
 *   **Domain Events:** `TripStarted`, `StudentBoarded`, `TripFinished`, `OfflineSyncCompleted`.
+
 
 #### 2.6.5.2. Interface Layer
 *   **REST Controllers:** `TrackingController` (Expone los endpoints REST principales).
@@ -3084,8 +3243,6 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ##### 2.6.5.6.2. Database Design Diagram
 
 ![Route DB Diagram](resources/chapter-2/software-architecture/fleet-database.svg)
-
-
 
 
 ### 2.6.6. Bounded Context: Stakeholder & Asset Management
