@@ -3087,6 +3087,10 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 #### 2.6.4.5. Component Level Diagrams
 
+![Subscription Frontend Components](resources\chapter-2\software-architecture\Subscription\Components_Front_Sub.svg)
+
+![Subscription Backend Components](resources\chapter-2\software-architecture\Subscription\Components_Back_Sub.svg)
+
 #### 2.6.4.6. Code Level Diagrams
 
 ##### 2.6.4.6.1. Domain Layer Class Diagram
