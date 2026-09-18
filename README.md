@@ -3110,6 +3110,19 @@ Aquí se ubican los casos de uso (Use Cases) que orquestan la lógica de negocio
 Contiene las implementaciones concretas de los repositorios (`ParentRepositoryImpl`), el acceso a datos locales mediante `ParentDao`, el consumo de servicios remotos con `ParentApiService`, y los mappers (`ParentMapper`) encargados de transformar los datos entre las distintas representaciones (entidad, DTO, modelo de dominio).
 
 
+#### 2.6.6.5. Component Level Diagrams
+
+**Backend**
+
+![Componentes Backend - Stakeholder](resources/chapter-2/C4/Components_Back_Stake.svg)
+
+**Frontend / Mobile**
+
+![Componentes Frontend - Stakeholder](resources/chapter-2/C4/Components_Front_Stake.svg)
+
+
+
+
 <div style="page-break-after: always;"></div>
 
 # Capítulo III: Solution UI/UX Design
