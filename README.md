@@ -3120,7 +3120,11 @@ Contiene las implementaciones concretas de los repositorios (`ParentRepositoryIm
 
 ![Componentes Frontend - Stakeholder](resources/chapter-2/C4/Components_Front_Stake.svg)
 
+#### 2.6.6.6. Code Level Diagrams
 
+##### 2.6.6.6.1. Domain Layer Class Diagram
+
+![Diagrama de Clases - Stakeholder Domain](resources/chapter-2/C4/stakeholder-domain.svg)
 
 
 <div style="page-break-after: always;"></div>
