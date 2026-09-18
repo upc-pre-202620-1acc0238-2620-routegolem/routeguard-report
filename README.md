@@ -2803,17 +2803,15 @@ Se descartó. El manifiesto puede cambiar entre la planificación de la ruta y l
  
 ![Context Mapping RouteGuard](resources/chapter-2/ContextMapping.jpg)
 
-![Context Map](resources/chapter-2/context-mapping.png)
-
 ### 2.5.3. Software Architecture
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-![System Context Diagram](resources/chapter-2/context-diagram.png)
+![System Context Diagram](resources/chapter-2/software-architecture/context-diagram.svg)
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-![Container Diagram](resources/chapter-2/container-diagram.png)
+![Container Diagram](resources/chapter-2/software-architecture/container-diagram.png)
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
@@ -2842,20 +2840,22 @@ Este contexto (Core Domain) encapsula toda la ejecución en tiempo real del viaj
 
 #### 2.6.1.5. Component Level Diagrams
 
-![Tracking Components](resources/chapter-2/software-architecture/components-tracking.svg)
+![Tracking Components](resources/chapter-2/software-architecture/components-frontend-tracking.svg)
+
+![Tracking Components](resources/chapter-2/software-architecture/components-backend-tracking.svg)
 
 #### 2.6.1.6. Code Level Diagrams
 ##### 2.6.1.6.1. Domain Layer Class Diagram
 
 **Versión Detallada:**
-![Tracking Domain Diagram Detailed](resources/chapter-2/tracking-domain-detailed.svg)
+![Tracking Domain Diagram Detailed](resources/chapter-2/software-architecture/tracking-domain-detailed.svg)
 
 **Versión Legible (Simplificada):**
-![Tracking Domain Diagram Readable](resources/chapter-2/tracking-domain-readable.svg)
+![Tracking Domain Diagram Readable](resources/chapter-2/software-architecture/tracking-domain-readable.svg)
 
 ##### 2.6.1.6.2. Database Design Diagram
 
-![Tracking DB Diagram](resources/chapter-2/tracking-database.png)
+![Tracking DB Diagram](resources/chapter-2/software-architecture/tracking-database.svg)
 
 
 ### 2.6.2. Bounded Context: Notifications & Communication
@@ -2880,20 +2880,22 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 #### 2.6.2.5. Component Level Diagrams
 
-![Notifications Components](resources/chapter-2/software-architecture/components-notifications.svg)
+![Notifications Frontend Components](resources/chapter-2/software-architecture/components-frontend-notifications.svg)
+
+![Notifications Backend Components](resources/chapter-2/software-architecture/components-backend-notifications.svg)
 
 #### 2.6.2.6. Code Level Diagrams
 ##### 2.6.2.6.1. Domain Layer Class Diagram
 
 **Versión Detallada:**
-![Notifications Domain Diagram Detailed](resources/chapter-2/notifications-domain-detailed.svg)
+![Notifications Domain Diagram Detailed](resources/chapter-2/software-architecture/notifications-domain-detailed.svg)
 
 **Versión Legible (Simplificada):**
-![Notifications Domain Diagram Readable](resources/chapter-2/notifications-domain-readable.svg)
+![Notifications Domain Diagram Readable](resources/chapter-2/software-architecture/notifications-domain-readable.svg)
 
 ##### 2.6.2.6.2. Database Design Diagram
 
-![Notifications DB Diagram](resources/chapter-2/notifications-database.png)
+![Notifications DB Diagram](resources/chapter-2/software-architecture/notifications-database.svg)
 
 
 
