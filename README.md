@@ -83,6 +83,7 @@
       - [Entrevistado 1: Manuel Jesús Francia Huambachano (Segmento: Padres de Familia)](#entrevistado-1-manuel-jesús-francia-huambachano-segmento-padres-de-familia)
       - [Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)](#entrevistado-2-luis-johnny-jesús-mendoza-segmento-conductor--transportista)
       - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
+      - [Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)](#entrevistado-4-iván-oscco-cosío-segmento-conductor--transportista)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
@@ -619,6 +620,21 @@ Máximo es un padre de familia con un hijo de 7 años. Optó por contratar movil
 * **Comportamiento actual:** La comunicación que mantiene con el servicio de movilidad se da exclusivamente a través de mensajes o llamadas. Del mismo modo, el control de los pagos de la pensión escolar de su hijo se realiza por WhatsApp, donde recibe las notificaciones de cobro de manera informal y manual.
 * **Frustraciones (Pain Points):** Su principal dolor es la falta de comunicación en tiempo real y la gran angustia que esto le genera. Relató un episodio crítico donde la movilidad se retrasó 20 minutos; al no tener forma de rastrear el vehículo, sintió un altísimo nivel de estrés temiendo un accidente o un extravío, viéndose obligado a timbrar desesperadamente a la directora del colegio. Adicionalmente, encuentra ineficiente llevar el control de pagos por WhatsApp, ya que a menudo se generan confusiones, desorden y *"los montos no cuadran"*.
 * **Percepción de la solución propuesta:** Máximo aprueba rotundamente la creación de la aplicación. Debido a la alta concentración que exige su trabajo (análisis de costos), prefiere recibir **notificaciones automáticas en segundo plano** en lugar de tener que vigilar activamente un mapa. Destaca la necesidad de tener un historial integrado, tanto para registrar las horas exactas de los viajes, como para llevar un control transparente de los pagos (comparándolo con una app bancaria). Es tan firme en su postura que asegura que **descartaría de inmediato** a su transportista actual si este se negara a usar el aplicativo. Finalmente, respalda con entusiasmo la función de reportar inasistencias con un botón y la opción de incluir contactos de emergencia.
+
+#### Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)
+* **Edad:** 51 años
+* **Distrito de residencia:** Surco
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ej: 00:11:30 - Llenar cuando edites tu video final]
+* **Screenshot del video:**
+  ![Extrevista 4 - Iván](resources/chapter-2/interviews/ivan.png)
+
+**Resumen de la entrevista:**
+Iván es un conductor independiente con más de 25 años de experiencia en el transporte escolar, operando actualmente con dos unidades móviles (conduce una y delega la otra según la demanda). A nivel tecnológico, utiliza WhatsApp para comunicarse con los padres, Waze y Google Maps (proyectados en una tablet grande) para la navegación, y lleva su control de asistencia mediante una hoja de cálculo en *Google Drive* y una app de *Checklist/Notas*. 
+
+* **Comportamiento actual:** Su servicio se contrata de forma anual. Para el control de asistencia, aplica una estrategia por descarte: asume que todos suben y solo anota a los ausentes en su Excel. Para evitar retrasos en las mañanas, ha establecido reglas estrictas acordadas mediante un "padre delegado"; si un niño no sale, él espera máximo 5 minutos y se retira para no perjudicar al resto. Con los padres que suelen tardar, ha optado por escribirles un mensaje de WhatsApp 5 minutos antes de llegar a su casa. Ocasionalmente, comparte su ubicación en tiempo real por WhatsApp a pedido de los padres.
+* **Frustraciones (Pain Points):** Su principal frustración es la distracción al volante causada por llamadas nerviosas de las madres cuando hay mucho tráfico, por lo que ha tenido que pedirles expresamente que solo envíen mensajes de texto. Además, sufre con las cancelaciones tardías: a menudo le avisan que un niño está enfermo cuando él ya está a punto de llegar a su casa, impidiéndole recalcular su ruta a tiempo y generándole estrés matutino. También menciona la presión de los padres para que no mire la pantalla del celular mientras maneja, obligándolo a usar solo los comandos de voz del GPS.
+* **Percepción de la solución propuesta:** Iván se muestra sumamente abierto a adoptar un sistema automatizado. Considera que una aplicación que pase lista con un solo toque y que le envíe notificaciones automáticas de ubicación a los padres (ej. cada 5 minutos) solucionaría el problema de las llamadas entrantes y la necesidad de compartir su ubicación manual por WhatsApp. Afirma que este sistema no interrumpiría su rutina, le permitiría mantener los ojos en la pista y le daría mucha más tranquilidad tanto a él como a los apoderados.
 
 ### 2.2.3. Análisis de entrevistas
 
