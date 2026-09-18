@@ -87,7 +87,6 @@
       - [Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)](#entrevistada-5-diana-chávez-omonte-segmento-padres-de-familia)
       - [Entrevistado 6: Matías Aguilar (Segmento: Conductores)](#entrevistado-6-matías-aguilar-segmento-conductores)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
-    - [2.2.3 Análisis de entrevistas](#223-análisis-de-entrevistas-1)
       - [Análisis del Segmento 1: Padres de Familia](#análisis-del-segmento-1-padres-de-familia)
       - [Análisis del Segmento 2: Conductores y Transportistas](#análisis-del-segmento-2-conductores-y-transportistas)
   - [2.3. Needfinding](#23-needfinding)
@@ -672,20 +671,6 @@ Matías es un conductor de movilidad escolar que trabaja de forma independiente 
 * **Percepción de la solución propuesta:** Matías reaccionó de manera muy positiva ante la propuesta tecnológica. Afirma que una plataforma automatizada le "quitaría un estrés enorme de encima", permitiéndole conducir tranquilo sin la presión de responder chats ni llamadas. Exhibe una clara intención de pago, indicando estar dispuesto a abonar una suscripción mensual equivalente al costo de "medio pasaje de un alumno". Valora que esta herramienta no solo agilizaría su trabajo (al evitarle discusiones), sino que le proyectaría una imagen mucho más profesional ante los colegios y apoderados.
 
 ### 2.2.3. Análisis de entrevistas
-
-¡Está excelente! El análisis que te armé hace match casi a la perfección con toda la data de este Registro de Entrevistas (2.2.2).
-
-Sin embargo, leyendo con lupa los resúmenes que me acabas de compartir, noté dos detalles técnicos muy finos:
-1. **Iván (Entrevistado 4)** lleva su asistencia de forma digital en *Google Drive*, no en papel. Por lo tanto, el uso de "registros físicos" en los conductores es de 2 de 3 (66%), no del 100%.
-2. **Luis (Entrevistado 2)** hace transporte B2B (personal corporativo), por lo que él sufre por el tráfico para llegar a la fábrica, no por cancelaciones de niños enfermos de última hora. Eso significa que el problema de "Desvíos inútiles" afecta directamente a 2 de 3 conductores (Iván y Matías).
-
-Para que el jurado o el profesor no te encuentre **ni un solo error de consistencia** al cruzar los datos, he ajustado milimétricamente los porcentajes de la tabla. 
-
-Usa esta **versión definitiva** para tu sección 2.2.3:
-
-***
-
-### 2.2.3 Análisis de entrevistas
 
 A continuación, se presenta el análisis estadístico y cualitativo derivado de las entrevistas realizadas a los dos segmentos objetivo del proyecto. Este análisis extrae las características objetivas (datos demográficos y uso de tecnología) y subjetivas (frustraciones, motivaciones y comportamientos) más repetitivas, las cuales servirán como base fundamental para la construcción de los arquetipos (*User Personas*).
 
