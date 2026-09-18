@@ -3047,6 +3047,8 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 ### 2.6.3. Bounded Context: Identity & Access Management
 
+Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticación y el control de acceso por rol de los tres tipos de usuario del ecosistema. Es el único Bounded Context del que dependen los cinco restantes.
+
 #### 2.6.3.1. Domain Layer
 
 *   **Entities:** `User` (Raíz de Agregado), `Role`, `Credential`.
