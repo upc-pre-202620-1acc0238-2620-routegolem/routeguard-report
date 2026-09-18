@@ -21,7 +21,7 @@
   <strong>RouteGuard</strong>
   <br><br>
   <strong>Integrantes:</strong><br>
-  [Código] - De la Cruz De los Santos, Mathias Marcelo<br>
+  u202424059 - De la Cruz De los Santos, Mathias Marcelo<br>
   [Código] - Francia Torres, Jhony Manuel<br>
   u202411627 - Pareja Calloapaza, Marcelo Fausto<br>
   [u202415551] - Ramirez Ruíz, Nickolas<br>
@@ -302,7 +302,7 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 
 |                         Foto                         | Apellidos y Nombres |   Código    | Carrera | Resumen |
 |:----------------------------------------------------:|:---|:-----------:|:---|:---|
-|                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+|                       ![Foto](resources/assets/images/team/mathias.jpg)                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software |Soy Mathias De la Cruz De los Santos, estudiante de quinto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado de la programación, así como del fútbol y los videojuegos, intereses que me han ayudado a desarrollar disciplina, paciencia y capacidad de trabajo en equipo. En cuanto al trabajo, aporto mis conocimientos técnicos junto con un enfoque responsable y comprometido, buscando siempre contribuir de forma constante al avance y la calidad del proyecto. |
 |                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
 | ![foto](resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
 | ![foto](resources/assets/images/team/nickolas.png) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
