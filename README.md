@@ -3107,13 +3107,25 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 ### 2.6.3. Bounded Context: Identity & Access Management
 
+Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticación y el control de acceso por rol de los tres tipos de usuario del ecosistema. Es el único Bounded Context del que dependen los cinco restantes.
+
 #### 2.6.3.1. Domain Layer
+
+*   **Entities:** `User` (Raíz de Agregado), `Role`, `Credential`.
+*   **Value Objects:** `Token`.
+*   **Domain Events:** `AdministratorAccountCreated`, `DriverAccountProvisioned`, `ParentAccountProvisioned`, `UserAuthenticated`, `JWTSessionTokenIssued`, `PasswordGenerated`.
 
 #### 2.6.3.2. Interface Layer
 
+*   **REST Controllers:** `IAM Controller` (Endpoints de autenticación y gestión de cuentas).
+
 #### 2.6.3.3. Application Layer
 
+*   **Application Services:** `IAM Application Service` (orquesta `AuthenticateUserUseCase`, `RegisterUserUseCase` y `RefreshTokenUseCase`).
+
 #### 2.6.3.4. Infrastructure Layer
+
+*   **Persistence:** `User JPA Repository`, persistido sobre las tablas `users`, `roles`, `user_roles` y `credentials`.
 
 #### 2.6.3.5. Component Level Diagrams
 
@@ -3125,27 +3137,56 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 ##### 2.6.3.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![IAM Domain Diagram Detailed](resources\chapter-2\software-architecture\IAM\iam-domain.svg)
+
+**Versión Legible (Simplificada):**
+![IAM Domain Diagram Readable](resources\chapter-2\software-architecture\IAM\iam-domain-readable.svg)
+
 ##### 2.6.3.6.2. Database Design Diagram
 
+![IAM DB Diagram](resources\chapter-2\software-architecture\IAM\iam-database.svg)
 
 ### 2.6.4. Bounded Context: Subscription & Plan Management
 
 #### 2.6.4.1. Domain Layer
 
+*   **Entities:** `Subscription` (Raíz de Agregado), `Plan`, `Invoice`.
+*   **Value Objects:** `PaymentMethod`.
+*   **Domain Events:** `PlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `PlanFeaturesEnabled`, `PlanUpgraded`, `QuotasIncreased`.
+
 #### 2.6.4.2. Interface Layer
+
+*   **REST Controllers:** `Subscription Controller` (Endpoints de contratación, cobro y actualización de plan).
 
 #### 2.6.4.3. Application Layer
 
+*   **Application Services:** `Subscription App Service` (orquesta `CreateSubscriptionUseCase`, `ProcessPaymentUseCase` y `CheckSubscriptionStatusUseCase`).
+
 #### 2.6.4.4. Infrastructure Layer
 
+*   **Persistence:** `Plan JPA Repository`, persistido sobre las tablas `plans`, `subscriptions` e `invoices`.
+*   **External Integrations:** Pasarela de pago (procesamiento de `PaymentMethod` y confirmación asíncrona vía webhook).
+
 #### 2.6.4.5. Component Level Diagrams
+
+![Subscription Frontend Components](resources\chapter-2\software-architecture\Subscription\Components_Front_Sub.svg)
+
+![Subscription Backend Components](resources\chapter-2\software-architecture\Subscription\Components_Back_Sub.svg)
 
 #### 2.6.4.6. Code Level Diagrams
 
 ##### 2.6.4.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![Subscription Domain Diagram Detailed](resources\chapter-2\software-architecture\Subscription\subscription-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Subscription Domain Diagram Readable](resources\chapter-2\software-architecture\Subscription\subscription-domain-readable.svg)
+
 ##### 2.6.4.6.2. Database Design Diagram
 
+![Subscription DB Diagram](resources\chapter-2\software-architecture\Subscription\subscription-database.svg)
 
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
