@@ -2960,6 +2960,8 @@ Este diagrama se definen los cinco contenedores principales para la interfaz res
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
+
+
 ## 2.6. Tactical-Level Domain-Driven Design
 
 ### 2.6.1. Bounded Context: Trip Execution & Monitoring
@@ -3043,8 +3045,6 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 ![Notifications DB Diagram](resources/chapter-2/software-architecture/notifications-database.svg)
 
 
-
-
 ### 2.6.3. Bounded Context: Identity & Access Management
 
 #### 2.6.3.1. Domain Layer
@@ -3056,6 +3056,10 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 #### 2.6.3.4. Infrastructure Layer
 
 #### 2.6.3.5. Component Level Diagrams
+
+![IAM Frontend Components](resources\chapter-2\software-architecture\IAM\Components_Front_IAM.svg)
+
+![IAM Backend Components](resources\chapter-2\software-architecture\IAM\Components_Back_IAM.svg)
 
 #### 2.6.3.6. Code Level Diagrams
 
