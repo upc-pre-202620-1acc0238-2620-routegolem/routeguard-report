@@ -85,7 +85,10 @@
       - [Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)](#entrevistado-3-máximo-quevedo-segmento-padres-de-familia)
       - [Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)](#entrevistado-4-iván-oscco-cosío-segmento-conductor--transportista)
       - [Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)](#entrevistada-5-diana-chávez-omonte-segmento-padres-de-familia)
+      - [Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)](#entrevistado-6-matías-aguilar-segmento-conductor--transportista)
     - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+      - [Análisis del Segmento 1: Padres de Familia](#análisis-del-segmento-1-padres-de-familia)
+      - [Análisis del Segmento 2: Conductores y Transportistas](#análisis-del-segmento-2-conductores-y-transportistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
       - [A. Segmento 1: El Transportista (Conductor)](#a-segmento-1-el-transportista-conductor)
@@ -443,7 +446,7 @@ Para el ecosistema de RouteGuard, hemos identificado dos segmentos de usuarios c
 
 ### Segmento 1: Transportistas Escolares (Administradores y Conductores)
 
-* **Demografía:** Hombres y mujeres de 30 a 60 años, residentes en Lima Metropolitana y otras principales zonas urbanas del país. Nivel socioeconómico B, C y D.
+* **Demografía:** Hombres y mujeres de 20 a 60 años, residentes en Lima Metropolitana y otras principales zonas urbanas del país. Nivel socioeconómico B, C y D.
 * **Perfil Ocupacional:** Microempresarios dueños de su propio vehículo (minivans) que operan de forma independiente, o administradores de pequeñas flotas (de 2 a 5 unidades) dedicadas exclusivamente al traslado escolar privado.
 * **Características y Comportamiento:** Poseen habilidades tecnológicas de nivel básico a intermedio. Pasan entre 4 y 6 horas diarias al volante lidiando con tráfico pesado. Buscan mantener o incrementar su cartera de clientes ofreciendo un servicio más profesional, pero evitan herramientas complejas que los distraigan. Requieren que la tecnología funcione como un asistente silencioso (GPS en segundo plano, soporte offline para zonas sin cobertura y botones grandes de 1 toque). Su mayor punto de dolor es la carga de responder llamadas y mensajes de padres mientras conducen.
 * **Información estadística de sustento:** Según la Autoridad de Transporte Urbano para Lima y Callao (ATU, 2024), se registró una caída del 25% en las movilidades escolares formalmente autorizadas, dejando un mercado altamente fragmentado e informal. Este segmento representa a miles de transportistas que necesitan urgentemente herramientas accesibles (SaaS) para digitalizar, organizar y dar valor agregado a su servicio frente a un mercado cada vez más exigente.
@@ -652,7 +655,64 @@ Diana es una madre de familia trabajadora con un hijo de 8 años. Decidió contr
 * **Frustraciones (Pain Points):** A pesar de contar con un acompañante enviando mensajes, Diana indica que la comunicación sigue siendo deficiente y "un poco tediosa". Su principal frustración ocurre cuando hace preguntas por el chat y no recibe respuesta inmediata, dejándola con la incertidumbre de si la movilidad ya salió del domicilio anterior o cuánto tardará. Además, en caso de emergencias médicas de última hora, considera que tener que redactar un mensaje al grupo para cancelar el recojo quita tiempo valioso cuando la prioridad es atender la salud de su hijo.
 * **Percepción de la solución propuesta:** Diana tiene un perfil más analítico y cauteloso frente a nuevas tecnologías. Se muestra abierta a probar una aplicación móvil que envíe notificaciones automáticas y mantenga un historial exacto, con el fin de compararla con su método actual (fotos y chats) y evaluar cuál se adapta mejor a sus necesidades. Respecto a cambiar de transportista por uno más tecnológico, indica que primero intentaría persuadir a su conductor actual para que pruebe el sistema, ya que les tiene confianza. Finalmente, valora de forma muy positiva la opción de configurar familiares como contactos de emergencia para que reciban alertas cuando ella esté ocupada en el trabajo.
 
+#### Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)
+* **Edad:** 24 años
+* **Distrito de residencia:** Santiago de Surco, Lima
+* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
+* **Timing de inicio:** [Ingresar timing, ej: 00:00:00]
+* **Screenshot del video:**
+  ![Extrevista 6 - Matías](resources/chapter-2/interviews/matias.jpeg)
+
+**Resumen de la entrevista:**
+Matías es un conductor de movilidad escolar que trabaja de forma independiente y administra su propia unidad desde hace 4 años. Gestiona un volumen considerable de pasajeros, manejando dos rutas diarias con un promedio de 10 a 15 alumnos por turno. A nivel tecnológico, sus procesos administrativos son altamente manuales y analógicos; emplea un cuaderno físico para controlar la asistencia de los menores mediante un checklist mensual, y delega los cobros de las pensiones a un archivo de Excel y transferencias bancarias.
+
+* **Comportamiento actual:** Todo su canal de comunicación y recolección de ubicaciones se basa en grupos de WhatsApp. Al inicio de la temporada escolar, sufre tratando de organizar rutas nuevas recibiendo ubicaciones por Google Maps, anotándolas a mano y armando el orden del recorrido mentalmente. Durante la ruta, al transitar por zonas sin señal de internet, su registro de asistencia no se detiene al ser en papel, pero se ve imposibilitado de responderle a los padres, lo que genera angustia en las familias.
+* **Frustraciones (Pain Points):** Su principal frustración radica en las distracciones al volante; recibe entre 10 y 15 mensajes durante el trayecto, y ante retrasos graves, se ve forzado a cuadrar el vehículo para enviar notas de voz por WhatsApp. Además, padece serios problemas logísticos con las cancelaciones de última hora: los padres le avisan que su hijo faltará justo cuando él ya está manejando. Al no poder leer el celular de inmediato, se desvía inútilmente hasta la casa del niño, perdiendo entre 5 y 10 minutos de ruta. Finalmente, sufre estrés administrativo porque un 30% de los padres se retrasa en los pagos u olvida enviar el voucher, obligándolo a revisar su cuenta bancaria de forma constante.
+* **Percepción de la solución propuesta:** Matías reaccionó de manera muy positiva ante la propuesta tecnológica. Afirma que una plataforma automatizada le "quitaría un estrés enorme de encima", permitiéndole conducir tranquilo sin la presión de responder chats ni llamadas. Exhibe una clara intención de pago, indicando estar dispuesto a abonar una suscripción mensual equivalente al costo de "medio pasaje de un alumno". Valora que esta herramienta no solo agilizaría su trabajo (al evitarle discusiones), sino que le proyectaría una imagen mucho más profesional ante los colegios y apoderados.
+
 ### 2.2.3. Análisis de entrevistas
+
+A continuación, se presenta el análisis estadístico y cualitativo derivado de las entrevistas realizadas a los dos segmentos objetivo del proyecto. Este análisis extrae las características objetivas (datos demográficos y uso de tecnología) y subjetivas (frustraciones, motivaciones y comportamientos) más repetitivas, las cuales servirán como base fundamental para la construcción de los arquetipos (*User Personas*).
+
+#### Análisis del Segmento 1: Padres de Familia
+Se analizaron las entrevistas de 3 padres de familia (Manuel, Máximo y Diana) que actualmente utilizan servicios de movilidad escolar privada para sus hijos (con un rango de edad entre los 7 y 13 años).
+
+**A. Características Objetivas y Tecnológicas**
+| Característica / Hábito | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Uso de WhatsApp como canal principal | 3 de 3 | **100%** | Alta afinidad móvil, pero uso de canales no optimizados para rastreo. |
+| Incompatibilidad de horarios y falta de tiempo | 3 de 3 | **100%** | Demandan soluciones rápidas que no requieran vigilancia constante. |
+| Control manual/informal del pago de pensiones | 2 de 3 | **66%** | Digitalizados financieramente, pero con desorganización en los cobros. |
+
+**B. Características Subjetivas (Pains & Gains)**
+| Percepción / Frustración | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Ansiedad/Incertidumbre ante retrasos sin aviso | 3 de 3 | **100%** | Su mayor "Pain". Necesitan visibilidad absoluta para sentir tranquilidad. |
+| Disposición a adoptar notificaciones automáticas | 3 de 3 | **100%** | Alto interés en modernizar el servicio; su principal motivación (*Gain*). |
+| Frustración por falta de respuesta rápida al chat | 2 de 3 | **66%** | No les agrada la comunicación asíncrona en situaciones de emergencia. |
+
+**Conclusión del Segmento 1:** El arquetipo del Padre de Familia es un usuario altamente ocupado que sufre de "espera a ciegas" generada por el tráfico y la nula comunicación proactiva de la movilidad. Su principal motivación (*Gain*) es la tranquilidad mental respecto a la seguridad de su hijo, valorando enormemente las notificaciones en segundo plano.
+
+---
+
+#### Análisis del Segmento 2: Conductores y Transportistas
+Se analizaron las entrevistas de 3 transportistas (Luis, Iván y Matías) con experiencia variada (desde 4 hasta 25 años) que manejan flotas independientes o corporativas con rutas preestablecidas.
+
+**A. Características Objetivas y Tecnológicas**
+| Característica / Hábito | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Uso de WhatsApp para reportar ubicación | 3 de 3 | **100%** | Canal sobresaturado que mezcla emergencias, ubicaciones y reportes. |
+| Uso de registros físicos (papel) o listas manuales | 2 de 3 | **66%** | Resistencia a sistemas complejos; requieren botones grandes y simples. |
+| Facturación y cobros fuera de plataformas de gestión | 3 de 3 | **100%** | Administran su dinero de forma manual, propensos al desorden. |
+
+**B. Características Subjetivas (Pains & Gains)**
+| Percepción / Frustración | Frecuencia | Porcentaje | Impacto en el User Persona |
+| :--- | :---: | :---: | :--- |
+| Estrés por usar el celular mientras conducen | 3 de 3 | **100%** | Riesgo alto de accidentes; necesitan que la app avise por ellos (*Gain*). |
+| Interés en pagar por proyectar una imagen formal | 3 de 3 | **100%** | Buscan escalar su negocio y retener clientes mediante tecnología. |
+| Pérdida de tiempo por ausencias/cancelaciones tardías | 2 de 3 | **66%** | "Pain" logístico. Conducen o se desvían en vano hacia un punto de recojo. |
+
+**Conclusión del Segmento 2:** El arquetipo del Conductor es un trabajador que sufre de sobrecarga operativa y distracciones peligrosas al volante. Su principal dolor (*Pain*) es la desorganización provocada por mensajes cruzados y la incapacidad de notificar su ubicación de forma segura. Su motivación principal (*Gain*) es formalizar su negocio y conducir en paz, estando dispuesto a invertir económicamente en una solución tecnológica.
 
 ## 2.3. Needfinding
 
