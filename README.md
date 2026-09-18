@@ -3145,7 +3145,7 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.3.5. Component Level Diagrams
 
-![IAM Frontend Components](resources\chapter-2\software-architecture\IAM\Components-Front-IAM.svg)
+![IAM Frontend Components](resources/chapter-2/software-architecture/IAM/Components-Front-IAM.svg)
 
 ![IAM Backend Components](resources/chapter-2/software-architecture/IAM/Components-Back-IAM.svg)
 
@@ -3186,23 +3186,23 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.4.5. Component Level Diagrams
 
-![Subscription Frontend Components](resources\chapter-2\software-architecture\Subscription\Components-Front-Sub.svg)
+![Subscription Frontend Components](resources/chapter-2/software-architecture/Subscription/Components-Front-Sub.svg)
 
-![Subscription Backend Components](resources\chapter-2\software-architecture\Subscription\Components-Back-Sub.svg)
+![Subscription Backend Components](resources/chapter-2/software-architecture/Subscription/Components-Back-Sub.svg)
 
 #### 2.6.4.6. Code Level Diagrams
 
 ##### 2.6.4.6.1. Domain Layer Class Diagram
 
 **Versión Detallada:**
-![Subscription Domain Diagram Detailed](resources\chapter-2\software-architecture\Subscription\subscription-domain.svg)
+![Subscription Domain Diagram Detailed](resources/chapter-2/software-architecture/Subscription/subscription-domain.svg)
 
 **Versión Legible (Simplificada):**
-![Subscription Domain Diagram Readable](resources\chapter-2\software-architecture\Subscription\subscription-domain-readable.svg)
+![Subscription Domain Diagram Readable](resources/chapter-2/software-architecture/Subscription/subscription-domain-readable.svg)
 
 ##### 2.6.4.6.2. Database Design Diagram
 
-![Subscription DB Diagram](resources\chapter-2\software-architecture\Subscription\subscription-database.svg)
+![Subscription DB Diagram](resources/chapter-2/software-architecture/Subscription/subscription-database.svg)
 
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
