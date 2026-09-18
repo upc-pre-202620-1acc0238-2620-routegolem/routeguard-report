@@ -3016,7 +3016,7 @@ Este diagrama muestra a RouteGuard como el sistema central que conecta a los tre
 
 Este diagrama se definen los cinco contenedores principales para la interfaz responsiva, la aplicación movil, landing page, interfaz de la logica del negocio (API) y la base de datos.
 
-![Container Diagram](resources/chapter-2/software-architecture/container-diagram.svg)
+![Container Diagram](resources/chapter-2/software-architecture/Deployment-Diagrams.png)
 
 #### 2.5.3.3. Software Architecture Components Level Diagrams
 
@@ -3030,7 +3030,9 @@ A continuación se presenta la vista macro de cada uno de los dos contenedores p
 
 #### 2.5.3.4. Software Architecture Deployment Diagrams
 
+Este diagrama describe la distribución del entorno en la nube de RouteGuard: los dispositivos del usuario, el servidor de aplicaciones, el broker de mensajería y la base de datos gestionada, asegurando que los componentes se desplieguen sobre infraestructura escalable.
 
+![Software Architecture Deployment Diagrams](resources/chapter-2/Bounded-Context-Canvas/The-Bounded-Context-Canvas-Suscription.jpg)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
