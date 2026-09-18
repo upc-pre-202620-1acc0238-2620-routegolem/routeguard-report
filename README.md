@@ -3049,11 +3049,21 @@ Este contexto reacciona a los eventos del sistema para notificar asíncronamente
 
 #### 2.6.3.1. Domain Layer
 
+*   **Entities:** `User` (Raíz de Agregado), `Role`, `Credential`.
+*   **Value Objects:** `Token`.
+*   **Domain Events:** `AdministratorAccountCreated`, `DriverAccountProvisioned`, `ParentAccountProvisioned`, `UserAuthenticated`, `JWTSessionTokenIssued`, `PasswordGenerated`.
+
 #### 2.6.3.2. Interface Layer
+
+*   **REST Controllers:** `IAM Controller` (Endpoints de autenticación y gestión de cuentas).
 
 #### 2.6.3.3. Application Layer
 
+*   **Application Services:** `IAM Application Service` (orquesta `AuthenticateUserUseCase`, `RegisterUserUseCase` y `RefreshTokenUseCase`).
+
 #### 2.6.3.4. Infrastructure Layer
+
+*   **Persistence:** `User JPA Repository`, persistido sobre las tablas `users`, `roles`, `user_roles` y `credentials`.
 
 #### 2.6.3.5. Component Level Diagrams
 
