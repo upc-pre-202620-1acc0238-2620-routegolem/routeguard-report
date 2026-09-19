@@ -1,34 +1,33 @@
-﻿<div align="center">
-  <img src="resources/cover/upc-logo.png" width="150" alt="Logo de la UPC">
-  <br><br>
-  <strong>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</strong>
-  <br><br>
-  <strong>INGENIERÍA DE SOFTWARE</strong>
-  <br><br>
-  <strong>1ACC0238 - Aplicaciones Para Dispositivos Móviles</strong>
-  <br>
-  NRC: <strong>4945</strong>
-  <br><br>
-  <strong>Informe de AV1</strong>
-  <br><br>
-  Docente:<br>
-  <strong>Jorge Luis Mayta Guillermo</strong>
-  <br><br>
-  Equipo:<br>
-  <strong>RouteGolem</strong>
-  <br><br>
-  Proyecto:<br>
-  <strong>RouteGuard</strong>
-  <br><br>
-  <strong>Integrantes:</strong><br>
-  u202424059 - De la Cruz De los Santos, Mathias Marcelo<br>
-  [Código] - Francia Torres, Jhony Manuel<br>
-  u202411627 - Pareja Calloapaza, Marcelo Fausto<br>
-  [u202415551] - Ramirez Ruíz, Nickolas<br>
-  <br><br>
-  <strong>Periodo 2026-02</strong><br>
-  <strong>Setiembre 2026</strong>
-</div>
+﻿<p align="center"><img src="resources/cover/upc-logo.png" alt="Logo UPC" width="150"></p>
+<p align="center"><strong>Universidad Peruana de Ciencias Aplicadas</strong></p>
+<p align="center"><strong>Carrera de Ingeniería de Software</strong></p>
+<br>
+<p align="center"><strong>1ACC0238</strong></p>
+<p align="center"><strong>Aplicaciones para Dispositivos Móviles</strong></p>
+<p align="center">NRC</p>
+<p align="center"><strong>4945</strong></p>
+<br>
+<h2 align="center">Informe del Trabajo Final</h2>
+<br>
+<p align="center">Docente</p>
+<p align="center"><strong>Mayta Guillermo, Jorge Luis</strong></p>
+<br>
+<p align="center">Equipo</p>
+<p align="center"><strong>RouteGolem</strong></p>
+<p align="center">Proyecto</p>
+<p align="center"><strong>RouteGuard</strong></p>
+<br>
+<p align="center"><strong>Integrantes</strong></p>
+<table align="center">
+  <tr><th>Código</th><th>Apellidos y Nombres</th></tr>
+  <tr><td>u202424059</td><td>De la Cruz De los Santos, Mathias Marcelo</td></tr>
+  <tr><td>u202417329</td><td>Francia Torres, Jhony Manuel</td></tr>
+  <tr><td>u202411627</td><td>Pareja Calloapaza, Marcelo Fausto</td></tr>
+  <tr><td>u202415551</td><td>Ramirez Ruíz, Nickolas</td></tr>
+</table>
+<br>
+<p align="center"><strong>Período 202620</strong></p>
+<p align="center"><strong>Setiembre 2026</strong></p>
 
 <div style="page-break-after: always;"></div>
 
@@ -41,6 +40,16 @@
 | **0.3** | 06/09/2026 | Marcelo Pareja | Integración del proceso Lean UX respetando los templates oficiales (Problem Statements, 5 tipos de Assumptions e Hipótesis). |
 | **0.4** | 06/09/2026 | Marcelo Pareja | Definición de los Segmentos Objetivo (Padres y Conductores) incorporando información estadística de sustento (MINEDU y ATU). |
 | **0.5** | 06/09/2026 | Marcelo Pareja | Incorporación de los Objetivos SMART, tabla de Student Outcome mapeada a la rúbrica y generación de la Tabla de Contenidos automatizada. |
+| **0.6** | 09/09/2026 | Marcelo Pareja | Diseño de guiones de entrevista, elaboración del User Task Matrix, User Personas y definición del Ubiquitous Language. |
+| **0.7** | 10/09/2026 | Marcelo Pareja | Integración visual del Big Picture EventStorming y desarrollo de los User Journey Maps (As-Is). |
+| **0.8** | 13/09/2026 | Manuel Francia | Definición de Épicas, creación del Product Backlog inicial y redacción de User Stories con criterios de aceptación Gherkin. |
+| **0.9** | 14/09/2026 | Mathias De La Cruz | Desarrollo del Strategic-Level DDD (EventStorming, Candidate Context Discovery, Domain Message Flows y Bounded Context Canvases). |
+| **1.0** | 14/09/2026 | Nickolas Ramirez | Redacción del Análisis Competitivo, definición de Estrategias frente a competidores y elaboración del Empathy Mapping. |
+| **1.1** | 16/09/2026 | Marcelo Pareja | Estructuración del Tactical-Level DDD, refinamiento del backlog e integración de arquitectura inicial para Tracking/Notifications. |
+| **1.2** | 17/09/2026 | Manuel Francia | Elaboración del Impact Mapping y actualización integral del formato de especificación de requerimientos. |
+| **1.3** | 18/09/2026 | Mathias De La Cruz | Diseño de diagramas de Software Architecture (Context, Container, Deployment) y refinamiento del Context Mapping. |
+| **1.4** | 18/09/2026 | Nickolas Ramirez | Modelado completo del Bounded Context de Stakeholder (Domain, Interface, Application, Infra) y diagramas C4 a nivel de código. |
+| **1.5** | 18/09/2026 | Marcelo Pareja | Consolidación de diagramas C4 Model (Micro-Frontend/Backend), resúmenes de entrevistas, video de Needfinding y resolución de merge conflicts (Release AV1). |
 
 <div style="page-break-after: always;"></div>
 
@@ -226,15 +235,14 @@
 
 ## Student Outcome
 
-El curso contribuye al cumplimiento del Student Outcome ABET: 
-* **Outcome 7 (Criterios 7.c1, 7.c2):** Capacidad para adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje adecuadas.
-* **Outcome 3 (Criterio 3.c2):** Capacidad para comunicarse efectivamente con una variedad de audiencias.
+El curso contribuye al cumplimiento del Student Outcome ABET:
+**ABET - EAC - Student Outcome 7**
+**Criterio:** La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
-|---------------------|---------------------|--------------|
-| **Outcome 7 (7.c1):** Identificación de problemáticas, UX Research, y diseño de arquitectura (DDD, RESTful). | Mediante el proceso de *Lean UX* y *UX Research*, investigamos a los usuarios y sus dolores. Aplicamos *Domain-Driven Design (DDD)* para diseñar los Bounded Contexts y diagramar la arquitectura del sistema, asegurando el cumplimiento de principios RESTful. | La investigación estructurada y el diseño guiado por el dominio nos permitió comprender la complejidad del transporte escolar y plantear una arquitectura de software robusta, escalable y centrada en las necesidades reales de seguridad. |
-| **Outcome 7 (7.c2):** Implementación de soluciones (Native/Cross-Platform), ciclo de vida ágil y mejora continua. | Investigamos e implementamos tecnologías nuevas fuera de clase (GPS en *background*, modo *offline*) para la app de conductores (Nativa) y la app de padres (Cross-Platform). Aplicamos marco de trabajo ágil con GitFlow, *Conventional Commits* y realizamos entrevistas de validación. | El aprendizaje autónomo de tecnologías nativas y servicios en segundo plano fue vital para resolver la necesidad del usuario operativo. Aplicar un flujo de CI/CD (GitFlow) garantizó el desarrollo colaborativo sin conflictos. |
-| **Outcome 3 (3.c2):** Comunicación oral y escrita objetiva, respetando estructuras y estándares. | Redactamos el presente informe técnico respetando las normas APA 7, la estructura exigida, un *Ubiquitous Language* en inglés, y produjimos videos explicativos para sustentar el progreso del Sprint de manera profesional. | Documentar el proyecto con un lenguaje técnico estandarizado mejora drásticamente la transferencia de conocimiento. La comunicación efectiva fue clave para alinear las expectativas de todos los miembros del equipo. |
+| :--- | :--- | :--- |
+| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** | **Pareja Calloapaza, Marcelo Fausto:**<br>**AV1:** Aprendió y aplicó técnicas avanzadas de Lean UX y herramientas de UX Research (UXPressia) para el diseño de entrevistas y mapeo de journeys, alineando las necesidades del negocio con la visión de la solución.<br><br>**Francia Torres, Jhony Manuel:**<br>**AV1:** Investigó y dominó la sintaxis Gherkin (Given-When-Then) para la correcta especificación de Criterios de Aceptación, así como el uso de Impact Mapping para alinear las historias de usuario con los objetivos SMART.<br><br>**De la Cruz De los Santos, Mathias Marcelo:**<br>**AV1:** Actualizó sus conocimientos en el modelado de arquitecturas aplicando Strategic-Level Domain-Driven Design (EventStorming, Context Mapping) y el framework C4 Model para la representación estructural del sistema.<br><br>**Ramirez Ruíz, Nickolas:**<br>**AV1:** Adquirió nuevos conocimientos en análisis competitivo y modelado de arquitecturas mediante herramientas de *Diagram-as-Code* (Structurizr DSL y PlantUML), aplicándolos para diagramar el nivel de código y base de datos. | La actualización constante de conocimientos en metodologías ágiles (Lean UX), modelado de dominio (DDD) y arquitectura de software (C4 Model) fue fundamental para definir la estructura base de RouteGuard. Sin este aprendizaje autónomo y la exploración de nuevas herramientas, hubiese sido imposible traducir las necesidades operativas de los usuarios a requerimientos técnicos y arquitectónicos formales. |
+| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** | **Pareja Calloapaza, Marcelo Fausto:**<br>**AV1:** Reconoció la importancia de mantener un estándar de comunicación global (Ubiquitous Language) y dominar herramientas de prototipado colaborativo para asegurar la calidad de los entregables a largo plazo.<br><br>**Francia Torres, Jhony Manuel:**<br>**AV1:** Identificó que el levantamiento de requerimientos evoluciona constantemente, comprendiendo la necesidad de investigar técnicas ágiles de priorización (Product Backlog) para maximizar el valor entregado.<br><br>**De la Cruz De los Santos, Mathias Marcelo:**<br>**AV1:** Comprendió que las arquitecturas modernas requieren una constante investigación sobre patrones de integración, evidenciando la necesidad de actualizarse continuamente en enfoques de despliegue en la nube.<br><br>**Ramirez Ruíz, Nickolas:**<br>**AV1:** Reconoció que el estudio continuo del mercado y la adopción constante de nuevos frameworks de modelado estructural son habilidades indispensables para agilizar la documentación técnica en entornos reales. | El equipo concluye que el ciclo de vida del software exige una mentalidad de aprendizaje continuo. La adopción temprana de estándares de la industria, herramientas de diseño modernas (como Figma o UXPressia) y enfoques arquitectónicos avanzados no solo asegura el éxito funcional del proyecto, sino que sienta las bases para la competitividad y el crecimiento profesional individual de cada integrante en el mercado laboral. |
 
 <div style="page-break-after: always;"></div>
 
@@ -307,10 +315,6 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 |                         Foto                         | Apellidos y Nombres |   Código    | Carrera | Resumen |
 |:----------------------------------------------------:|:---|:-----------:|:---|:---|
 |                       ![Foto](resources/assets/images/team/mathias.jpg)                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software |Soy Mathias De la Cruz De los Santos, estudiante de quinto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado de la programación, así como del fútbol y los videojuegos, intereses que me han ayudado a desarrollar disciplina, paciencia y capacidad de trabajo en equipo. En cuanto al trabajo, aporto mis conocimientos técnicos junto con un enfoque responsable y comprometido, buscando siempre contribuir de forma constante al avance y la calidad del proyecto. |
-|                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
-| ![foto](resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
-| ![foto](resources/assets/images/team/nickolas.png) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
-|                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
 | ![foto](/resources/assets/images/team/Manuel.jpeg)                         | Francia Torres, Jhony Manuel |   U202417329    | Ingeniería de Software | Mi nombre es Jhony Manuel Francia Torres, tengo 19 años, actualmente estoy cursando el 6to  ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado del fútbol y la natación. Soy perseverante en lograr mis objetivos y metódico en mis proyectos. Mi objetivo en este grupo es poder desarrollar mis habilidades de trabajo en equipo y comunicación ágil, además de adquirir conocimientos en nuevos lenguajes de programación para el desarrollo de aplicaciones móviles. Mis aportes en este grupo serán cumplir responsablemente con las tareas que se me asignen y brindar ideas para el desarrollo del proyecto. |
 | ![foto](/resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
 | ![foto](/resources/assets/images/team/nickolas.png ) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
