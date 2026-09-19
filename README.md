@@ -116,7 +116,8 @@
     - [2.5.3. Software Architecture](#253-software-architecture)
       - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
       - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
-      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
+      - [2.5.3.3. Software Architecture Components Diagrams](#2533-software-architecture-components-diagrams)
+      - [2.5.3.4. Software Architecture Deployment Diagrams](#2534-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
     - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring)
       - [2.6.1.1. Domain Layer](#2611-domain-layer)
@@ -309,6 +310,10 @@ La visión de RouteGolem es consolidarse como el estándar tecnológico regional
 |                        [Foto]                        | Francia Torres, Jhony Manuel |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
 | ![foto](resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
 | ![foto](resources/assets/images/team/nickolas.png) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
+|                        [Foto]                        | De la Cruz De los Santos, Mathias Marcelo |   U20...    | Ingeniería de Software | [Breve descripción de 3-4 líneas del integrante, habilidades y qué aporta al proyecto] |
+| ![foto](/resources/assets/images/team/Manuel.jpeg)                         | Francia Torres, Jhony Manuel |   U202417329    | Ingeniería de Software | Mi nombre es Jhony Manuel Francia Torres, tengo 19 años, actualmente estoy cursando el 6to  ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy un apasionado del fútbol y la natación. Soy perseverante en lograr mis objetivos y metódico en mis proyectos. Mi objetivo en este grupo es poder desarrollar mis habilidades de trabajo en equipo y comunicación ágil, además de adquirir conocimientos en nuevos lenguajes de programación para el desarrollo de aplicaciones móviles. Mis aportes en este grupo serán cumplir responsablemente con las tareas que se me asignen y brindar ideas para el desarrollo del proyecto. |
+| ![foto](/resources/assets/images/team/marcelo.jpg) | Pareja Calloapaza, Marcelo Fausto | U202411627  | Ingeniería de Software | Soy Marcelo Pareja Calloapaza, estudiante de Ingeniería de Software y considero que, gracias a mis estudios he podido construir un perfil técnico altamente versátil. Domino tecnologías backend, bases de datos y entornos cloud (C#, C++, JavaScript, SQL/NoSQL, Azure), y actualmente busco embarcarme en desarrollo móvil nativo con Kotlin. En RouteGuard desempeño un rol Full-Stack y de liderazgo arquitectónico, en donde busco involucrarme en todas las capas del ecosistema. Me considero un desarrollador analítico y adaptable, con disposición innata a resolver problemas complejos para asegurar el éxito del proyecto. |
+| ![foto](/resources/assets/images/team/nickolas.png ) | Ramirez Ruiz, Nickolas | U202415551 | Ingeniería de Software | Soy Nickolas Ramirez Ruiz, estudiante del sexto ciclo de la carrera de Ingeniería de Software. A lo largo de mi formación académica he adquirido conocimientos en programación, principalmente utilizando el lenguaje Java. Me considero una persona organizada, comprometida y con un enfoque proactivo, siempre buscando cumplir con mis responsabilidades antes del tiempo previsto.|
 
 ## 1.2. Solution Profile
 
@@ -3018,9 +3023,21 @@ Este diagrama se definen los cinco contenedores principales para la interfaz res
 
 ![Container Diagram](resources/chapter-2/software-architecture/container-diagram.svg)
 
-#### 2.5.3.3. Software Architecture Deployment Diagrams
+#### 2.5.3.3. Software Architecture Components Level Diagrams
 
+El nivel de Contenedores del modelo C4 descompone el sistema en las unidades de despliegue independientes que lo conforman: las aplicaciones que corren en el dispositivo del usuario y la API que las sirve.
 
+A continuación se presenta la vista macro de cada uno de los dos contenedores principales, mostrando sus módulos:
+
+![Vista general de la aplicación móvil](resources/chapter-2/software-architecture/Components_MobileApp_Macro.svg)
+
+![Vista general del backend REST API](resources/chapter-2/software-architecture/Components_RestApi_Macro.svg)
+
+#### 2.5.3.4. Software Architecture Deployment Diagrams
+
+Este diagrama describe la distribución del entorno en la nube de RouteGuard: los dispositivos del usuario, el servidor de aplicaciones, el broker de mensajería y la base de datos gestionada, asegurando que los componentes se desplieguen sobre infraestructura escalable.
+
+![Software Architecture Deployment](resources/chapter-2/software-architecture/Deployment-Diagrams.png)
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
@@ -3129,23 +3146,23 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.3.5. Component Level Diagrams
 
-![IAM Frontend Components](resources\chapter-2\software-architecture\IAM\Components_Front_IAM.svg)
+![IAM Frontend Components](resources/chapter-2/software-architecture/IAM/Components-Front-IAM.svg)
 
-![IAM Backend Components](resources\chapter-2\software-architecture\IAM\Components_Back_IAM.svg)
+![IAM Backend Components](resources/chapter-2/software-architecture/IAM/Components-Back-IAM.svg)
 
 #### 2.6.3.6. Code Level Diagrams
 
 ##### 2.6.3.6.1. Domain Layer Class Diagram
 
 **Versión Detallada:**
-![IAM Domain Diagram Detailed](resources\chapter-2\software-architecture\IAM\iam-domain.svg)
+![IAM Domain Diagram Detailed](resources/chapter-2/software-architecture/IAM/iam-domain.svg)
 
 **Versión Legible (Simplificada):**
-![IAM Domain Diagram Readable](resources\chapter-2\software-architecture\IAM\iam-domain-readable.svg)
+![IAM Domain Diagram Readable](resources/chapter-2/software-architecture/IAM/iam-domain-readable.svg)
 
 ##### 2.6.3.6.2. Database Design Diagram
 
-![IAM DB Diagram](resources\chapter-2\software-architecture\IAM\iam-database.svg)
+![IAM DB Diagram](resources/chapter-2/software-architecture/IAM/iam-database.svg)
 
 ### 2.6.4. Bounded Context: Subscription & Plan Management
 
@@ -3170,41 +3187,62 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.4.5. Component Level Diagrams
 
-![Subscription Frontend Components](resources\chapter-2\software-architecture\Subscription\Components_Front_Sub.svg)
+![Subscription Frontend Components](resources/chapter-2/software-architecture/Subscription/Components-Front-Sub.svg)
 
-![Subscription Backend Components](resources\chapter-2\software-architecture\Subscription\Components_Back_Sub.svg)
+![Subscription Backend Components](resources/chapter-2/software-architecture/Subscription/Components-Back-Sub.svg)
 
 #### 2.6.4.6. Code Level Diagrams
 
 ##### 2.6.4.6.1. Domain Layer Class Diagram
 
 **Versión Detallada:**
-![Subscription Domain Diagram Detailed](resources\chapter-2\software-architecture\Subscription\subscription-domain.svg)
+![Subscription Domain Diagram Detailed](resources/chapter-2/software-architecture/Subscription/subscription-domain.svg)
 
 **Versión Legible (Simplificada):**
-![Subscription Domain Diagram Readable](resources\chapter-2\software-architecture\Subscription\subscription-domain-readable.svg)
+![Subscription Domain Diagram Readable](resources/chapter-2/software-architecture/Subscription/subscription-domain-readable.svg)
 
 ##### 2.6.4.6.2. Database Design Diagram
 
-![Subscription DB Diagram](resources\chapter-2\software-architecture\Subscription\subscription-database.svg)
+![Subscription DB Diagram](resources/chapter-2/software-architecture/Subscription/subscription-database.svg)
 
 ### 2.6.5. Bounded Context: Fleet & Route Management
 
 #### 2.6.5.1. Domain Layer
+*   **Entities:** `Trip` (Raíz del Agregado), `Waypoint`, `LocationRecord`.
+*   **Value Objects:** `Coordinates` (Lat/Lng), `Telemetry` (Speed, Battery, Heading), `Timestamp`.
+*   **Domain Events:** `TripStarted`, `StudentBoarded`, `TripFinished`, `OfflineSyncCompleted`.
+
 
 #### 2.6.5.2. Interface Layer
+*   **REST Controllers:** `TrackingController` (Expone los endpoints REST principales).
+*   **Event Listeners / Message Brokers:** `RabbitMqEventPublisher` (Publica eventos de dominio al bus de mensajes).
+*   **WebSockets / External Integrations:** `MapboxAdapter / TripApiService` (Integración remota para cálculo de ETA y rutas).
 
 #### 2.6.5.3. Application Layer
+*   **Application Services:** TrackingApp Service / Use Cases (`StartTripUseCase`, `BoardStudentUseCase`, `SyncOfflineRecordsUseCase`, `FinishTripUseCase`, `RouteTrackingService` - Maneja la lógica de casos de uso y cálculo de distancias/paradas).
 
 #### 2.6.5.4. Infrastructure Layer
+*   **Persistence:** Base de datos relacional principal con `PostgreSQL` y capacidades espaciales `PostGIS` (utilizando Trip JPA Repo / Room DAO para almacenamiento geométrico y local).
+*   **External APIs:** `Mapbox API / Retrofit` (Servicios externos para mapas, geolocalización y sincronización).
 
 #### 2.6.5.5. Component Level Diagrams
 
-#### 2.6.5.6. Code Level Diagrams
+![Route Frontend Components](resources/chapter-2/software-architecture/components_frontend_fleet.svg)
 
+![Route Backend Components](resources/chapter-2/software-architecture/components_backend_fleet.svg)
+
+#### 2.6.5.6. Code Level Diagrams
 ##### 2.6.5.6.1. Domain Layer Class Diagram
 
+**Versión Detallada:**
+![Route Domain Diagram Detailed](resources/chapter-2/software-architecture/fleet-domain.svg)
+
+**Versión Legible (Simplificada):**
+![Route Domain Diagram Readable](resources/chapter-2/software-architecture/fleet-domain-readable.svg)
+
 ##### 2.6.5.6.2. Database Design Diagram
+
+![Route DB Diagram](resources/chapter-2/software-architecture/fleet-database.svg)
 
 
 ### 2.6.6. Bounded Context: Stakeholder & Asset Management
