@@ -1,4 +1,4 @@
-﻿<p align="center"><img src="resources/cover/upc-logo.png" alt="Logo UPC" width="150"></p>
+<p align="center"><img src="resources/cover/upc-logo.png" alt="Logo UPC" width="150"></p>
 <p align="center"><strong>Universidad Peruana de Ciencias Aplicadas</strong></p>
 <p align="center"><strong>Carrera de Ingeniería de Software</strong></p>
 <br>
@@ -54,6 +54,22 @@
 <div style="page-break-after: always;"></div>
 
 ## Project Report Collaboration Insights
+
+Para el desarrollo del presente informe y proyecto, el equipo RouteGolem adoptó una cultura de trabajo colaborativo apoyada en las siguientes prácticas y herramientas:
+
+1. **Control de Versiones:** Todo el trabajo se integró utilizando Git y GitHub, manejando ramas independientes (como `feature/chapter-2`) para organizar el desarrollo de los capítulos y los diagramas C4, promoviendo la revisión antes de integrar a la rama `main`.
+2. **Diseño Colaborativo:** Se utilizó **Miro** de forma sincrónica para las sesiones de *EventStorming* y diseño de la arquitectura (Context Mapping). 
+3. **Diagramas como Código:** Los diseños estructurales de C4 Model y de Bases de Datos se elaboraron mediante *Structurizr DSL* y *PlantUML*, permitiendo un historial de versiones claro.
+
+A continuación, se adjunta la evidencia de la distribución equitativa de aportes extraída de la pestaña **Insights / Contributors** del repositorio oficial:
+
+> **Repositorio de GitHub:** [https://github.com/upc-pre-202620-1acc0238-4945-routegolem/routeguard-report](https://github.com/upc-pre-202620-1acc0238-4945-routegolem/routeguard-report)
+
+![GitHub Contributors Graph](resources/assets/images/team/github-insights.png)
+
+> **Actividad del Repositorio (Pulse):** El resumen de actividad refleja la integración continua y la revisión de Pull Requests durante las semanas de desarrollo del AV1.
+
+![GitHub Pulse Graph](resources/assets/images/team/github-pulse.png)
 
 <div style="page-break-after: always;"></div>
 
