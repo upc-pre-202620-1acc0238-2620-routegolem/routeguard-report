@@ -588,8 +588,8 @@ El objetivo de estas entrevistas es validar la magnitud de los problemas de comu
 #### Entrevistado 1: Manuel Jesús Francia Huambachano (Segmento: Padres de Familia)
 * **Edad:** 50
 * **Distrito de residencia:** Lurín, Lima
-* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** 00:00:01
+* **URL de la entrevista:** [Entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411627_upc_edu_pe/IQCkcavPTPPXTp1o41Ed0EQjAXYwEDw-mDTgQKu7Ced_1NY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c7Cjd8)
+* **Timing de inicio:** 00:00:05
 * **Screenshot del video:**
   ![Extrevista 1 - Manuel](resources/chapter-2/interviews/manuel.png)
 
@@ -603,8 +603,8 @@ Manuel es un padre de familia con un hijo de 13 años, quien contrató el servic
 #### Entrevistado 2: Luis Johnny Jesús Mendoza (Segmento: Conductor / Transportista)
 * **Edad:** 57
 * **Distrito de residencia:** Lurín, Lima
-* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** []
+* **URL de la entrevista:** [Entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411627_upc_edu_pe/IQCkcavPTPPXTp1o41Ed0EQjAXYwEDw-mDTgQKu7Ced_1NY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c7Cjd8)
+* **Timing de inicio:** 00:10:51
 * **Screenshot del video:**
   ![Extrevista 2 - Luis](resources/chapter-2/interviews/luis.png)
 
@@ -618,8 +618,8 @@ Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa co
 #### Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)
 * **Edad:** 22 años
 * **Distrito de residencia:** Lima, Lima
-* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** []
+* **URL de la entrevista:** [Entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411627_upc_edu_pe/IQCkcavPTPPXTp1o41Ed0EQjAXYwEDw-mDTgQKu7Ced_1NY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c7Cjd8)
+* **Timing de inicio:** 27:55:22
 * **Screenshot del video:**
   ![Extrevista 3 - Máximo](resources/chapter-2/interviews/maximo.png)
 
@@ -633,8 +633,8 @@ Máximo es un padre de familia con un hijo de 7 años. Optó por contratar movil
 #### Entrevistado 4: Iván Oscco Cosío (Segmento: Conductor / Transportista)
 * **Edad:** 51 años
 * **Distrito de residencia:** Santiago de Surco, Lima
-* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** []
+* **URL de la entrevista:** [Entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411627_upc_edu_pe/IQCkcavPTPPXTp1o41Ed0EQjAXYwEDw-mDTgQKu7Ced_1NY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c7Cjd8)
+* **Timing de inicio:** 36:03:18
 * **Screenshot del video:**
   ![Extrevista 4 - Iván](resources/chapter-2/interviews/ivan.png)
 
@@ -648,8 +648,8 @@ Iván es un conductor independiente con más de 25 años de experiencia en el tr
 #### Entrevistada 5: Diana Chávez Omonte (Segmento: Padres de Familia)
 * **Edad:** 31 años
 * **Distrito de residencia:** Santiago de Surco, Lima
-* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** []
+* **URL de la entrevista:** [Entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411627_upc_edu_pe/IQCkcavPTPPXTp1o41Ed0EQjAXYwEDw-mDTgQKu7Ced_1NY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c7Cjd8)
+* **Timing de inicio:** 45:01:26
 * **Screenshot del video:**
   ![Extrevista 5 - Diana](resources/chapter-2/interviews/diana.png)
 
@@ -663,8 +663,8 @@ Diana es una madre de familia trabajadora con un hijo de 8 años. Decidió contr
 #### Entrevistado 6: Matías Aguilar (Segmento: Conductor / Transportista)
 * **Edad:** 24 años
 * **Distrito de residencia:** Santiago de Surco, Lima
-* **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
-* **Timing de inicio:** [Ingresar timing, ej: 00:00:00]
+* **URL de la entrevista:** [Entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411627_upc_edu_pe/IQCkcavPTPPXTp1o41Ed0EQjAXYwEDw-mDTgQKu7Ced_1NY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=c7Cjd8)
+* **Timing de inicio:** 54:10:00
 * **Screenshot del video:**
   ![Extrevista 6 - Matías](resources/chapter-2/interviews/matias.jpeg)
 
