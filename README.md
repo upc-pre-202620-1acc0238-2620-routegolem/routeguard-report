@@ -9,7 +9,7 @@
   <br>
   NRC: <strong>4945</strong>
   <br><br>
-  <strong>Informe de Trabajo Final</strong>
+  <strong>Informe de AV1</strong>
   <br><br>
   Docente:<br>
   <strong>Jorge Luis Mayta Guillermo</strong>
@@ -475,7 +475,7 @@ Para el ecosistema de RouteGuard, hemos identificado dos segmentos de usuarios c
 
 Este análisis nos permite conocer las características, ventajas y limitaciones de las principales soluciones de transporte escolar existentes en el mercado. También ayuda a identificar oportunidades de diferenciación y áreas de mejora para SafeRoute.
 
-| Categoría | Subcategoría | **RouteGuard**![RouteGuard](.assetsimagesChapter2RouteGuard.png)                                                                                                      | **OnTrack School**![OnTrack School](./resources/assets/images/OnTrackSchool.png)| **SafeRoute Parent** ![SafeRoute Parent](./resources/assets/images/SafeRouteParent.png)| **BusRight**![BusRight](./resources/assets/images/BusRight.png)                                            |
+| Categoría | Subcategoría | **RouteGuard**![RouteGuard](/resources/assets/images/RouteGuard.jpg)                                                                                                  | **OnTrack School**![OnTrack School](./resources/assets/images/OnTrackSchool.png)| **SafeRoute Parent** ![SafeRoute Parent](./resources/assets/images/SafeRouteParent.png)| **BusRight**![BusRight](./resources/assets/images/BusRight.png)                                            |
 |---|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|------------------------------------------------------------------------------------------------------------|
 | **Perfil** | Overview | Plataforma de monitoreo y gestión de transporte escolar.                                                                                                              | Plataforma de gestión de transporte escolar para colegios, instituciones educativas y empresas de transporte. | Plataforma de monitoreo y seguridad del transporte escolar enfocada principalmente en padres de familia. | Plataforma integral para la gestión y optimización del transporte escolar y sus operaciones.               |
 | | Ventaja Competitiva | Roles específicos tanto para el padre como para el conductor y herramientas para la gestión de los viajes escolares.                                                  | Integra la gestión del transporte, seguimiento en tiempo real, control de acceso y otros servicios escolares en una sola plataforma. | Enfoque en seguridad, seguimiento en tiempo real, alertas y tranquilidad para los padres durante el traslado. | Combina planificación de rutas, GPS, gestión de estudiantes, conductores y comunicación con los padres.    |
@@ -2669,6 +2669,7 @@ Para el caso de RouteGuard, hemos estructurado nuestras Épicas de modo que se a
 
 ![Impact Mapping](resources/chapter-2/Impact%20Mapping/Impact%20Mapping%20-%20Route%20Golem.png)
 
+
 ### 2.4.3. Product Backlog
 
 El *Product Backlog* es un artefacto vivo y emergente que centraliza y ordena todo el trabajo necesario para la evolución del producto (Schwaber & Sutherland, 2020). Para RouteGuard, las historias han sido estimadas mediante Puntos de Historia (Fibonacci) y priorizadas bajo el criterio de maximización de valor temprano (Rubin, 2012), asegurando que las funcionalidades críticas para el *Minimum Viable Product* (MVP) se desarrollen en los primeros *sprints*.
@@ -3249,19 +3250,44 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 
 #### 2.6.6.1. Domain Layer
 
+En esta capa se definen las entidades principales del dominio de Stakeholder, como `Parent`, `Student`, `EmergencyContact` y `School`, junto con sus relaciones (por ejemplo, un padre puede tener varios hijos y varios contactos de emergencia asociados). También se incluyen contratos como `StakeholderRepository` que abstraen el acceso a los datos desde la lógica de negocio.
+
+
+
 #### 2.6.6.2. Interface Layer
+
+Esta capa expone la interacción con el usuario mediante pantallas como `StakeholderScreen`, que se comunican con el `StakeholderViewModel` para gestionar el estado de la interfaz (`StakeholderUiState`) y disparar las acciones del usuario hacia los casos de uso correspondientes.
+
 
 #### 2.6.6.3. Application Layer
 
+Aquí se ubican los casos de uso (Use Cases) que orquestan la lógica de negocio, como `AddEmergencyContactUseCase`, que coordina las validaciones y operaciones necesarias antes de delegar la persistencia a la capa de infraestructura.
+
+
 #### 2.6.6.4. Infrastructure Layer
 
+Contiene las implementaciones concretas de los repositorios (`ParentRepositoryImpl`), el acceso a datos locales mediante `ParentDao`, el consumo de servicios remotos con `ParentApiService`, y los mappers (`ParentMapper`) encargados de transformar los datos entre las distintas representaciones (entidad, DTO, modelo de dominio).
+
+
 #### 2.6.6.5. Component Level Diagrams
+
+**Backend**
+
+![Componentes Backend - Stakeholder](resources/chapter-2/C4/Components_Back_Stake.svg)
+
+**Frontend / Mobile**
+
+![Componentes Frontend - Stakeholder](resources/chapter-2/C4/Components_Front_Stake.svg)
 
 #### 2.6.6.6. Code Level Diagrams
 
 ##### 2.6.6.6.1. Domain Layer Class Diagram
 
+![Diagrama de Clases - Stakeholder Domain](resources/chapter-2/C4/stakeholder-domain.svg)
+
 ##### 2.6.6.6.2. Database Design Diagram
+
+![Diagrama de Base de Datos - Stakeholder](resources/chapter-2/C4/stakeholder-database.svg)
 
 
 
@@ -3387,6 +3413,15 @@ Este contexto es un *Generic Subdomain* que gestiona el registro, la autenticaci
 # Conclusiones
 
 ### Conclusiones y recomendaciones
+
+
+1. Las entrevistas de validación confirmaron que la problemática es real: tanto padres (Manuel, Máximo) como transportistas (Luis Johnny) dependen de canales informales como WhatsApp y llamadas, validando la propuesta de valor de RouteGuard centrada en automatizar la comunicación y el monitoreo pasivo.
+
+2. El *Domain-Driven Design* aplicado permitió delimitar con claridad los seis Bounded Contexts del sistema, identificando a *Trip Execution & Monitoring* como el Core Domain, lo que asegura que el mayor esfuerzo de ingeniería se concentre en la funcionalidad que diferencia a RouteGuard de sus competidores.
+
+3. Dividir el ecosistema en dos aplicaciones nativa para el conductor con soporte offline y GPS en segundo plano, y multiplataforma pasiva para el padre responde a las diferencias de uso evidenciadas en el *User Task Matrix* y los *User Journey Maps* de ambos segmentos.
+
+4. La priorización del *Product Backlog* por valor temprano aseguró que las historias del Core Domain (autenticación, sincronización offline, GPS y monitoreo en tiempo real) queden al inicio del desarrollo, antes que funcionalidades secundarias.
 
 ### Video App Validation
 
