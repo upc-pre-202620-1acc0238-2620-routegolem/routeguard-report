@@ -116,7 +116,7 @@
     - [2.5.3. Software Architecture](#253-software-architecture)
       - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
       - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
-      - [2.5.3.3. Software Architecture Components Diagrams](#2533-software-architecture-components-diagrams)
+      - [2.5.3.3. Software Architecture Components Level Diagrams](#2533-software-architecture-components-level-diagrams)
       - [2.5.3.4. Software Architecture Deployment Diagrams](#2534-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
     - [2.6.1. Bounded Context: Trip Execution \& Monitoring](#261-bounded-context-trip-execution--monitoring)
@@ -616,8 +616,8 @@ Luis Johnny es conductor y representante de *Transporte JCM SAC*, una empresa co
 * **Percepción de la solución propuesta:** Luis considera que una aplicación móvil de monitoreo y gestión sería una herramienta invaluable, especialmente para escalar su negocio. Reconoce que actualmente lleva el control "así nomás" (hojas y chats), pero entiende que para manejar flotas más grandes un software de trazabilidad es obligatorio. Ve un impacto muy positivo en el uso de la app para transmitir una **imagen más formal y profesional** frente a sus clientes corporativos, y afirmó estar dispuesto a pagar una suscripción mensual por esta tecnología conforme su empresa de transportes siga creciendo.
 
 #### Entrevistado 3: Máximo Quevedo (Segmento: Padres de Familia)
-* **Edad:** [Ingresar Edad]
-* **Distrito de residencia:** [Ingresar Distrito]
+* **Edad:** 22 años
+* **Distrito de residencia:** Lima, Lima
 * **URL de la entrevista:** [Ingresar URL del video subido a OneDrive]
 * **Timing de inicio:** []
 * **Screenshot del video:**
