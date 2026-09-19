@@ -46,6 +46,14 @@
 
 ## Project Report Collaboration Insights
 
+El equipo ha utilizado un flujo de trabajo en github: https://github.com/upc-pre-202620-1acc0238-2620-routegolem/routeguard-report/tree/develop
+
+AV1:
+
+![av1](/resources/assets/images/AV1.png)
+
+
+
 <div style="page-break-after: always;"></div>
 
 ## Tabla de contenidos
